@@ -333,10 +333,10 @@
         <category>hadoop</category>
       </categories>
       <tags>
+        <tag>hbase</tag>
         <tag>hadoop</tag>
         <tag>ubuntu</tag>
         <tag>教程</tag>
-        <tag>hbase</tag>
         <tag>大数据</tag>
       </tags>
   </entry>
