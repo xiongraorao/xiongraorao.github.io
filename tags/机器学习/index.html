@@ -140,17 +140,17 @@
 
 
 
-  <meta name="description" content="blog web site for big data application, 大数据应用，人工智能，容器技术，java, go">
-<meta name="keywords" content="blog hexo bigdata ai hadoop kubernets k8s">
+  <meta name="description" content="用我的知识改变世界">
+<meta name="keywords" content="blog bigdata AI hadoop kubernets k8s docker">
 <meta property="og:type" content="website">
 <meta property="og:title" content="在路上">
-<meta property="og:url" content="http://xraorao.top/tags/机器学习/index.html">
+<meta property="og:url" content="https://xiongraorao.github.io/tags/机器学习/index.html">
 <meta property="og:site_name" content="在路上">
-<meta property="og:description" content="blog web site for big data application, 大数据应用，人工智能，容器技术，java, go">
+<meta property="og:description" content="用我的知识改变世界">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在路上">
-<meta name="twitter:description" content="blog web site for big data application, 大数据应用，人工智能，容器技术，java, go">
+<meta name="twitter:description" content="用我的知识改变世界">
 
 
 
@@ -159,7 +159,7 @@
 
 
 
-  <link rel="canonical" href="http://xraorao.top/tags/机器学习/"/>
+  <link rel="canonical" href="https://xiongraorao.github.io/tags/机器学习/"/>
 
 
 
@@ -233,7 +233,7 @@
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta custom-logo">
     
 
     <div class="custom-logo-site-title">
@@ -321,14 +321,6 @@
     <a href="/sitemap.xml" rel="section">
       <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />站点地图</a>
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-commonweal">
-    <a href="/404/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />公益 404</a>
-  </li>
 
       
       
@@ -401,9 +393,6 @@
             
 
     
-    
-      
-      
     
       
       
@@ -517,7 +506,7 @@
                 alt="Xiong Raorao" />
             
               <p class="site-author-name" itemprop="name">Xiong Raorao</p>
-              <p class="site-description motion-element" itemprop="description">blog web site for big data application, 大数据应用，人工智能，容器技术，java, go</p>
+              <p class="site-description motion-element" itemprop="description">用我的知识改变世界</p>
           </div>
 
           
@@ -1350,9 +1339,25 @@
             });
           } else {
             
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
-              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
+              var newcounter = new Counter();
+              /* Set ACL */
+              var acl = new AV.ACL();
+              acl.setPublicReadAccess(true);
+              acl.setPublicWriteAccess(true);
+              newcounter.setACL(acl);
+              /* End Set ACL */
+              newcounter.set("title", title);
+              newcounter.set("url", url);
+              newcounter.set("time", 1);
+              newcounter.save(null, {
+                success: function(newcounter) {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                },
+                error: function(newcounter, error) {
+                  console.log('Failed to create');
+                }
+              });
             
           }
         },

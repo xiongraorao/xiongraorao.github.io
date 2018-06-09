@@ -5,9 +5,9 @@
   <subtitle>stay hungry, stay foolish!</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://xraorao.top/"/>
+  <link href="https://xiongraorao.github.io/"/>
   <updated>2018-06-08T09:10:07.339Z</updated>
-  <id>http://xraorao.top/</id>
+  <id>https://xiongraorao.github.io/</id>
   
   <author>
     <name>Xiong Raorao</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>k8s学习-1</title>
-    <link href="http://xraorao.top/2018/04/27/k8s%E5%AD%A6%E4%B9%A0-1/"/>
-    <id>http://xraorao.top/2018/04/27/k8s学习-1/</id>
+    <link href="https://xiongraorao.github.io/2018/04/27/k8s%E5%AD%A6%E4%B9%A0-1/"/>
+    <id>https://xiongraorao.github.io/2018/04/27/k8s学习-1/</id>
     <published>2018-04-27T09:30:43.000Z</published>
     <updated>2018-06-08T09:10:07.339Z</updated>
     
@@ -34,17 +34,17 @@
     
     </summary>
     
-      <category term="k8s" scheme="http://xraorao.top/categories/k8s/"/>
+      <category term="k8s" scheme="https://xiongraorao.github.io/categories/k8s/"/>
     
     
-      <category term="k8s" scheme="http://xraorao.top/tags/k8s/"/>
+      <category term="k8s" scheme="https://xiongraorao.github.io/tags/k8s/"/>
     
   </entry>
   
   <entry>
     <title>大数据平台维护笔记</title>
-    <link href="http://xraorao.top/2017/06/09/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E7%BB%B4%E6%8A%A4%E7%AC%94%E8%AE%B0/"/>
-    <id>http://xraorao.top/2017/06/09/大数据平台维护笔记/</id>
+    <link href="https://xiongraorao.github.io/2017/06/09/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E7%BB%B4%E6%8A%A4%E7%AC%94%E8%AE%B0/"/>
+    <id>https://xiongraorao.github.io/2017/06/09/大数据平台维护笔记/</id>
     <published>2017-06-09T04:47:59.000Z</published>
     <updated>2018-06-08T09:10:07.352Z</updated>
     
@@ -59,21 +59,21 @@
     
     </summary>
     
-      <category term="笔记" scheme="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="https://xiongraorao.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="hadoop" scheme="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/hadoop/"/>
+      <category term="hadoop" scheme="https://xiongraorao.github.io/categories/%E7%AC%94%E8%AE%B0/hadoop/"/>
     
     
-      <category term="hadoop" scheme="http://xraorao.top/tags/hadoop/"/>
+      <category term="hadoop" scheme="https://xiongraorao.github.io/tags/hadoop/"/>
     
-      <category term="大数据" scheme="http://xraorao.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+      <category term="大数据" scheme="https://xiongraorao.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
   </entry>
   
   <entry>
     <title>caffe相关博客</title>
-    <link href="http://xraorao.top/2017/06/04/caffe%E7%9B%B8%E5%85%B3%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://xraorao.top/2017/06/04/caffe相关博客/</id>
+    <link href="https://xiongraorao.github.io/2017/06/04/caffe%E7%9B%B8%E5%85%B3%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://xiongraorao.github.io/2017/06/04/caffe相关博客/</id>
     <published>2017-06-04T01:31:57.000Z</published>
     <updated>2018-06-08T09:10:07.336Z</updated>
     
@@ -90,19 +90,19 @@
     
     </summary>
     
-      <category term="笔记" scheme="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="https://xiongraorao.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="caffe" scheme="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/caffe/"/>
+      <category term="caffe" scheme="https://xiongraorao.github.io/categories/%E7%AC%94%E8%AE%B0/caffe/"/>
     
     
-      <category term="caffe" scheme="http://xraorao.top/tags/caffe/"/>
+      <category term="caffe" scheme="https://xiongraorao.github.io/tags/caffe/"/>
     
   </entry>
   
   <entry>
     <title>理解Linux系统/etc/init.d目录和/etc/rc.local脚本</title>
-    <link href="http://xraorao.top/2017/05/24/%E7%90%86%E8%A7%A3Linux%E7%B3%BB%E7%BB%9F-etc-init-d%E7%9B%AE%E5%BD%95%E5%92%8C-etc-rc-local%E8%84%9A%E6%9C%AC/"/>
-    <id>http://xraorao.top/2017/05/24/理解Linux系统-etc-init-d目录和-etc-rc-local脚本/</id>
+    <link href="https://xiongraorao.github.io/2017/05/24/%E7%90%86%E8%A7%A3Linux%E7%B3%BB%E7%BB%9F-etc-init-d%E7%9B%AE%E5%BD%95%E5%92%8C-etc-rc-local%E8%84%9A%E6%9C%AC/"/>
+    <id>https://xiongraorao.github.io/2017/05/24/理解Linux系统-etc-init-d目录和-etc-rc-local脚本/</id>
     <published>2017-05-24T01:56:35.000Z</published>
     <updated>2018-06-08T09:10:07.353Z</updated>
     
@@ -117,19 +117,19 @@
     
     </summary>
     
-      <category term="IT" scheme="http://xraorao.top/categories/IT/"/>
+      <category term="IT" scheme="https://xiongraorao.github.io/categories/IT/"/>
     
-      <category term="linux" scheme="http://xraorao.top/categories/IT/linux/"/>
+      <category term="linux" scheme="https://xiongraorao.github.io/categories/IT/linux/"/>
     
     
-      <category term="linux" scheme="http://xraorao.top/tags/linux/"/>
+      <category term="linux" scheme="https://xiongraorao.github.io/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>Ubuntu系统操作命令笔记（持续更新...）</title>
-    <link href="http://xraorao.top/2017/05/24/%E5%8E%9F-Ubuntu%E7%B3%BB%E7%BB%9F%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-%EF%BC%89/"/>
-    <id>http://xraorao.top/2017/05/24/原-Ubuntu系统操作命令笔记（持续更新-）/</id>
+    <link href="https://xiongraorao.github.io/2017/05/24/%E5%8E%9F-Ubuntu%E7%B3%BB%E7%BB%9F%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-%EF%BC%89/"/>
+    <id>https://xiongraorao.github.io/2017/05/24/原-Ubuntu系统操作命令笔记（持续更新-）/</id>
     <published>2017-05-24T01:14:21.000Z</published>
     <updated>2018-06-08T09:10:07.348Z</updated>
     
@@ -144,21 +144,21 @@
     
     </summary>
     
-      <category term="IT" scheme="http://xraorao.top/categories/IT/"/>
+      <category term="IT" scheme="https://xiongraorao.github.io/categories/IT/"/>
     
-      <category term="linux" scheme="http://xraorao.top/categories/IT/linux/"/>
+      <category term="linux" scheme="https://xiongraorao.github.io/categories/IT/linux/"/>
     
     
-      <category term="ubuntu" scheme="http://xraorao.top/tags/ubuntu/"/>
+      <category term="ubuntu" scheme="https://xiongraorao.github.io/tags/ubuntu/"/>
     
-      <category term="笔记" scheme="http://xraorao.top/tags/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="https://xiongraorao.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>ubuntu端口转发</title>
-    <link href="http://xraorao.top/2017/05/23/ubuntu%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/"/>
-    <id>http://xraorao.top/2017/05/23/ubuntu端口转发/</id>
+    <link href="https://xiongraorao.github.io/2017/05/23/ubuntu%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/"/>
+    <id>https://xiongraorao.github.io/2017/05/23/ubuntu端口转发/</id>
     <published>2017-05-23T13:11:44.000Z</published>
     <updated>2018-06-08T09:10:07.345Z</updated>
     
@@ -173,23 +173,23 @@
     
     </summary>
     
-      <category term="解决方案" scheme="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+      <category term="解决方案" scheme="https://xiongraorao.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     
-      <category term="ubuntu" scheme="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/ubuntu/"/>
+      <category term="ubuntu" scheme="https://xiongraorao.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/ubuntu/"/>
     
     
-      <category term="ubuntu" scheme="http://xraorao.top/tags/ubuntu/"/>
+      <category term="ubuntu" scheme="https://xiongraorao.github.io/tags/ubuntu/"/>
     
-      <category term="iptable" scheme="http://xraorao.top/tags/iptable/"/>
+      <category term="iptable" scheme="https://xiongraorao.github.io/tags/iptable/"/>
     
-      <category term="端口转发" scheme="http://xraorao.top/tags/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/"/>
+      <category term="端口转发" scheme="https://xiongraorao.github.io/tags/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/"/>
     
   </entry>
   
   <entry>
     <title>ubuntu14.04下 Cloudera Manager和CDH5.11的配置</title>
-    <link href="http://xraorao.top/2017/05/23/Cloudera%20Manager%E5%92%8CCDH5-11%E7%9A%84%E9%85%8D%E7%BD%AE/"/>
-    <id>http://xraorao.top/2017/05/23/Cloudera Manager和CDH5-11的配置/</id>
+    <link href="https://xiongraorao.github.io/2017/05/23/Cloudera%20Manager%E5%92%8CCDH5-11%E7%9A%84%E9%85%8D%E7%BD%AE/"/>
+    <id>https://xiongraorao.github.io/2017/05/23/Cloudera Manager和CDH5-11的配置/</id>
     <published>2017-05-23T03:25:25.000Z</published>
     <updated>2018-06-08T09:10:07.333Z</updated>
     
@@ -205,23 +205,23 @@
     
     </summary>
     
-      <category term="解决方案" scheme="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+      <category term="解决方案" scheme="https://xiongraorao.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     
-      <category term="hadoop" scheme="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/hadoop/"/>
+      <category term="hadoop" scheme="https://xiongraorao.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/hadoop/"/>
     
     
-      <category term="hadoop" scheme="http://xraorao.top/tags/hadoop/"/>
+      <category term="hadoop" scheme="https://xiongraorao.github.io/tags/hadoop/"/>
     
-      <category term="CDH5" scheme="http://xraorao.top/tags/CDH5/"/>
+      <category term="CDH5" scheme="https://xiongraorao.github.io/tags/CDH5/"/>
     
-      <category term="Cloudera Manager" scheme="http://xraorao.top/tags/Cloudera-Manager/"/>
+      <category term="Cloudera Manager" scheme="https://xiongraorao.github.io/tags/Cloudera-Manager/"/>
     
   </entry>
   
   <entry>
     <title>linux服务器时间同步</title>
-    <link href="http://xraorao.top/2017/04/25/linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"/>
-    <id>http://xraorao.top/2017/04/25/linux服务器时间同步/</id>
+    <link href="https://xiongraorao.github.io/2017/04/25/linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"/>
+    <id>https://xiongraorao.github.io/2017/04/25/linux服务器时间同步/</id>
     <published>2017-04-25T10:57:24.000Z</published>
     <updated>2018-06-08T09:10:07.340Z</updated>
     
@@ -236,21 +236,21 @@
     
     </summary>
     
-      <category term="解决方案" scheme="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+      <category term="解决方案" scheme="https://xiongraorao.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     
-      <category term="linux" scheme="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/linux/"/>
+      <category term="linux" scheme="https://xiongraorao.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/linux/"/>
     
     
-      <category term="linux" scheme="http://xraorao.top/tags/linux/"/>
+      <category term="linux" scheme="https://xiongraorao.github.io/tags/linux/"/>
     
-      <category term="ntp" scheme="http://xraorao.top/tags/ntp/"/>
+      <category term="ntp" scheme="https://xiongraorao.github.io/tags/ntp/"/>
     
   </entry>
   
   <entry>
     <title>mysql命令</title>
-    <link href="http://xraorao.top/2017/04/24/mysql%E5%91%BD%E4%BB%A4/"/>
-    <id>http://xraorao.top/2017/04/24/mysql命令/</id>
+    <link href="https://xiongraorao.github.io/2017/04/24/mysql%E5%91%BD%E4%BB%A4/"/>
+    <id>https://xiongraorao.github.io/2017/04/24/mysql命令/</id>
     <published>2017-04-24T11:50:40.000Z</published>
     <updated>2018-06-08T09:10:07.342Z</updated>
     
@@ -265,21 +265,21 @@
     
     </summary>
     
-      <category term="笔记" scheme="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="https://xiongraorao.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="mysql" scheme="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/mysql/"/>
+      <category term="mysql" scheme="https://xiongraorao.github.io/categories/%E7%AC%94%E8%AE%B0/mysql/"/>
     
     
-      <category term="mysql" scheme="http://xraorao.top/tags/mysql/"/>
+      <category term="mysql" scheme="https://xiongraorao.github.io/tags/mysql/"/>
     
-      <category term="数据库" scheme="http://xraorao.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+      <category term="数据库" scheme="https://xiongraorao.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   
   <entry>
     <title>java核心技术（一）</title>
-    <link href="http://xraorao.top/2017/04/21/java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%EF%BC%88%E4%B8%80%EF%BC%89/"/>
-    <id>http://xraorao.top/2017/04/21/java核心技术（一）/</id>
+    <link href="https://xiongraorao.github.io/2017/04/21/java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>https://xiongraorao.github.io/2017/04/21/java核心技术（一）/</id>
     <published>2017-04-21T01:06:51.000Z</published>
     <updated>2018-06-08T09:10:07.337Z</updated>
     
@@ -294,19 +294,19 @@
     
     </summary>
     
-      <category term="笔记" scheme="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="https://xiongraorao.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="java" scheme="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/java/"/>
+      <category term="java" scheme="https://xiongraorao.github.io/categories/%E7%AC%94%E8%AE%B0/java/"/>
     
     
-      <category term="java" scheme="http://xraorao.top/tags/java/"/>
+      <category term="java" scheme="https://xiongraorao.github.io/tags/java/"/>
     
   </entry>
   
   <entry>
     <title>java设计模式（三）：行为型模式</title>
-    <link href="http://xraorao.top/2017/04/07/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://xraorao.top/2017/04/07/java设计模式（三）：行为型模式/</id>
+    <link href="https://xiongraorao.github.io/2017/04/07/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://xiongraorao.github.io/2017/04/07/java设计模式（三）：行为型模式/</id>
     <published>2017-04-07T14:39:29.000Z</published>
     <updated>2018-06-08T09:10:07.338Z</updated>
     
@@ -321,21 +321,21 @@
     
     </summary>
     
-      <category term="笔记" scheme="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="https://xiongraorao.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="java" scheme="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/java/"/>
+      <category term="java" scheme="https://xiongraorao.github.io/categories/%E7%AC%94%E8%AE%B0/java/"/>
     
     
-      <category term="java" scheme="http://xraorao.top/tags/java/"/>
+      <category term="java" scheme="https://xiongraorao.github.io/tags/java/"/>
     
-      <category term="设计模式" scheme="http://xraorao.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="https://xiongraorao.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>java设计模式（二）：结构型模式</title>
-    <link href="http://xraorao.top/2017/04/07/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://xraorao.top/2017/04/07/java设计模式（二）：结构型模式/</id>
+    <link href="https://xiongraorao.github.io/2017/04/07/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://xiongraorao.github.io/2017/04/07/java设计模式（二）：结构型模式/</id>
     <published>2017-04-07T14:39:19.000Z</published>
     <updated>2018-06-08T09:10:07.338Z</updated>
     
@@ -350,21 +350,21 @@
     
     </summary>
     
-      <category term="笔记" scheme="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="https://xiongraorao.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="java" scheme="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/java/"/>
+      <category term="java" scheme="https://xiongraorao.github.io/categories/%E7%AC%94%E8%AE%B0/java/"/>
     
     
-      <category term="java" scheme="http://xraorao.top/tags/java/"/>
+      <category term="java" scheme="https://xiongraorao.github.io/tags/java/"/>
     
-      <category term="设计模式" scheme="http://xraorao.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="https://xiongraorao.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>java设计模式（一）：创建型模式</title>
-    <link href="http://xraorao.top/2017/04/07/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://xraorao.top/2017/04/07/java设计模式（一）：创建型模式/</id>
+    <link href="https://xiongraorao.github.io/2017/04/07/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://xiongraorao.github.io/2017/04/07/java设计模式（一）：创建型模式/</id>
     <published>2017-04-07T14:39:05.000Z</published>
     <updated>2018-06-08T09:10:07.337Z</updated>
     
@@ -379,21 +379,21 @@
     
     </summary>
     
-      <category term="笔记" scheme="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="https://xiongraorao.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="java" scheme="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/java/"/>
+      <category term="java" scheme="https://xiongraorao.github.io/categories/%E7%AC%94%E8%AE%B0/java/"/>
     
     
-      <category term="java" scheme="http://xraorao.top/tags/java/"/>
+      <category term="java" scheme="https://xiongraorao.github.io/tags/java/"/>
     
-      <category term="设计模式" scheme="http://xraorao.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="https://xiongraorao.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>storm学习笔记-storm.yaml配置项</title>
-    <link href="http://xraorao.top/2017/03/18/storm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-storm-yaml%E9%85%8D%E7%BD%AE%E9%A1%B9/"/>
-    <id>http://xraorao.top/2017/03/18/storm学习笔记-storm-yaml配置项/</id>
+    <link href="https://xiongraorao.github.io/2017/03/18/storm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-storm-yaml%E9%85%8D%E7%BD%AE%E9%A1%B9/"/>
+    <id>https://xiongraorao.github.io/2017/03/18/storm学习笔记-storm-yaml配置项/</id>
     <published>2017-03-18T13:32:10.000Z</published>
     <updated>2018-06-08T09:10:07.343Z</updated>
     
@@ -419,19 +419,19 @@
     
     </summary>
     
-      <category term="笔记" scheme="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="https://xiongraorao.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="storm" scheme="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/storm/"/>
+      <category term="storm" scheme="https://xiongraorao.github.io/categories/%E7%AC%94%E8%AE%B0/storm/"/>
     
     
-      <category term="storm" scheme="http://xraorao.top/tags/storm/"/>
+      <category term="storm" scheme="https://xiongraorao.github.io/tags/storm/"/>
     
   </entry>
   
   <entry>
     <title>linux下U盘分区</title>
-    <link href="http://xraorao.top/2017/03/18/linux%E4%B8%8BU%E7%9B%98%E5%88%86%E5%8C%BA/"/>
-    <id>http://xraorao.top/2017/03/18/linux下U盘分区/</id>
+    <link href="https://xiongraorao.github.io/2017/03/18/linux%E4%B8%8BU%E7%9B%98%E5%88%86%E5%8C%BA/"/>
+    <id>https://xiongraorao.github.io/2017/03/18/linux下U盘分区/</id>
     <published>2017-03-18T02:34:44.000Z</published>
     <updated>2018-06-08T09:10:07.340Z</updated>
     
@@ -446,21 +446,21 @@
     
     </summary>
     
-      <category term="解决方案" scheme="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+      <category term="解决方案" scheme="https://xiongraorao.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     
-      <category term="linux" scheme="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/linux/"/>
+      <category term="linux" scheme="https://xiongraorao.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/linux/"/>
     
     
-      <category term="分区" scheme="http://xraorao.top/tags/%E5%88%86%E5%8C%BA/"/>
+      <category term="分区" scheme="https://xiongraorao.github.io/tags/%E5%88%86%E5%8C%BA/"/>
     
-      <category term="U盘" scheme="http://xraorao.top/tags/U%E7%9B%98/"/>
+      <category term="U盘" scheme="https://xiongraorao.github.io/tags/U%E7%9B%98/"/>
     
   </entry>
   
   <entry>
     <title>linux磁盘分区和挂载</title>
-    <link href="http://xraorao.top/2017/03/18/linux%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA%E5%92%8C%E6%8C%82%E8%BD%BD/"/>
-    <id>http://xraorao.top/2017/03/18/linux磁盘分区和挂载/</id>
+    <link href="https://xiongraorao.github.io/2017/03/18/linux%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA%E5%92%8C%E6%8C%82%E8%BD%BD/"/>
+    <id>https://xiongraorao.github.io/2017/03/18/linux磁盘分区和挂载/</id>
     <published>2017-03-18T02:11:57.000Z</published>
     <updated>2018-06-08T09:10:07.341Z</updated>
     
@@ -475,19 +475,19 @@
     
     </summary>
     
-      <category term="解决方案" scheme="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+      <category term="解决方案" scheme="https://xiongraorao.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     
-      <category term="linux" scheme="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/linux/"/>
+      <category term="linux" scheme="https://xiongraorao.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/linux/"/>
     
     
-      <category term="linux" scheme="http://xraorao.top/tags/linux/"/>
+      <category term="linux" scheme="https://xiongraorao.github.io/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>kafka操作命令</title>
-    <link href="http://xraorao.top/2017/03/16/kafka%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/"/>
-    <id>http://xraorao.top/2017/03/16/kafka操作命令/</id>
+    <link href="https://xiongraorao.github.io/2017/03/16/kafka%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/"/>
+    <id>https://xiongraorao.github.io/2017/03/16/kafka操作命令/</id>
     <published>2017-03-16T08:45:49.000Z</published>
     <updated>2018-06-08T09:10:07.339Z</updated>
     
@@ -502,19 +502,19 @@
     
     </summary>
     
-      <category term="笔记" scheme="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="https://xiongraorao.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="kafka" scheme="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/kafka/"/>
+      <category term="kafka" scheme="https://xiongraorao.github.io/categories/%E7%AC%94%E8%AE%B0/kafka/"/>
     
     
-      <category term="kafka" scheme="http://xraorao.top/tags/kafka/"/>
+      <category term="kafka" scheme="https://xiongraorao.github.io/tags/kafka/"/>
     
   </entry>
   
   <entry>
     <title>Hbase基本操作命令</title>
-    <link href="http://xraorao.top/2017/03/09/Hbase%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/"/>
-    <id>http://xraorao.top/2017/03/09/Hbase基本操作命令/</id>
+    <link href="https://xiongraorao.github.io/2017/03/09/Hbase%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/"/>
+    <id>https://xiongraorao.github.io/2017/03/09/Hbase基本操作命令/</id>
     <published>2017-03-09T05:28:27.000Z</published>
     <updated>2018-06-08T09:10:07.334Z</updated>
     
@@ -530,21 +530,21 @@
     
     </summary>
     
-      <category term="笔记" scheme="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="https://xiongraorao.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="hbase" scheme="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/hbase/"/>
+      <category term="hbase" scheme="https://xiongraorao.github.io/categories/%E7%AC%94%E8%AE%B0/hbase/"/>
     
     
-      <category term="hbase" scheme="http://xraorao.top/tags/hbase/"/>
+      <category term="hbase" scheme="https://xiongraorao.github.io/tags/hbase/"/>
     
-      <category term="命令" scheme="http://xraorao.top/tags/%E5%91%BD%E4%BB%A4/"/>
+      <category term="命令" scheme="https://xiongraorao.github.io/tags/%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   
   <entry>
     <title>分布式大数据分析平台环境搭建</title>
-    <link href="http://xraorao.top/2017/03/07/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B9%B3%E5%8F%B0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
-    <id>http://xraorao.top/2017/03/07/大数据分析平台环境搭建/</id>
+    <link href="https://xiongraorao.github.io/2017/03/07/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B9%B3%E5%8F%B0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    <id>https://xiongraorao.github.io/2017/03/07/大数据分析平台环境搭建/</id>
     <published>2017-03-07T02:29:58.000Z</published>
     <updated>2018-06-08T09:10:07.352Z</updated>
     
@@ -559,29 +559,29 @@
     
     </summary>
     
-      <category term="解决方案" scheme="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+      <category term="解决方案" scheme="https://xiongraorao.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     
-      <category term="hadoop" scheme="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/hadoop/"/>
+      <category term="hadoop" scheme="https://xiongraorao.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/hadoop/"/>
     
     
-      <category term="caffe" scheme="http://xraorao.top/tags/caffe/"/>
+      <category term="caffe" scheme="https://xiongraorao.github.io/tags/caffe/"/>
     
-      <category term="深度学习" scheme="http://xraorao.top/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+      <category term="深度学习" scheme="https://xiongraorao.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="大数据" scheme="http://xraorao.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+      <category term="大数据" scheme="https://xiongraorao.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
-      <category term="cuda" scheme="http://xraorao.top/tags/cuda/"/>
+      <category term="cuda" scheme="https://xiongraorao.github.io/tags/cuda/"/>
     
-      <category term="opencv" scheme="http://xraorao.top/tags/opencv/"/>
+      <category term="opencv" scheme="https://xiongraorao.github.io/tags/opencv/"/>
     
-      <category term="分布式" scheme="http://xraorao.top/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
+      <category term="分布式" scheme="https://xiongraorao.github.io/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>Ubuntu制作UbuntuLiveCD+备份系统镜像教程</title>
-    <link href="http://xraorao.top/2017/03/03/Ubuntu%E5%88%B6%E4%BD%9CUbuntuLiveCD-%E5%A4%87%E4%BB%BD%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F%E6%95%99%E7%A8%8B/"/>
-    <id>http://xraorao.top/2017/03/03/Ubuntu制作UbuntuLiveCD-备份系统镜像教程/</id>
+    <link href="https://xiongraorao.github.io/2017/03/03/Ubuntu%E5%88%B6%E4%BD%9CUbuntuLiveCD-%E5%A4%87%E4%BB%BD%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F%E6%95%99%E7%A8%8B/"/>
+    <id>https://xiongraorao.github.io/2017/03/03/Ubuntu制作UbuntuLiveCD-备份系统镜像教程/</id>
     <published>2017-03-03T07:50:08.000Z</published>
     <updated>2018-06-08T09:10:07.335Z</updated>
     
@@ -597,14 +597,14 @@
     
     </summary>
     
-      <category term="解决方案" scheme="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+      <category term="解决方案" scheme="https://xiongraorao.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     
-      <category term="ubuntu" scheme="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/ubuntu/"/>
+      <category term="ubuntu" scheme="https://xiongraorao.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/ubuntu/"/>
     
     
-      <category term="ubuntu" scheme="http://xraorao.top/tags/ubuntu/"/>
+      <category term="ubuntu" scheme="https://xiongraorao.github.io/tags/ubuntu/"/>
     
-      <category term="教程" scheme="http://xraorao.top/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://xiongraorao.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   

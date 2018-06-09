@@ -144,16 +144,16 @@
 <meta name="keywords" content="java,设计模式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java设计模式（一）：创建型模式">
-<meta property="og:url" content="http://xraorao.top/2017/04/07/java设计模式（一）：创建型模式/index.html">
+<meta property="og:url" content="https://xiongraorao.github.io/2017/04/07/java设计模式（一）：创建型模式/index.html">
 <meta property="og:site_name" content="在路上">
 <meta property="og:description" content="参考链接：http://www.cnblogs.com/maowang1991/archive/2013/04/15/3023236.htmlhttp://blog.csdn.net/u013142781/article/details/50816245 一、设计模式分类总体来说设计模式分为三大类： 创建型模式，共五种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。 结构型模式，共七">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://xraorao.top/images/java设计模式（一）：创建型模式-1.jpg">
+<meta property="og:image" content="https://xiongraorao.github.io/images/java设计模式（一）：创建型模式-1.jpg">
 <meta property="og:updated_time" content="2018-06-08T09:10:07.337Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java设计模式（一）：创建型模式">
 <meta name="twitter:description" content="参考链接：http://www.cnblogs.com/maowang1991/archive/2013/04/15/3023236.htmlhttp://blog.csdn.net/u013142781/article/details/50816245 一、设计模式分类总体来说设计模式分为三大类： 创建型模式，共五种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。 结构型模式，共七">
-<meta name="twitter:image" content="http://xraorao.top/images/java设计模式（一）：创建型模式-1.jpg">
+<meta name="twitter:image" content="https://xiongraorao.github.io/images/java设计模式（一）：创建型模式-1.jpg">
 
 
 
@@ -162,7 +162,7 @@
 
 
 
-  <link rel="canonical" href="http://xraorao.top/2017/04/07/java设计模式（一）：创建型模式/"/>
+  <link rel="canonical" href="https://xiongraorao.github.io/2017/04/07/java设计模式（一）：创建型模式/"/>
 
 
 
@@ -236,7 +236,7 @@
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta custom-logo">
     
 
     <div class="custom-logo-site-title">
@@ -323,14 +323,6 @@
           <li class="menu-item menu-item-sitemap">
     <a href="/sitemap.xml" rel="section">
       <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />站点地图</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-commonweal">
-    <a href="/404/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />公益 404</a>
   </li>
 
       
@@ -425,11 +417,11 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xraorao.top/2017/04/07/java设计模式（一）：创建型模式/">
+    <link itemprop="mainEntityOfPage" href="https://xiongraorao.github.io/2017/04/07/java设计模式（一）：创建型模式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiong Raorao">
-      <meta itemprop="description" content="blog web site for big data application, 大数据应用，人工智能，容器技术，java, go">
+      <meta itemprop="description" content="用我的知识改变世界">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
@@ -759,7 +751,7 @@
                 alt="Xiong Raorao" />
             
               <p class="site-author-name" itemprop="name">Xiong Raorao</p>
-              <p class="site-description motion-element" itemprop="description">blog web site for big data application, 大数据应用，人工智能，容器技术，java, go</p>
+              <p class="site-description motion-element" itemprop="description">用我的知识改变世界</p>
           </div>
 
           
@@ -1636,9 +1628,25 @@
             });
           } else {
             
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
-              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
+              var newcounter = new Counter();
+              /* Set ACL */
+              var acl = new AV.ACL();
+              acl.setPublicReadAccess(true);
+              acl.setPublicWriteAccess(true);
+              newcounter.setACL(acl);
+              /* End Set ACL */
+              newcounter.set("title", title);
+              newcounter.set("url", url);
+              newcounter.set("time", 1);
+              newcounter.save(null, {
+                success: function(newcounter) {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                },
+                error: function(newcounter, error) {
+                  console.log('Failed to create');
+                }
+              });
             
           }
         },
