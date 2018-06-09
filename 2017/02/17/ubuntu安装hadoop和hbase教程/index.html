@@ -141,7 +141,7 @@
 
 
   <meta name="description" content="ubuntu安装hadoop和hbase教程创建hadoop用户和hadoop用户组sudo addgroup hadoop sudo adduser -ingourp hadoop hadoop sudo gedit /etc/sudoers 最后显示结果如下： 安装ssh免密码登录见此文 配置java环境见此文 安装hadoop2 官网下载： http://mirror.bit.edu.cn/">
-<meta name="keywords" content="hadoop,hbase,ubuntu,教程,大数据">
+<meta name="keywords" content="hbase,hadoop,ubuntu,教程,大数据">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ubuntu安装hadoop和hbase教程">
 <meta property="og:url" content="http://xraorao.top/2017/02/17/ubuntu安装hadoop和hbase教程/index.html">
@@ -219,6 +219,9 @@
   </style>
 </noscript>
 
+  
+    <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -245,7 +248,7 @@
     </div>
     
       
-        <p class="site-subtitle">stay hungry, stay foolish!</p>
+        <h1 class="site-subtitle" itemprop="description">stay hungry, stay foolish!</h1>
       
     
   </div>
@@ -439,10 +442,10 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ubuntu安装hadoop和hbase教程
+          <h2 class="post-title" itemprop="name headline">ubuntu安装hadoop和hbase教程
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -529,6 +532,17 @@
 
           
           
+             <span id="/2017/02/17/ubuntu安装hadoop和hbase教程/" class="leancloud_visitors" data-flag-title="ubuntu安装hadoop和hbase教程">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
@@ -558,8 +572,8 @@ sudo gedit /etc/sudoers
 <h3 id="安装hadoop2"><a href="#安装hadoop2" class="headerlink" title="安装hadoop2"></a>安装hadoop2</h3><ul>
 <li>官网下载： <a href="http://mirror.bit.edu.cn/apache/hadoop/common/" target="_blank" rel="noopener">http://mirror.bit.edu.cn/apache/hadoop/common/</a></li>
 <li><p>安装,修改文件拥有者为hadoop,修改权限为774</p>
-<pre><code>sudo chown -R hadoop:hadoop hadoop-install-path
-sudo chmod 774 hadoop-install-path
+<pre><code>  sudo chown -R hadoop:hadoop hadoop-install-path
+  sudo chmod 774 hadoop-install-path
 </code></pre></li>
 <li>配置环境变量</li>
 </ul>
@@ -575,11 +589,11 @@ sudo chmod 774 hadoop-install-path
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.replication<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">value</span>&gt;</span>1<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.namenode.name.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">value</span>&gt;</span>file:/usr/local/hadoop/tmp/dfs/name<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.datanode.data.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">value</span>&gt;</span>file:/usr/local/hadoop/tmp/dfs/data<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>执行NameNode初始化</p>
-<pre><code>./bin/hdfs namenode -format
+<pre><code>  ./bin/hdfs namenode -format
 </code></pre><p>成功的话，会看到 “successfully formatted” 和 “Exitting with status 0” 的提示，若为 “Exitting with status 1” 则是出错。</p>
 </li>
 <li><p>开启NameNode 和 DataNode守护进程</p>
-<pre><code>./sbin/start-dfs.sh
+<pre><code>  ./sbin/start-dfs.sh
 </code></pre><p>通过$jps命令可以查看是否启动相关进程（NameNode，DataNode,SecondaryNameNode）</p>
 </li>
 </ul>
@@ -594,21 +608,21 @@ sudo chmod 774 hadoop-install-path
 <p>启动Yarn来管理资源，负责任务调度</p>
 <ul>
 <li><p>修改配置文件 mapred-site.xml</p>
-<pre><code>mv ./etc/hadoop/mapred­site.xml.template ./etc/hadoop/mapred­site.xml
+<pre><code>  mv ./etc/hadoop/mapred­site.xml.template ./etc/hadoop/mapred­site.xml
 </code></pre><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.framework.name<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>yarn<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>修改配置文件 yarn-site.xml</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.aux­services<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>mapreduce_shuffle<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>启动yarn</p>
-<pre><code>./sbin/start­-yarn.sh # 启动YARN
-./sbin/mr­jobhistory­daemon.sh start historyserver # 开启历史服务器，才能在Web中查看任务运行情况
+<pre><code>  ./sbin/start­-yarn.sh # 启动YARN
+  ./sbin/mr­jobhistory­daemon.sh start historyserver # 开启历史服务器，才能在Web中查看任务运行情况
 </code></pre></li>
 </ul>
 <p>开启jps，出现NodeManager和ResourceManager两个后台进程，通过web界面<a href="http://localhost:8088/cluster" target="_blank" rel="noopener">ResourceManager</a> 可以查看任务运行情况</p>
 <ul>
-<li>关闭yarn<pre><code>./sbin/stop-yarn.sh
-./sbin/mr­jobhistory­daemon.sh stop historyserver
+<li>关闭yarn<pre><code>  ./sbin/stop-yarn.sh
+  ./sbin/mr­jobhistory­daemon.sh stop historyserver
 </code></pre></li>
 </ul>
 <p><strong>注意:不启动 YARN 需重命名 mapred­site.xml如果不想启动 YARN，务必把配置文件 mapred­site.xml 重命名，改成 mapred­site.xml.template，需要用时改回来就行。否则在该配置文件存在，而未开启 YARN 的情况下，运行程序会提示 “Retrying connect to server: 0.0.0.0/0.0.0.0:8032” 的错误，这也是为何该配置文件初始文件名为 mapred­site.xml.template。</strong></p>
@@ -632,9 +646,9 @@ sudo chmod 774 hadoop-install-path
       
         <div class="post-tags">
           
-            <a href="/tags/hadoop/" rel="tag"># hadoop</a>
-          
             <a href="/tags/hbase/" rel="tag"># hbase</a>
+          
+            <a href="/tags/hadoop/" rel="tag"># hadoop</a>
           
             <a href="/tags/ubuntu/" rel="tag"># ubuntu</a>
           
@@ -967,32 +981,32 @@ sudo chmod 774 hadoop-install-path
             <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/xiongraorao" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  <a href="https://github.com/xiongraorao" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="mailto:xiongraorao@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  <a href="mailto:xiongraorao@gmail.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://plus.google.com/109510977952432239538" target="_blank" title="Google"><i class="fa fa-fw fa-google"></i>Google</a>
+                  <a href="https://plus.google.com/109510977952432239538" target="_blank" title="Google" rel="external nofollow"><i class="fa fa-fw fa-google"></i>Google</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://weibo.com/u/3605456425" target="_blank" title="微博"><i class="fa fa-fw fa-weibo"></i>微博</a>
+                  <a href="https://weibo.com/u/3605456425" target="_blank" title="微博" rel="external nofollow"><i class="fa fa-fw fa-weibo"></i>微博</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://www.douban.com/people/139800623/" target="_blank" title="豆瓣"><i class="fa fa-fw fa-globe"></i>豆瓣</a>
+                  <a href="https://www.douban.com/people/139800623/" target="_blank" title="豆瓣" rel="external nofollow"><i class="fa fa-fw fa-globe"></i>豆瓣</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://www.zhihu.com/people/xiong-ge-78/" target="_blank" title="知乎"><i class="fa fa-fw fa-globe"></i>知乎</a>
+                  <a href="https://www.zhihu.com/people/xiong-ge-78/" target="_blank" title="知乎" rel="external nofollow"><i class="fa fa-fw fa-globe"></i>知乎</a>
                   
                 </span>
               
@@ -1055,9 +1069,11 @@ sudo chmod 774 hadoop-install-path
 </div>
 
 
+  
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
 
@@ -1065,7 +1081,7 @@ sudo chmod 774 hadoop-install-path
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.3.0</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" rel="external nofollow" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.3.0</div>
 
 
 
@@ -1115,6 +1131,8 @@ sudo chmod 774 hadoop-install-path
 
 
 
+  
+
 
 
 
@@ -1142,6 +1160,11 @@ sudo chmod 774 hadoop-install-path
   
   
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
   
@@ -1573,6 +1596,102 @@ sudo chmod 774 hadoop-install-path
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("Nobvpla4KCLkSofVkh4r7KQt-gzGzoHsz", "vmdldWBq3N8oOWIbDrajVMFE");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            
+            counter.save(null, {
+              success: function(counter) {
+                
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
+              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
+            
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 

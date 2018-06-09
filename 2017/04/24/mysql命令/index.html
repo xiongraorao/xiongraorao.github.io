@@ -217,6 +217,9 @@
   </style>
 </noscript>
 
+  
+    <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -243,7 +246,7 @@
     </div>
     
       
-        <p class="site-subtitle">stay hungry, stay foolish!</p>
+        <h1 class="site-subtitle" itemprop="description">stay hungry, stay foolish!</h1>
       
     
   </div>
@@ -437,10 +440,10 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">mysql命令
+          <h2 class="post-title" itemprop="name headline">mysql命令
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -527,6 +530,17 @@
 
           
           
+             <span id="/2017/04/24/mysql命令/" class="leancloud_visitors" data-flag-title="mysql命令">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
@@ -550,13 +564,13 @@
         <h2 id="1、mysql的安装"><a href="#1、mysql的安装" class="headerlink" title="1、mysql的安装"></a>1、mysql的安装</h2><p><a href="https://www.cnblogs.com/xinjing-jingxin/p/8025805.html" target="_blank" rel="noopener">linux下mysql安装-博客园</a></p>
 <h2 id="2、用户管理"><a href="#2、用户管理" class="headerlink" title="2、用户管理"></a>2、用户管理</h2><p>启动服务：<br>net start mysqld<br>链接数据库：<br>mysql -uroot -p<br>修改root用户密码：<br>mysqladmin -u root password “new_password”;</p>
 <h3 id="2-1新建用户"><a href="#2-1新建用户" class="headerlink" title="2.1新建用户"></a>2.1新建用户</h3><p>mysql -uroot -p //登录mysql<br>mysql&gt; insert into mysql.user(Host,User,Password) values(“localhost”,”test”,password(“1234”));<br>//localhost表示只能在本机登录，改为”%”则可以远程登录</p>
-<p>或者：<br>mysql&gt; CREATE USER ‘username‘@’host’ IDENTIFIED BY ‘password’;</p>
-<h3 id="2-2用户授权"><a href="#2-2用户授权" class="headerlink" title="2.2用户授权"></a>2.2用户授权</h3><p>grant 权限 on 数据库.* to ‘username‘@’host’ identified by ‘password’<br>权限：select, update, all, delete, create, drop</p>
+<p>或者：<br>mysql&gt; CREATE USER ‘username’@’host’ IDENTIFIED BY ‘password’;</p>
+<h3 id="2-2用户授权"><a href="#2-2用户授权" class="headerlink" title="2.2用户授权"></a>2.2用户授权</h3><p>grant 权限 on 数据库.* to ‘username’@’host’ identified by ‘password’<br>权限：select, update, all, delete, create, drop</p>
 <h3 id="2-3删除用户"><a href="#2-3删除用户" class="headerlink" title="2.3删除用户"></a>2.3删除用户</h3><p>Delete FROM user Where User=’test’ and Host=’localhost’;<br>flush privileges;<br>drop database 用户数据库名;<br>drop user 用户名@’%’<br>drop user 用户名@‘localhost’</p>
 <h3 id="2-4修改用户密码"><a href="#2-4修改用户密码" class="headerlink" title="2.4修改用户密码"></a>2.4修改用户密码</h3><p>mysql&gt;update mysql.user set password=password(‘新密码’) where User=”test” and Host=”localhost”;<br>mysql&gt;flush privileges;</p>
 <p>在5.7版本的mysql中，没有“password”这个字段，因此需要使用“authentication_string”这个字段来替换“password”字段</p>
-<p>或者采用以下命令：ALTER USER ‘root‘@’localhost’IDENTIFIED<br> BY ‘<strong><em>**</em></strong>‘</p>
-<h3 id="2-5撤销用户权限"><a href="#2-5撤销用户权限" class="headerlink" title="2.5撤销用户权限"></a>2.5撤销用户权限</h3><p>REVOKE 权限 ON databasename.tablename FROM ‘username‘@’host’;</p>
+<p>或者采用以下命令：ALTER USER ‘root’@’localhost’IDENTIFIED<br> BY ‘<strong><em>**</em></strong>‘</p>
+<h3 id="2-5撤销用户权限"><a href="#2-5撤销用户权限" class="headerlink" title="2.5撤销用户权限"></a>2.5撤销用户权限</h3><p>REVOKE 权限 ON databasename.tablename FROM ‘username’@’host’;</p>
 <h3 id="2-6常用命令"><a href="#2-6常用命令" class="headerlink" title="2.6常用命令"></a>2.6常用命令</h3><p>show databases;//列出所有数据库<br>use ‘databasename’;//切换数据库<br>show tables;//列出所有表<br>describe tablename;//显示数据表结构<br>drop database 数据库名;//删除数据库<br>drop database 表名;//删除表</p>
 <h3 id="2-7重置root密码"><a href="#2-7重置root密码" class="headerlink" title="2.7重置root密码"></a>2.7重置root密码</h3><ul>
 <li>修改安装目录下的my.ini文件，添加一行：skip-grant-tables</li>
@@ -571,7 +585,7 @@
 <h2 id="3-常见问题"><a href="#3-常见问题" class="headerlink" title="3.常见问题"></a>3.常见问题</h2><ul>
 <li><p>远程连接问题：</p>
 <blockquote>
-<p>解决方案如下：<br>1、授权<br>mysql&gt;grant all privileges on <em>.</em>  to  ‘root‘@’%’  identified by ‘youpassword’  with grant option;<br>mysql&gt;flush privileges;<br>2、修改/etc/mysql/my.conf<br>找到bind-address = 127.0.0.1这一行,注释即可</p>
+<p>解决方案如下：<br>1、授权<br>mysql&gt;grant all privileges on <em>.</em>  to  ‘root’@’%’  identified by ‘youpassword’  with grant option;<br>mysql&gt;flush privileges;<br>2、修改/etc/mysql/my.conf<br>找到bind-address = 127.0.0.1这一行,注释即可</p>
 </blockquote>
 </li>
 <li><p>重启mysql服务</p>
@@ -927,32 +941,32 @@
             <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/xiongraorao" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  <a href="https://github.com/xiongraorao" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="mailto:xiongraorao@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  <a href="mailto:xiongraorao@gmail.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://plus.google.com/109510977952432239538" target="_blank" title="Google"><i class="fa fa-fw fa-google"></i>Google</a>
+                  <a href="https://plus.google.com/109510977952432239538" target="_blank" title="Google" rel="external nofollow"><i class="fa fa-fw fa-google"></i>Google</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://weibo.com/u/3605456425" target="_blank" title="微博"><i class="fa fa-fw fa-weibo"></i>微博</a>
+                  <a href="https://weibo.com/u/3605456425" target="_blank" title="微博" rel="external nofollow"><i class="fa fa-fw fa-weibo"></i>微博</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://www.douban.com/people/139800623/" target="_blank" title="豆瓣"><i class="fa fa-fw fa-globe"></i>豆瓣</a>
+                  <a href="https://www.douban.com/people/139800623/" target="_blank" title="豆瓣" rel="external nofollow"><i class="fa fa-fw fa-globe"></i>豆瓣</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://www.zhihu.com/people/xiong-ge-78/" target="_blank" title="知乎"><i class="fa fa-fw fa-globe"></i>知乎</a>
+                  <a href="https://www.zhihu.com/people/xiong-ge-78/" target="_blank" title="知乎" rel="external nofollow"><i class="fa fa-fw fa-globe"></i>知乎</a>
                   
                 </span>
               
@@ -1015,9 +1029,11 @@
 </div>
 
 
+  
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
 
@@ -1025,7 +1041,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.3.0</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" rel="external nofollow" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.3.0</div>
 
 
 
@@ -1075,6 +1091,8 @@
 
 
 
+  
+
 
 
 
@@ -1102,6 +1120,11 @@
   
   
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
   
@@ -1533,6 +1556,102 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("Nobvpla4KCLkSofVkh4r7KQt-gzGzoHsz", "vmdldWBq3N8oOWIbDrajVMFE");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            
+            counter.save(null, {
+              success: function(counter) {
+                
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
+              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
+            
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 

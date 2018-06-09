@@ -217,6 +217,9 @@
   </style>
 </noscript>
 
+  
+    <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -243,7 +246,7 @@
     </div>
     
       
-        <p class="site-subtitle">stay hungry, stay foolish!</p>
+        <h1 class="site-subtitle" itemprop="description">stay hungry, stay foolish!</h1>
       
     
   </div>
@@ -437,10 +440,10 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[原]Java学习笔记（一）
+          <h2 class="post-title" itemprop="name headline">[原]Java学习笔记（一）
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -527,6 +530,17 @@
 
           
           
+             <span id="/2016/08/23/原-Java学习笔记（一）/" class="leancloud_visitors" data-flag-title="[原]Java学习笔记（一）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
@@ -552,7 +566,8 @@
 </blockquote>
 <h3 id="java的参数传递"><a href="#java的参数传递" class="headerlink" title="java的参数传递"></a><strong>java的参数传递</strong></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.test3;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestReference</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		A a1=<span class="keyword">new</span> A(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">		B b=<span class="keyword">new</span> B(<span class="number">11</span>,<span class="number">22</span>);</span><br><span class="line">		System.out.println(a1.b);</span><br><span class="line">		a1.test(b);</span><br><span class="line">		System.out.println(a1.b); <span class="comment">//java中是值传递，输出都是2</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a,b;</span><br><span class="line">	A(<span class="keyword">int</span> a,<span class="keyword">int</span> b)&#123;</span><br><span class="line">		<span class="keyword">this</span>.a=a;</span><br><span class="line">		<span class="keyword">this</span>.b=b;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">(B b)</span></span>&#123;</span><br><span class="line">		b.a=a;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a,b;</span><br><span class="line">	B(<span class="keyword">int</span> a,<span class="keyword">int</span> b)&#123;</span><br><span class="line">		<span class="keyword">this</span>.a=a;</span><br><span class="line">		<span class="keyword">this</span>.b=b;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setA</span><span class="params">(<span class="keyword">int</span> a)</span></span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.a=a;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>从上面的代码看出，java的对象引用的传递和C++的不同，java的引用传递相当于值传递，C++的引用传递相当于传递的是地址。</p>
-<h3 id="java类的引用"><a href="#java类的引用" class="headerlink" title="java类的引用"></a><strong>java类的引用</strong></h3><h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a><strong>修饰符</strong></h3><table>
+<h3 id="java类的引用"><a href="#java类的引用" class="headerlink" title="java类的引用"></a><strong>java类的引用</strong></h3><h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a><strong>修饰符</strong></h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th></th>
@@ -624,6 +639,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 
       
     </div>
@@ -973,32 +989,32 @@
             <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/xiongraorao" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  <a href="https://github.com/xiongraorao" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="mailto:xiongraorao@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  <a href="mailto:xiongraorao@gmail.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://plus.google.com/109510977952432239538" target="_blank" title="Google"><i class="fa fa-fw fa-google"></i>Google</a>
+                  <a href="https://plus.google.com/109510977952432239538" target="_blank" title="Google" rel="external nofollow"><i class="fa fa-fw fa-google"></i>Google</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://weibo.com/u/3605456425" target="_blank" title="微博"><i class="fa fa-fw fa-weibo"></i>微博</a>
+                  <a href="https://weibo.com/u/3605456425" target="_blank" title="微博" rel="external nofollow"><i class="fa fa-fw fa-weibo"></i>微博</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://www.douban.com/people/139800623/" target="_blank" title="豆瓣"><i class="fa fa-fw fa-globe"></i>豆瓣</a>
+                  <a href="https://www.douban.com/people/139800623/" target="_blank" title="豆瓣" rel="external nofollow"><i class="fa fa-fw fa-globe"></i>豆瓣</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://www.zhihu.com/people/xiong-ge-78/" target="_blank" title="知乎"><i class="fa fa-fw fa-globe"></i>知乎</a>
+                  <a href="https://www.zhihu.com/people/xiong-ge-78/" target="_blank" title="知乎" rel="external nofollow"><i class="fa fa-fw fa-globe"></i>知乎</a>
                   
                 </span>
               
@@ -1061,9 +1077,11 @@
 </div>
 
 
+  
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
 
@@ -1071,7 +1089,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.3.0</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" rel="external nofollow" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.3.0</div>
 
 
 
@@ -1121,6 +1139,8 @@
 
 
 
+  
+
 
 
 
@@ -1148,6 +1168,11 @@
   
   
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
   
@@ -1579,6 +1604,102 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("Nobvpla4KCLkSofVkh4r7KQt-gzGzoHsz", "vmdldWBq3N8oOWIbDrajVMFE");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            
+            counter.save(null, {
+              success: function(counter) {
+                
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
+              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
+            
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 

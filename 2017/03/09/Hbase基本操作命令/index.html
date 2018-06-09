@@ -217,6 +217,9 @@
   </style>
 </noscript>
 
+  
+    <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -243,7 +246,7 @@
     </div>
     
       
-        <p class="site-subtitle">stay hungry, stay foolish!</p>
+        <h1 class="site-subtitle" itemprop="description">stay hungry, stay foolish!</h1>
       
     
   </div>
@@ -437,10 +440,10 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hbase基本操作命令
+          <h2 class="post-title" itemprop="name headline">Hbase基本操作命令
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -527,6 +530,17 @@
 
           
           
+             <span id="/2017/03/09/Hbase基本操作命令/" class="leancloud_visitors" data-flag-title="Hbase基本操作命令">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
@@ -560,26 +574,26 @@
 <li><p>其它的基本命令：describe ‘testtable’（查看表结构），alert 修改表结构，list 列出所有表。</p>
 </li>
 <li><p>查询前10条数据:</p>
-<pre><code>scan&apos;testtable&apos;,{COLUMNS=&gt;&apos;info&apos;,LIMIT=&gt;10,STARTROW=&gt;&apos;666632331200000020160305&apos;,STOPROW=&gt;&apos;666632331200000020160308&apos;}
+<pre><code>scan&#39;testtable&#39;,{COLUMNS=&gt;&#39;info&#39;,LIMIT=&gt;10,STARTROW=&gt;&#39;666632331200000020160305&#39;,STOPROW=&gt;&#39;666632331200000020160308&#39;}
 </code></pre></li>
 </ul>
 <h2 id="分区合并"><a href="#分区合并" class="headerlink" title="分区合并"></a>分区合并</h2><p>合并两个预分区，合并预分区要提供该区encode值，该值在16010hbase管理web可查</p>
-<pre><code>merge_region &apos;region1的encode值&apos;,&apos;region2的encode值&apos;
+<pre><code>merge_region &#39;region1的encode值&#39;,&#39;region2的encode值&#39;
 </code></pre><h2 id="手动触发major-compact动作"><a href="#手动触发major-compact动作" class="headerlink" title="手动触发major_compact动作"></a>手动触发major_compact动作</h2><p>cd /opt/hbase-1.2.1/bin<br>./hbase shell<br>major_compact ‘table’<br>quit</p>
 <h2 id="手动触发flush动作"><a href="#手动触发flush动作" class="headerlink" title="手动触发flush动作"></a>手动触发flush动作</h2><p>cd /opt/hbase-1.2.1/bin<br>./hbase shell<br>flush ‘table1’<br>flush ‘table2’<br>quit</p>
 <h2 id="每次hbase启动，最好设置一下参数，让hbase区自动均衡"><a href="#每次hbase启动，最好设置一下参数，让hbase区自动均衡" class="headerlink" title="每次hbase启动，最好设置一下参数，让hbase区自动均衡"></a>每次hbase启动，最好设置一下参数，让hbase区自动均衡</h2><p>cd /opt/hbase-1.2.1/bin<br>./hbase shell<br>balance_switch true</p>
 <h1 id="二、日常维护的命令"><a href="#二、日常维护的命令" class="headerlink" title="二、日常维护的命令"></a>二、日常维护的命令</h1><p>1，major_compact ‘testtable’，通常生产环境会关闭自动major_compact(配置文件中hbase.hregion.majorcompaction设为0)，选择一个晚上用户少的时间窗口手工major_compact，如果hbase更新不是太频繁，可以一个星期对所有表做一次major_compact，这个可以在做完一次major_compact后，观看所有的storefile数量，如果storefile数量增加到major_compact后的storefile的近二倍时，可以对所有表做一次major_compact，时间比较长，操作尽量避免高锋期。</p>
 <p>2，flush ‘testtable’，将所有memstore刷新到hdfs，通常如果发现regionserver的内存使用过大，造成该机的regionserver很多线程block，可以执行一下flush操作，这个操作会造成hbase的storefile数量剧增，应尽量避免这个操作，还有一种情况，在hbase进行迁移的时候，如果选择拷贝文件方式，可以先停写入，然后flush所有表，拷贝文件。</p>
 <p>3，balance_switch true或者balance_switch flase，配置master是否执行平衡各个regionserver的region数量，当我们需要维护或者重启一个regionserver时，会关闭balancer，这样就使得region在regionserver上的分布不均，这个时候需要手工的开启balance。</p>
-<h1 id="三、重启一个regionserver"><a href="#三、重启一个regionserver" class="headerlink" title="三、重启一个regionserver"></a>三、重启一个regionserver</h1><p>bin/graceful_stop.sh –restart –reload –debug nodename</p>
+<h1 id="三、重启一个regionserver"><a href="#三、重启一个regionserver" class="headerlink" title="三、重启一个regionserver"></a>三、重启一个regionserver</h1><p>bin/graceful_stop.sh —restart —reload —debug nodename</p>
 <p>这个操作是平滑的重启regionserver进程，对服务不会有影响，他会先将需要重启的regionserver上面的所有region迁移到其它的服务器，然后重启，最后又会将之前的region迁移回来，但我们修改一个配置时，可以用这种方式重启每一台机子，这个命令会关闭balancer，所以最后我们要在hbase shell里面执行一下balance_switch true，对于hbase regionserver重启，不要直接kill进程，这样会造成在zookeeper.session.timeout这个时间长的中断，也不要通过bin/hbase-daemon.sh stop regionserver去重启，如果运气不太好，-ROOT-或者.META.表在上面的话，所有的请求会全部失败。</p>
-<h1 id="四、关闭下线一台regionserver"><a href="#四、关闭下线一台regionserver" class="headerlink" title="四、关闭下线一台regionserver"></a>四、关闭下线一台regionserver</h1><p>bin/graceful_stop.sh –stop  nodename</p>
+<h1 id="四、关闭下线一台regionserver"><a href="#四、关闭下线一台regionserver" class="headerlink" title="四、关闭下线一台regionserver"></a>四、关闭下线一台regionserver</h1><p>bin/graceful_stop.sh —stop  nodename</p>
 <p>和上面一样，系统会在关闭之前迁移所有region，然后stop进程，同样最后我们要手工balance_switch true，开启master的region均衡。</p>
 <h1 id="五、检查region是否正常以及修复"><a href="#五、检查region是否正常以及修复" class="headerlink" title="五、检查region是否正常以及修复"></a>五、检查region是否正常以及修复</h1><p>bin/hbase hbck  (检查)</p>
 <p>bin/hbase hbck -fix  （修复）</p>
 <p>会返回所有的region是否正常挂载，如没有正常挂载可以使用下一条命令修复，如果还是不能修复，那需要看日志为什么失败，手工处理。</p>
 <h1 id="六、hbase的迁移"><a href="#六、hbase的迁移" class="headerlink" title="六、hbase的迁移"></a>六、hbase的迁移</h1><p>1，copytable方式</p>
-<p>bin/hbase org.apache.hadoop.hbase.mapreduce.CopyTable –peer.adr=zookeeper1,zookeeper2,zookeeper3:/hbase ‘testtable’</p>
+<p>bin/hbase org.apache.hadoop.hbase.mapreduce.CopyTable —peer.adr=zookeeper1,zookeeper2,zookeeper3:/hbase ‘testtable’</p>
 <p>目前0.92之前的版本的不支持多版本的复制，0.94已经支持多个版本的复制。当然这个操作需要添加hbase目录里的conf/mapred-site.xml，可以复制hadoop的过来。</p>
 <p>2，Export/Import</p>
 <p>bin/hbase org.apache.hadoop.hbase.mapreduce.Export testtable /user/testtable [versions] [starttime] [stoptime]</p>
@@ -939,32 +953,32 @@
             <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/xiongraorao" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  <a href="https://github.com/xiongraorao" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="mailto:xiongraorao@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  <a href="mailto:xiongraorao@gmail.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://plus.google.com/109510977952432239538" target="_blank" title="Google"><i class="fa fa-fw fa-google"></i>Google</a>
+                  <a href="https://plus.google.com/109510977952432239538" target="_blank" title="Google" rel="external nofollow"><i class="fa fa-fw fa-google"></i>Google</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://weibo.com/u/3605456425" target="_blank" title="微博"><i class="fa fa-fw fa-weibo"></i>微博</a>
+                  <a href="https://weibo.com/u/3605456425" target="_blank" title="微博" rel="external nofollow"><i class="fa fa-fw fa-weibo"></i>微博</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://www.douban.com/people/139800623/" target="_blank" title="豆瓣"><i class="fa fa-fw fa-globe"></i>豆瓣</a>
+                  <a href="https://www.douban.com/people/139800623/" target="_blank" title="豆瓣" rel="external nofollow"><i class="fa fa-fw fa-globe"></i>豆瓣</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://www.zhihu.com/people/xiong-ge-78/" target="_blank" title="知乎"><i class="fa fa-fw fa-globe"></i>知乎</a>
+                  <a href="https://www.zhihu.com/people/xiong-ge-78/" target="_blank" title="知乎" rel="external nofollow"><i class="fa fa-fw fa-globe"></i>知乎</a>
                   
                 </span>
               
@@ -1027,9 +1041,11 @@
 </div>
 
 
+  
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
 
@@ -1037,7 +1053,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.3.0</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" rel="external nofollow" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.3.0</div>
 
 
 
@@ -1087,6 +1103,8 @@
 
 
 
+  
+
 
 
 
@@ -1114,6 +1132,11 @@
   
   
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
   
@@ -1545,6 +1568,102 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("Nobvpla4KCLkSofVkh4r7KQt-gzGzoHsz", "vmdldWBq3N8oOWIbDrajVMFE");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            
+            counter.save(null, {
+              success: function(counter) {
+                
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
+              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
+            
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 

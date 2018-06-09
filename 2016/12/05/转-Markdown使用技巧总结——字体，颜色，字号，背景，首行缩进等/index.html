@@ -219,6 +219,9 @@
   </style>
 </noscript>
 
+  
+    <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -245,7 +248,7 @@
     </div>
     
       
-        <p class="site-subtitle">stay hungry, stay foolish!</p>
+        <h1 class="site-subtitle" itemprop="description">stay hungry, stay foolish!</h1>
       
     
   </div>
@@ -439,10 +442,10 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[转]Markdown使用技巧总结——字体，颜色，字号，背景，首行缩进等
+          <h2 class="post-title" itemprop="name headline">[转]Markdown使用技巧总结——字体，颜色，字号，背景，首行缩进等
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -529,6 +532,17 @@
 
           
           
+             <span id="/2016/12/05/转-Markdown使用技巧总结——字体，颜色，字号，背景，首行缩进等/" class="leancloud_visitors" data-flag-title="[转]Markdown使用技巧总结——字体，颜色，字号，背景，首行缩进等">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
@@ -554,7 +568,14 @@
 <p>方法1: 连续两个以上空格+回车<br>方法2：使用html语言换行标签：<br><br>首行缩进两个字符：(每个表示一个空格，连续使用两个即可）</p>
 <p>&ensp; 半角的空格<br>&emsp; 全角的空格<br>字体、字号与颜色:</p>
 <p>  Markdown是一种可以使用普通文本编辑器编写的标记语言，通过类似HTML的标记语法，它可以使普通文本内容具有一定的格式。但是它本身是不支持修改字体、字号与颜色等功能的！<br>  CSDN-markdown编辑器是其衍生版本，扩展了Markdown的功能（如表格、脚注、内嵌HTML等等）！对，就是内嵌HTML，接下来要讲的功能就需要使用内嵌HTML的方法来实现。</p>
-<font color="#ff0000">字体，字号和颜色编辑</font>如下代码<br><br><font face="黑体">我是黑体字</font><br><font face="微软雅黑">我是微软雅黑</font><br><font face="STCAIYUN">我是华文彩云</font><br><font color="#0099ff" size="7" face="黑体">color=#0099ff size=72 face=”黑体”</font><br><font color="#00ffff" size="72">color=#00ffff</font><br><font color="gray" size="72">color=gray</font>
+<font color="#ff0000">字体，字号和颜色编辑</font>如下代码
+
+<font face="黑体">我是黑体字</font>
+<font face="微软雅黑">我是微软雅黑</font>
+<font face="STCAIYUN">我是华文彩云</font>
+<font color="#0099ff" size="7" face="黑体">color=#0099ff size=72 face="黑体"</font>
+<font color="#00ffff" size="72">color=#00ffff</font>
+<font color="gray" size="72">color=gray</font>
 
 <p>Size：规定文本的尺寸大小。可能的值：从 1 到 7 的数字。浏览器默认值是 3<br>具体颜色分类及标记请参照：各种颜色</p>
 <p>背景色:<br>Markdown本身不支持背景色设置，需要采用内置html的方式实现：借助 table, tr, td 等表格标签的 bgcolor 属性来实现背景色的功能。举例如下：</p>
@@ -562,15 +583,15 @@
 <p>链接：链接文字都是用 [方括号] 来标记,在方块括号后面紧接着圆括号并插入网址链接即可:可参照<br><a href="http://example.NET/" target="_blank" rel="noopener">This link</a> has no title attribute.</p>
 <p>代码块：</p>
 <p>代码块：用2个以上TAB键起始的段落，会被认为是代码块（效果如下）：</p>
-<pre><code>struct {
-  int year;
-  int month;
-  int day;
- }bdate;
+<pre><code>    struct {
+      int year;
+      int month;
+      int day;
+     }bdate;
 </code></pre><p>如果在一个行内需要引用代码，只要用反引号`引起来就好(Esc健）</p>
 <p>代码块与语法高亮：在需要高亮的代码块的前一行及后一行使用三个反引号“`”，同时第一行反引号后面表面代码块所使用的语言<br>插入互联网上图片：</p>
 <p><img src="http://img3.douban.com/mpic/s1108264.jpg" alt="这里写图片描述"></p>
-<p>使用LaTex数学公式:<br>行内公式：使用两个”$”符号引用公式: $公式$<br>行间公式：使用两对“$$”符号引用公式： $$公式$$ </p>
+<p>使用LaTex数学公式:<br>行内公式：使用两个”$”符号引用公式: $公式$<br>行间公式：使用两对“<script type="math/tex">”符号引用公式：</script>公式$$ </p>
 
       
     </div>
@@ -911,32 +932,32 @@
             <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/xiongraorao" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  <a href="https://github.com/xiongraorao" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="mailto:xiongraorao@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  <a href="mailto:xiongraorao@gmail.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://plus.google.com/109510977952432239538" target="_blank" title="Google"><i class="fa fa-fw fa-google"></i>Google</a>
+                  <a href="https://plus.google.com/109510977952432239538" target="_blank" title="Google" rel="external nofollow"><i class="fa fa-fw fa-google"></i>Google</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://weibo.com/u/3605456425" target="_blank" title="微博"><i class="fa fa-fw fa-weibo"></i>微博</a>
+                  <a href="https://weibo.com/u/3605456425" target="_blank" title="微博" rel="external nofollow"><i class="fa fa-fw fa-weibo"></i>微博</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://www.douban.com/people/139800623/" target="_blank" title="豆瓣"><i class="fa fa-fw fa-globe"></i>豆瓣</a>
+                  <a href="https://www.douban.com/people/139800623/" target="_blank" title="豆瓣" rel="external nofollow"><i class="fa fa-fw fa-globe"></i>豆瓣</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://www.zhihu.com/people/xiong-ge-78/" target="_blank" title="知乎"><i class="fa fa-fw fa-globe"></i>知乎</a>
+                  <a href="https://www.zhihu.com/people/xiong-ge-78/" target="_blank" title="知乎" rel="external nofollow"><i class="fa fa-fw fa-globe"></i>知乎</a>
                   
                 </span>
               
@@ -983,9 +1004,11 @@
 </div>
 
 
+  
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
 
@@ -993,7 +1016,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.3.0</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" rel="external nofollow" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.3.0</div>
 
 
 
@@ -1043,6 +1066,8 @@
 
 
 
+  
+
 
 
 
@@ -1070,6 +1095,11 @@
   
   
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
   
@@ -1501,6 +1531,102 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("Nobvpla4KCLkSofVkh4r7KQt-gzGzoHsz", "vmdldWBq3N8oOWIbDrajVMFE");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            
+            counter.save(null, {
+              success: function(counter) {
+                
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
+              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
+            
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
