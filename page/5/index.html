@@ -175,6 +175,15 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120522271-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120522271-1');
+</script>
+
 
 
 
@@ -321,11 +330,42 @@
 
       
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
     </ul>
   
 
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -501,85 +541,18 @@
       
         
           
-            <h3 id="java的自动回收机制"><a href="#java的自动回收机制" class="headerlink" title="java的自动回收机制"></a><strong>java的自动回收机制</strong></h3><blockquote>
-<p>java拥有自动回收机制，也可以手动使用finalize()方法进行释放资源。</p>
-</blockquote>
-<h3 id="java的参数传递"><a href="#java的参数传递" class="headerlink" title="java的参数传递"></a><strong>java的参数传递</strong></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.test3;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestReference</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		A a1=<span class="keyword">new</span> A(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">		B b=<span class="keyword">new</span> B(<span class="number">11</span>,<span class="number">22</span>);</span><br><span class="line">		System.out.println(a1.b);</span><br><span class="line">		a1.test(b);</span><br><span class="line">		System.out.println(a1.b); <span class="comment">//java中是值传递，输出都是2</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a,b;</span><br><span class="line">	A(<span class="keyword">int</span> a,<span class="keyword">int</span> b)&#123;</span><br><span class="line">		<span class="keyword">this</span>.a=a;</span><br><span class="line">		<span class="keyword">this</span>.b=b;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">(B b)</span></span>&#123;</span><br><span class="line">		b.a=a;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a,b;</span><br><span class="line">	B(<span class="keyword">int</span> a,<span class="keyword">int</span> b)&#123;</span><br><span class="line">		<span class="keyword">this</span>.a=a;</span><br><span class="line">		<span class="keyword">this</span>.b=b;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setA</span><span class="params">(<span class="keyword">int</span> a)</span></span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.a=a;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>从上面的代码看出，java的对象引用的传递和C++的不同，java的引用传递相当于值传递，C++的引用传递相当于传递的是地址。</p>
-<h3 id="java类的引用"><a href="#java类的引用" class="headerlink" title="java类的引用"></a><strong>java类的引用</strong></h3><h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a><strong>修饰符</strong></h3><table>
-<thead>
-<tr>
-<th></th>
-<th style="text-align:center">类</th>
-<th style="text-align:center">成员变量</th>
-<th style="text-align:right">成员方法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>public</td>
-<td style="text-align:center">包外可见</td>
-<td style="text-align:center">包外可见</td>
-<td style="text-align:right">包外可见</td>
-</tr>
-<tr>
-<td>abstract</td>
-<td style="text-align:center">申明抽象类</td>
-<td style="text-align:center">X</td>
-<td style="text-align:right">抽象方法</td>
-</tr>
-<tr>
-<td>final</td>
-<td style="text-align:center">不能有子类</td>
-<td style="text-align:center">最终域修饰符</td>
-<td style="text-align:right">最终方法控制符</td>
-</tr>
-<tr>
-<td>static</td>
-<td style="text-align:center">X</td>
-<td style="text-align:center">静态域修饰符</td>
-<td style="text-align:right">静态方法控制符</td>
-</tr>
-<tr>
-<td>volatile</td>
-<td style="text-align:center">X</td>
-<td style="text-align:center">共享域修饰符</td>
-<td style="text-align:right">X</td>
-</tr>
-<tr>
-<td>transient</td>
-<td style="text-align:center">X</td>
-<td style="text-align:center">暂时性域修饰符</td>
-<td style="text-align:right">X</td>
-</tr>
-<tr>
-<td>private</td>
-<td style="text-align:center">X</td>
-<td style="text-align:center">类内调用</td>
-<td style="text-align:right">类内调用</td>
-</tr>
-<tr>
-<td>protected</td>
-<td style="text-align:center">X</td>
-<td style="text-align:center">父子类之间调用</td>
-<td style="text-align:right">父子类之间调用</td>
-</tr>
-<tr>
-<td>native</td>
-<td style="text-align:center">X</td>
-<td style="text-align:center">X</td>
-<td style="text-align:right">本地方法控制符</td>
-</tr>
-<tr>
-<td>synchronized</td>
-<td style="text-align:center">X</td>
-<td style="text-align:center">X</td>
-<td style="text-align:right">同步方法控制符</td>
-</tr>
-</tbody>
-</table>
+          java的自动回收机制
+java拥有自动回收机制，也可以手动使用finalize()方法进行释放资源。
 
-          
+java的参数传递123456789101112131415161718192021222324252627282930313233package com.test3;public class 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/08/23/原-Java学习笔记（一）/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -754,132 +727,24 @@
       
         
           
-            <h1 id="欢迎使用Markdown编辑器写博客"><a href="#欢迎使用Markdown编辑器写博客" class="headerlink" title="欢迎使用Markdown编辑器写博客"></a>欢迎使用Markdown编辑器写博客</h1><p>本Markdown编辑器使用<a href="https://github.com/benweet/stackedit" target="_blank" rel="noopener">StackEdit</a>修改而来，用它写博客，将会带来全新的体验哦：</p>
-<ul>
-<li><strong>Markdown和扩展Markdown简洁的语法</strong></li>
-<li><strong>代码块高亮</strong></li>
-<li><strong>图片链接和图片上传</strong></li>
-<li><strong><em>LaTex</em>数学公式</strong></li>
-<li><strong>UML序列图和流程图</strong></li>
-<li><strong>离线写博客</strong></li>
-<li><strong>导入导出Markdown文件</strong></li>
-<li><strong>丰富的快捷键</strong></li>
-</ul>
-<hr>
-<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
-<li>加粗    <code>Ctrl + B</code></li>
-<li>斜体    <code>Ctrl + I</code></li>
-<li>引用    <code>Ctrl + Q</code></li>
-<li>插入链接    <code>Ctrl + L</code></li>
-<li>插入代码    <code>Ctrl + K</code></li>
-<li>插入图片    <code>Ctrl + G</code></li>
-<li>提升标题    <code>Ctrl + H</code></li>
-<li>有序列表    <code>Ctrl + O</code></li>
-<li>无序列表    <code>Ctrl + U</code></li>
-<li>横线    <code>Ctrl + R</code></li>
-<li>撤销    <code>Ctrl + Z</code></li>
-<li>重做    <code>Ctrl + Y</code></li>
-</ul>
-<h2 id="Markdown及扩展"><a href="#Markdown及扩展" class="headerlink" title="Markdown及扩展"></a>Markdown及扩展</h2><blockquote>
-<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。    —— <a href="https://zh.wikipedia.org/wiki/Markdown" target="_blank"> [ 维基百科 ]</a></p>
-</blockquote>
-<p>使用简单的符号标识不同的标题，将某些文字标记为<strong>粗体</strong>或者<em>斜体</em>，创建一个<a href="http://www.csdn.net" target="_blank" rel="noopener">链接</a>等，详细语法参考帮助？。</p>
-<p>本编辑器支持 <strong>Markdown Extra</strong> , 　扩展了很多好用的功能。具体请参考<a href="https://github.com/jmcmanus/pagedown-extra" title="Pagedown Extra" target="_blank" rel="noopener">Github</a>.  </p>
-<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p><strong>Markdown　Extra</strong>　表格语法：</p>
-<table>
-<thead>
-<tr>
-<th>项目</th>
-<th>价格</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Computer</td>
-<td>$1600</td>
-</tr>
-<tr>
-<td>Phone</td>
-<td>$12</td>
-</tr>
-<tr>
-<td>Pipe</td>
-<td>$1</td>
-</tr>
-</tbody>
-</table>
-<p>可以使用冒号来定义对齐方式：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">项目</th>
-<th style="text-align:right">价格</th>
-<th style="text-align:center">数量</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">Computer</td>
-<td style="text-align:right">1600 元</td>
-<td style="text-align:center">5</td>
-</tr>
-<tr>
-<td style="text-align:left">Phone</td>
-<td style="text-align:right">12 元</td>
-<td style="text-align:center">12</td>
-</tr>
-<tr>
-<td style="text-align:left">Pipe</td>
-<td style="text-align:right">1 元</td>
-<td style="text-align:center">234</td>
-</tr>
-</tbody>
-</table>
-<p>###定义列表</p>
-<p><strong>Markdown　Extra</strong>　定义列表语法：<br>项目１<br>项目２<br>:   定义 A<br>:   定义 B</p>
-<p>项目３<br>:   定义 C</p>
-<p>:   定义 D</p>
-<pre><code>&gt; 定义D内容
-</code></pre><h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p>代码块语法遵循标准markdown代码，例如：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@requires_authorization</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">somefunc</span><span class="params">(param1=<span class="string">''</span>, param2=<span class="number">0</span>)</span>:</span></span><br><span class="line">    <span class="string">'''A docstring'''</span></span><br><span class="line">    <span class="keyword">if</span> param1 &gt; param2: <span class="comment"># interesting</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">'Greater'</span></span><br><span class="line">    <span class="keyword">return</span> (param2 - param1 + <span class="number">1</span>) <span class="keyword">or</span> <span class="keyword">None</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>message = <span class="string">'''interpreter</span></span><br><span class="line"><span class="string"><span class="meta">... </span>prompt'''</span></span><br></pre></td></tr></table></figure></p>
-<p>###脚注<br>生成一个脚注[^footnote].<br>  [^footnote]: 这里是 <strong>脚注</strong> 的 <em>内容</em>.</p>
-<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><p>用 <code>[TOC]</code>来生成目录：</p>
-<p>[TOC]</p>
-<h3 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h3><p>使用MathJax渲染<em>LaTex</em> 数学公式，详见<a href="http://math.stackexchange.com/" target="_blank" rel="noopener">math.stackexchange.com</a>.</p>
-<ul>
-<li>行内公式，数学公式为：$\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$。</li>
-<li>块级公式：</li>
-</ul>
-<p>$$    x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</p>
-<p>更多LaTex语法请参考 <a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="noopener">这儿</a>.</p>
-<h3 id="UML-图"><a href="#UML-图" class="headerlink" title="UML 图:"></a>UML 图:</h3><p>可以渲染序列图：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">张三-&gt;李四: 嘿，小四儿, 写博客了没?</span><br><span class="line">Note right of 李四: 李四愣了一下，说：</span><br><span class="line">李四--&gt;张三: 忙得吐血，哪有时间写。</span><br></pre></td></tr></table></figure>
-<p>或者流程图：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: 开始</span><br><span class="line">e=&gt;end: 结束</span><br><span class="line">op=&gt;operation: 我的操作</span><br><span class="line">cond=&gt;condition: 确认？</span><br><span class="line"></span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br></pre></td></tr></table></figure>
-<ul>
-<li>关于 <strong>序列图</strong> 语法，参考 <a href="http://bramp.github.io/js-sequence-diagrams/" target="_blank" rel="noopener">这儿</a>,</li>
-<li>关于 <strong>流程图</strong> 语法，参考 <a href="http://adrai.github.io/flowchart.js/" target="_blank" rel="noopener">这儿</a>.</li>
-</ul>
-<h2 id="离线写博客"><a href="#离线写博客" class="headerlink" title="离线写博客"></a>离线写博客</h2><p>即使用户在没有网络的情况下，也可以通过本编辑器离线写博客（直接在曾经使用过的浏览器中输入<a href="http://write.blog.csdn.net/mdeditor" target="_blank" rel="noopener">write.blog.csdn.net/mdeditor</a>即可。<strong>Markdown编辑器</strong>使用浏览器离线存储将内容保存在本地。</p>
-<p>用户写博客的过程中，内容实时保存在浏览器缓存中，在用户关闭浏览器或者其它异常情况下，内容不会丢失。用户再次打开浏览器时，会显示上次用户正在编辑的没有发表的内容。</p>
-<p>博客发表后，本地缓存将被删除。　</p>
-<p>用户可以选择 <i class="icon-disk"></i> 把正在写的博客保存到服务器草稿箱，即使换浏览器或者清除缓存，内容也不会丢失。</p>
-<blockquote>
-<p><strong>注意：</strong>虽然浏览器存储大部分时候都比较可靠，但为了您的数据安全，在联网后，<strong>请务必及时发表或者保存到服务器草稿箱</strong>。</p>
-</blockquote>
-<p>##浏览器兼容</p>
-<ol>
-<li>目前，本编辑器对Chrome浏览器支持最为完整。建议大家使用较新版本的Chrome。</li>
-<li>IE９以下不支持</li>
-<li>IE９，１０，１１存在以下问题<ol>
-<li>不支持离线功能</li>
-<li>IE9不支持文件导入导出</li>
-<li>IE10不支持拖拽文件导入</li>
-</ol>
-</li>
-</ol>
-<hr>
+          欢迎使用Markdown编辑器写博客本Markdown编辑器使用StackEdit修改而来，用它写博客，将会带来全新的体验哦：
 
-          
+Markdown和扩展Markdown简洁的语法
+代码块高亮
+图片链接和图片上传
+LaTex数学公式
+UML序列图和流程图
+离线写博客
+导入导出Markdown文件
+丰富
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/08/22/原-欢迎使用CSDN-markdown编辑器/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1054,104 +919,15 @@
       
         
           
-            <p><span style="font-size:14px; line-height:24px; font-family:arial,宋体,sans-serif">ROC曲线指受试者工作特征曲线 / 接收器操作特性曲线(receiver operating characteristic curve), 是反映敏感性和特异性连续变量的综合指标,是用构图法揭示敏感性和特异性的相互关系，它通过将连续变量设定出多个不同的临界&#20540;，从而计算出一系列敏感性和特异性，再以敏感性为纵坐标、（1-特异性）为横坐标绘制成曲线，曲线下面积越大，诊断准确性越高。在ROC曲线上，最靠近坐标图左上方的点为敏感性和特异性均较高的临界&#20540;。</span><span style="font-family:Arial; font-size:14px; line-height:26px"></span></p>
-<p><span style="font-family:arial,宋体,sans-serif"><span style="line-height:24px"></span></span></p>
-<p></p>
-<p><span style="font-family:arial,宋体,sans-serif"><span style="line-height:24px"></span></span></p>
-<p>##<br><span class="headline-content">ROC曲线的例子</span></p>
-<p><span style="line-height:24px; font-family:arial,宋体,sans-serif">　　考虑一个二分问题，即将实例分成正类（positive）或负类（negative）。对一个二分问题来说，会出现四种情况。如果一个实例是正类并且也被 预测成正类，即为真正类（True positive）,如果实例是负类被预测成正类，称之为假正类（False positive）。相应地，如果实例是负类被预测成负类，称之为真负类（True negative）,正类被预测成负类则为假负类（false<br> negative）。</span></p>
-<p><span style="line-height:24px; font-family:arial,宋体,sans-serif; background-color:rgb(255,255,153)">TP：正确肯定的数目；</span></p>
-<p><span style="line-height:24px; font-family:arial,宋体,sans-serif; background-color:rgb(255,255,153)">FN：漏报，没有正确找到的匹配的数目；</span></p>
-<p><span style="line-height:24px; font-family:arial,宋体,sans-serif; background-color:rgb(255,255,153)">FP：误报，给出的匹配是不正确的；</span></p>
-<p><span style="line-height:24px; font-family:arial,宋体,sans-serif; background-color:rgb(255,255,153)">TN：正确拒绝的非匹配对数；</span></p>
-<div class="spctrl" style="font-size:14px; height:14px; line-height:14px; overflow:hidden; font-family:arial,宋体,sans-serif"><br></div><br><span style="font-size:14px; line-height:24px; font-family:arial,宋体,sans-serif">　　列联表如下表所示，1代表正类，0代表负类。</span><span style="font-family:Arial; font-size:14px; line-height:26px"></span><span style="font-family:Arial; font-size:14px; line-height:26px"></span><br><div class="spctrl" style="font-size:14px; height:14px; line-height:14px; overflow:hidden; font-family:arial,宋体,sans-serif"><br></div><br><span style="font-size:14px; line-height:24px; font-family:arial,宋体,sans-serif">　　</span><span style="font-family:Arial; font-size:14px; line-height:26px"></span><span style="font-family:Arial; font-size:14px; line-height:26px"></span><br><table class="table-view log-set-param       " style="color:rgb(0,0,0); font-family:Arial; font-size:14px; line-height:26px"><br><tbody><br><tr><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>&nbsp;</td><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>&nbsp;</td><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>预测</td><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>&nbsp;</td><br></tr><br><tr><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>&nbsp;</td><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>&nbsp;</td><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>1</td><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>0</td><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>合计</td><br></tr><br><tr><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>实际</td><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>1</td><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>True Positive（TP）</td><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>False Negative（FN）</td><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>Actual Positive(TP&#43;FN)</td><br></tr><br><tr><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>&nbsp;</td><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>0</td><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>False Positive（FP)</td><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>True Negative(TN)</td><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>Actual Negative(FP&#43;TN)</td><br></tr><br><tr><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>合计</td><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>&nbsp;</td><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>Predicted Positive(TP&#43;FP)</td><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>Predicted Negative(FN&#43;TN)</td><br><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>TP&#43;FP&#43;FN&#43;TN</td><br></tr><br></tbody><br></table><br><br><span style="line-height:24px; font-family:arial,宋体,sans-serif">从列联表引入两个新名词。其一是真正类率(true positive rate ,<span style="color:rgb(255,0,0)">TPR</span>), 计算公式为</span><span style="line-height:24px; font-family:arial,宋体,sans-serif">TPR=TP</span><span style="line-height:24px; font-family:arial,宋体,sans-serif">/<br> (</span><span style="line-height:24px; font-family:arial,宋体,sans-serif">TP</span><span style="line-height:24px; font-family:arial,宋体,sans-serif">&#43;&nbsp;</span><span style="line-height:24px; font-family:arial,宋体,sans-serif">FN</span><span style="line-height:24px; font-family:arial,宋体,sans-serif">)，刻画的是分类器所识别出的<br> 正实例占所有正实例的比例。另外一个是负正类率(false positive rate,&nbsp;<span style="color:rgb(255,0,0)">FPR</span>),计算公式为</span><span style="line-height:24px; font-family:arial,宋体,sans-serif">FPR= FP / (FP &#43; TN)，</span><span style="line-height:24px; font-family:arial,宋体,sans-serif">计算的是分类器错认为正类的负实例占所有负实例的比例。还有一个真负类率（True<br> Negative Rate，TNR），也称为specificity,计算公式为TNR=</span><span style="line-height:24px; font-family:arial,宋体,sans-serif">TN</span><span style="line-height:24px; font-family:arial,宋体,sans-serif">/ (</span><span style="line-height:24px; font-family:arial,宋体,sans-serif">FP</span><span style="line-height:24px; font-family:arial,宋体,sans-serif">&#43;&nbsp;</span><span style="line-height:24px; font-family:arial,宋体,sans-serif">TN</span><span style="line-height:24px; font-family:arial,宋体,sans-serif">)<br> = 1-</span><span style="line-height:24px; font-family:arial,宋体,sans-serif">FPR</span><span style="line-height:24px; font-family:arial,宋体,sans-serif">。</span><br><br><span style="line-height:24px; font-family:arial,宋体,sans-serif"><img src="http://my.csdn.net/uploads/201206/20/1340175403_3476.jpg" alt=""><br><br></span><br><br><span style="line-height:24px; font-family:arial,宋体,sans-serif">其中，两列True matches和True non-match分别代表<span style="background-color:rgb(204,255,255)">应该</span>匹配上和<span style="background-color:rgb(204,255,255)">不应该</span>匹配上的</span><br><br><span style="line-height:24px; font-family:arial,宋体,sans-serif">两行Pred matches和Pred non-match分别代表<span style="background-color:rgb(204,255,255)">预测</span><span style="line-height:23px">匹配上和预测</span><span style="line-height:23px; background-color:rgb(204,255,255)">不</span><span style="line-height:23px">匹配上的</span></span><br><br><span style="line-height:24px; font-family:arial,宋体,sans-serif"><span style="line-height:23px"><img src="http://my.csdn.net/uploads/201206/20/1340175807_2760.jpg" alt=""><br><br></span></span><br><br><div class="spctrl" style="font-size:14px; height:14px; line-height:14px; overflow:hidden; font-family:arial,宋体,sans-serif"><br></div>
-
-<p><span style="line-height:24px; font-family:arial,宋体,sans-serif">　　在一个二分类模型中，对于所得到的连续结果，假设已确定一个阀&#20540;，比如说 0.6，大于这个&#20540;的实例划归为正类，小于这个&#20540;则划到负类中。如果减小阀&#20540;，减到0.5，固然能识别出更多的正类，也就是提高了识别出的正例占所有正例 的比类，即TPR,但同时也将更多的负实例当作了正实例，即提高了FPR。为了形象化这一变化，在此引入ROC，<span style="background-color:rgb(255,255,153)">ROC曲线可以用于评价一个分类器</span>。</span></p>
-<p><span style="line-height:24px; font-family:arial,宋体,sans-serif"><img src="http://my.csdn.net/uploads/201206/20/1340176083_5411.jpg" alt=""></span></p>
-<p></p>
-<p><span style="line-height:24px; font-family:arial,宋体,sans-serif">ROC曲线和它相关的比率</span></p>
-<p><span style="line-height:24px; font-family:arial,宋体,sans-serif">(a)理想情况下，TPR应该接近1，FPR应该接近0。</span></p>
-<p><span style="line-height:24px; font-family:arial,宋体,sans-serif">ROC曲线上的每一个点对应于一个threshold，<span style="background-color:rgb(255,255,153)">对于一个分类器，每个threshold下会有一个TPR和FPR</span>。</span></p>
-<p><span style="line-height:24px; font-family:arial,宋体,sans-serif">比如Threshold最大时，TP=FP=0，对应于原点；Threshold最小时，TN=FN=0，对应于右上角的点(1,1)</span></p>
-<p><span style="line-height:24px; font-family:arial,宋体,sans-serif">(b)P和N得分不作为特征间距离d的一个函数，随着阈&#20540;theta增加，TP和FP都增加</span></p>
-<p><span style="font-family:arial,宋体,sans-serif"><span style="line-height:23px"></span></span></p>
-<p></p>
-<div class="spctrl" style="font-size:14px; height:14px; line-height:14px; overflow:hidden; font-family:arial,宋体,sans-serif"><br></div>
-
-<p><span style="line-height:24px; font-family:arial,宋体,sans-serif">　　Receiver Operating Characteristic,翻译为&quot;接受者操作特性曲线&quot;，够拗口的。曲线由两个变量1-specificity 和 Sensitivity绘制. 1-specificity=FPR，即负正类率。Sensitivity即是真正类率，TPR(True positive rate),反映了正类覆盖程度。这个组合以1-specificity对sensitivity,即是以代价(costs)对收益(benefits)。</span></p>
-<p><span style="line-height:24px; font-family:arial,宋体,sans-serif">&nbsp; &nbsp; &nbsp; &nbsp;此外，ROC曲线还可以用来计算“均&#20540;平均精度”（<span style="background-color:rgb(255,255,153)">mean average precision</span>），这是当你通过改变阈&#20540;来选择最好的结果时所得到的平均精度（PPV）.</span></p>
-<p><div class="spctrl" style="font-size:14px; height:14px; line-height:14px; overflow:hidden; font-family:arial,宋体,sans-serif"><br></div><br><span style="font-size:14px; line-height:24px; font-family:arial,宋体,sans-serif">　　下表是一个逻辑回归得到的结果。将得到的实数&#20540;按大到小划分成10个个数 相同的部分。</span><span style="font-family:Arial; font-size:14px; line-height:26px"></span><span style="font-family:Arial; font-size:14px; line-height:26px"></span></p>
-<p><div class="spctrl" style="font-size:14px; height:14px; line-height:14px; overflow:hidden; font-family:arial,宋体,sans-serif"><br></div><br><span style="font-size:14px; line-height:24px; font-family:arial,宋体,sans-serif">　　</span><span style="font-family:Arial; font-size:14px; line-height:26px"></span><span style="font-family:Arial; font-size:14px; line-height:26px"></span></p>
-<p><table class="table-view log-set-param       " style="color:rgb(0,0,0); font-family:Arial; font-size:14px; line-height:26px"></table></p>
-<p><tbody></tbody></p>
-<p><tr></tr></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>Percentile</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>实例数</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>正例数</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>1-特异度(%)</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>敏感度(%)</td><br></p>
-<p><tr></tr></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>10</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>6180</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>4879</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>2.73</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>34.64</td><br></p>
-<p><tr></tr></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>20</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>6180</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>2804</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>9.80</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>54.55</td><br></p>
-<p><tr></tr></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>30</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>6180</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>2165</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>18.22</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>69.92</td><br></p>
-<p><tr></tr></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>40</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>6180</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>1506</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>28.01</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>80.62</td><br></p>
-<p><tr></tr></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>50</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>6180</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>987</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>38.90</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>87.62</td><br></p>
-<p><tr></tr></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>60</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>6180</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>529</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>50.74</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>91.38</td><br></p>
-<p><tr></tr></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>70</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>6180</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>365</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>62.93</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>93.97</td><br></p>
-<p><tr></tr></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>80</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>6180</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>294</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>75.26</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>96.06</td><br></p>
-<p><tr></tr></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>90</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>6180</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>297</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>87.59</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>98.17</td><br></p>
-<p><tr></tr></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>100</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>6177</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>258</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>100.00</td></p>
-<p><td style="margin:0px; padding:0px 10px; border:1px solid rgb(221,221,221); line-height:22px"><br>100.00</td><br><br><br><br><span style="font-size:14px; line-height:24px; font-family:arial,宋体,sans-serif">其正例数为此部分里实际的正类数。也就是说，将逻辑回归得到的结 果按从大到小排列，倘若以前10%的数&#20540;作为阀&#20540;，即将前10%的实例都划归为正类，6180个。其中，正确的个数为4879个，占所有正类的 4879/14084<em>100%=34.64%，即敏感度；另外，有6180-4879=1301个负实例被错划为正类，占所有负类的1301 /47713</em>100%=2.73%,即1-特异度。以这两组&#20540;分别作为x&#20540;和y&#20540;，在excel中作散点图。</span></p>
-
-          
+          ROC曲线指受试者工作特征曲线 / 接收器操作特性曲线(receiver operating characteristic curve), 是反映敏感性和特异性连续变量的综合指标,是用构图法揭示敏感性和特异性的相互关系，它通过将连续变量设定出多个不同的临界&#20540;，从而计算出一系列敏感性和特
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/04/11/转-ROC曲线-阈值评价标准/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1560,6 +1336,8 @@
 
 
 
+  
+
 
 
   
@@ -1575,6 +1353,11 @@
   
   
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
   
 
 
@@ -1648,6 +1431,326 @@
 
   
 
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
 
 
 
@@ -1657,6 +1760,21 @@
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
 
@@ -1666,6 +1784,9 @@
   
 
   
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=6.3.0"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=6.3.0"></script>
+
 
   
 

@@ -175,6 +175,15 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120522271-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120522271-1');
+</script>
+
 
 
 
@@ -321,11 +330,42 @@
 
       
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
     </ul>
   
 
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -501,10 +541,17 @@
       
         
           
-            <p><a href="http://blog.csdn.net/u013142781/article/details/50825301" target="_blank" rel="noopener">参考链接：http://blog.csdn.net/u013142781/article/details/50825301</a></p>
-<p>行为型模式细分为如下11种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。</p>
+          参考链接：http://blog.csdn.net/u013142781/article/details/50825301
+行为型模式细分为如下11种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/07/java设计模式（三）：行为型模式/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -679,35 +726,16 @@
       
         
           
-            <p><a href="http://blog.csdn.net/u013142781/article/details/50821155" target="_blank" rel="noopener">参考链接：http://blog.csdn.net/u013142781/article/details/50821155</a></p>
-<h2 id="一、结构型模式分类："><a href="#一、结构型模式分类：" class="headerlink" title="一、结构型模式分类："></a>一、结构型模式分类：</h2><p>一共七种：适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式。其中适配器模式主要分为三类：类的适配器模式、对象的适配器模式、接口的适配器模式。其中的对象的适配器模式是各种结构型模式的起源。</p>
-<h2 id="二、适配器模式："><a href="#二、适配器模式：" class="headerlink" title="二、适配器模式："></a>二、适配器模式：</h2><p>适配器模式主要分为三类：类的适配器模式、对象的适配器模式、接口的适配器模式。</p>
-<p>适配器模式将某个类的接口转换成客户端期望的另一个接口表示，目的是消除由于接口不匹配所造成的类的兼容性问题。有点抽象，我们来看看详细的内容。</p>
-<h2 id="三、装饰模式："><a href="#三、装饰模式：" class="headerlink" title="三、装饰模式："></a>三、装饰模式：</h2><p>装饰模式：在不必改变原类文件和使用继承的情况下，动态地扩展一个对象的功能。它是通过创建一个包装对象，也就是装饰来包裹真实的对象。</p>
-<p>装饰模式的特点：</p>
-<p>（1） 装饰对象和真实对象有相同的接口。这样客户端对象就能以和真实对象相同的方式和装饰对象交互。<br>（2） 装饰对象包含一个真实对象的引用（reference）<br>（3） 装饰对象接受所有来自客户端的请求。它把这些请求转发给真实的对象。<br>（4） 装饰对象可以在转发这些请求以前或以后增加一些附加功能。这样就确保了在运行时，不用修改给定对象的结构就可以在外部增加附加的功能。在面向对象的设计中，通常是通过继承来实现对给定类的功能扩展。继承不能做到这一点，继承的功能是静态的，不能动态增删。</p>
-<h2 id="四、代理模式："><a href="#四、代理模式：" class="headerlink" title="四、代理模式："></a>四、代理模式：</h2><p>代理模式就是多一个代理类出来，替原对象进行一些操作。代理类就像中介，它比我们掌握着更多的信息。</p>
-<h2 id="五、外观模式："><a href="#五、外观模式：" class="headerlink" title="五、外观模式："></a>五、外观模式：</h2><p>外观模式是为了解决类与类之间的依赖关系的，像spring一样，可以将类和类之间的关系配置到配置文件中，而外观模式就是将他们的关系放在一个Facade类中，降低了类类之间的耦合度，该模式中没有涉及到接口。</p>
-<h2 id="六、桥接模式："><a href="#六、桥接模式：" class="headerlink" title="六、桥接模式："></a>六、桥接模式：</h2><p>在软件系统中，某些类型由于自身的逻辑，它具有两个或多个维度的变化，那么如何应对这种“多维度的变化”？如何利用面向对象的技术来使得该类型能够轻松的沿着多个方向进行变化，而又不引入额外的复杂度？这就要使用Bridge模式。</p>
-<p>在提出桥梁模式的时候指出，桥梁模式的用意是”将抽象化(Abstraction)与实现化(Implementation)脱耦，使得二者可以独立地变化”。这句话有三个关键词，也就是抽象化、实现化和脱耦。</p>
-<ul>
-<li>抽象化：存在于多个实体中的共同的概念性联系，就是抽象化。作为一个过程，抽象化就是忽略一些信息，从而把不同的实体当做同样的实体对待。</li>
-<li>实现化：抽象化给出的具体实现，就是实现化。</li>
-<li>脱耦：所谓耦合，就是两个实体的行为的某种强关联。而将它们的强关联去掉，就是耦合的解脱，或称脱耦。在这里，脱耦是指将抽象化和实现化之间的耦合解脱开，或者说是将它们之间的强关联改换成弱关联</li>
-</ul>
-<h2 id="七、组合模式"><a href="#七、组合模式" class="headerlink" title="七、组合模式"></a>七、组合模式</h2><p>组合模式，将对象组合成树形结构以表示“部分-整体”的层次结构，组合模式使得用户对单个对象和组合对象的使用具有一致性。掌握组合模式的重点是要理解清楚 “部分/整体” 还有 ”单个对象“ 与 “组合对象” 的含义。</p>
-<p>组合模式让你可以优化处理递归或分级数据结构。</p>
-<p>《设计模式》：将对象组合成树形结构以表示“部分整体”的层次结构。组合模式使得用户对单个对象和组合对象的使用具有一致性。</p>
-<p>涉及角色：</p>
-<p>Component：是组合中的对象声明接口，在适当的情况下，实现所有类共有接口的默认行为。声明一个接口用于访问和管理Component子部件。</p>
-<p>Leaf：在组合中表示叶子结点对象，叶子结点没有子结点。</p>
-<p>Composite：定义有枝节点行为，用来存储子部件，在Component接口中实现与子部件有关操作，如增加(add)和删除(remove)等。</p>
-<p>比如现实中公司内各部门的层级关系，请看代码：</p>
-<p>Component：是组合中的对象声明接口，在适当的情况下，实现所有类共有接口的默认行为。声明一个接口用于访问和管理Component子部件。</p>
-<h2 id="八、享元模式"><a href="#八、享元模式" class="headerlink" title="八、享元模式"></a>八、享元模式</h2><p>享元模式的主要目的是实现对象的共享，即共享池，当系统中对象多的时候可以减少内存的开销，通常与工厂模式一起使用。</p>
-<p>一提到共享池，我们很容易联想到Java里面的JDBC连接池，想想每个连接的特点，我们不难总结出：适用于作共享的一些个对象，他们有一些共有的属性，就拿数据库连接池来说，url、driverClassName、username、password及dbname，这些属性对于每个连接来说都是一样的，所以就适合用享元模式来处理，建一个工厂类，将上述类似属性作为内部数据，其它的作为外部数据，在方法调用时，当做参数传进来，这样就节省了空间，减少了实例的数量。</p>
-
-          
+          参考链接：http://blog.csdn.net/u013142781/article/details/50821155
+一、结构型模式分类：一共七种：适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式。其中适配器模式主要分为三类：类的适配器模式、对象的适配器模式、接口的适配
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/07/java设计模式（二）：结构型模式/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -882,44 +910,16 @@
       
         
           
-            <p><a href="http://www.cnblogs.com/maowang1991/archive/2013/04/15/3023236.html" target="_blank" rel="noopener">参考链接：http://www.cnblogs.com/maowang1991/archive/2013/04/15/3023236.html</a><br><a href="http://blog.csdn.net/u013142781/article/details/50816245" target="_blank" rel="noopener">http://blog.csdn.net/u013142781/article/details/50816245</a></p>
-<h2 id="一、设计模式分类"><a href="#一、设计模式分类" class="headerlink" title="一、设计模式分类"></a>一、设计模式分类</h2><p>总体来说设计模式分为三大类：</p>
-<p>创建型模式，共五种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。</p>
-<p>结构型模式，共七种：适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式。</p>
-<p>行为型模式，共十一种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。</p>
-<p>其实还有两类：并发型模式和线程池模式。用一个图片来整体描述一下：<br><img src="/images/java设计模式（一）：创建型模式-1.jpg" alt="java设计模式之间的关系"></p>
-<h2 id="二、设计模式的六大原则"><a href="#二、设计模式的六大原则" class="headerlink" title="二、设计模式的六大原则"></a>二、设计模式的六大原则</h2><ul>
-<li><p>开闭原则（Open Close Principle）<br>开闭原则就是说对扩展开放，对修改关闭。在程序需要进行拓展的时候，不能去修改原有的代码，实现一个热插拔的效果。所以一句话概括就是：为了使程序的扩展性好，易于维护和升级。想要达到这样的效果，我们需要使用接口和抽象类，后面的具体设计中我们会提到这点。</p>
-</li>
-<li><p>里氏代换原则（Liskov Substitution Principle）<br>里氏代换原则(Liskov Substitution Principle LSP)面向对象设计的基本原则之一。 里氏代换原则中说，任何基类可以出现的地方，子类一定可以出现。 LSP是继承复用的基石，只有当衍生类可以替换掉基类，软件单位的功能不受到影响时，基类才能真正被复用，而衍生类也能够在基类的基础上增加新的行为。</p>
-</li>
-<li><p>依赖倒转原则（Dependence Inversion Principle）<br>这个是开闭原则的基础，具体内容：真对接口编程，依赖于抽象而不依赖于具体。</p>
-</li>
-<li><p>接口隔离原则（Interface Segregation Principle）<br>这个原则的意思是：使用多个隔离的接口，比使用单个接口要好。还是一个降低类之间的耦合度的意思，从这儿我们看出，其实设计模式就是一个软件的设计思想，从大型软件架构出发，为了升级和维护方便。所以上文中多次出现：降低依赖，降低耦合。</p>
-</li>
-<li><p>迪米特法则（最少知道原则）（Demeter Principle）<br>一个实体应当尽量少的与其他实体之间发生相互作用，使得系统功能模块相对独立。</p>
-</li>
-<li><p>合成复用原则（Composite Reuse Principle）<br>原则是尽量使用合成/聚合的方式，而不是使用继承。</p>
-</li>
-</ul>
-<h2 id="三、工厂方法模式"><a href="#三、工厂方法模式" class="headerlink" title="三、工厂方法模式"></a>三、工厂方法模式</h2><h3 id="1、普通工厂模式"><a href="#1、普通工厂模式" class="headerlink" title="1、普通工厂模式"></a>1、普通工厂模式</h3><p>建立一个工厂类，对实现了同一接口的类进行实例的创建</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"># 创建类的共同接口</span><br><span class="line">======</span><br><span class="line">Active.java</span><br><span class="line">======</span><br><span class="line"><span class="keyword">public</span> Interface Active&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">spark</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"># 创建实现类</span><br><span class="line">======</span><br><span class="line">Cat.java</span><br><span class="line">======</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Cat</span> <span class="keyword">implements</span> <span class="title">Active</span></span>&#123;</span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="function">pubic <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"I eat fish!"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">======</span><br><span class="line">Dog.java</span><br><span class="line">======</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">implements</span> <span class="title">Active</span></span>&#123;</span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="function">pubic <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"I eat meat!"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"># 创建工厂类</span><br><span class="line">======</span><br><span class="line">ActiveFactory.java</span><br><span class="line">======</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ActiveFactory</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> Active <span class="title">produce</span><span class="params">(String type)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(type.equals(<span class="string">"cat"</span>))&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">new</span> Cat();</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(type.equals(<span class="string">"dog"</span>))&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">new</span> Dog();</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">      System.out.println(<span class="string">"Error! please intput correct type!"</span>);</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  # test</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    ActiveFactory activeFactory = <span class="keyword">new</span> ActiveFactory();</span><br><span class="line">    Active active = activeFactory.produce(<span class="string">"cat"</span>);</span><br><span class="line">    active.eat(); <span class="comment">//output ===&gt; "I eat fish!"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="2-多个工厂方法模式"><a href="#2-多个工厂方法模式" class="headerlink" title="2.多个工厂方法模式"></a>2.多个工厂方法模式</h3><p>在普通工厂方法模式中，如果传递的字符串出错，则不能正确创建对象，而多个工厂方法模式是提供多个工厂方法，分别创建对象<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">======</span><br><span class="line">ActiveFactory.java</span><br><span class="line">======</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ActiveFactory</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> Active <span class="title">produceCat</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Cat();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> Active <span class="title">produceDog</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Dog();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  # test</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    ActiveFactory activeFactory = <span class="keyword">new</span> ActiveFactory();</span><br><span class="line">    Active active = activeFactory.produceCat(<span class="string">"cat"</span>);</span><br><span class="line">    active.eat(); <span class="comment">//output ===&gt; "I eat fish!"</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="3-静态工厂模式"><a href="#3-静态工厂模式" class="headerlink" title="3.静态工厂模式"></a>3.静态工厂模式</h3><p>将多个工厂方法模式中的方法置为静态的，不需要创建实例，直接调用即可<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">======</span><br><span class="line">ActiveFactory.java</span><br><span class="line">======</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ActiveFactory</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Active <span class="title">produceCat</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Cat();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Active <span class="title">produceDog</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Dog();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  # test</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    Active active = ActiveFactory.produceCat(<span class="string">"cat"</span>);</span><br><span class="line">    active.eat(); <span class="comment">//output ===&gt; "I eat fish!"</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="四、抽象工厂模式"><a href="#四、抽象工厂模式" class="headerlink" title="四、抽象工厂模式"></a>四、抽象工厂模式</h2><p>在一般的工厂模式中，类的创建依赖工厂类，如果要扩展程序，必须对工厂类进行修改，违背了闭包原则，因此<br>需要用抽象工厂模式，创建多个工厂类，一旦需要增加新的功能，直接增加新的工厂类就可以<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">======</span><br><span class="line">Provider.java</span><br><span class="line">======</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Provider</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> Active <span class="title">produce</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">======</span><br><span class="line">ActiveCatFactory.java</span><br><span class="line">======</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ActiveCatFactory</span> <span class="keyword">implements</span> <span class="title">Provider</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> Active <span class="title">produce</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Cat();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">======</span><br><span class="line">ActiveDogFactory.java</span><br><span class="line">======</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ActiveDogFactory</span> <span class="keyword">implements</span> <span class="title">Provider</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> Active <span class="title">produce</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Dog();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="五、单例模式"><a href="#五、单例模式" class="headerlink" title="五、单例模式"></a>五、单例模式</h2><p>在Java应用中，单例对象能保证在一个JVM中，该对象只有一个实例存在.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">======</span><br><span class="line">Singleton.java</span><br><span class="line">======</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;  </span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 持有私有静态实例，防止被引用，此处赋值为null，目的是实现延迟加载 */</span>  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance = <span class="keyword">null</span>;  </span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 私有构造方法，防止被实例化 */</span>  </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 静态工程方法，创建实例 */</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;  </span><br><span class="line">            instance = <span class="keyword">new</span> Singleton();  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">return</span> instance;  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 如果该对象被用于序列化，可以保证对象在序列化前后保持一致 */</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">readResolve</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这个类可以满足基本要求，但是，像这样毫无线程安全保护的类，如果我们把它放入多线程的环境下，肯定就会出现问题了，如何解决？我们首先会想到对getInstance方法加synchronized关键字，如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;  </span><br><span class="line">            instance = <span class="keyword">new</span> Singleton();  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">return</span> instance;  </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>但是，synchronized关键字锁住的是这个对象，这样的用法，在性能上会有所下降，因为每次调用getInstance()，都要对对象上锁，事实上，只有在第一次创建对象的时候需要加锁，之后就不需要了，所以，这个地方需要改进。我们改成下面这个：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;  </span><br><span class="line">            <span class="keyword">synchronized</span> (instance) &#123;  </span><br><span class="line">                <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;  </span><br><span class="line">                    instance = <span class="keyword">new</span> Singleton();  </span><br><span class="line">                &#125;  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">return</span> instance;  </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<p>改程序在多线程的时候还是有可能发生错误，因此需要进一步改善<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonFactory</span></span>&#123;           </span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance = <span class="keyword">new</span> Singleton();           </span><br><span class="line">    &#125;           </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;           </span><br><span class="line">        <span class="keyword">return</span> SingletonFactory.instance;           </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<p><a href="http://www.cnblogs.com/maowang1991/archive/2013/04/15/3023236.html" target="_blank" rel="noopener">参考链接</a></p>
-<h2 id="六、建造者模式"><a href="#六、建造者模式" class="headerlink" title="六、建造者模式"></a>六、建造者模式</h2><p>工厂类模式提供的是创建单个类的模式，而建造者模式则是将各种产品集中起来进行管理，用来创建复合对象，所谓复合对象就是指某个类具有不同的属性，其实建造者模式就是前面抽象工厂模式和最后的Test结合起来得到的。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Builder</span> </span>&#123;  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> List&lt;Active&gt; list = <span class="keyword">new</span> ArrayList&lt;Active&gt;();  </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">produceCatActive</span><span class="params">(<span class="keyword">int</span> count)</span></span>&#123;  </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;count; i++)&#123;  </span><br><span class="line">            list.add(<span class="keyword">new</span> Cat());  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">produceDogActive</span><span class="params">(<span class="keyword">int</span> count)</span></span>&#123;  </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;count; i++)&#123;  </span><br><span class="line">            list.add(<span class="keyword">new</span> Dog());  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">      Builder builder = <span class="keyword">new</span> Builder();  </span><br><span class="line">      builder.produceMailSender(<span class="number">10</span>);</span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="七、原型模式"><a href="#七、原型模式" class="headerlink" title="七、原型模式"></a>七、原型模式</h2><p>原型模式虽然是创建型的模式，但是与工程模式没有关系，从名字即可看出，该模式的思想就是将一个对象作为原型，对其进行复制、克隆，产生一个和原对象类似的新对象。本小结会通过对象的复制，进行讲解。在Java中，复制对象是通过clone()实现的，先创建一个原型类：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Prototype</span> <span class="keyword">implements</span> <span class="title">Cloneable</span> </span>&#123;  </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">clone</span><span class="params">()</span> <span class="keyword">throws</span> CloneNotSupportedException </span>&#123;  </span><br><span class="line">        Prototype proto = (Prototype) <span class="keyword">super</span>.clone();  </span><br><span class="line">        <span class="keyword">return</span> proto;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>深浅复制的例子：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Prototype</span> <span class="keyword">implements</span> <span class="title">Cloneable</span>, <span class="title">Serializable</span> </span>&#123;  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;  </span><br><span class="line">    <span class="keyword">private</span> String string;  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> SerializableObject obj;  </span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 浅复制 */</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">clone</span><span class="params">()</span> <span class="keyword">throws</span> CloneNotSupportedException </span>&#123;  </span><br><span class="line">        Prototype proto = (Prototype) <span class="keyword">super</span>.clone();  </span><br><span class="line">        <span class="keyword">return</span> proto;  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 深复制 */</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">deepClone</span><span class="params">()</span> <span class="keyword">throws</span> IOException, ClassNotFoundException </span>&#123;  </span><br><span class="line"></span><br><span class="line">        <span class="comment">/* 写入当前对象的二进制流 */</span>  </span><br><span class="line">        ByteArrayOutputStream bos = <span class="keyword">new</span> ByteArrayOutputStream();  </span><br><span class="line">        ObjectOutputStream oos = <span class="keyword">new</span> ObjectOutputStream(bos);  </span><br><span class="line">        oos.writeObject(<span class="keyword">this</span>);  </span><br><span class="line"></span><br><span class="line">        <span class="comment">/* 读出二进制流产生的新对象 */</span>  </span><br><span class="line">        ByteArrayInputStream bis = <span class="keyword">new</span> ByteArrayInputStream(bos.toByteArray());  </span><br><span class="line">        ObjectInputStream ois = <span class="keyword">new</span> ObjectInputStream(bis);  </span><br><span class="line">        <span class="keyword">return</span> ois.readObject();  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getString</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> string;  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setString</span><span class="params">(String string)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">this</span>.string = string;  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> SerializableObject <span class="title">getObj</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> obj;  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setObj</span><span class="params">(SerializableObject obj)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">this</span>.obj = obj;  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">&#125;  </span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SerializableObject</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-          
+          参考链接：http://www.cnblogs.com/maowang1991/archive/2013/04/15/3023236.htmlhttp://blog.csdn.net/u013142781/article/details/50816245
+一、设计模式分类总体来说设计模式分为三大类：
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/07/java设计模式（一）：创建型模式/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1094,202 +1094,36 @@
       
         
           
-            <table>
-<thead>
-<tr>
-<th>配置项</th>
-<th>配置说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>storm.zookeeper.servers</td>
-<td>Zookeeper服务器列表</td>
-</tr>
-<tr>
-<td>storm.zookeeper.port</td>
-<td>zookeeper 连接端口</td>
-</tr>
-<tr>
-<td>storm.local.dir</td>
-<td>storm使用的本地文件系统目录（必须存在并且storm进程可读写）</td>
-</tr>
-<tr>
-<td>storm.cluster.mode</td>
-<td>Storm集群运行模式([distributedllocall)</td>
-</tr>
-<tr>
-<td>storm.local.mode.zmq</td>
-<td>Local模式下是否使用ZeroMQ作消息系统，如果设置为false则使用java消息系统默认为false</td>
-</tr>
-<tr>
-<td>storm.zookeeper.root</td>
-<td>ZooKeeper中Storm的根目录位置</td>
-</tr>
-<tr>
-<td>storm.zookeeper.session.timeout</td>
-<td>客户端连接ZooKeeper超时时间</td>
-</tr>
-<tr>
-<td>storm.id</td>
-<td>运行中拓扑的id,由stormname和一个唯随机数组成</td>
-</tr>
-<tr>
-<td>nimbus.host</td>
-<td>nimbus服务器地址</td>
-</tr>
-<tr>
-<td>nimbus.thrift.port</td>
-<td>nimbus的thrift监听端口</td>
-</tr>
-<tr>
-<td>nimbus.childopts</td>
-<td>通过storm-deploy项目部署时指定给nimbus进程的jvm选项</td>
-</tr>
-<tr>
-<td>nimbus.task.timeout.secs</td>
-<td>心跳超时时间，超时后nimbus会认为task死掉并重分配给另一个地址</td>
-</tr>
-<tr>
-<td>nimbus.monitor. freq .secs</td>
-<td>nimbu归心跳和重分配任务的时间间隔注意如果是机器宫掉nimbus会立即接管并处理</td>
-</tr>
-<tr>
-<td>nimbus.supervisor.timeout.secs</td>
-<td>supervisor的心跳超时时间，一旦超过nimbus会认为该supervisor已死并停止为它分发新任务</td>
-</tr>
-<tr>
-<td>nimbus.task.launch.secs</td>
-<td>task启动时的一个特殊超时设置在启动后第一次心跳前会使用该值来临时 替代nimbus.task.timeout.secs.</td>
-</tr>
-<tr>
-<td>nimbus.reassign</td>
-<td>当发现task失败是nimbus是否重新分配执行，默认为真</td>
-</tr>
-<tr>
-<td>nimbus.file.copy.expiration.secs</td>
-<td>nimbus判断上传I下载链接的超时时间，当空闲时间超过该设定时nimbus会认为链接死掉并主动断开</td>
-</tr>
-<tr>
-<td>ui.port</td>
-<td>Storm UI的服务端口</td>
-</tr>
-<tr>
-<td>drpc.servers</td>
-<td>DRPC服务器列表，以便DRPCSpout知道和谁通讯</td>
-</tr>
-<tr>
-<td>drpc.port</td>
-<td>Storm DRPC的服务端口</td>
-</tr>
-<tr>
-<td>supervisor.slots.ports</td>
-<td>supervisor上能够运行workers的端口列表.每个worker占用一个端口,且每个端口只运行一个worker.通过这项配置可以调整每台机器上运行的worker数.(调整slot数/每机)</td>
-</tr>
-<tr>
-<td>supervisor.childopts</td>
-<td>在storm-deploy项目中使用,用来配置supervisor守护进程的jvm选项</td>
-</tr>
-<tr>
-<td>supervisor.worker.timeout.secs</td>
-<td>supervisor中的worker心跳超时时间,一旦超时supervisor会尝试重启worker进程.</td>
-</tr>
-<tr>
-<td>supervisor.worker.start.timeout.secs</td>
-<td>supervisor初始启动时，worker的心跳超时时间，当超过该时间supervisor会尝试重启worker。因为JVM初始启动和配置会带来的额外消耗，从而使得第一次心跳会超过supervisor.worker.timeout.secs的设定</td>
-</tr>
-<tr>
-<td>supervisor.enable</td>
-<td>supervisor是否应当运行分配给他的workers.默认为true,该选项用来进行Storm的单元测试,一般不应修改.</td>
-</tr>
-<tr>
-<td>supervisor.heartbeat.frequency.secs</td>
-<td>supervisor心跳发送频率(多久发送一次)</td>
-</tr>
-<tr>
-<td>supervisor.monitor.frequency.secs    supervisor</td>
-<td>检查worker心跳的频率</td>
-</tr>
-<tr>
-<td>worker.childopts</td>
-<td>supervisor启动worker时使用的jvm选项.所有的”%ID%”字串会被替换为对应worker的标识符</td>
-</tr>
-<tr>
-<td>worker.heartbeat.frequency.secs</td>
-<td>worker的心跳发送时间间隔</td>
-</tr>
-<tr>
-<td>task.heartbeat.frequency.secs</td>
-<td>task汇报状态心跳时间间隔</td>
-</tr>
-<tr>
-<td>task.refresh.poll.secs</td>
-<td>task与其他tasks之间链接同步的频率.(如果task被重分配,其他tasks向它发送消息需要刷新连接).一般来讲，重分配发生时其他tasks会理解得到通知。该配置仅仅为了防止未通知的情况。</td>
-</tr>
-<tr>
-<td>topology.debug</td>
-<td>如果设置成true，Storm将记录发射的每条信息。</td>
-</tr>
-<tr>
-<td>topology.optimize</td>
-<td>master是否在合适时机通过在单个线程内运行多个task以达到优化topologies的目的.</td>
-</tr>
-<tr>
-<td>topology.workers</td>
-<td>执行该topology集群中应当启动的进程数量.每个进程内部将以线程方式执行一定数目的tasks.topology的组件结合该参数和并行度提示来优化性能</td>
-</tr>
-<tr>
-<td>topology.ackers</td>
-<td>topology中启动的acker任务数.Acker保存由spout发送的tuples的记录，并探测tuple何时被完全处理.当Acker探测到tuple被处理完毕时会向spout发送确认信息.通常应当根据topology的吞吐量来确定acker的数目，但一般不需要太多.当设置为0时,相当于禁用了消息可靠性,storm会在spout发送tuples后立即进行确认.</td>
-</tr>
-<tr>
-<td>topology.message.timeout.secs</td>
-<td>topology中spout发送消息的最大处理超时时间.如果一条消息在该时间窗口内未被成功ack,Storm会告知spout这条消息失败。而部分spout实现了失败消息重播功能。</td>
-</tr>
-<tr>
-<td>topology.kryo.register</td>
-<td>注册到Kryo(Storm底层的序列化框架)的序列化方案列表.序列化方案可以是一个类名,或者是com.esotericsoftware.kryo.Serializer的实现.</td>
-</tr>
-<tr>
-<td>topology.skip.missing.kryo.registrations</td>
-<td>Storm是否应该跳过它不能识别的kryo序列化方案.如果设置为否task可能会装载失败或者在运行时抛出错误.</td>
-</tr>
-<tr>
-<td>topology.max.task.parallelism</td>
-<td>在一个topology中能够允许的最大组件并行度.该项配置主要用在本地模式中测试线程数限制.</td>
-</tr>
-<tr>
-<td>topology.max.spout.pending</td>
-<td>一个spout task中处于pending状态的最大的tuples数量.该配置应用于单个task,而不是整个spouts或topology.</td>
-</tr>
-<tr>
-<td>topology.state.synchronization.timeout.secs</td>
-<td>组件同步状态源的最大超时时间(保留选项,暂未使用)</td>
-</tr>
-<tr>
-<td>topology.stats.sample.rate</td>
-<td>用来产生task统计信息的tuples抽样百分比</td>
-</tr>
-<tr>
-<td>topology.fall.back.on.java.serialization</td>
-<td>topology中是否使用java的序列化方案</td>
-</tr>
-<tr>
-<td>zmq.threads</td>
-<td>每个worker进程内zeromq通讯用到的线程数</td>
-</tr>
-<tr>
-<td>zmq.linger.millis</td>
-<td>当连接关闭时,链接尝试重新发送消息到目标主机的持续时长.这是一个不常用的高级选项,基本上可以忽略.</td>
-</tr>
-<tr>
-<td>java.library.path</td>
-<td>JVM启动(如Nimbus,Supervisor和workers)时的java.library.path设置.该选项告诉JVM在哪些路径下定位本地库.</td>
-</tr>
-</tbody>
-</table>
-
           
+
+
+配置项
+配置说明
+
+
+
+
+storm.zookeeper.servers
+Zookeeper服务器列表
+
+
+storm.zookeeper.port
+zookeeper 连接端口
+
+
+storm.local.dir
+storm使用的本地文件系统目录（必须存在并且storm进程可读写）
+
+
+st
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/18/storm学习笔记-storm-yaml配置项/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1464,9 +1298,16 @@
       
         
           
-            <p>转载自：<a href="https://www.zybuluo.com/fanisfun/note/677301" target="_blank" rel="noopener">https://www.zybuluo.com/fanisfun/note/677301</a></p>
+          转载自：https://www.zybuluo.com/fanisfun/note/677301
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/18/linux下U盘分区/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1641,29 +1482,16 @@
       
         
           
-            <h2 id="磁盘分区"><a href="#磁盘分区" class="headerlink" title="磁盘分区"></a>磁盘分区</h2><h3 id="显示磁盘和分区情况"><a href="#显示磁盘和分区情况" class="headerlink" title="显示磁盘和分区情况"></a>显示磁盘和分区情况</h3><p>sudo fdisk -l</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Disk /dev/xvda: 42.9 GB, 42949672960 bytes</span><br><span class="line">255 heads, 63 sectors/track, 5221 cylinders, total 83886080 sectors</span><br><span class="line">Units = sectors of 1 * 512 = 512 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disk identifier: 0x00054506</span><br><span class="line"></span><br><span class="line">    Device Boot      Start         End      Blocks   Id  System</span><br><span class="line">/dev/xvda1   *        2048    75495423    37746688   83  Linux</span><br><span class="line">/dev/xvda2        75497470    83884031     4193281    5  Extended</span><br><span class="line">/dev/xvda5        75497472    83884031     4193280   82  Linux swap / Solaris</span><br><span class="line"></span><br><span class="line">Disk /dev/xvdb: 107.4 GB, 107374182400 bytes</span><br><span class="line">255 heads, 63 sectors/track, 13054 cylinders, total 209715200 sectors</span><br><span class="line">Units = sectors of 1 * 512 = 512 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disk identifier: 0x00000000</span><br><span class="line"></span><br><span class="line">Disk /dev/xvdb doesn\<span class="string">'t contain a valid partition table</span></span><br></pre></td></tr></table></figure>
-<h3 id="对磁盘进行分区操作"><a href="#对磁盘进行分区操作" class="headerlink" title="对磁盘进行分区操作"></a>对磁盘进行分区操作</h3><p>sudo fdisk /dev/xvdb</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Command (m <span class="keyword">for</span> <span class="built_in">help</span>): m     <span class="comment">## 打印命令列表</span></span><br><span class="line">Command action</span><br><span class="line">   a   toggle a bootable flag   <span class="comment"># 将分区标记为可启动盘</span></span><br><span class="line">   b   edit bsd disklabel</span><br><span class="line">   c   toggle the dos compatibility flag</span><br><span class="line">   d   delete a partition       <span class="comment"># 删除一个分区</span></span><br><span class="line">   l   list known partition types</span><br><span class="line">   m   <span class="built_in">print</span> this menu</span><br><span class="line">   n   add a new partition</span><br><span class="line">   o   create a new empty DOS partition table</span><br><span class="line">   p   <span class="built_in">print</span> the partition table</span><br><span class="line">   q   quit without saving changes</span><br><span class="line">   s   create a new empty Sun disklabel</span><br><span class="line">   t   change a partition\<span class="string">'s system id</span></span><br><span class="line"><span class="string">   u   change display/entry units</span></span><br><span class="line"><span class="string">   v   verify the partition table</span></span><br><span class="line"><span class="string">   w   write table to disk and exit</span></span><br><span class="line"><span class="string">   x   extra functionality (experts only)</span></span><br></pre></td></tr></table></figure>
-<p>输入n，增加硬盘一个新分区<br>选择e，指定分区为扩展分区（extended）<br>出现Partition number(1-4)时，输入１表示只分一个区<br>输入p，打印分区表<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Disk /dev/xvdb: 107.4 GB, 107374182400 bytes</span><br><span class="line">255 heads, 63 sectors/track, 13054 cylinders, total 209715200 sectors</span><br><span class="line">Units = sectors of 1 * 512 = 512 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disk identifier: 0xf88fabb6</span><br><span class="line"></span><br><span class="line">    Device Boot      Start         End      Blocks   Id  System</span><br><span class="line">/dev/xvdb1            2048   209715199   104856576    5  Extended</span><br></pre></td></tr></table></figure></p>
-<h3 id="硬盘格式化操作"><a href="#硬盘格式化操作" class="headerlink" title="硬盘格式化操作"></a>硬盘格式化操作</h3><p>sudo mkfs -t ext4 /dev/xvdb</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mkfs 命令的语法如下：</span><br><span class="line">mkfs [-V] [-t fstype] [fs-options] filesys</span><br><span class="line">说明：</span><br><span class="line">-V   显示简要的使用方法。</span><br><span class="line">-t    指定要建立何种文件系统，如：ext3, ext4。</span><br><span class="line">fs   指定建立文件系统时的参数。</span><br><span class="line">-v   显示版本信息与详细的使用方法。</span><br></pre></td></tr></table></figure>
-<h3 id="挂载硬盘分区"><a href="#挂载硬盘分区" class="headerlink" title="挂载硬盘分区"></a>挂载硬盘分区</h3><p>sudo mount -t ext4 /dev/xvdb /deb/sdb #指定硬盘分区文件系统为ext4，将/dev/xvdb 分区挂载到/dev/sdb</p>
-<p>sudo df -h #查看分区挂载情况<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Filesystem      Size  Used Avail Use% Mounted on</span><br><span class="line">/dev/xvda1       36G  2.3G   32G   7% /</span><br><span class="line">none            4.0K     0  4.0K   0% /sys/fs/cgroup</span><br><span class="line">udev            476M   12K  476M   1% /dev</span><br><span class="line">tmpfs            98M  392K   97M   1% /run</span><br><span class="line">none            5.0M  4.0K  5.0M   1% /run/lock</span><br><span class="line">none            486M     0  486M   0% /run/shm</span><br><span class="line">none            100M     0  100M   0% /run/user</span><br><span class="line">/dev/xvdb        99G   60M   94G   1% /dev/sdb</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mount命令详解</span></span><br><span class="line">mount [-afFnrsvw] [-t vfstype] [-L label]  [-o options] device dir</span><br><span class="line">mount [-lhv]</span><br><span class="line">说明：</span><br><span class="line">-a    加载文件/etc/fstab中设置的所有设备。</span><br><span class="line">-f     不实际加载设备。可与-v等参数同时使用以查看mount的执行过程。</span><br><span class="line">-F    需与-a参数同时使用。所有在/etc/fstab中设置的设备会被同时加载，可加快执行速度。</span><br><span class="line">-t vfstype   指定加载的文件系统类型，如：ext3, ext4。</span><br><span class="line">-L label      给挂载点指定一个标签名称。</span><br><span class="line">-l     显示分区的label。</span><br><span class="line">-h    显示帮助信息。</span><br><span class="line">-v    显示mount的版本信息。</span><br><span class="line">device       要挂载的分区或文件。如果device是一个文件，挂载时须加上 -o loop参数。</span><br><span class="line">dir             分区的挂载点。</span><br></pre></td></tr></table></figure>
-<h3 id="设置开机自动挂载"><a href="#设置开机自动挂载" class="headerlink" title="设置开机自动挂载"></a>设置开机自动挂载</h3><p>sudo vi /etc/fstab</p>
-<p>UUID=XXXXX /dev/sdb ext4 defaults 0 3</p>
-<p>UUID获取命令： ls -l /dev/disk/by-uuid/  或者 blkid /dev/xvdb</p>
-<p>fstab配置详解：<br>/etc/fstab 中一共有６列：</p>
-<ul>
-<li>file system：指定要挂载的文件系统的设备名称（如：/dev/sdb）。也可以采用UUID，UUID可以通过使用blkid命令来查看（如：blkid  /dev/sdb）指定设备的UUID号。</li>
-<li>mount point：挂载点。就是自己手动创建一个目录，然后把分区挂载到这个目录下。</li>
-<li>type：用来指定文件系统的类型。如：ext3, ext4, ntfs等。</li>
-<li>option dump：0表示不备份；１表示要将整个中的内容备份。此处建议设置为0。</li>
-<li>pass：用来指定fsck如何来检查硬盘。0表示不检查；挂载点为分区／（根分区）必须设置为1，其他的挂载点不能设置为1；如果有挂载ass设置成大于1的值，则在检查完根分区后，然后按pass的值从小到大依次检查，相同数值的同时检查。如：/home　和 /boot　的pass 设置成2，/devdata 的pass 设置成3，则系统在检查完根分区，接着同时检查/boot和/home，再检查/devdata。</li>
-</ul>
-
-          
+          磁盘分区显示磁盘和分区情况sudo fdisk -l
+1234567891011121314151617181920Disk /dev/xvda: 42.9 GB, 42949672960 bytes255 heads, 63 sectors/track, 5221 cylinders, total
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/18/linux磁盘分区和挂载/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1838,9 +1666,15 @@
       
         
           
-            <h1 id="kafka常用操作命令"><a href="#kafka常用操作命令" class="headerlink" title="kafka常用操作命令"></a>kafka常用操作命令</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">## 1 创建新的topic</span></span><br><span class="line">kafka-topic --create --zookeeper zkhost:2181/kafka --replication-factor 1 --partitions 3 --topic topic-name</span><br><span class="line"></span><br><span class="line"><span class="comment">## 2 查询所有的topic</span></span><br><span class="line">kafka-topics --list --zookeeper zkhost:2181/kafka</span><br><span class="line"></span><br><span class="line"><span class="comment">## 3 查看topic详细信息</span></span><br><span class="line">kafka-topics --describe --zookeeper zkhost:2181/kafka --topic topicname</span><br><span class="line"></span><br><span class="line"><span class="comment">## 4 生产消息</span></span><br><span class="line">kafka-console-producer --broker-list kafkahost:9092 --topic topicname</span><br><span class="line"></span><br><span class="line"><span class="comment">## 5 消费消息</span></span><br><span class="line">kafka-console-consumer --bootstrap-server kafkahost:9092 --topic topicname</span><br></pre></td></tr></table></figure>
-
-          
+          kafka常用操作命令123456789101112131415## 1 创建新的topickafka-topic --create --zookeeper zkhost:2181/kafka --replication-factor 1 --partitions 3 --topic topic-n
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/16/kafka操作命令/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -2015,51 +1849,19 @@
       
         
           
-            <h1 id="一、基本命令："><a href="#一、基本命令：" class="headerlink" title="一、基本命令："></a>一、基本命令：</h1><ul>
-<li><p>建表：create ‘testtable’,’coulmn1’,’coulmn2’</p>
-</li>
-<li><p>也可以建表时加coulmn的属性如：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="string">'testtable'</span>,&#123;<span class="keyword">NAME</span> =&gt; <span class="string">'coulmn1'</span>, BLOOMFILTER =&gt; <span class="string">'NONE'</span>, REPLICATION_SCOPE =&gt; <span class="string">'0'</span>, <span class="keyword">VERSIONS</span> =&gt; <span class="string">'10'</span>, COMPRESSION =&gt; <span class="string">'LZO'</span>, TTL =&gt; <span class="string">'30000'</span>, IN_MEMORY =&gt; <span class="string">'false'</span>, BLOCKCACHE =&gt; <span class="string">'false'</span>&#125;, &#123;<span class="keyword">NAME</span> =&gt; <span class="string">'coulmn'</span>, BLOOMFILTER =&gt; <span class="string">'NONE'</span>, REPLICATION_SCOPE =&gt; <span class="string">'0'</span>, <span class="keyword">VERSIONS</span> =&gt; <span class="string">'30'</span>, COMPRESSION =&gt; <span class="string">'LZO'</span>, TTL =&gt; <span class="string">'30000'</span>, IN_MEMORY =&gt; <span class="string">'true'</span>&#125;  (其中的属性有<span class="keyword">versions</span>：设置历史版本数，TTL：过期时间，COMPRESSION：压缩方式，当配置lzo的情况)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>删除表：drop ‘testtable’   （删除表之前先要禁用表，命令disable ‘testtable’）</p>
-</li>
-<li><p>启用和禁用表： enable ‘testtable’ 和disable ‘testtable’</p>
-</li>
-<li><p>其它的基本命令：describe ‘testtable’（查看表结构），alert 修改表结构，list 列出所有表。</p>
-</li>
-<li><p>查询前10条数据:</p>
-<pre><code>scan&apos;testtable&apos;,{COLUMNS=&gt;&apos;info&apos;,LIMIT=&gt;10,STARTROW=&gt;&apos;666632331200000020160305&apos;,STOPROW=&gt;&apos;666632331200000020160308&apos;}
-</code></pre></li>
-</ul>
-<h2 id="分区合并"><a href="#分区合并" class="headerlink" title="分区合并"></a>分区合并</h2><p>合并两个预分区，合并预分区要提供该区encode值，该值在16010hbase管理web可查</p>
-<pre><code>merge_region &apos;region1的encode值&apos;,&apos;region2的encode值&apos;
-</code></pre><h2 id="手动触发major-compact动作"><a href="#手动触发major-compact动作" class="headerlink" title="手动触发major_compact动作"></a>手动触发major_compact动作</h2><p>cd /opt/hbase-1.2.1/bin<br>./hbase shell<br>major_compact ‘table’<br>quit</p>
-<h2 id="手动触发flush动作"><a href="#手动触发flush动作" class="headerlink" title="手动触发flush动作"></a>手动触发flush动作</h2><p>cd /opt/hbase-1.2.1/bin<br>./hbase shell<br>flush ‘table1’<br>flush ‘table2’<br>quit</p>
-<h2 id="每次hbase启动，最好设置一下参数，让hbase区自动均衡"><a href="#每次hbase启动，最好设置一下参数，让hbase区自动均衡" class="headerlink" title="每次hbase启动，最好设置一下参数，让hbase区自动均衡"></a>每次hbase启动，最好设置一下参数，让hbase区自动均衡</h2><p>cd /opt/hbase-1.2.1/bin<br>./hbase shell<br>balance_switch true</p>
-<h1 id="二、日常维护的命令"><a href="#二、日常维护的命令" class="headerlink" title="二、日常维护的命令"></a>二、日常维护的命令</h1><p>1，major_compact ‘testtable’，通常生产环境会关闭自动major_compact(配置文件中hbase.hregion.majorcompaction设为0)，选择一个晚上用户少的时间窗口手工major_compact，如果hbase更新不是太频繁，可以一个星期对所有表做一次major_compact，这个可以在做完一次major_compact后，观看所有的storefile数量，如果storefile数量增加到major_compact后的storefile的近二倍时，可以对所有表做一次major_compact，时间比较长，操作尽量避免高锋期。</p>
-<p>2，flush ‘testtable’，将所有memstore刷新到hdfs，通常如果发现regionserver的内存使用过大，造成该机的regionserver很多线程block，可以执行一下flush操作，这个操作会造成hbase的storefile数量剧增，应尽量避免这个操作，还有一种情况，在hbase进行迁移的时候，如果选择拷贝文件方式，可以先停写入，然后flush所有表，拷贝文件。</p>
-<p>3，balance_switch true或者balance_switch flase，配置master是否执行平衡各个regionserver的region数量，当我们需要维护或者重启一个regionserver时，会关闭balancer，这样就使得region在regionserver上的分布不均，这个时候需要手工的开启balance。</p>
-<h1 id="三、重启一个regionserver"><a href="#三、重启一个regionserver" class="headerlink" title="三、重启一个regionserver"></a>三、重启一个regionserver</h1><p>bin/graceful_stop.sh –restart –reload –debug nodename</p>
-<p>这个操作是平滑的重启regionserver进程，对服务不会有影响，他会先将需要重启的regionserver上面的所有region迁移到其它的服务器，然后重启，最后又会将之前的region迁移回来，但我们修改一个配置时，可以用这种方式重启每一台机子，这个命令会关闭balancer，所以最后我们要在hbase shell里面执行一下balance_switch true，对于hbase regionserver重启，不要直接kill进程，这样会造成在zookeeper.session.timeout这个时间长的中断，也不要通过bin/hbase-daemon.sh stop regionserver去重启，如果运气不太好，-ROOT-或者.META.表在上面的话，所有的请求会全部失败。</p>
-<h1 id="四、关闭下线一台regionserver"><a href="#四、关闭下线一台regionserver" class="headerlink" title="四、关闭下线一台regionserver"></a>四、关闭下线一台regionserver</h1><p>bin/graceful_stop.sh –stop  nodename</p>
-<p>和上面一样，系统会在关闭之前迁移所有region，然后stop进程，同样最后我们要手工balance_switch true，开启master的region均衡。</p>
-<h1 id="五、检查region是否正常以及修复"><a href="#五、检查region是否正常以及修复" class="headerlink" title="五、检查region是否正常以及修复"></a>五、检查region是否正常以及修复</h1><p>bin/hbase hbck  (检查)</p>
-<p>bin/hbase hbck -fix  （修复）</p>
-<p>会返回所有的region是否正常挂载，如没有正常挂载可以使用下一条命令修复，如果还是不能修复，那需要看日志为什么失败，手工处理。</p>
-<h1 id="六、hbase的迁移"><a href="#六、hbase的迁移" class="headerlink" title="六、hbase的迁移"></a>六、hbase的迁移</h1><p>1，copytable方式</p>
-<p>bin/hbase org.apache.hadoop.hbase.mapreduce.CopyTable –peer.adr=zookeeper1,zookeeper2,zookeeper3:/hbase ‘testtable’</p>
-<p>目前0.92之前的版本的不支持多版本的复制，0.94已经支持多个版本的复制。当然这个操作需要添加hbase目录里的conf/mapred-site.xml，可以复制hadoop的过来。</p>
-<p>2，Export/Import</p>
-<p>bin/hbase org.apache.hadoop.hbase.mapreduce.Export testtable /user/testtable [versions] [starttime] [stoptime]</p>
-<p>bin/hbase org.apache.hadoop.hbase.mapreduce.Import testtable  /user/testtable</p>
-<p>跨版本的迁移，我觉得是一个不错的选择，而且copytable不支持多版本，而export支持多版本，比copytable更实用一些。</p>
-<p>3，直接拷贝hdfs对应的文件</p>
-<p>首先拷贝hdfs文件，如bin/hadoop distcp hdfs://srcnamenode:9000/hbase/testtable/ hdfs://distnamenode:9000/hbase/testtable/</p>
-<p>然后在目的hbase上执行bin/hbase org.jruby.Main bin/add_table.rb /hbase/testtable</p>
-<p>生成meta信息后，重启hbase</p>
-<p>这个操作是简单的方式，操作之前可以关闭hbase的写入，执行flush所有表（上面有介绍）,再distcp拷贝，如果hadoop版本不一致，可以用hftp接口的方式，我推荐使用这种方式，成本低。</p>
+          一、基本命令：
+建表：create ‘testtable’,’coulmn1’,’coulmn2’
 
-          
+也可以建表时加coulmn的属性如：
+1create 'testtable',&#123;NAME =&gt; 'coulmn1', BLOOMFILTER =&gt; 'NONE', REPLIC
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/09/Hbase基本操作命令/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -2234,184 +2036,16 @@
       
         
           
-            <h2 id="安装ubuntu"><a href="#安装ubuntu" class="headerlink" title="安装ubuntu"></a>安装ubuntu</h2><p>在windows上使用ultraISO软件来刻录Ubuntu系统安装盘，设置U盘启动，安装系统<br>参考链接：<a href="https://xiongraorao.github.io/2017/01/14/%E5%8E%9F-Ubuntu-14-04-64%E4%BD%8D%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85cuda8-0-cudnn7-5-opencv-caffe-%E8%A1%80%E6%B3%AA%E6%95%99%E7%A8%8B/" target="_blank" rel="noopener">Ubuntu 14.04 64位系统安装cuda8.0+cudnn7.5+opencv+caffe 血泪教程</a></p>
-<h2 id="安装NVIDIA驱动"><a href="#安装NVIDIA驱动" class="headerlink" title="安装NVIDIA驱动"></a>安装NVIDIA驱动</h2><p><a href="http://www.nvidia.cn/Download/index.aspx?lang=cn" target="_blank" rel="noopener">http://www.nvidia.cn/Download/index.aspx?lang=cn</a><br>选择合适型号，下载驱动包</p>
-<ul>
-<li>首先按Ctrl+Alt+F1，进入text mode，关闭显示驱动<br> sudo service lightdm stop</li>
-<li><p>增加执行权限</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod +x NVIDIA-Linux-x86_64-375.39.run</span><br><span class="line">sudo ./NVIDIA-Linux-x86_64-375.39.run</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装成功后，重启图像界面服务<br> sudo service lightdm start</p>
-</li>
-</ul>
-<h2 id="安装cuda-cudnn-opencv-caffe"><a href="#安装cuda-cudnn-opencv-caffe" class="headerlink" title="安装cuda+cudnn+opencv+caffe"></a>安装cuda+cudnn+opencv+caffe</h2><p>参考这个链接：<a href="https://xiongraorao.github.io/2017/01/14/%E5%8E%9F-Ubuntu-14-04-64%E4%BD%8D%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85cuda8-0-cudnn7-5-opencv-caffe-%E8%A1%80%E6%B3%AA%E6%95%99%E7%A8%8B/" target="_blank" rel="noopener">原-Ubuntu-14-04-64位系统安装cuda8-0-cudnn7-5-opencv-caffe-血泪教程</a></p>
-<p>caffe_github_link:<a href="https://github.com/BVLC/caffe.git" target="_blank" rel="noopener">https://github.com/BVLC/caffe.git</a><br>opencv_github_link:<a href="https://github.com/opencv/opencv" target="_blank" rel="noopener">https://github.com/opencv/opencv</a></p>
-<h2 id="配置静态ip-安装ssh-server"><a href="#配置静态ip-安装ssh-server" class="headerlink" title="配置静态ip + 安装ssh-server"></a>配置静态ip + 安装ssh-server</h2><h3 id="静态ip"><a href="#静态ip" class="headerlink" title="静态ip"></a>静态ip</h3><p>ubuntu14.04设置静态ip</p>
-<ol>
-<li>找到文件并作如下修改：</li>
-</ol>
-<p>sudo vim /etc/network/interfaces</p>
-<p>修改如下部分：</p>
-<p>auto eth0<br>iface eth0 inet static<br>address 192.168.1.4<br>gateway 192.168.1.1 #这个地址你要确认下 网关是不是这个地址<br>netmask 255.255.255.0</p>
-<p>#network 192.168.0.0</p>
-<p>#broadcast 192.168.0.255</p>
-<ol start="2">
-<li>修改dns解析</li>
-</ol>
-<p>因为以前是dhcp解析，所以会自动分配dns服务器地址</p>
-<p>而一旦设置为静态ip后就没有自动获取到的dns服务器了</p>
-<p>要自己设置一个</p>
-<p>sudo vim /etc/resolv.conf</p>
-<p>写上一个公网的DNS</p>
-<p>nameserver 202.114.0.131(公网dns服务器)<br>nameserver 202.114.0.242（公网dns服务器）<br>nameserver 192.168.1.1（局域网内可以访问外网的机器，非网关服务器放在前面）</p>
-<p>sudo vim /etc/resolvconf/resolv.d/base</p>
-<p>nameserver 202.114.0.131(公网dns服务器)<br>nameserver 202.114.0.242（公网dns服务器）<br>nameserver 192.168.1.1（局域网内可以访问外网的机器，非网关服务器放在前面）</p>
-<ol start="3">
-<li>重启网卡：</li>
-</ol>
-<p>sudo /etc/init.d/network restart</p>
-<h3 id="安装ssh-server"><a href="#安装ssh-server" class="headerlink" title="安装ssh-server"></a>安装ssh-server</h3><ul>
-<li>判断是否安装ssh服务<br>Ubuntu系统默认安装ssh-client，如果想远程登录主机，就需要安装ssh-server，如下命令：  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -e|grep sshps -e|grep ssh</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>ssh-agent表示ssh-client启动，sshd表示ssh-server启动了</p>
-<p>如果缺少sshd，说明ssh服务没有启动或者没有安装。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openssh-client <span class="comment">#安装ssh-client命令</span></span><br><span class="line">sudo apt-get install openssh-server <span class="comment">#安装ssh-server命令</span></span><br><span class="line">sudo /etc/init.d/ssh start <span class="comment">#启动服务</span></span><br><span class="line">ps -e|grep sshps -e|grep ssh <span class="comment">#查看是否正确启动。</span></span><br></pre></td></tr></table></figure></p>
-<ul>
-<li><p>配置ssh服务端口<br>默认端口是 22<br>sudo gedit /etc/ssh/sshd_config<br>sudo /etc/init.d/ssh restart #重启ssh服务生效</p>
-</li>
-<li><p>设置开机自动启动</p>
-</li>
-</ul>
-<h2 id="安装storm-kafka-zookeeper-hdfs-hbase-jdk"><a href="#安装storm-kafka-zookeeper-hdfs-hbase-jdk" class="headerlink" title="安装storm+kafka+zookeeper+hdfs+hbase+jdk"></a>安装storm+kafka+zookeeper+hdfs+hbase+jdk</h2><h3 id="前期准备工作"><a href="#前期准备工作" class="headerlink" title="前期准备工作"></a>前期准备工作</h3><ol>
-<li>首先下载好这几个文件，这里用的版本分别是：</li>
-</ol>
-<ul>
-<li>storm <strong><em>0.9.6</em></strong></li>
-<li>zookeeper <strong><em>3.4.0</em></strong></li>
-<li>jdk <strong><em>1.8.0.92</em></strong></li>
-<li>kafka <strong><em>2.11.0.10.0.0</em></strong></li>
-<li>hadoop <strong><em>2.6.4</em></strong></li>
-<li>hbase <strong><em>1.2.4</em></strong></li>
-</ul>
-<ol start="2">
-<li>设置ip地址映射<br>sudo vi /etc/hosts</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># test</span></span><br><span class="line">192.168.0.136   pc1080</span><br><span class="line">192.168.0.116   pcwrp</span><br><span class="line">192.168.0.117   pcxrr</span><br><span class="line"></span><br><span class="line">192.168.0.136   cloud01</span><br><span class="line">192.168.0.116   cloud02</span><br><span class="line">192.168.0.117   cloud03</span><br><span class="line"></span><br><span class="line">192.168.0.136   hadoop01</span><br><span class="line">192.168.0.116   hadoop02</span><br><span class="line">192.168.0.117   hadoop03</span><br><span class="line"></span><br><span class="line">192.168.0.136   zk01</span><br><span class="line">192.168.0.116   zk02</span><br><span class="line">192.168.0.117   zk03</span><br><span class="line"></span><br><span class="line">192.168.0.136   kafka01</span><br><span class="line">192.168.0.116   kafka02</span><br><span class="line">192.168.0.117   kafka03</span><br><span class="line"></span><br><span class="line">192.168.0.136   kafka01</span><br><span class="line">192.168.0.116   kafka02</span><br><span class="line">192.168.0.117   kafka03</span><br><span class="line"></span><br><span class="line">192.168.0.136   storm01</span><br><span class="line">192.168.0.116   storm02</span><br><span class="line">192.168.0.117   storm03</span><br><span class="line"></span><br><span class="line">192.168.0.136   hbase01</span><br><span class="line">192.168.0.116   hbase02</span><br><span class="line">192.168.0.117   hbase03</span><br><span class="line"></span><br><span class="line"><span class="comment"># end test</span></span><br></pre></td></tr></table></figure>
-<p><span style="color:red">这里面需要注意一下，之所以需要配置多组ip映射，是因为在相应的软件中很多默认参数需要用到这些映射</span></p>
-<ol start="3">
-<li><p>三台机机器实现互相ssh免密码登录，并且实现自身环回登录<br>参考链接：<a href="https://xiongraorao.github.io/2017/02/17/ssh%E5%85%8D%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95/" target="_blank" rel="noopener">ssh免密码登录</a></p>
-</li>
-<li><p>设置环境变量<br>vi ~/.bashrc</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># java</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/home/hadoop/cloud/jdk1.8.0_92/</span><br><span class="line"><span class="built_in">export</span> JRE_HOME=<span class="variable">$JAVA_HOME</span>/jre</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/lib/tools.jar:<span class="variable">$JAVA_HOME</span>/lib/dt.jar:<span class="variable">$JRE_HOME</span>/lib</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$JRE_HOME</span>/bin</span><br><span class="line"><span class="comment"># hadoop</span></span><br><span class="line"><span class="built_in">export</span> MAVEN_HOME=/home/hadoop/cloud/apache-maven-3.3.9/</span><br><span class="line"><span class="built_in">export</span> ZOOKEEPER_HOME=/home/hadoop/cloud/zookeeper-3.4.9/</span><br><span class="line"><span class="built_in">export</span> HADOOP_HOME=/home/hadoop/cloud/hadoop-2.6.4/</span><br><span class="line"><span class="built_in">export</span> HBASE_HOME=/home/hadoop/cloud/hbase-1.2.4/</span><br><span class="line"><span class="built_in">export</span> FLUME_HOME=/home/hadoop/cloud/apache-flume-1.6.0/</span><br><span class="line"><span class="built_in">export</span> KAFKA_HOME=/home/hadoop/cloud/kafka_2.11-0.10.0.0/</span><br><span class="line"><span class="built_in">export</span> STORM_HOME=/home/hadoop/cloud/apache-storm-0.9.6/</span><br><span class="line"><span class="built_in">export</span> HIVE_HOME=/home/hadoop/cloud/apache-hive-1.2.1/</span><br><span class="line"><span class="built_in">export</span> HADOOP_INSTALL=<span class="variable">$HADOOP_HOME</span></span><br><span class="line"><span class="built_in">export</span> HADOOP_PREFIX=<span class="variable">$HADOOP_HOME</span></span><br><span class="line"><span class="built_in">export</span> HADOOP_MAPRED_HOME=<span class="variable">$HADOOP_HOME</span></span><br><span class="line"><span class="built_in">export</span> HADOOP_COMMON_HOME=<span class="variable">$HADOOP_HOME</span></span><br><span class="line"><span class="built_in">export</span> HADOOP_HDFS_HOME=<span class="variable">$HADOOP_HOME</span></span><br><span class="line"><span class="built_in">export</span> YARN_HOME=<span class="variable">$HADOOP_HOME</span></span><br><span class="line"><span class="built_in">export</span> HADOOP_COMMON_LIB_NATIVE_DIR=<span class="variable">$HADOOP_HOME</span>/lib/native</span><br><span class="line"><span class="built_in">export</span> HADOOP_OPTS=<span class="string">"-Djava.library.path=<span class="variable">$HADOOP_PREFIX</span>/lib/native"</span></span><br><span class="line"><span class="comment">#export CHUKWA_HOME=/home/hadoop/cloud/chukwa-0.8.0/</span></span><br><span class="line"><span class="comment">#export CHUKWA_CONF_DIR=$CHUKWA_HOME/etc/chukwa</span></span><br><span class="line">PATH=<span class="variable">$PATH</span>:<span class="variable">$HOME</span>/bin</span><br><span class="line">PATH=<span class="variable">$JAVA_HOME</span>/bin/:<span class="variable">$PATH</span></span><br><span class="line">PATH=<span class="variable">$MAVEN_HOME</span>/bin/:<span class="variable">$PATH</span></span><br><span class="line">PATH=<span class="variable">$ZOOKEEPER_HOME</span>/bin/:<span class="variable">$PATH</span></span><br><span class="line">PATH=<span class="variable">$HBASE_HOME</span>/bin/:<span class="variable">$PATH</span></span><br><span class="line">PATH=<span class="variable">$FLUME_HOME</span>/bin/:<span class="variable">$PATH</span></span><br><span class="line">PATH=<span class="variable">$KAFKA_HOME</span>/bin/:<span class="variable">$PATH</span></span><br><span class="line">PATH=<span class="variable">$STORM_HOME</span>/bin/:<span class="variable">$PATH</span></span><br><span class="line">PATH=<span class="variable">$PATH</span>:<span class="variable">$HADOOP_HOME</span>/sbin:<span class="variable">$HADOOP_HOME</span>/bin</span><br><span class="line">PATH=<span class="variable">$HIVE_HOME</span>/bin/:<span class="variable">$PATH</span></span><br><span class="line">PATH=<span class="variable">$PATH</span>:<span class="variable">$CHUKWA_HOME</span>/bin:<span class="variable">$CHUKWA_HOME</span>/sbin</span><br><span class="line"><span class="built_in">export</span> PATH</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="安装zookeeper"><a href="#安装zookeeper" class="headerlink" title="安装zookeeper"></a>安装zookeeper</h3><ul>
-<li>下载安装包，解压到 /home/hadoop/cloud 目录下</li>
-<li>添加环境变量</li>
-<li><strong>配置/etc/hosts 文件，做好ip地址映射</strong></li>
-<li>cat zoo_sample.cfg &gt;&gt; zoo.cfg</li>
-<li><p>编辑 zoo.cfg文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">tickTime=2000</span><br><span class="line">initLimit=10</span><br><span class="line">syncLimit=5</span><br><span class="line"><span class="comment"># zookeeper数据保存路径</span></span><br><span class="line">dataDir=/home/hadoop/cloud/zookeeper-3.4.9/data/</span><br><span class="line">clientPort=2181</span><br><span class="line">maxClientCnxns=150</span><br><span class="line">maxSessionTimeout=100000</span><br><span class="line">autopurge.snapRetainCount=6</span><br><span class="line">autopurge.purgeInterval=48</span><br><span class="line">server.1=zk01:2888:3888</span><br><span class="line">server.2=zk02:2888:3888</span><br><span class="line">server.3=zk03:2888:3888</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在节点配置的dataDir目录中创建一个myid文件，里面内容为一个数字，用来标识当前主机，$ZOOKEEPER_HOME/conf/zoo.cfg文件中配置的server.X，则myid文件中就输入这个数字X。（即在每个节点上新建并设置文件myid，其内容与zoo.cfg中的id相对应）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/hadoop/cloud/zookeeper-3.4.9/data/</span><br><span class="line">mkdir myid</span><br><span class="line">vi myid</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>启动zookeeper</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ZOOKEEPER_HOME</span>/bin/zkServer.sh start</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="安装storm"><a href="#安装storm" class="headerlink" title="安装storm"></a>安装storm</h3><ul>
-<li>下载安装包，解压到 /home/hadoop/cloud 目录下</li>
-<li>设置环境变量</li>
-<li><p>修改 storm 主目录下conf/storm.yaml文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">storm.zookeeper.servers:</span><br><span class="line"> - <span class="string">"zk01"</span></span><br><span class="line"> - <span class="string">"zk02"</span></span><br><span class="line"> - <span class="string">"zk03"</span></span><br><span class="line">storm.zookeeper.port: 2181</span><br><span class="line">storm.zookeeper.root: <span class="string">"/storm"</span></span><br><span class="line">nimbus.host: <span class="string">"storm01"</span></span><br><span class="line"></span><br><span class="line">supervisor.slots.ports:</span><br><span class="line"> - 6700</span><br><span class="line"> - 6701</span><br><span class="line"> - 6702</span><br><span class="line"> - 6703</span><br><span class="line"> - 6704</span><br><span class="line"> - 6705</span><br><span class="line"> - 6706</span><br><span class="line"> - 6707</span><br><span class="line"> - 6708</span><br><span class="line">storm.local.dir: <span class="string">"/home/hadoop/cloud/apache-storm-0.9.6/local"</span></span><br><span class="line"></span><br><span class="line">drpc.servers:</span><br><span class="line"> - <span class="string">"storm01"</span></span><br><span class="line">drpc.port: 3772</span><br><span class="line">drpc.worker.threads: 100</span><br><span class="line">drpc.queue.size: 1024</span><br><span class="line">drpc.invocations.port: 3773</span><br><span class="line">drpc.request.timeout.secs: 800</span><br><span class="line">drpc.childopts: <span class="string">"-Xmx2048m"</span></span><br><span class="line">drpc.port: 3772</span><br><span class="line">drpc.worker.threads: 100</span><br><span class="line">drpc.queue.size: 1024</span><br><span class="line">drpc.invocations.port: 3773</span><br><span class="line">drpc.request.timeout.secs: 800</span><br><span class="line">drpc.childopts: <span class="string">"-Xmx2048m"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#JVM options of worker</span></span><br><span class="line"><span class="comment">#edited by persist</span></span><br><span class="line">superivisor.childopts: <span class="string">"-Xmx2048m"</span></span><br><span class="line">worker.childopts: <span class="string">"-Xmx2048m"</span></span><br><span class="line"><span class="comment">#JVM options of worker</span></span><br><span class="line"><span class="comment">#edited by persist</span></span><br><span class="line">superivisor.childopts: <span class="string">"-Xmx2048m"</span></span><br><span class="line">worker.childopts: <span class="string">"-Xmx2048m"</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>启动storm命令（<strong>启动storm之前需要启动zookeeper</strong>）</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nimubs-host: nohup bin/storm nimbus&amp;</span><br><span class="line">nimubs-host: nohup bin/storm ui&amp;</span><br><span class="line">superivisor-hosts: nohup bin/storm superivisor&amp;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>浏览器输入：<a href="http://pc1080:8080" target="_blank" rel="noopener">http://pc1080:8080</a> 查看storm UI界面</li>
-</ul>
-<h3 id="安装hadoop"><a href="#安装hadoop" class="headerlink" title="安装hadoop"></a>安装hadoop</h3><ul>
-<li>下载安装包，解压到 /home/hadoop/cloud 目录下</li>
-<li>设置环境变量</li>
-<li><p>修改主目录下 etc/hadoop-env.sh</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> JAVA_HOME=/home/hadoop/cloud/jdk1.8.0_92/</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改主目录下 etc/yarn-env.sh</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> JAVA_HOME=/home/hadoop/cloud/jdk1.8.0_92/</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改 etc/hadoop/mapred-env.sh</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> JAVA_HOME=/home/hadoop/cloud/jdk1.8.0_92/</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改主目录下 etc/core-site.xml</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">            &lt;name&gt;fs.defaultFS&lt;/name&gt;</span><br><span class="line">            &lt;value&gt;hdfs://hadoop01:9000&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">                &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;file:/home/hadoop/cloud/hadoop-2.6.4/data/tmp&lt;/value&gt;</span><br><span class="line">                &lt;description&gt;Abase <span class="keyword">for</span> other temporary directories.&lt;/description&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;ha.zookeeper.quorum&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;zk01:2181,zk02:2181,zk03:2181&lt;/value&gt;</span><br><span class="line">        &lt;description&gt;这里是ZooKeeper集群的地址和端口。注意，数量一定是奇数，且不少于三个节点&lt;/description&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    <span class="comment"># add ours here</span></span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hadoop.proxyuser.hadoop.groups&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;*&lt;/value&gt;</span><br><span class="line">        &lt;description&gt;允许所有用户组用户代理&lt;/description&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hadoop.proxyuser.hadoop.hosts&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;hadoop01&lt;/value&gt;</span><br><span class="line">        &lt;description&gt;允许挂载的主机域名&lt;/description&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改主目录下 etc/hdfs-site.xml</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.nfs.exports.allowed.hosts&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;hadoop01 rw;hadoop02 rw;hadoop03 rw;&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.namenode.secondary.http-address&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;hadoop01:50090&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.replication&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;2&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;file:/home/hadoop/cloud/hadoop-2.6.4/tmp/dfs/name&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;file:/home/hadoop/cloud/hadoop-2.6.4/tmp/dfs/data&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">		&lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.webhdfs.enabled&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;<span class="literal">true</span>&lt;/value&gt;</span><br><span class="line">		&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">        <span class="comment">## add options here</span></span><br><span class="line">		&lt;property&gt;</span><br><span class="line">				&lt;name&gt;dfs.client.block.write.replace-datanode-on-failure.enable&lt;/name&gt;</span><br><span class="line">				&lt;value&gt;<span class="literal">true</span>&lt;/value&gt;</span><br><span class="line">		&lt;/property&gt;</span><br><span class="line">		&lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.client.block.write.replace-datanode-on-failure.policy&lt;/name&gt;</span><br><span class="line">		        &lt;value&gt;NEVER&lt;/value&gt;</span><br><span class="line">		&lt;/property&gt;</span><br><span class="line">		&lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.namenode.fs-limits.max-component-length&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;255&lt;/value&gt;</span><br><span class="line">                &lt;description&gt;Defines the maximum number of bytes <span class="keyword">in</span> UTF-8 encoding <span class="keyword">in</span> each</span><br><span class="line">                    component of a path.  A value of 0 will <span class="built_in">disable</span> the check.&lt;/description&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.namenode.fs-limits.max-directory-items&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;6000000&lt;/value&gt;</span><br><span class="line">                &lt;description&gt;Defines the maximum number of items that a directory may</span><br><span class="line">                    contain. Cannot <span class="built_in">set</span> the property to a value less than 1 or more than</span><br><span class="line">                    6400000.&lt;/description&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.namenode.fs-limits.min-block-size&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;1048576&lt;/value&gt;</span><br><span class="line">                &lt;description&gt;Minimum block size <span class="keyword">in</span> bytes, enforced by the Namenode at create</span><br><span class="line">                    time. This prevents the accidental creation of files with tiny block</span><br><span class="line">                    sizes (and thus many blocks), <span class="built_in">which</span> can degrade performance.&lt;/description&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.namenode.fs-limits.max-blocks-per-file&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;1048576&lt;/value&gt;</span><br><span class="line">                &lt;description&gt;Maximum number of blocks per file, enforced by the Namenode on</span><br><span class="line">                    write. This prevents the creation of extremely large files <span class="built_in">which</span> can</span><br><span class="line">                    degrade performance.&lt;/description&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.namenode.fs-limits.max-xattrs-per-inode&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;32&lt;/value&gt;</span><br><span class="line">                &lt;description&gt;</span><br><span class="line">                    Maximum number of extended attributes per inode.</span><br><span class="line">                &lt;/description&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.namenode.fs-limits.max-xattr-size&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;16384&lt;/value&gt;</span><br><span class="line">                &lt;description&gt;</span><br><span class="line">                    The maximum combined size of the name and value of an extended attribute</span><br><span class="line">                    <span class="keyword">in</span> bytes. It should be larger than 0, and less than or equal to maximum</span><br><span class="line">                    size hard <span class="built_in">limit</span> <span class="built_in">which</span> is 32768.</span><br><span class="line">                &lt;/description&gt;</span><br><span class="line">       &lt;/property&gt;</span><br><span class="line">	   &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.datanode.max.transfer.threads&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;8192&lt;/value&gt;</span><br><span class="line">      &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改主目录下 etc/httpfs-env.sh</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> JAVA_HOME=/home/hadoop/cloud/jdk1.8.0_92/</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> HTTPFS_HOME=/home/hadoop/cloud/hadoop-2.6.4/</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> HTTPFS_CONFIG=/home/hadoop/cloud/hadoop-2.6.4/etc/hadoop</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> CATALINA_BASE=/home/hadoop/cloud/hadoop-2.6.4/share/hadoop/httpfs/tomcat</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> HTTPFS_LOG=<span class="variable">$&#123;HTTPFS_HOME&#125;</span>/httpfs/logs</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> HTTPFS_TEMP=<span class="variable">$&#123;HTTPFS_HOME&#125;</span>/httpfs/temp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> HTTPFS_HTTP_PORT=14000</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> HTTPFS_ADMIN_PORT=`expr <span class="variable">$&#123;HTTPFS_HTTP_PORT&#125;</span> + 1`</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改 etc/hadoop/slavers</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hadoop01</span><br><span class="line">hadoop02</span><br><span class="line">hadoop03</span><br></pre></td></tr></table></figure>
-<p><span style="color:red">以上只是部分配置，其中hadoop01是默认的主节点，默认配置的主机</span></p>
-<ul>
-<li><p>启动hadoop</p>
-<ul>
-<li>首先需要启动zookeeper</li>
-<li>格式化hdfs： bin/hdfs namenode -format</li>
-<li>启动hdfs和yarn： sbin/start-all.sh,启动成功master出现NameNode，SecondaryNameNode，ResourceManger进程，slave节点出现DataNode和NodeManager<br><strong>注意事项：如果增加了多个ip映射，那么有可能提醒是否需要添加host到ssh表，这种情况框需要重新设置ssh互通</strong></li>
-</ul>
-</li>
-<li><p>web查看<br>hdfs: <a href="https://hadoop01:50070/" target="_blank" rel="noopener">https://hadoop01:50070/</a><br>yarn: <a href="https://hadoop01:8088/" target="_blank" rel="noopener">https://hadoop01:8088/</a></p>
-</li>
-</ul>
-<p>遇到的问题：<br>主节点上启动start-all.sh, 只有主节点的NameNode和SecondaryNameNode和DataNode启动，从节点的DataNode没有启动</p>
-<p>重启部分坏死节点：<br>bin/Hadoop-daemon.sh start DataNode<br>bin/Hadoop-daemon.sh start jobtracker</p>
-<p>动态加入新节点：<br>bin/Hadoop-daemon.sh –config ./conf start DataNode<br>bin/Hadoop-daemon.sh –config ./conf start tasktracker</p>
-<p>更新配置文件命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> ip <span class="keyword">in</span> `seq 2 3`; <span class="keyword">do</span> scp /home/hadoop/cloud/hadoop-2.6.4/etc/hadoop/* hadoop@hadoop0<span class="variable">$ip</span>:/home/hadoop/cloud/hadoop-2.6.4/etc/hadoop/; <span class="keyword">done</span></span><br></pre></td></tr></table></figure></p>
-<p>更新环境变量：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> ip <span class="keyword">in</span> `seq 2 3`; <span class="keyword">do</span> scp /home/hadoop/.bashrc hadoop@hadoop0<span class="variable">$ip</span>:/home/hadoop/; <span class="keyword">done</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="安装HBase"><a href="#安装HBase" class="headerlink" title="安装HBase"></a>安装HBase</h3><ul>
-<li>下载安装包，解压到 /home/hadoop/cloud 目录下</li>
-<li>修改～/.bashrc文件，添加HBASE_HOME环境变量；</li>
-<li><p>修改 conf/hbase-env.sh</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> JAVA_HOME=/home/hadoop/cloud/jdk1.8.0_92/</span><br><span class="line"><span class="built_in">export</span> HBASE_CLASSPATH=/opt/hbase/conf  (extral classpath like java, Optional)</span><br><span class="line"><span class="comment"># 此配置信息，设置由zk集群管理，故为false  </span></span><br><span class="line"><span class="built_in">export</span> HBASE_MANAGES_ZK=<span class="literal">false</span>  </span><br><span class="line"><span class="built_in">export</span> HBASE_HOME=/opt/hbase  (Optional)</span><br><span class="line"><span class="comment">#Hbase日志目录  </span></span><br><span class="line"><span class="built_in">export</span> HBASE_LOG_DIR=<span class="variable">$HBASE_HOME</span>/logs(Optional)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改 conf/hbase-site.xml</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hbase.rootdir&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;hdfs://hbase01:9000/hbase&lt;/value&gt;</span><br><span class="line">        &lt;description&gt;The directory shared by region servers.&lt;/description&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hbase.zookeeper.property.clientPort&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;2181&lt;/value&gt;</span><br><span class="line">        &lt;description&gt;Property from ZooKeeper config zoo.cfg. The port at <span class="built_in">which</span> the clients will connect.</span><br><span class="line">        &lt;/description&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hbase.master.info.bindAddress&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;192.168.100.101&lt;/value&gt;</span><br><span class="line">        &lt;description&gt;HBase Master web ui <span class="built_in">bind</span> address&lt;/description&gt; **必须填写master节点地址**</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;zookeeper.session.timeout&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;60000&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hbase.zookeeper.quorum&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;hbase01,hbase02,hbase03&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hbase.tmp.dir&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;/home/hadoop/cloud/hbase-1.2.4/data/tmp&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hbase.cluster.distributed&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;<span class="literal">true</span>&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hbase.zookeeper.property.dataDir&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;/home/hadoop/cloud/hbase-1.2.4/zookeeper&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hbase.zookeeper.property.maxClientCnxns&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;300&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.client.block.write.replace-datanode-on-failure.enable&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;<span class="literal">true</span>&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.client.block.write.replace-datanode-on-failure.policy&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;NEVER&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.replication&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;1&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改 regionservers</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hbase01</span><br><span class="line">hbase02  <span class="comment">#设置regionserver的节点</span></span><br><span class="line">hbase03</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>同步配置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> ip <span class="keyword">in</span> `seq 2 3`; <span class="keyword">do</span> scp /home/hadoop/cloud/hbase-1.2.4/conf/* hadoop@hadoop0<span class="variable">$ip</span>:/home/hadoop/cloud/hbase-1.2.4/conf/; <span class="keyword">done</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>启动hbase</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bin/start-hbase.sh</span><br><span class="line">启动后，jps可以看到有这两个进程</span><br><span class="line">HRegionServer</span><br><span class="line">HMaster</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>启动Hbase Shell</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/hbase shell</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>访问HBase UI<br>查看hbase管理界面<a href="http://192.168.181.66:16010" target="_blank" rel="noopener">http://192.168.181.66:16010</a></p>
-</li>
-<li><p>hbase日常维护<br>参考链接：<a href="https://xiongraorao.github.io/2017/03/09/Hbase%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/#more" target="_blank" rel="noopener">Hbase基本操作命令</a></p>
-</li>
-</ul>
-<blockquote>
-<p><span style="color:red;font-size: 26px;font-weight: bold">注意hbase集群安装的大坑</span></p>
-<ol>
-<li>hbase-site.xml必须添加hbase.master.info.bindAddress配置项，设置为master节点的ip地址</li>
-<li>设置/etc/hosts文件，注释掉 127.0.1.1 hostname这一行，替换成局域网ip hostname，否则HRegionServer 无法链接Master节点</li>
-</ol>
-</blockquote>
-<p>错误参考链接：<a href="http://www.cnblogs.com/colorfulkoala/archive/2012/07/09/2583841.html" target="_blank" rel="noopener">http://www.cnblogs.com/colorfulkoala/archive/2012/07/09/2583841.html</a></p>
-<h3 id="安装kafka"><a href="#安装kafka" class="headerlink" title="安装kafka"></a>安装kafka</h3><p>参考链接：<a href="http://121.42.164.108/index.php/2017/03/08/ubuntu14-04-stormkafkazookeeperhdfs/" target="_blank" rel="noopener">kafka</a></p>
-
-          
+          安装ubuntu在windows上使用ultraISO软件来刻录Ubuntu系统安装盘，设置U盘启动，安装系统参考链接：Ubuntu 14.04 64位系统安装cuda8.0+cudnn7.5+opencv+caffe 血泪教程
+安装NVIDIA驱动http://www.nvidia.cn/Down
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/07/大数据分析平台环境搭建/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -2586,37 +2220,25 @@
       
         
           
-            <h2 id="安装UbuntuLiveCD"><a href="#安装UbuntuLiveCD" class="headerlink" title="安装UbuntuLiveCD"></a>安装UbuntuLiveCD</h2><blockquote>
-<p>准备：U盘，ubuntu官方镜像文件</p>
-</blockquote>
-<h3 id="windows解决方案"><a href="#windows解决方案" class="headerlink" title="windows解决方案"></a>windows解决方案</h3><ul>
-<li>安装UltralSO，打开ubuntu镜像文件，写入U盘</li>
-<li>安装UNetBootin，打开Ubuntu镜像文件，写入U盘</li>
-</ul>
-<h3 id="linux解决方案"><a href="#linux解决方案" class="headerlink" title="linux解决方案"></a>linux解决方案</h3><ul>
-<li>插入U盘</li>
-<li>sudo fdisk -l</li>
-<li>cd ubuntu-iso的目录</li>
-<li>sudo dd if=ubuntu-14.04.5-desktop-amd64.iso of=/dev/sdX(sdX表示插入的U盘)</li>
-</ul>
-<h2 id="备份系统镜像"><a href="#备份系统镜像" class="headerlink" title="备份系统镜像"></a>备份系统镜像</h2><p>linux提供的dd命令可以直接复制磁盘的数据</p>
-<ul>
-<li>使用U盘启动UbuntuLiveCD，类似WinPE系统</li>
-<li>sudo fdisk -l /dev/sdX(sdX代表你要克隆的磁盘)<br><img src="/images/ubuntu系统备份镜像-1.png" alt="磁盘分区图"><br>如图所示，linux系统有三个分区分别是sda8 sda9 sda10,其中sda8 是交换分区，不用备份，只需要备份sda9和sda10空间</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dd bs=512 count=1953523712 skip=1646948352 <span class="keyword">if</span>=/dev/sda of=savedPath/ghost.img</span><br></pre></td></tr></table></figure>
-<ul>
-<li>将ghost.img恢复到新硬盘</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dd <span class="keyword">if</span>=savedPath/ghost.img of=/dev/sda</span><br></pre></td></tr></table></figure>
-<ul>
-<li>不要直接在计算机上用本地磁盘启动系统后执行dd命令生成本地磁盘的镜像。而应该用livecd启动计算机。因此计算机运行时会对系统盘产生大量写操作。 直接对运行中的系统盘生成的镜像，在恢复到其他硬盘上时，很可能会无法启动！</li>
-</ul>
-<h3 id="使用gzip进行压缩和解压缩"><a href="#使用gzip进行压缩和解压缩" class="headerlink" title="使用gzip进行压缩和解压缩"></a>使用gzip进行压缩和解压缩</h3><p>gzip参数：<br>-c 表示输出到stdout<br>-d  表示解压缩<br>-1 表示最快压缩<br>-9 表示最好压缩<br>默认使用的是-6压缩级别</p>
-<p>dd备份命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dd bs=512 count=1953523712 skip=1646948352 <span class="keyword">if</span>=/dev/sda | gzip -6 &gt; /ghost.img.gz</span><br></pre></td></tr></table></figure></p>
-<p>dd还原命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gzip -dc /ghost.img.gz.gz | dd of=/dev/sda</span><br></pre></td></tr></table></figure></p>
+          安装UbuntuLiveCD
+准备：U盘，ubuntu官方镜像文件
 
-          
+windows解决方案
+安装UltralSO，打开ubuntu镜像文件，写入U盘
+安装UNetBootin，打开Ubuntu镜像文件，写入U盘
+
+linux解决方案
+插入U盘
+sudo fdisk -l
+cd ubuntu-iso
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/03/Ubuntu制作UbuntuLiveCD-备份系统镜像教程/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -3025,6 +2647,8 @@
 
 
 
+  
+
 
 
   
@@ -3040,6 +2664,11 @@
   
   
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
   
 
 
@@ -3113,6 +2742,326 @@
 
   
 
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
 
 
 
@@ -3122,6 +3071,21 @@
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
 
@@ -3131,6 +3095,9 @@
   
 
   
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=6.3.0"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=6.3.0"></script>
+
 
   
 
