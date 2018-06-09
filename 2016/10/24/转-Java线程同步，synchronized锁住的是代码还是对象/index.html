@@ -144,7 +144,7 @@
 <meta name="keywords" content="java,笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[转]Java线程同步，synchronized锁住的是代码还是对象">
-<meta property="og:url" content="https://xiongraorao.github.io/2016/10/24/转-Java线程同步，synchronized锁住的是代码还是对象/index.html">
+<meta property="og:url" content="https://xraorao.top/2016/10/24/转-Java线程同步，synchronized锁住的是代码还是对象/index.html">
 <meta property="og:site_name" content="在路上">
 <meta property="og:description" content="作者：叉叉哥转载自： http://blog.csdn.net/xiao__gui/article/details/8188833 在Java中，synchronized关键字是用来控制线程同步的，就是在多线程的环境下，控制synchronized代码段不被多个线程同时执行。synchronized既可以加在一段代码上，也可以加在方法上。 关键是，不要认为给方法或者代码段加上synchronize">
 <meta property="og:locale" content="zh-CN">
@@ -160,7 +160,7 @@
 
 
 
-  <link rel="canonical" href="https://xiongraorao.github.io/2016/10/24/转-Java线程同步，synchronized锁住的是代码还是对象/"/>
+  <link rel="canonical" href="https://xraorao.top/2016/10/24/转-Java线程同步，synchronized锁住的是代码还是对象/"/>
 
 
 
@@ -407,7 +407,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xiongraorao.github.io/2016/10/24/转-Java线程同步，synchronized锁住的是代码还是对象/">
+    <link itemprop="mainEntityOfPage" href="https://xraorao.top/2016/10/24/转-Java线程同步，synchronized锁住的是代码还是对象/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiong Raorao">
@@ -592,7 +592,7 @@
 <p>test结束..</p>
 <p>test开始..</p>
 <p>test结束..</p>
-<p>上面代码用<span style="color:red"><span style="font-family:Calibri">synchronized(Sync.class)</span>&lt;/span&gt;<span style="color:red">实现了全局锁的效果</span>。</span></p>
+<p>上面代码用<span style="color:red"><span style="font-family:Calibri">synchronized(Sync.class)</span></span><span style="color:red">实现了全局锁的效果</span>。</p>
 <p><span style="font-family:宋体">最后说说</span>static synchronized方法，static方法可以直接类名加方法名调用，方法中无法使用this，所以它锁的不是this，而是类的Class对象，所以，<span style="color:red">static synchronized</span><span style="color:red">方法也相当于全局锁</span>，相当于锁住了代码段。</p>
 <h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a href="http://www.cnblogs.com/techyc/archive/2013/03/19/2969677.html" target="_blank" rel="noopener">http://www.cnblogs.com/techyc/archive/2013/03/19/2969677.html</a></p>
 

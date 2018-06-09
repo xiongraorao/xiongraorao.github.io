@@ -144,7 +144,7 @@
 <meta name="keywords" content="java,笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[原]Java学习笔记（一）">
-<meta property="og:url" content="https://xiongraorao.github.io/2016/08/23/原-Java学习笔记（一）/index.html">
+<meta property="og:url" content="https://xraorao.top/2016/08/23/原-Java学习笔记（一）/index.html">
 <meta property="og:site_name" content="在路上">
 <meta property="og:description" content="java的自动回收机制 java拥有自动回收机制，也可以手动使用finalize()方法进行释放资源。  java的参数传递123456789101112131415161718192021222324252627282930313233package com.test3;public class TestReference &amp;#123;	public static void main(Strin">
 <meta property="og:locale" content="zh-CN">
@@ -160,7 +160,7 @@
 
 
 
-  <link rel="canonical" href="https://xiongraorao.github.io/2016/08/23/原-Java学习笔记（一）/"/>
+  <link rel="canonical" href="https://xraorao.top/2016/08/23/原-Java学习笔记（一）/"/>
 
 
 
@@ -407,7 +407,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xiongraorao.github.io/2016/08/23/原-Java学习笔记（一）/">
+    <link itemprop="mainEntityOfPage" href="https://xraorao.top/2016/08/23/原-Java学习笔记（一）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiong Raorao">
@@ -550,8 +550,7 @@
 </blockquote>
 <h3 id="java的参数传递"><a href="#java的参数传递" class="headerlink" title="java的参数传递"></a><strong>java的参数传递</strong></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.test3;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestReference</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		A a1=<span class="keyword">new</span> A(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">		B b=<span class="keyword">new</span> B(<span class="number">11</span>,<span class="number">22</span>);</span><br><span class="line">		System.out.println(a1.b);</span><br><span class="line">		a1.test(b);</span><br><span class="line">		System.out.println(a1.b); <span class="comment">//java中是值传递，输出都是2</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a,b;</span><br><span class="line">	A(<span class="keyword">int</span> a,<span class="keyword">int</span> b)&#123;</span><br><span class="line">		<span class="keyword">this</span>.a=a;</span><br><span class="line">		<span class="keyword">this</span>.b=b;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">(B b)</span></span>&#123;</span><br><span class="line">		b.a=a;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a,b;</span><br><span class="line">	B(<span class="keyword">int</span> a,<span class="keyword">int</span> b)&#123;</span><br><span class="line">		<span class="keyword">this</span>.a=a;</span><br><span class="line">		<span class="keyword">this</span>.b=b;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setA</span><span class="params">(<span class="keyword">int</span> a)</span></span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.a=a;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>从上面的代码看出，java的对象引用的传递和C++的不同，java的引用传递相当于值传递，C++的引用传递相当于传递的是地址。</p>
-<h3 id="java类的引用"><a href="#java类的引用" class="headerlink" title="java类的引用"></a><strong>java类的引用</strong></h3><h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a><strong>修饰符</strong></h3><div class="table-container">
-<table>
+<h3 id="java类的引用"><a href="#java类的引用" class="headerlink" title="java类的引用"></a><strong>java类的引用</strong></h3><h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a><strong>修饰符</strong></h3><table>
 <thead>
 <tr>
 <th></th>
@@ -623,7 +622,6 @@
 </tr>
 </tbody>
 </table>
-</div>
 
       
     </div>
