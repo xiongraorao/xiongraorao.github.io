@@ -1954,7 +1954,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9dc1d9;
+  background: #98acff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3085,5 +3085,16 @@ ul.breadcrumb li+li:last-child {
 @media (max-width: 767px) {
   .post-body {
     text-align: justify;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: url("/images/sun-forest.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+  }
+  #footer a {
+    color: #eee;
   }
 }

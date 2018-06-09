@@ -310,14 +310,6 @@
         
         
           
-          <li class="menu-item menu-item-schedule">
-    <a href="/schedule/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />日程表</a>
-  </li>
-        
-        
-        
-          
           <li class="menu-item menu-item-sitemap">
     <a href="/sitemap.xml" rel="section">
       <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />站点地图</a>
@@ -558,7 +550,7 @@
 <h3 id="3、解压文件"><a href="#3、解压文件" class="headerlink" title="3、解压文件"></a>3、解压文件</h3><p>tar zxvf /opt/software/jdk-8u92-linux-x64.tar.gz -C /opt/software/</p>
 <h3 id="4、添加环境变量"><a href="#4、添加环境变量" class="headerlink" title="4、添加环境变量"></a>4、添加环境变量</h3><p>当前用户的path（/home/username/.bashrc 和 .bash_profile）<br>全局的path（/etc/bashrc 和/etc/profile）</p>
 <p>立即生效的方法 source 配置文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/opt/software/jdk1.8.0_92</span><br><span class="line">export JRE_HOME=/opt/software/jdk1.8.0_92/jre</span><br><span class="line">export CLASSPATH=.:$CLASSPATH:$JAVA_HOME/lib:$JRE_HOME/lib</span><br><span class="line">export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin</span><br></pre></td></tr></table></figure></p>
-<p>修改默认的JDK（<strong>注意替换路径，如果能直接显示sun的jdk的话就不用操作</strong>）<br>sudo update-alternatives —install “/usr/bin/java” “java” “/usr/java/jdk_8u60/bin/java” 300<br>sudo update-alternatives —install “/usr/bin/javac” “javac” “/usr/java/jdk_8u60/bin/javac” 300<br>sudo update-alternatives —install “/usr/bin/javaws” “javaws” “/usr/java/jdk_8u60/bin/javaws” 300</p>
+<p>修改默认的JDK（<strong>注意替换路径，如果能直接显示sun的jdk的话就不用操作</strong>）<br>sudo update-alternatives –install “/usr/bin/java” “java” “/usr/java/jdk_8u60/bin/java” 300<br>sudo update-alternatives –install “/usr/bin/javac” “javac” “/usr/java/jdk_8u60/bin/javac” 300<br>sudo update-alternatives –install “/usr/bin/javaws” “javaws” “/usr/java/jdk_8u60/bin/javaws” 300</p>
 <p>重要参考链接：<a href="http://www.linuxidc.com/Linux/2015-09/122689.htm" target="_blank" rel="noopener">http://www.linuxidc.com/Linux/2015-09/122689.htm</a></p>
 <h3 id="5、解压eclipse"><a href="#5、解压eclipse" class="headerlink" title="5、解压eclipse"></a>5、解压eclipse</h3><h3 id="6、创建快捷方式"><a href="#6、创建快捷方式" class="headerlink" title="6、创建快捷方式"></a>6、创建快捷方式</h3><p>sudo gedit /usr/share/applications/eclipse.desktop<br>然后写入以下语句（绝对不能有空格，否则很苦逼的说）<br>[Desktop Entry]</p>
 <p>Encoding=UTF-8</p>
