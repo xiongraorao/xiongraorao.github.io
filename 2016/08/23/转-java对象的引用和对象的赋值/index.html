@@ -564,9 +564,9 @@
 veh1 = new Vehicle();
 </code></pre><p>效果是一样的。这样写，就比较清楚了，有两个实体：一是对象引用变量，一是对象本身。</p>
 <p>   在堆空间里创建的实体，与在数据段以及栈空间里创建的实体不同。尽管它们也是确确实实存在的实体，但是，我们看不见，也摸不着。不仅如此，我们仔细研究一下第二句，找找刚创建的对象叫什么名字？有人说，它叫“Vehicle”。不对，“Vehicle”是类（对象的创建模板）的名字。一个Vehicle类可以据此创建出无数个对象，这些对象不可能全叫“Vehicle”。对象连名都没有，没法直接访问它。我们只能通过对象引用来间接访问对象。 为了形象地说明对象、引用及它们之间的关系，可以做一个或许不很妥当的比喻。对象好比是一只很大的气球，大到我们抓不住它。引用变量是一根绳， 可以用来系气球。如果只执行了第一条语句，还没执行第二条，此时创建的引用变量veh1还没指向任何一个对象，它的值是null。引用变量可以指向某个对象，或者为null。它是一根绳，一根还没有系上任何一个汽球的绳。执行了第二句后，一只新汽球做出来了，并被系在veh1这根绳上。我们抓住这根绳，就等于抓住了那只汽球。<br>再来一句：</p>
-<pre><code>Vehicle veh2;
+<pre><code>   Vehicle veh2;
 </code></pre><p>就又做了一根绳，还没系上汽球。如果再加一句：</p>
-<pre><code>veh2 = veh1;
+<pre><code>   veh2 = veh1;
 </code></pre><p>系上了。这里，发生了复制行为。但是，要说明的是，对象本身并没有被复制，被复制的只是对象引用。结果是，veh2也指向了veh1所指向的对象。两根绳系的是同一只汽球。</p>
 <p>如果用下句再创建一个对象：</p>
 <pre><code>veh2 = new Vehicle();
@@ -574,7 +574,7 @@ veh1 = new Vehicle();
 <p>从以上叙述再推演下去，我们可以获得以下结论：</p>
 <p>（1）一个对象引用可以指向0个或1个对象（一根绳子可以不系汽球，也可以系一个汽球）；</p>
 <p>（2）一个对象可以有N个引用指向它（可以有N条绳子系住一个汽球）。<br>如果再来下面语句：</p>
-<pre><code>veh1 = veh2;
+<pre><code>   veh1 = veh2;
 </code></pre><p>按上面的推断，veh1也指向了第二个对象。这个没问题。问题是第一个对象呢？没有一条绳子系住它，它飞了。多数书里说，它被Java的垃圾回收机制回收了。</p>
 <p>这不确切。正确地说，它已成为垃圾回收机制的处理对象。至于什么时候真正被回收，那要看垃圾回收机制的心情了。</p>
 <p>由此看来，下面的语句应该不合法吧？至少是没用的吧？</p>
@@ -1129,9 +1129,18 @@ veh1 = new Vehicle();
 
 
 
+  
+  
 
 
 
+  
+  
+
+
+
+  
+  
 
 
 
@@ -1159,6 +1168,26 @@ veh1 = new Vehicle();
   
   
     <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_sphere.min.js"></script>
   
 
   
