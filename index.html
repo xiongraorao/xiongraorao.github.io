@@ -433,7 +433,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 <a class="post-title-link" href="/2018/04/27/k8s学习-1/" itemprop="url">
-                  k8s学习-1
+                  k8s学习-1--常用命令
                 </a>
               
             
@@ -476,7 +476,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-06-08 17:10:07" itemprop="dateModified" datetime="2018-06-08T17:10:07+08:00">2018-06-08</time>
+                <time title="修改时间：2018-06-11 10:06:41" itemprop="dateModified" datetime="2018-06-11T10:06:41+08:00">2018-06-11</time>
               
             
           </span>
@@ -507,7 +507,7 @@
 
           
           
-             <span id="/2018/04/27/k8s学习-1/" class="leancloud_visitors" data-flag-title="k8s学习-1">
+             <span id="/2018/04/27/k8s学习-1/" class="leancloud_visitors" data-flag-title="k8s学习-1--常用命令">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -540,9 +540,14 @@
       
         
           
-          1 简介references:1.k8s简介2.使用kube-proxy让外部网络访问K8S service的ClusterIP
-
-          
+          k8s 采用声明式的 API , 因此许多命令可以组合使用
+查看查看资源
+kubectl get \&lt;resource type\&gt; | all  [-n namespace] [-o wide]
+查看集群
+kubectl cluster-info
+查看各组件的状态
+kubectl -s
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/04/27/k8s学习-1/#more" rel="contents">

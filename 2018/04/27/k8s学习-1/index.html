@@ -148,18 +148,18 @@
 
 
 
-  <meta name="description" content="1 简介references:1.k8s简介2.使用kube-proxy让外部网络访问K8S service的ClusterIP">
+  <meta name="description" content="k8s 采用声明式的 API , 因此许多命令可以组合使用 查看查看资源 kubectl get \&amp;lt;resource type\&amp;gt; | all  [-n namespace] [-o wide] 查看集群 kubectl cluster-info 查看各组件的状态 kubectl -s http://masterip:8080 get componentstatuses  详细信息查">
 <meta name="keywords" content="k8s">
 <meta property="og:type" content="article">
-<meta property="og:title" content="k8s学习-1">
+<meta property="og:title" content="k8s学习-1--常用命令">
 <meta property="og:url" content="http://xraorao.top/2018/04/27/k8s学习-1/index.html">
 <meta property="og:site_name" content="在路上">
-<meta property="og:description" content="1 简介references:1.k8s简介2.使用kube-proxy让外部网络访问K8S service的ClusterIP">
+<meta property="og:description" content="k8s 采用声明式的 API , 因此许多命令可以组合使用 查看查看资源 kubectl get \&amp;lt;resource type\&amp;gt; | all  [-n namespace] [-o wide] 查看集群 kubectl cluster-info 查看各组件的状态 kubectl -s http://masterip:8080 get componentstatuses  详细信息查">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-08T09:10:07.339Z">
+<meta property="og:updated_time" content="2018-06-11T02:06:41.808Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="k8s学习-1">
-<meta name="twitter:description" content="1 简介references:1.k8s简介2.使用kube-proxy让外部网络访问K8S service的ClusterIP">
+<meta name="twitter:title" content="k8s学习-1--常用命令">
+<meta name="twitter:description" content="k8s 采用声明式的 API , 因此许多命令可以组合使用 查看查看资源 kubectl get \&amp;lt;resource type\&amp;gt; | all  [-n namespace] [-o wide] 查看集群 kubectl cluster-info 查看各组件的状态 kubectl -s http://masterip:8080 get componentstatuses  详细信息查">
 
 
 
@@ -178,7 +178,7 @@
   };
 </script>
 
-  <title>k8s学习-1 | 在路上</title>
+  <title>k8s学习-1--常用命令 | 在路上</title>
   
 
 
@@ -432,7 +432,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">k8s学习-1
+          <h2 class="post-title" itemprop="name headline">k8s学习-1--常用命令
               
             
           </h2>
@@ -474,7 +474,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-06-08 17:10:07" itemprop="dateModified" datetime="2018-06-08T17:10:07+08:00">2018-06-08</time>
+                <time title="修改时间：2018-06-11 10:06:41" itemprop="dateModified" datetime="2018-06-11T10:06:41+08:00">2018-06-11</time>
               
             
           </span>
@@ -505,7 +505,7 @@
 
           
           
-             <span id="/2018/04/27/k8s学习-1/" class="leancloud_visitors" data-flag-title="k8s学习-1">
+             <span id="/2018/04/27/k8s学习-1/" class="leancloud_visitors" data-flag-title="k8s学习-1--常用命令">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -536,7 +536,46 @@
       
 
       
-        <h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1 简介"></a>1 简介</h1><h2 id="references"><a href="#references" class="headerlink" title="references:"></a>references:</h2><p><a href="http://vernlium.github.io/2017/08/09/kubernetes%E7%AE%80%E4%BB%8B-k8s-1/" target="_blank" rel="noopener">1.k8s简介</a><br><a href="https://blog.csdn.net/liyingke112/article/details/76022267" target="_blank" rel="noopener">2.使用kube-proxy让外部网络访问K8S service的ClusterIP</a></p>
+        <p>k8s 采用声明式的 API , 因此许多命令可以组合使用</p>
+<h1 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h1><p>查看资源</p>
+<pre><code>kubectl get \&lt;resource type\&gt; | all  [-n namespace] [-o wide]
+</code></pre><p>查看集群</p>
+<pre><code>kubectl cluster-info
+</code></pre><p>查看各组件的状态</p>
+<pre><code>kubectl -s http://masterip:8080 get componentstatuses 
+</code></pre><h1 id="详细信息"><a href="#详细信息" class="headerlink" title="详细信息"></a>详细信息</h1><p>查看资源的详细信息，类似docker inspect</p>
+<pre><code>kubectl describe \&lt;resource type\&gt;
+</code></pre><h1 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h1><p>创建k8s资源</p>
+<pre><code>kubectl create -f filename
+</code></pre><p>filename 为定义资源的yaml文件。也可以直接只用子命令 [run/namespace/secret/configmap/serviceaccount] 等直接创建相应的resource。从追踪和维护的角度出发，建议使用json或yaml的方式定义资源。</p>
+<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p>更新资源有以下几种方式：</p>
+<p>1.replace</p>
+<pre><code>kubectl replace -f filename
+</code></pre><p>replace命令用于对已有资源进行更新、替换。当我们需要更新resource的一些属性的时候，如果修改副本数量，增加、修改label，更改image版本，修改端口等。都可以直接修改原yaml文件，然后执行replace命令。</p>
+<p><strong>注意名字不可以被更新</strong></p>
+<p>2.patch</p>
+<p>对一个已经在运行的pod进行更新操作，不会删除容器</p>
+<p>3.edit</p>
+<p>交互式编辑资源文件并更新</p>
+<p>4.apply</p>
+<p>比 pathch 和 edit 更加严格的更新操作，保留更新历史版本库</p>
+<p>5.rolling-update</p>
+<p>不中断更新，先产生新的 pod, 更新完成后再生成再删除旧的 pod, 直到替换掉所有的pod</p>
+<p>6.scale</p>
+<p>资源的扩容或缩容</p>
+<p>7.autoscale</p>
+<p>自动根据系统资源的情况进行扩容或缩容</p>
+<h1 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h1><pre><code>kubectl delete &lt;resource type&gt;
+</code></pre><h1 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h1><pre><code>kubectl logs
+</code></pre><h1 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h1><pre><code>kubectl attach 
+kubectl exec [-c container-name]
+</code></pre><h1 id="节点管理"><a href="#节点管理" class="headerlink" title="节点管理"></a>节点管理</h1><pre><code>kubectl get nodes //查看所有节点
+</code></pre><p>节点维护：cordon, drain, uncordon</p>
+<ul>
+<li>cordon: 标记节点为SchedulingDisable, 禁止新的资源被调度到该节点</li>
+<li>drain: 将要维护的节点的pod赶到其他的节点</li>
+<li>uncordon: 恢复维护节点到正常的工作状态</li>
+</ul>
 
       
     </div>
@@ -914,7 +953,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-简介"><span class="nav-number">1.</span> <span class="nav-text">1 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#references"><span class="nav-number">1.1.</span> <span class="nav-text">references:</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#查看"><span class="nav-number">1.</span> <span class="nav-text">查看</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#详细信息"><span class="nav-number">2.</span> <span class="nav-text">详细信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建"><span class="nav-number">3.</span> <span class="nav-text">创建</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更新"><span class="nav-number">4.</span> <span class="nav-text">更新</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#删除"><span class="nav-number">5.</span> <span class="nav-text">删除</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#日志"><span class="nav-number">6.</span> <span class="nav-text">日志</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#进入容器"><span class="nav-number">7.</span> <span class="nav-text">进入容器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#节点管理"><span class="nav-number">8.</span> <span class="nav-text">节点管理</span></a></li></ol></div>
             
 
           </div>
