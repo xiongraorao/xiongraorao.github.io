@@ -322,6 +322,14 @@
     <a href="/sitemap.xml" rel="section">
       <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />站点地图</a>
   </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-music">
+    <a href="/music/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-music"></i> <br />音乐</a>
+  </li>
 
       
       
@@ -419,7 +427,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiong Raorao">
-      <meta itemprop="description" content="用我的知识改变世界">
+      <meta itemprop="description" content="学无止境 Always on the road!">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
@@ -547,7 +555,7 @@
 <h4 id="2-请求对时客户端配置"><a href="#2-请求对时客户端配置" class="headerlink" title="2.请求对时客户端配置"></a>2.请求对时客户端配置</h4><p>这里cloud02和cloud03分别是客户端<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#安装ntp服务</span></span><br><span class="line">sudo apt-get install ntp</span><br><span class="line">sudo vi /etc/ntp.conf</span><br><span class="line"></span><br><span class="line"><span class="comment">#去掉之前默认的server</span></span><br><span class="line">server 192.168.1.1（时间服务器的ip）</span><br><span class="line">fudge 192.168.1.1 stratum 5</span><br></pre></td></tr></table></figure></p>
 <h4 id="3-客户端和时间服务器同步"><a href="#3-客户端和时间服务器同步" class="headerlink" title="3.客户端和时间服务器同步"></a>3.客户端和时间服务器同步</h4><ul>
 <li><p>使用ntpdate更新时间</p>
-<h1 id="注意要停止ntp服务才能使用ntpdate更新时间"><a href="#注意要停止ntp服务才能使用ntpdate更新时间" class="headerlink" title="注意要停止ntp服务才能使用ntpdate更新时间"></a>注意要停止ntp服务才能使用ntpdate更新时间</h1><p>sudo ntpdate 192.168.1.1<br>sudo hwclock —systohc #将系统时间写入硬件时间<br>sudo hwclock —hctosys #将硬件时间写入系统时间</p>
+<h1 id="注意要停止ntp服务才能使用ntpdate更新时间"><a href="#注意要停止ntp服务才能使用ntpdate更新时间" class="headerlink" title="注意要停止ntp服务才能使用ntpdate更新时间"></a>注意要停止ntp服务才能使用ntpdate更新时间</h1><p>sudo ntpdate 192.168.1.1<br>sudo hwclock –systohc #将系统时间写入硬件时间<br>sudo hwclock –hctosys #将硬件时间写入系统时间</p>
 </li>
 <li><p>使用ntpd更新时间<br>sudo service ntp start #启动ntp进程，自动逐渐同步时间</p>
 </li>
@@ -689,7 +697,7 @@
                 alt="Xiong Raorao" />
             
               <p class="site-author-name" itemprop="name">Xiong Raorao</p>
-              <p class="site-description motion-element" itemprop="description">用我的知识改变世界</p>
+              <p class="site-description motion-element" itemprop="description">学无止境 Always on the road!</p>
           </div>
 
           
@@ -920,7 +928,7 @@
 
           
           
-          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=640588966&auto=0&height=430"></iframe>
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=298 src="//music.163.com/outchain/player?type=0&id=640588966&auto=0&height=430"></iframe>
 
           
             
