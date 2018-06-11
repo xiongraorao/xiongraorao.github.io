@@ -23,6 +23,10 @@
 
 
 
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
 
 
 
@@ -37,12 +41,16 @@
 
 
 
+  <meta name="google-site-verification" content="true" />
 
 
 
 
 
 
+
+
+  <meta name="baidu-site-verification" content="ZENXsU2j2F" />
 
 
 
@@ -144,7 +152,7 @@
 <meta name="keywords" content="java,笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[转]Java线程同步，synchronized锁住的是代码还是对象">
-<meta property="og:url" content="https://xraorao.top/2016/10/24/转-Java线程同步，synchronized锁住的是代码还是对象/index.html">
+<meta property="og:url" content="http://xraorao.top/2016/10/24/转-Java线程同步，synchronized锁住的是代码还是对象/index.html">
 <meta property="og:site_name" content="在路上">
 <meta property="og:description" content="作者：叉叉哥转载自： http://blog.csdn.net/xiao__gui/article/details/8188833 在Java中，synchronized关键字是用来控制线程同步的，就是在多线程的环境下，控制synchronized代码段不被多个线程同时执行。synchronized既可以加在一段代码上，也可以加在方法上。 关键是，不要认为给方法或者代码段加上synchronize">
 <meta property="og:locale" content="zh-CN">
@@ -160,7 +168,7 @@
 
 
 
-  <link rel="canonical" href="https://xraorao.top/2016/10/24/转-Java线程同步，synchronized锁住的是代码还是对象/"/>
+  <link rel="canonical" href="http://xraorao.top/2016/10/24/转-Java线程同步，synchronized锁住的是代码还是对象/"/>
 
 
 
@@ -176,13 +184,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120522271-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120522271-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-120522271-1');
+  gtag('config', 'UA-120522271-2');
 </script>
 
 
@@ -218,8 +226,8 @@
 </noscript>
 
   
-    <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-  
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -407,7 +415,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xraorao.top/2016/10/24/转-Java线程同步，synchronized锁住的是代码还是对象/">
+    <link itemprop="mainEntityOfPage" href="http://xraorao.top/2016/10/24/转-Java线程同步，synchronized锁住的是代码还是对象/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiong Raorao">
@@ -500,16 +508,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/10/24/转-Java线程同步，synchronized锁住的是代码还是对象/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count gitment-comments-count" data-xid="/2016/10/24/转-Java线程同步，synchronized锁住的是代码还是对象/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -592,7 +590,7 @@
 <p>test结束..</p>
 <p>test开始..</p>
 <p>test结束..</p>
-<p>上面代码用<span style="color:red"><span style="font-family:Calibri">synchronized(Sync.class)</span></span><span style="color:red">实现了全局锁的效果</span>。</p>
+<p>上面代码用<span style="color:red"><span style="font-family:Calibri">synchronized(Sync.class)</span>&lt;/span&gt;<span style="color:red">实现了全局锁的效果</span>。</span></p>
 <p><span style="font-family:宋体">最后说说</span>static synchronized方法，static方法可以直接类名加方法名调用，方法中无法使用this，所以它锁的不是this，而是类的Class对象，所以，<span style="color:red">static synchronized</span><span style="color:red">方法也相当于全局锁</span>，相当于锁住了代码段。</p>
 <h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a href="http://www.cnblogs.com/techyc/archive/2013/03/19/2969677.html" target="_blank" rel="noopener">http://www.cnblogs.com/techyc/archive/2013/03/19/2969677.html</a></p>
 
@@ -623,6 +621,21 @@
       
 
       
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
       
       
 
@@ -661,45 +674,6 @@
 
     <div class="post-spread">
       
-        
-  <div class="bdsharebuttonbox">
-    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
-    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
-    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
-    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
-    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
-    <a href="#" class="bds_more" data-cmd="more"></a>
-    <a class="bds_count" data-cmd="count"></a>
-  </div>
-  <script>
-    window._bd_share_config = {
-      "common": {
-        "bdText": "",
-        "bdMini": "2",
-        "bdMiniList": false,
-        "bdPic": ""
-      },
-      "share": {
-        "bdSize": "16",
-        "bdStyle": "0"
-      },
-      "image": {
-        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
-        "viewText": "分享到：",
-        "viewSize": "16"
-      }
-    }
-  </script>
-
-<script>
-  <!-- with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)]; -->
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
-      
     </div>
   </div>
 
@@ -708,12 +682,7 @@
           
 
   
-    <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
-    </div>
-
+    <div id="gitalk-container"></div>
   
 
 
@@ -987,6 +956,7 @@
 
           
           
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=640588966&auto=0&height=430"></iframe>
 
           
             
@@ -1100,22 +1070,11 @@
 
 
 
-  
 
 
 
-  
-  
 
 
-
-  
-  
-
-
-
-  
-  
 
 
 
@@ -1142,32 +1101,7 @@
 
   
   
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/canvas_sphere.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1.1/reading_progress.min.js"></script>
   
 
 
@@ -1226,45 +1160,25 @@
 
 
 
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-
-    
-      <script type="text/javascript">
-      function renderGitment(){
-        var gitment = new Gitmint({
-            id: window.location.pathname,
-            owner: 'xiongraorao',
-            repo: 'hexo-comment',
-            
-            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
-            
-            oauth: {
-            
-            
-                client_secret: 'f5b4b12d0ce3eb0bf7e9294eed6726f836f43ded',
-            
-                client_id: 'b26d67370855fd2d2294'
-            }});
-        gitment.render('gitment-container');
-      }
-
-      
-      renderGitment();
-      
-      </script>
-    
 
 
 
 
+  <link rel="stylesheet" href="/lib/gitalk/gitalk.css">
+  
+  <script src="/lib/gitalk/gitalk.min.js"></script>
+   <script type="text/javascript">
+		var gitalk = new Gitalk({
+		  clientID: '4859c15bbe8a95c43467',
+		  clientSecret: 'b344dbb77e74909e1cc588315b0572e77cc6ead7',
+		  repo: 'hexo-comment',
+		  owner: 'xiongraorao',
+		  admin: ['xiongraorao'], 
+		  id: location.pathname,
+		  distractionFreeMode: 'true'
+		})
+		gitalk.render('gitalk-container')           
+       </script>
 
 
   
@@ -1729,6 +1643,27 @@
   
 
   
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook,GooglePlus,Linkedin";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
   
 
   

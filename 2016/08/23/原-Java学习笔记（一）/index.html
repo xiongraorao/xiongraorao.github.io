@@ -23,6 +23,10 @@
 
 
 
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
 
 
 
@@ -37,12 +41,16 @@
 
 
 
+  <meta name="google-site-verification" content="true" />
 
 
 
 
 
 
+
+
+  <meta name="baidu-site-verification" content="ZENXsU2j2F" />
 
 
 
@@ -144,7 +152,7 @@
 <meta name="keywords" content="java,笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[原]Java学习笔记（一）">
-<meta property="og:url" content="https://xraorao.top/2016/08/23/原-Java学习笔记（一）/index.html">
+<meta property="og:url" content="http://xraorao.top/2016/08/23/原-Java学习笔记（一）/index.html">
 <meta property="og:site_name" content="在路上">
 <meta property="og:description" content="java的自动回收机制 java拥有自动回收机制，也可以手动使用finalize()方法进行释放资源。  java的参数传递123456789101112131415161718192021222324252627282930313233package com.test3;public class TestReference &amp;#123;	public static void main(Strin">
 <meta property="og:locale" content="zh-CN">
@@ -160,7 +168,7 @@
 
 
 
-  <link rel="canonical" href="https://xraorao.top/2016/08/23/原-Java学习笔记（一）/"/>
+  <link rel="canonical" href="http://xraorao.top/2016/08/23/原-Java学习笔记（一）/"/>
 
 
 
@@ -176,13 +184,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120522271-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120522271-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-120522271-1');
+  gtag('config', 'UA-120522271-2');
 </script>
 
 
@@ -218,8 +226,8 @@
 </noscript>
 
   
-    <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-  
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -407,7 +415,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xraorao.top/2016/08/23/原-Java学习笔记（一）/">
+    <link itemprop="mainEntityOfPage" href="http://xraorao.top/2016/08/23/原-Java学习笔记（一）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiong Raorao">
@@ -500,16 +508,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/08/23/原-Java学习笔记（一）/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count gitment-comments-count" data-xid="/2016/08/23/原-Java学习笔记（一）/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -550,7 +548,8 @@
 </blockquote>
 <h3 id="java的参数传递"><a href="#java的参数传递" class="headerlink" title="java的参数传递"></a><strong>java的参数传递</strong></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.test3;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestReference</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		A a1=<span class="keyword">new</span> A(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">		B b=<span class="keyword">new</span> B(<span class="number">11</span>,<span class="number">22</span>);</span><br><span class="line">		System.out.println(a1.b);</span><br><span class="line">		a1.test(b);</span><br><span class="line">		System.out.println(a1.b); <span class="comment">//java中是值传递，输出都是2</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a,b;</span><br><span class="line">	A(<span class="keyword">int</span> a,<span class="keyword">int</span> b)&#123;</span><br><span class="line">		<span class="keyword">this</span>.a=a;</span><br><span class="line">		<span class="keyword">this</span>.b=b;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">(B b)</span></span>&#123;</span><br><span class="line">		b.a=a;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a,b;</span><br><span class="line">	B(<span class="keyword">int</span> a,<span class="keyword">int</span> b)&#123;</span><br><span class="line">		<span class="keyword">this</span>.a=a;</span><br><span class="line">		<span class="keyword">this</span>.b=b;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setA</span><span class="params">(<span class="keyword">int</span> a)</span></span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.a=a;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>从上面的代码看出，java的对象引用的传递和C++的不同，java的引用传递相当于值传递，C++的引用传递相当于传递的是地址。</p>
-<h3 id="java类的引用"><a href="#java类的引用" class="headerlink" title="java类的引用"></a><strong>java类的引用</strong></h3><h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a><strong>修饰符</strong></h3><table>
+<h3 id="java类的引用"><a href="#java类的引用" class="headerlink" title="java类的引用"></a><strong>java类的引用</strong></h3><h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a><strong>修饰符</strong></h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th></th>
@@ -622,6 +621,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 
       
     </div>
@@ -650,6 +650,21 @@
       
 
       
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
       
       
 
@@ -688,45 +703,6 @@
 
     <div class="post-spread">
       
-        
-  <div class="bdsharebuttonbox">
-    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
-    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
-    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
-    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
-    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
-    <a href="#" class="bds_more" data-cmd="more"></a>
-    <a class="bds_count" data-cmd="count"></a>
-  </div>
-  <script>
-    window._bd_share_config = {
-      "common": {
-        "bdText": "",
-        "bdMini": "2",
-        "bdMiniList": false,
-        "bdPic": ""
-      },
-      "share": {
-        "bdSize": "16",
-        "bdStyle": "0"
-      },
-      "image": {
-        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
-        "viewText": "分享到：",
-        "viewSize": "16"
-      }
-    }
-  </script>
-
-<script>
-  <!-- with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)]; -->
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
-      
     </div>
   </div>
 
@@ -735,12 +711,7 @@
           
 
   
-    <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
-    </div>
-
+    <div id="gitalk-container"></div>
   
 
 
@@ -1014,6 +985,7 @@
 
           
           
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=640588966&auto=0&height=430"></iframe>
 
           
             
@@ -1127,22 +1099,11 @@
 
 
 
-  
 
 
 
-  
-  
 
 
-
-  
-  
-
-
-
-  
-  
 
 
 
@@ -1169,32 +1130,7 @@
 
   
   
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/canvas_sphere.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1.1/reading_progress.min.js"></script>
   
 
 
@@ -1253,45 +1189,25 @@
 
 
 
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-
-    
-      <script type="text/javascript">
-      function renderGitment(){
-        var gitment = new Gitmint({
-            id: window.location.pathname,
-            owner: 'xiongraorao',
-            repo: 'hexo-comment',
-            
-            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
-            
-            oauth: {
-            
-            
-                client_secret: 'f5b4b12d0ce3eb0bf7e9294eed6726f836f43ded',
-            
-                client_id: 'b26d67370855fd2d2294'
-            }});
-        gitment.render('gitment-container');
-      }
-
-      
-      renderGitment();
-      
-      </script>
-    
 
 
 
 
+  <link rel="stylesheet" href="/lib/gitalk/gitalk.css">
+  
+  <script src="/lib/gitalk/gitalk.min.js"></script>
+   <script type="text/javascript">
+		var gitalk = new Gitalk({
+		  clientID: '4859c15bbe8a95c43467',
+		  clientSecret: 'b344dbb77e74909e1cc588315b0572e77cc6ead7',
+		  repo: 'hexo-comment',
+		  owner: 'xiongraorao',
+		  admin: ['xiongraorao'], 
+		  id: location.pathname,
+		  distractionFreeMode: 'true'
+		})
+		gitalk.render('gitalk-container')           
+       </script>
 
 
   
@@ -1756,6 +1672,27 @@
   
 
   
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook,GooglePlus,Linkedin";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
   
 
   

@@ -23,6 +23,10 @@
 
 
 
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
 
 
 
@@ -37,12 +41,16 @@
 
 
 
+  <meta name="google-site-verification" content="true" />
 
 
 
 
 
 
+
+
+  <meta name="baidu-site-verification" content="ZENXsU2j2F" />
 
 
 
@@ -144,7 +152,7 @@
 <meta name="keywords" content="linux,ntp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux服务器时间同步">
-<meta property="og:url" content="https://xraorao.top/2017/04/25/linux服务器时间同步/index.html">
+<meta property="og:url" content="http://xraorao.top/2017/04/25/linux服务器时间同步/index.html">
 <meta property="og:site_name" content="在路上">
 <meta property="og:description" content="Ubuntu下服务器时间同步1.时间服务器配置123456789101112131415161718192021222324252627282930#服务器cloud01,cloud02,cloud03都安装ntp服务sudo apt-get install ntp#查看服务是否启动service --status-all[+]表示启动#选择cloud01作为时间同步服务器ssh cloud01s">
 <meta property="og:locale" content="zh-CN">
@@ -160,7 +168,7 @@
 
 
 
-  <link rel="canonical" href="https://xraorao.top/2017/04/25/linux服务器时间同步/"/>
+  <link rel="canonical" href="http://xraorao.top/2017/04/25/linux服务器时间同步/"/>
 
 
 
@@ -176,13 +184,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120522271-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120522271-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-120522271-1');
+  gtag('config', 'UA-120522271-2');
 </script>
 
 
@@ -218,8 +226,8 @@
 </noscript>
 
   
-    <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-  
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -407,7 +415,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xraorao.top/2017/04/25/linux服务器时间同步/">
+    <link itemprop="mainEntityOfPage" href="http://xraorao.top/2017/04/25/linux服务器时间同步/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiong Raorao">
@@ -500,16 +508,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/04/25/linux服务器时间同步/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count gitment-comments-count" data-xid="/2017/04/25/linux服务器时间同步/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -549,7 +547,7 @@
 <h4 id="2-请求对时客户端配置"><a href="#2-请求对时客户端配置" class="headerlink" title="2.请求对时客户端配置"></a>2.请求对时客户端配置</h4><p>这里cloud02和cloud03分别是客户端<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#安装ntp服务</span></span><br><span class="line">sudo apt-get install ntp</span><br><span class="line">sudo vi /etc/ntp.conf</span><br><span class="line"></span><br><span class="line"><span class="comment">#去掉之前默认的server</span></span><br><span class="line">server 192.168.1.1（时间服务器的ip）</span><br><span class="line">fudge 192.168.1.1 stratum 5</span><br></pre></td></tr></table></figure></p>
 <h4 id="3-客户端和时间服务器同步"><a href="#3-客户端和时间服务器同步" class="headerlink" title="3.客户端和时间服务器同步"></a>3.客户端和时间服务器同步</h4><ul>
 <li><p>使用ntpdate更新时间</p>
-<h1 id="注意要停止ntp服务才能使用ntpdate更新时间"><a href="#注意要停止ntp服务才能使用ntpdate更新时间" class="headerlink" title="注意要停止ntp服务才能使用ntpdate更新时间"></a>注意要停止ntp服务才能使用ntpdate更新时间</h1><p>sudo ntpdate 192.168.1.1<br>sudo hwclock –systohc #将系统时间写入硬件时间<br>sudo hwclock –hctosys #将硬件时间写入系统时间</p>
+<h1 id="注意要停止ntp服务才能使用ntpdate更新时间"><a href="#注意要停止ntp服务才能使用ntpdate更新时间" class="headerlink" title="注意要停止ntp服务才能使用ntpdate更新时间"></a>注意要停止ntp服务才能使用ntpdate更新时间</h1><p>sudo ntpdate 192.168.1.1<br>sudo hwclock —systohc #将系统时间写入硬件时间<br>sudo hwclock —hctosys #将硬件时间写入系统时间</p>
 </li>
 <li><p>使用ntpd更新时间<br>sudo service ntp start #启动ntp进程，自动逐渐同步时间</p>
 </li>
@@ -588,6 +586,21 @@
 
       
       
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
       
 
       
@@ -625,45 +638,6 @@
 
     <div class="post-spread">
       
-        
-  <div class="bdsharebuttonbox">
-    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
-    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
-    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
-    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
-    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
-    <a href="#" class="bds_more" data-cmd="more"></a>
-    <a class="bds_count" data-cmd="count"></a>
-  </div>
-  <script>
-    window._bd_share_config = {
-      "common": {
-        "bdText": "",
-        "bdMini": "2",
-        "bdMiniList": false,
-        "bdPic": ""
-      },
-      "share": {
-        "bdSize": "16",
-        "bdStyle": "0"
-      },
-      "image": {
-        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
-        "viewText": "分享到：",
-        "viewSize": "16"
-      }
-    }
-  </script>
-
-<script>
-  <!-- with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)]; -->
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
-      
     </div>
   </div>
 
@@ -672,12 +646,7 @@
           
 
   
-    <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
-    </div>
-
+    <div id="gitalk-container"></div>
   
 
 
@@ -951,6 +920,7 @@
 
           
           
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=640588966&auto=0&height=430"></iframe>
 
           
             
@@ -1064,22 +1034,11 @@
 
 
 
-  
 
 
 
-  
-  
 
 
-
-  
-  
-
-
-
-  
-  
 
 
 
@@ -1106,32 +1065,7 @@
 
   
   
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/canvas_sphere.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1.1/reading_progress.min.js"></script>
   
 
 
@@ -1190,45 +1124,25 @@
 
 
 
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-
-    
-      <script type="text/javascript">
-      function renderGitment(){
-        var gitment = new Gitmint({
-            id: window.location.pathname,
-            owner: 'xiongraorao',
-            repo: 'hexo-comment',
-            
-            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
-            
-            oauth: {
-            
-            
-                client_secret: 'f5b4b12d0ce3eb0bf7e9294eed6726f836f43ded',
-            
-                client_id: 'b26d67370855fd2d2294'
-            }});
-        gitment.render('gitment-container');
-      }
-
-      
-      renderGitment();
-      
-      </script>
-    
 
 
 
 
+  <link rel="stylesheet" href="/lib/gitalk/gitalk.css">
+  
+  <script src="/lib/gitalk/gitalk.min.js"></script>
+   <script type="text/javascript">
+		var gitalk = new Gitalk({
+		  clientID: '4859c15bbe8a95c43467',
+		  clientSecret: 'b344dbb77e74909e1cc588315b0572e77cc6ead7',
+		  repo: 'hexo-comment',
+		  owner: 'xiongraorao',
+		  admin: ['xiongraorao'], 
+		  id: location.pathname,
+		  distractionFreeMode: 'true'
+		})
+		gitalk.render('gitalk-container')           
+       </script>
 
 
   
@@ -1693,6 +1607,27 @@
   
 
   
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook,GooglePlus,Linkedin";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
   
 
   

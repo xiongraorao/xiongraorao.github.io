@@ -23,6 +23,10 @@
 
 
 
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
 
 
 
@@ -37,12 +41,16 @@
 
 
 
+  <meta name="google-site-verification" content="true" />
 
 
 
 
 
 
+
+
+  <meta name="baidu-site-verification" content="ZENXsU2j2F" />
 
 
 
@@ -144,7 +152,7 @@
 <meta name="keywords" content="mysql,数据库">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mysql命令">
-<meta property="og:url" content="https://xraorao.top/2017/04/24/mysql命令/index.html">
+<meta property="og:url" content="http://xraorao.top/2017/04/24/mysql命令/index.html">
 <meta property="og:site_name" content="在路上">
 <meta property="og:description" content="1、mysql的安装linux下mysql安装-博客园 2、用户管理启动服务：net start mysqld链接数据库：mysql -uroot -p修改root用户密码：mysqladmin -u root password “new_password”; 2.1新建用户mysql -uroot -p //登录mysqlmysql&amp;gt; insert into mysql.user(Host">
 <meta property="og:locale" content="zh-CN">
@@ -160,7 +168,7 @@
 
 
 
-  <link rel="canonical" href="https://xraorao.top/2017/04/24/mysql命令/"/>
+  <link rel="canonical" href="http://xraorao.top/2017/04/24/mysql命令/"/>
 
 
 
@@ -176,13 +184,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120522271-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120522271-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-120522271-1');
+  gtag('config', 'UA-120522271-2');
 </script>
 
 
@@ -218,8 +226,8 @@
 </noscript>
 
   
-    <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-  
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -407,7 +415,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xraorao.top/2017/04/24/mysql命令/">
+    <link itemprop="mainEntityOfPage" href="http://xraorao.top/2017/04/24/mysql命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiong Raorao">
@@ -500,16 +508,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/04/24/mysql命令/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count gitment-comments-count" data-xid="/2017/04/24/mysql命令/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -548,13 +546,13 @@
         <h2 id="1、mysql的安装"><a href="#1、mysql的安装" class="headerlink" title="1、mysql的安装"></a>1、mysql的安装</h2><p><a href="https://www.cnblogs.com/xinjing-jingxin/p/8025805.html" target="_blank" rel="noopener">linux下mysql安装-博客园</a></p>
 <h2 id="2、用户管理"><a href="#2、用户管理" class="headerlink" title="2、用户管理"></a>2、用户管理</h2><p>启动服务：<br>net start mysqld<br>链接数据库：<br>mysql -uroot -p<br>修改root用户密码：<br>mysqladmin -u root password “new_password”;</p>
 <h3 id="2-1新建用户"><a href="#2-1新建用户" class="headerlink" title="2.1新建用户"></a>2.1新建用户</h3><p>mysql -uroot -p //登录mysql<br>mysql&gt; insert into mysql.user(Host,User,Password) values(“localhost”,”test”,password(“1234”));<br>//localhost表示只能在本机登录，改为”%”则可以远程登录</p>
-<p>或者：<br>mysql&gt; CREATE USER ‘username‘@’host’ IDENTIFIED BY ‘password’;</p>
-<h3 id="2-2用户授权"><a href="#2-2用户授权" class="headerlink" title="2.2用户授权"></a>2.2用户授权</h3><p>grant 权限 on 数据库.* to ‘username‘@’host’ identified by ‘password’<br>权限：select, update, all, delete, create, drop</p>
+<p>或者：<br>mysql&gt; CREATE USER ‘username’@’host’ IDENTIFIED BY ‘password’;</p>
+<h3 id="2-2用户授权"><a href="#2-2用户授权" class="headerlink" title="2.2用户授权"></a>2.2用户授权</h3><p>grant 权限 on 数据库.* to ‘username’@’host’ identified by ‘password’<br>权限：select, update, all, delete, create, drop</p>
 <h3 id="2-3删除用户"><a href="#2-3删除用户" class="headerlink" title="2.3删除用户"></a>2.3删除用户</h3><p>Delete FROM user Where User=’test’ and Host=’localhost’;<br>flush privileges;<br>drop database 用户数据库名;<br>drop user 用户名@’%’<br>drop user 用户名@‘localhost’</p>
 <h3 id="2-4修改用户密码"><a href="#2-4修改用户密码" class="headerlink" title="2.4修改用户密码"></a>2.4修改用户密码</h3><p>mysql&gt;update mysql.user set password=password(‘新密码’) where User=”test” and Host=”localhost”;<br>mysql&gt;flush privileges;</p>
 <p>在5.7版本的mysql中，没有“password”这个字段，因此需要使用“authentication_string”这个字段来替换“password”字段</p>
-<p>或者采用以下命令：ALTER USER ‘root‘@’localhost’IDENTIFIED<br> BY ‘<strong><em>**</em></strong>‘</p>
-<h3 id="2-5撤销用户权限"><a href="#2-5撤销用户权限" class="headerlink" title="2.5撤销用户权限"></a>2.5撤销用户权限</h3><p>REVOKE 权限 ON databasename.tablename FROM ‘username‘@’host’;</p>
+<p>或者采用以下命令：ALTER USER ‘root’@’localhost’IDENTIFIED<br> BY ‘<strong><em>**</em></strong>‘</p>
+<h3 id="2-5撤销用户权限"><a href="#2-5撤销用户权限" class="headerlink" title="2.5撤销用户权限"></a>2.5撤销用户权限</h3><p>REVOKE 权限 ON databasename.tablename FROM ‘username’@’host’;</p>
 <h3 id="2-6常用命令"><a href="#2-6常用命令" class="headerlink" title="2.6常用命令"></a>2.6常用命令</h3><p>show databases;//列出所有数据库<br>use ‘databasename’;//切换数据库<br>show tables;//列出所有表<br>describe tablename;//显示数据表结构<br>drop database 数据库名;//删除数据库<br>drop database 表名;//删除表</p>
 <h3 id="2-7重置root密码"><a href="#2-7重置root密码" class="headerlink" title="2.7重置root密码"></a>2.7重置root密码</h3><ul>
 <li>修改安装目录下的my.ini文件，添加一行：skip-grant-tables</li>
@@ -569,7 +567,7 @@
 <h2 id="3-常见问题"><a href="#3-常见问题" class="headerlink" title="3.常见问题"></a>3.常见问题</h2><ul>
 <li><p>远程连接问题：</p>
 <blockquote>
-<p>解决方案如下：<br>1、授权<br>mysql&gt;grant all privileges on <em>.</em>  to  ‘root‘@’%’  identified by ‘youpassword’  with grant option;<br>mysql&gt;flush privileges;<br>2、修改/etc/mysql/my.conf<br>找到bind-address = 127.0.0.1这一行,注释即可</p>
+<p>解决方案如下：<br>1、授权<br>mysql&gt;grant all privileges on <em>.</em>  to  ‘root’@’%’  identified by ‘youpassword’  with grant option;<br>mysql&gt;flush privileges;<br>2、修改/etc/mysql/my.conf<br>找到bind-address = 127.0.0.1这一行,注释即可</p>
 </blockquote>
 </li>
 <li><p>重启mysql服务</p>
@@ -604,6 +602,21 @@
       
 
       
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
       
       
 
@@ -642,45 +655,6 @@
 
     <div class="post-spread">
       
-        
-  <div class="bdsharebuttonbox">
-    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
-    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
-    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
-    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
-    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
-    <a href="#" class="bds_more" data-cmd="more"></a>
-    <a class="bds_count" data-cmd="count"></a>
-  </div>
-  <script>
-    window._bd_share_config = {
-      "common": {
-        "bdText": "",
-        "bdMini": "2",
-        "bdMiniList": false,
-        "bdPic": ""
-      },
-      "share": {
-        "bdSize": "16",
-        "bdStyle": "0"
-      },
-      "image": {
-        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
-        "viewText": "分享到：",
-        "viewSize": "16"
-      }
-    }
-  </script>
-
-<script>
-  <!-- with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)]; -->
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
-      
     </div>
   </div>
 
@@ -689,12 +663,7 @@
           
 
   
-    <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
-    </div>
-
+    <div id="gitalk-container"></div>
   
 
 
@@ -968,6 +937,7 @@
 
           
           
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=640588966&auto=0&height=430"></iframe>
 
           
             
@@ -1081,22 +1051,11 @@
 
 
 
-  
 
 
 
-  
-  
 
 
-
-  
-  
-
-
-
-  
-  
 
 
 
@@ -1123,32 +1082,7 @@
 
   
   
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/canvas_sphere.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1.1/reading_progress.min.js"></script>
   
 
 
@@ -1207,45 +1141,25 @@
 
 
 
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-
-    
-      <script type="text/javascript">
-      function renderGitment(){
-        var gitment = new Gitmint({
-            id: window.location.pathname,
-            owner: 'xiongraorao',
-            repo: 'hexo-comment',
-            
-            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
-            
-            oauth: {
-            
-            
-                client_secret: 'f5b4b12d0ce3eb0bf7e9294eed6726f836f43ded',
-            
-                client_id: 'b26d67370855fd2d2294'
-            }});
-        gitment.render('gitment-container');
-      }
-
-      
-      renderGitment();
-      
-      </script>
-    
 
 
 
 
+  <link rel="stylesheet" href="/lib/gitalk/gitalk.css">
+  
+  <script src="/lib/gitalk/gitalk.min.js"></script>
+   <script type="text/javascript">
+		var gitalk = new Gitalk({
+		  clientID: '4859c15bbe8a95c43467',
+		  clientSecret: 'b344dbb77e74909e1cc588315b0572e77cc6ead7',
+		  repo: 'hexo-comment',
+		  owner: 'xiongraorao',
+		  admin: ['xiongraorao'], 
+		  id: location.pathname,
+		  distractionFreeMode: 'true'
+		})
+		gitalk.render('gitalk-container')           
+       </script>
 
 
   
@@ -1710,6 +1624,27 @@
   
 
   
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook,GooglePlus,Linkedin";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
   
 
   

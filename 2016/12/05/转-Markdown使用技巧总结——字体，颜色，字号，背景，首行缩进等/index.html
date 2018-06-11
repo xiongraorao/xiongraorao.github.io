@@ -23,6 +23,10 @@
 
 
 
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
 
 
 
@@ -37,12 +41,16 @@
 
 
 
+  <meta name="google-site-verification" content="true" />
 
 
 
 
 
 
+
+
+  <meta name="baidu-site-verification" content="ZENXsU2j2F" />
 
 
 
@@ -144,7 +152,7 @@
 <meta name="keywords" content="教程,Markdown">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[转]Markdown使用技巧总结——字体，颜色，字号，背景，首行缩进等">
-<meta property="og:url" content="https://xraorao.top/2016/12/05/转-Markdown使用技巧总结——字体，颜色，字号，背景，首行缩进等/index.html">
+<meta property="og:url" content="http://xraorao.top/2016/12/05/转-Markdown使用技巧总结——字体，颜色，字号，背景，首行缩进等/index.html">
 <meta property="og:site_name" content="在路上">
 <meta property="og:description" content="转载自：http://blog.csdn.net/u010177286/article/details/50358720 Markdown 常用技巧：换行:     方法1: 连续两个以上空格+回车方法2：使用html语言换行标签：首行缩进两个字符：(每个表示一个空格，连续使用两个即可） &amp;ensp; 半角的空格&amp;emsp; 全角的空格字体、字号与颜色:   Markdown是一种可以使用普通文本">
 <meta property="og:locale" content="zh-CN">
@@ -162,7 +170,7 @@
 
 
 
-  <link rel="canonical" href="https://xraorao.top/2016/12/05/转-Markdown使用技巧总结——字体，颜色，字号，背景，首行缩进等/"/>
+  <link rel="canonical" href="http://xraorao.top/2016/12/05/转-Markdown使用技巧总结——字体，颜色，字号，背景，首行缩进等/"/>
 
 
 
@@ -178,13 +186,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120522271-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120522271-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-120522271-1');
+  gtag('config', 'UA-120522271-2');
 </script>
 
 
@@ -220,8 +228,8 @@
 </noscript>
 
   
-    <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-  
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -409,7 +417,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xraorao.top/2016/12/05/转-Markdown使用技巧总结——字体，颜色，字号，背景，首行缩进等/">
+    <link itemprop="mainEntityOfPage" href="http://xraorao.top/2016/12/05/转-Markdown使用技巧总结——字体，颜色，字号，背景，首行缩进等/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiong Raorao">
@@ -502,16 +510,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/12/05/转-Markdown使用技巧总结——字体，颜色，字号，背景，首行缩进等/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count gitment-comments-count" data-xid="/2016/12/05/转-Markdown使用技巧总结——字体，颜色，字号，背景，首行缩进等/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -552,7 +550,14 @@
 <p>方法1: 连续两个以上空格+回车<br>方法2：使用html语言换行标签：<br><br>首行缩进两个字符：(每个表示一个空格，连续使用两个即可）</p>
 <p>&ensp; 半角的空格<br>&emsp; 全角的空格<br>字体、字号与颜色:</p>
 <p>  Markdown是一种可以使用普通文本编辑器编写的标记语言，通过类似HTML的标记语法，它可以使普通文本内容具有一定的格式。但是它本身是不支持修改字体、字号与颜色等功能的！<br>  CSDN-markdown编辑器是其衍生版本，扩展了Markdown的功能（如表格、脚注、内嵌HTML等等）！对，就是内嵌HTML，接下来要讲的功能就需要使用内嵌HTML的方法来实现。</p>
-<font color="#ff0000">字体，字号和颜色编辑</font>如下代码<br><br><font face="黑体">我是黑体字</font><br><font face="微软雅黑">我是微软雅黑</font><br><font face="STCAIYUN">我是华文彩云</font><br><font color="#0099ff" size="7" face="黑体">color=#0099ff size=72 face=”黑体”</font><br><font color="#00ffff" size="72">color=#00ffff</font><br><font color="gray" size="72">color=gray</font>
+<font color="#ff0000">字体，字号和颜色编辑</font>如下代码
+
+<font face="黑体">我是黑体字</font>
+<font face="微软雅黑">我是微软雅黑</font>
+<font face="STCAIYUN">我是华文彩云</font>
+<font color="#0099ff" size="7" face="黑体">color=#0099ff size=72 face="黑体"</font>
+<font color="#00ffff" size="72">color=#00ffff</font>
+<font color="gray" size="72">color=gray</font>
 
 <p>Size：规定文本的尺寸大小。可能的值：从 1 到 7 的数字。浏览器默认值是 3<br>具体颜色分类及标记请参照：各种颜色</p>
 <p>背景色:<br>Markdown本身不支持背景色设置，需要采用内置html的方式实现：借助 table, tr, td 等表格标签的 bgcolor 属性来实现背景色的功能。举例如下：</p>
@@ -560,15 +565,15 @@
 <p>链接：链接文字都是用 [方括号] 来标记,在方块括号后面紧接着圆括号并插入网址链接即可:可参照<br><a href="http://example.NET/" target="_blank" rel="noopener">This link</a> has no title attribute.</p>
 <p>代码块：</p>
 <p>代码块：用2个以上TAB键起始的段落，会被认为是代码块（效果如下）：</p>
-<pre><code>struct {
-  int year;
-  int month;
-  int day;
- }bdate;
+<pre><code>    struct {
+      int year;
+      int month;
+      int day;
+     }bdate;
 </code></pre><p>如果在一个行内需要引用代码，只要用反引号`引起来就好(Esc健）</p>
 <p>代码块与语法高亮：在需要高亮的代码块的前一行及后一行使用三个反引号“`”，同时第一行反引号后面表面代码块所使用的语言<br>插入互联网上图片：</p>
 <p><img src="http://img3.douban.com/mpic/s1108264.jpg" alt="这里写图片描述"></p>
-<p>使用LaTex数学公式:<br>行内公式：使用两个”$”符号引用公式: $公式$<br>行间公式：使用两对“$$”符号引用公式： $$公式$$ </p>
+<p>使用LaTex数学公式:<br>行内公式：使用两个”$”符号引用公式: $公式$<br>行间公式：使用两对“<script type="math/tex">”符号引用公式：</script>公式$$ </p>
 
       
     </div>
@@ -597,6 +602,21 @@
       
 
       
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
       
       
 
@@ -635,45 +655,6 @@
 
     <div class="post-spread">
       
-        
-  <div class="bdsharebuttonbox">
-    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
-    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
-    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
-    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
-    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
-    <a href="#" class="bds_more" data-cmd="more"></a>
-    <a class="bds_count" data-cmd="count"></a>
-  </div>
-  <script>
-    window._bd_share_config = {
-      "common": {
-        "bdText": "",
-        "bdMini": "2",
-        "bdMiniList": false,
-        "bdPic": ""
-      },
-      "share": {
-        "bdSize": "16",
-        "bdStyle": "0"
-      },
-      "image": {
-        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
-        "viewText": "分享到：",
-        "viewSize": "16"
-      }
-    }
-  </script>
-
-<script>
-  <!-- with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)]; -->
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
-      
     </div>
   </div>
 
@@ -682,12 +663,7 @@
           
 
   
-    <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
-    </div>
-
+    <div id="gitalk-container"></div>
   
 
 
@@ -952,6 +928,7 @@
 
           
           
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=640588966&auto=0&height=430"></iframe>
 
           
             
@@ -1049,22 +1026,11 @@
 
 
 
-  
 
 
 
-  
-  
 
 
-
-  
-  
-
-
-
-  
-  
 
 
 
@@ -1091,32 +1057,7 @@
 
   
   
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/canvas_sphere.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1.1/reading_progress.min.js"></script>
   
 
 
@@ -1175,45 +1116,25 @@
 
 
 
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-
-    
-      <script type="text/javascript">
-      function renderGitment(){
-        var gitment = new Gitmint({
-            id: window.location.pathname,
-            owner: 'xiongraorao',
-            repo: 'hexo-comment',
-            
-            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
-            
-            oauth: {
-            
-            
-                client_secret: 'f5b4b12d0ce3eb0bf7e9294eed6726f836f43ded',
-            
-                client_id: 'b26d67370855fd2d2294'
-            }});
-        gitment.render('gitment-container');
-      }
-
-      
-      renderGitment();
-      
-      </script>
-    
 
 
 
 
+  <link rel="stylesheet" href="/lib/gitalk/gitalk.css">
+  
+  <script src="/lib/gitalk/gitalk.min.js"></script>
+   <script type="text/javascript">
+		var gitalk = new Gitalk({
+		  clientID: '4859c15bbe8a95c43467',
+		  clientSecret: 'b344dbb77e74909e1cc588315b0572e77cc6ead7',
+		  repo: 'hexo-comment',
+		  owner: 'xiongraorao',
+		  admin: ['xiongraorao'], 
+		  id: location.pathname,
+		  distractionFreeMode: 'true'
+		})
+		gitalk.render('gitalk-container')           
+       </script>
 
 
   
@@ -1678,6 +1599,27 @@
   
 
   
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook,GooglePlus,Linkedin";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
   
 
   

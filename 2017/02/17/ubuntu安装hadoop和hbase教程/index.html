@@ -23,6 +23,10 @@
 
 
 
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
 
 
 
@@ -37,12 +41,16 @@
 
 
 
+  <meta name="google-site-verification" content="true" />
 
 
 
 
 
 
+
+
+  <meta name="baidu-site-verification" content="ZENXsU2j2F" />
 
 
 
@@ -144,16 +152,16 @@
 <meta name="keywords" content="hadoop,hbase,ubuntu,教程,大数据">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ubuntu安装hadoop和hbase教程">
-<meta property="og:url" content="https://xraorao.top/2017/02/17/ubuntu安装hadoop和hbase教程/index.html">
+<meta property="og:url" content="http://xraorao.top/2017/02/17/ubuntu安装hadoop和hbase教程/index.html">
 <meta property="og:site_name" content="在路上">
 <meta property="og:description" content="ubuntu安装hadoop和hbase教程创建hadoop用户和hadoop用户组sudo addgroup hadoop sudo adduser -ingourp hadoop hadoop sudo gedit /etc/sudoers 最后显示结果如下： 安装ssh免密码登录见此文 配置java环境见此文 安装hadoop2 官网下载： http://mirror.bit.edu.cn/">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://xraorao.top/images/ubuntu安装hadoop和hbase教程-1.png">
+<meta property="og:image" content="http://xraorao.top/images/ubuntu安装hadoop和hbase教程-1.png">
 <meta property="og:updated_time" content="2018-06-08T09:10:07.344Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ubuntu安装hadoop和hbase教程">
 <meta name="twitter:description" content="ubuntu安装hadoop和hbase教程创建hadoop用户和hadoop用户组sudo addgroup hadoop sudo adduser -ingourp hadoop hadoop sudo gedit /etc/sudoers 最后显示结果如下： 安装ssh免密码登录见此文 配置java环境见此文 安装hadoop2 官网下载： http://mirror.bit.edu.cn/">
-<meta name="twitter:image" content="https://xraorao.top/images/ubuntu安装hadoop和hbase教程-1.png">
+<meta name="twitter:image" content="http://xraorao.top/images/ubuntu安装hadoop和hbase教程-1.png">
 
 
 
@@ -162,7 +170,7 @@
 
 
 
-  <link rel="canonical" href="https://xraorao.top/2017/02/17/ubuntu安装hadoop和hbase教程/"/>
+  <link rel="canonical" href="http://xraorao.top/2017/02/17/ubuntu安装hadoop和hbase教程/"/>
 
 
 
@@ -178,13 +186,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120522271-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120522271-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-120522271-1');
+  gtag('config', 'UA-120522271-2');
 </script>
 
 
@@ -220,8 +228,8 @@
 </noscript>
 
   
-    <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-  
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -409,7 +417,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xraorao.top/2017/02/17/ubuntu安装hadoop和hbase教程/">
+    <link itemprop="mainEntityOfPage" href="http://xraorao.top/2017/02/17/ubuntu安装hadoop和hbase教程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiong Raorao">
@@ -502,16 +510,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/02/17/ubuntu安装hadoop和hbase教程/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count gitment-comments-count" data-xid="/2017/02/17/ubuntu安装hadoop和hbase教程/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -556,8 +554,8 @@ sudo gedit /etc/sudoers
 <h3 id="安装hadoop2"><a href="#安装hadoop2" class="headerlink" title="安装hadoop2"></a>安装hadoop2</h3><ul>
 <li>官网下载： <a href="http://mirror.bit.edu.cn/apache/hadoop/common/" target="_blank" rel="noopener">http://mirror.bit.edu.cn/apache/hadoop/common/</a></li>
 <li><p>安装,修改文件拥有者为hadoop,修改权限为774</p>
-<pre><code>sudo chown -R hadoop:hadoop hadoop-install-path
-sudo chmod 774 hadoop-install-path
+<pre><code>  sudo chown -R hadoop:hadoop hadoop-install-path
+  sudo chmod 774 hadoop-install-path
 </code></pre></li>
 <li>配置环境变量</li>
 </ul>
@@ -573,11 +571,11 @@ sudo chmod 774 hadoop-install-path
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.replication<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">value</span>&gt;</span>1<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.namenode.name.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">value</span>&gt;</span>file:/usr/local/hadoop/tmp/dfs/name<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.datanode.data.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">value</span>&gt;</span>file:/usr/local/hadoop/tmp/dfs/data<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>执行NameNode初始化</p>
-<pre><code>./bin/hdfs namenode -format
+<pre><code>  ./bin/hdfs namenode -format
 </code></pre><p>成功的话，会看到 “successfully formatted” 和 “Exitting with status 0” 的提示，若为 “Exitting with status 1” 则是出错。</p>
 </li>
 <li><p>开启NameNode 和 DataNode守护进程</p>
-<pre><code>./sbin/start-dfs.sh
+<pre><code>  ./sbin/start-dfs.sh
 </code></pre><p>通过$jps命令可以查看是否启动相关进程（NameNode，DataNode,SecondaryNameNode）</p>
 </li>
 </ul>
@@ -592,21 +590,21 @@ sudo chmod 774 hadoop-install-path
 <p>启动Yarn来管理资源，负责任务调度</p>
 <ul>
 <li><p>修改配置文件 mapred-site.xml</p>
-<pre><code>mv ./etc/hadoop/mapred­site.xml.template ./etc/hadoop/mapred­site.xml
+<pre><code>  mv ./etc/hadoop/mapred­site.xml.template ./etc/hadoop/mapred­site.xml
 </code></pre><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.framework.name<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>yarn<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>修改配置文件 yarn-site.xml</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.aux­services<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>mapreduce_shuffle<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>启动yarn</p>
-<pre><code>./sbin/start­-yarn.sh # 启动YARN
-./sbin/mr­jobhistory­daemon.sh start historyserver # 开启历史服务器，才能在Web中查看任务运行情况
+<pre><code>  ./sbin/start­-yarn.sh # 启动YARN
+  ./sbin/mr­jobhistory­daemon.sh start historyserver # 开启历史服务器，才能在Web中查看任务运行情况
 </code></pre></li>
 </ul>
 <p>开启jps，出现NodeManager和ResourceManager两个后台进程，通过web界面<a href="http://localhost:8088/cluster" target="_blank" rel="noopener">ResourceManager</a> 可以查看任务运行情况</p>
 <ul>
-<li>关闭yarn<pre><code>./sbin/stop-yarn.sh
-./sbin/mr­jobhistory­daemon.sh stop historyserver
+<li>关闭yarn<pre><code>  ./sbin/stop-yarn.sh
+  ./sbin/mr­jobhistory­daemon.sh stop historyserver
 </code></pre></li>
 </ul>
 <p><strong>注意:不启动 YARN 需重命名 mapred­site.xml如果不想启动 YARN，务必把配置文件 mapred­site.xml 重命名，改成 mapred­site.xml.template，需要用时改回来就行。否则在该配置文件存在，而未开启 YARN 的情况下，运行程序会提示 “Retrying connect to server: 0.0.0.0/0.0.0.0:8032” 的错误，这也是为何该配置文件初始文件名为 mapred­site.xml.template。</strong></p>
@@ -645,6 +643,21 @@ sudo chmod 774 hadoop-install-path
 
       
       
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
       
 
       
@@ -682,45 +695,6 @@ sudo chmod 774 hadoop-install-path
 
     <div class="post-spread">
       
-        
-  <div class="bdsharebuttonbox">
-    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
-    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
-    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
-    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
-    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
-    <a href="#" class="bds_more" data-cmd="more"></a>
-    <a class="bds_count" data-cmd="count"></a>
-  </div>
-  <script>
-    window._bd_share_config = {
-      "common": {
-        "bdText": "",
-        "bdMini": "2",
-        "bdMiniList": false,
-        "bdPic": ""
-      },
-      "share": {
-        "bdSize": "16",
-        "bdStyle": "0"
-      },
-      "image": {
-        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
-        "viewText": "分享到：",
-        "viewSize": "16"
-      }
-    }
-  </script>
-
-<script>
-  <!-- with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)]; -->
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
-      
     </div>
   </div>
 
@@ -729,12 +703,7 @@ sudo chmod 774 hadoop-install-path
           
 
   
-    <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
-    </div>
-
+    <div id="gitalk-container"></div>
   
 
 
@@ -1008,6 +977,7 @@ sudo chmod 774 hadoop-install-path
 
           
           
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=640588966&auto=0&height=430"></iframe>
 
           
             
@@ -1121,22 +1091,11 @@ sudo chmod 774 hadoop-install-path
 
 
 
-  
 
 
 
-  
-  
 
 
-
-  
-  
-
-
-
-  
-  
 
 
 
@@ -1163,32 +1122,7 @@ sudo chmod 774 hadoop-install-path
 
   
   
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/canvas_sphere.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1.1/reading_progress.min.js"></script>
   
 
 
@@ -1247,45 +1181,25 @@ sudo chmod 774 hadoop-install-path
 
 
 
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-
-    
-      <script type="text/javascript">
-      function renderGitment(){
-        var gitment = new Gitmint({
-            id: window.location.pathname,
-            owner: 'xiongraorao',
-            repo: 'hexo-comment',
-            
-            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
-            
-            oauth: {
-            
-            
-                client_secret: 'f5b4b12d0ce3eb0bf7e9294eed6726f836f43ded',
-            
-                client_id: 'b26d67370855fd2d2294'
-            }});
-        gitment.render('gitment-container');
-      }
-
-      
-      renderGitment();
-      
-      </script>
-    
 
 
 
 
+  <link rel="stylesheet" href="/lib/gitalk/gitalk.css">
+  
+  <script src="/lib/gitalk/gitalk.min.js"></script>
+   <script type="text/javascript">
+		var gitalk = new Gitalk({
+		  clientID: '4859c15bbe8a95c43467',
+		  clientSecret: 'b344dbb77e74909e1cc588315b0572e77cc6ead7',
+		  repo: 'hexo-comment',
+		  owner: 'xiongraorao',
+		  admin: ['xiongraorao'], 
+		  id: location.pathname,
+		  distractionFreeMode: 'true'
+		})
+		gitalk.render('gitalk-container')           
+       </script>
 
 
   
@@ -1750,6 +1664,27 @@ sudo chmod 774 hadoop-install-path
   
 
   
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook,GooglePlus,Linkedin";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
   
 
   
