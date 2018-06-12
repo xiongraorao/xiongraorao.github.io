@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://xraorao.top/about/index.html</loc>
+    <loc>http://xraorao.top/2018/06/12/jenkins%E4%BD%BF%E7%94%A8/</loc>
     
-    <lastmod>2018-06-11T12:39:45.548Z</lastmod>
+    <lastmod>2018-06-12T13:02:17.554Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://xraorao.top/music/index.html</loc>
     
-    <lastmod>2018-06-11T12:07:03.539Z</lastmod>
+    <lastmod>2018-06-12T00:28:02.742Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xraorao.top/about/index.html</loc>
+    
+    <lastmod>2018-06-12T00:27:40.053Z</lastmod>
     
   </url>
   
@@ -65,14 +72,14 @@
   </url>
   
   <url>
-    <loc>http://xraorao.top/2016/08/23/%E8%BD%AC-java%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%BC%95%E7%94%A8%E5%92%8C%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%B5%8B%E5%80%BC/</loc>
+    <loc>http://xraorao.top/2016/04/11/%E8%BD%AC-ROC%E6%9B%B2%E7%BA%BF-%E9%98%88%E5%80%BC%E8%AF%84%E4%BB%B7%E6%A0%87%E5%87%86/</loc>
     
     <lastmod>2018-06-08T09:10:07.358Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://xraorao.top/2016/04/11/%E8%BD%AC-ROC%E6%9B%B2%E7%BA%BF-%E9%98%88%E5%80%BC%E8%AF%84%E4%BB%B7%E6%A0%87%E5%87%86/</loc>
+    <loc>http://xraorao.top/2016/08/23/%E8%BD%AC-java%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%BC%95%E7%94%A8%E5%92%8C%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%B5%8B%E5%80%BC/</loc>
     
     <lastmod>2018-06-08T09:10:07.358Z</lastmod>
     
@@ -135,14 +142,14 @@
   </url>
   
   <url>
-    <loc>http://xraorao.top/2017/06/09/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E7%BB%B4%E6%8A%A4%E7%AC%94%E8%AE%B0/</loc>
+    <loc>http://xraorao.top/2017/03/07/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B9%B3%E5%8F%B0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
     
     <lastmod>2018-06-08T09:10:07.352Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://xraorao.top/2017/03/07/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B9%B3%E5%8F%B0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
+    <loc>http://xraorao.top/2017/06/09/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E7%BB%B4%E6%8A%A4%E7%AC%94%E8%AE%B0/</loc>
     
     <lastmod>2018-06-08T09:10:07.352Z</lastmod>
     
@@ -184,14 +191,14 @@
   </url>
   
   <url>
-    <loc>http://xraorao.top/2016/12/05/%E5%8E%9F-Ubuntu%E4%B8%8B%E9%85%8D%E7%BD%AEjava-Eclipse%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc>
+    <loc>http://xraorao.top/2016/10/20/%E5%8E%9F-Ubuntu14-04%E4%B8%8B%E5%AE%89%E8%A3%85%E5%8D%95%E6%9C%BA%E7%89%88Storm%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</loc>
     
     <lastmod>2018-06-08T09:10:07.347Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://xraorao.top/2016/10/20/%E5%8E%9F-Ubuntu14-04%E4%B8%8B%E5%AE%89%E8%A3%85%E5%8D%95%E6%9C%BA%E7%89%88Storm%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</loc>
+    <loc>http://xraorao.top/2016/12/05/%E5%8E%9F-Ubuntu%E4%B8%8B%E9%85%8D%E7%BD%AEjava-Eclipse%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc>
     
     <lastmod>2018-06-08T09:10:07.347Z</lastmod>
     
@@ -205,13 +212,6 @@
   </url>
   
   <url>
-    <loc>http://xraorao.top/2017/05/23/ubuntu%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/</loc>
-    
-    <lastmod>2018-06-08T09:10:07.345Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://xraorao.top/2016/08/23/%E5%8E%9F-Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
     
     <lastmod>2018-06-08T09:10:07.345Z</lastmod>
@@ -219,14 +219,21 @@
   </url>
   
   <url>
-    <loc>http://xraorao.top/2017/02/17/ubuntu%E5%AE%89%E8%A3%85hadoop%E5%92%8Chbase%E6%95%99%E7%A8%8B/</loc>
+    <loc>http://xraorao.top/2017/05/23/ubuntu%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/</loc>
+    
+    <lastmod>2018-06-08T09:10:07.345Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xraorao.top/2017/02/28/storm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%B5%81%E5%88%86%E7%BB%84/</loc>
     
     <lastmod>2018-06-08T09:10:07.344Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://xraorao.top/2017/02/28/storm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%B5%81%E5%88%86%E7%BB%84/</loc>
+    <loc>http://xraorao.top/2017/02/17/ubuntu%E5%AE%89%E8%A3%85hadoop%E5%92%8Chbase%E6%95%99%E7%A8%8B/</loc>
     
     <lastmod>2018-06-08T09:10:07.344Z</lastmod>
     
@@ -261,14 +268,14 @@
   </url>
   
   <url>
-    <loc>http://xraorao.top/2017/03/18/linux%E4%B8%8BU%E7%9B%98%E5%88%86%E5%8C%BA/</loc>
+    <loc>http://xraorao.top/2017/04/25/linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</loc>
     
     <lastmod>2018-06-08T09:10:07.340Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://xraorao.top/2017/04/25/linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</loc>
+    <loc>http://xraorao.top/2017/03/18/linux%E4%B8%8BU%E7%9B%98%E5%88%86%E5%8C%BA/</loc>
     
     <lastmod>2018-06-08T09:10:07.340Z</lastmod>
     
@@ -303,14 +310,14 @@
   </url>
   
   <url>
-    <loc>http://xraorao.top/2017/03/03/Ubuntu%E5%88%B6%E4%BD%9CUbuntuLiveCD-%E5%A4%87%E4%BB%BD%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F%E6%95%99%E7%A8%8B/</loc>
+    <loc>http://xraorao.top/2017/02/28/caffe%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-solver-prototxt%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</loc>
     
     <lastmod>2018-06-08T09:10:07.335Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://xraorao.top/2017/02/28/caffe%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-solver-prototxt%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</loc>
+    <loc>http://xraorao.top/2017/03/03/Ubuntu%E5%88%B6%E4%BD%9CUbuntuLiveCD-%E5%A4%87%E4%BB%BD%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F%E6%95%99%E7%A8%8B/</loc>
     
     <lastmod>2018-06-08T09:10:07.335Z</lastmod>
     
