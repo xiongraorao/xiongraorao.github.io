@@ -560,7 +560,7 @@
 <li>删除老集群的hdfs文件<br>使用hdfs命令删除文件后执行<br>hadoop dfs -expunge<br>删除对应的DataNode和namenode路径下的文件夹</li>
 </ul>
 <h3 id="2-多次格式化NameNode导致无法启动DataNode的解决方案"><a href="#2-多次格式化NameNode导致无法启动DataNode的解决方案" class="headerlink" title="2.多次格式化NameNode导致无法启动DataNode的解决方案"></a>2.多次格式化NameNode导致无法启动DataNode的解决方案</h3><p><a href="http://www.cnblogs.com/yeahwell/p/5642798.html" target="_blank" rel="noopener">http://www.cnblogs.com/yeahwell/p/5642798.html</a></p>
-<h3 id="3-查看某端口被映射到端口上"><a href="#3-查看某端口被映射到端口上" class="headerlink" title="3.查看某端口被映射到端口上"></a>3.查看某端口被映射到端口上</h3><p>iptables -t nat -L -n  | grep 80<br>iptables -t nat —list   //检查nat列表信息<br>iptables -t nat -D PREROUTING 1    /Nat列表信息删除：序号从1 开始，后边以此+1.</p>
+<h3 id="3-查看某端口被映射到端口上"><a href="#3-查看某端口被映射到端口上" class="headerlink" title="3.查看某端口被映射到端口上"></a>3.查看某端口被映射到端口上</h3><p>iptables -t nat -L -n  | grep 80<br>iptables -t nat –list   //检查nat列表信息<br>iptables -t nat -D PREROUTING 1    /Nat列表信息删除：序号从1 开始，后边以此+1.</p>
 <p>参考链接：<a href="http://blog.csdn.net/xin_yu_xin/article/details/46416101" target="_blank" rel="noopener">http://blog.csdn.net/xin_yu_xin/article/details/46416101</a></p>
 <h3 id="4-安装mysql"><a href="#4-安装mysql" class="headerlink" title="4.安装mysql"></a>4.安装mysql</h3><p><a href="http://blog.csdn.net/chenpy/article/details/50344085" target="_blank" rel="noopener">http://blog.csdn.net/chenpy/article/details/50344085</a></p>
 <h3 id="5-storm-并行度"><a href="#5-storm-并行度" class="headerlink" title="5.storm 并行度"></a>5.storm 并行度</h3><p>rebalance操作：<a href="http://blog.csdn.net/jmppok/article/details/17243857" target="_blank" rel="noopener">http://blog.csdn.net/jmppok/article/details/17243857</a><br>storm并行度理解：<a href="http://www.cnblogs.com/catkins/p/5254377.html" target="_blank" rel="noopener">http://www.cnblogs.com/catkins/p/5254377.html</a></p>
@@ -710,7 +710,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">44</span>
+                    <span class="site-state-item-count">45</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -870,7 +870,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">43</span>
+                      
+                    
+                    <span class="site-state-item-count">44</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

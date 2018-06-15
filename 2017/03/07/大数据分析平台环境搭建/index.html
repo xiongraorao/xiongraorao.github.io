@@ -570,7 +570,9 @@
 <p>sudo vim /etc/network/interfaces</p>
 <p>修改如下部分：</p>
 <p>auto eth0<br>iface eth0 inet static<br>address 192.168.1.4<br>gateway 192.168.1.1 #这个地址你要确认下 网关是不是这个地址<br>netmask 255.255.255.0</p>
-<h1 id="network-192-168-0-0"><a href="#network-192-168-0-0" class="headerlink" title="network 192.168.0.0"></a>network 192.168.0.0</h1><h1 id="broadcast-192-168-0-255"><a href="#broadcast-192-168-0-255" class="headerlink" title="broadcast 192.168.0.255"></a>broadcast 192.168.0.255</h1><ol>
+<p>#network 192.168.0.0</p>
+<p>#broadcast 192.168.0.255</p>
+<ol start="2">
 <li>修改dns解析</li>
 </ol>
 <p>因为以前是dhcp解析，所以会自动分配dns服务器地址</p>
@@ -581,7 +583,7 @@
 <p>nameserver 202.114.0.131(公网dns服务器)<br>nameserver 202.114.0.242（公网dns服务器）<br>nameserver 192.168.1.1（局域网内可以访问外网的机器，非网关服务器放在前面）</p>
 <p>sudo vim /etc/resolvconf/resolv.d/base</p>
 <p>nameserver 202.114.0.131(公网dns服务器)<br>nameserver 202.114.0.242（公网dns服务器）<br>nameserver 192.168.1.1（局域网内可以访问外网的机器，非网关服务器放在前面）</p>
-<ol>
+<ol start="3">
 <li>重启网卡：</li>
 </ol>
 <p>sudo /etc/init.d/network restart</p>
@@ -608,12 +610,12 @@
 <li>hadoop <strong><em>2.6.4</em></strong></li>
 <li>hbase <strong><em>1.2.4</em></strong></li>
 </ul>
-<ol>
+<ol start="2">
 <li>设置ip地址映射<br>sudo vi /etc/hosts</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># test</span></span><br><span class="line">192.168.0.136   pc1080</span><br><span class="line">192.168.0.116   pcwrp</span><br><span class="line">192.168.0.117   pcxrr</span><br><span class="line"></span><br><span class="line">192.168.0.136   cloud01</span><br><span class="line">192.168.0.116   cloud02</span><br><span class="line">192.168.0.117   cloud03</span><br><span class="line"></span><br><span class="line">192.168.0.136   hadoop01</span><br><span class="line">192.168.0.116   hadoop02</span><br><span class="line">192.168.0.117   hadoop03</span><br><span class="line"></span><br><span class="line">192.168.0.136   zk01</span><br><span class="line">192.168.0.116   zk02</span><br><span class="line">192.168.0.117   zk03</span><br><span class="line"></span><br><span class="line">192.168.0.136   kafka01</span><br><span class="line">192.168.0.116   kafka02</span><br><span class="line">192.168.0.117   kafka03</span><br><span class="line"></span><br><span class="line">192.168.0.136   kafka01</span><br><span class="line">192.168.0.116   kafka02</span><br><span class="line">192.168.0.117   kafka03</span><br><span class="line"></span><br><span class="line">192.168.0.136   storm01</span><br><span class="line">192.168.0.116   storm02</span><br><span class="line">192.168.0.117   storm03</span><br><span class="line"></span><br><span class="line">192.168.0.136   hbase01</span><br><span class="line">192.168.0.116   hbase02</span><br><span class="line">192.168.0.117   hbase03</span><br><span class="line"></span><br><span class="line"><span class="comment"># end test</span></span><br></pre></td></tr></table></figure>
 <p><span style="color:red">这里面需要注意一下，之所以需要配置多组ip映射，是因为在相应的软件中很多默认参数需要用到这些映射</span></p>
-<ol>
+<ol start="3">
 <li><p>三台机机器实现互相ssh免密码登录，并且实现自身环回登录<br>参考链接：<a href="https://xiongraorao.github.io/2017/02/17/ssh%E5%85%8D%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95/" target="_blank" rel="noopener">ssh免密码登录</a></p>
 </li>
 <li><p>设置环境变量<br>vi ~/.bashrc</p>
@@ -687,7 +689,7 @@
 </ul>
 <p>遇到的问题：<br>主节点上启动start-all.sh, 只有主节点的NameNode和SecondaryNameNode和DataNode启动，从节点的DataNode没有启动</p>
 <p>重启部分坏死节点：<br>bin/Hadoop-daemon.sh start DataNode<br>bin/Hadoop-daemon.sh start jobtracker</p>
-<p>动态加入新节点：<br>bin/Hadoop-daemon.sh —config ./conf start DataNode<br>bin/Hadoop-daemon.sh —config ./conf start tasktracker</p>
+<p>动态加入新节点：<br>bin/Hadoop-daemon.sh –config ./conf start DataNode<br>bin/Hadoop-daemon.sh –config ./conf start tasktracker</p>
 <p>更新配置文件命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> ip <span class="keyword">in</span> `seq 2 3`; <span class="keyword">do</span> scp /home/hadoop/cloud/hadoop-2.6.4/etc/hadoop/* hadoop@hadoop0<span class="variable">$ip</span>:/home/hadoop/cloud/hadoop-2.6.4/etc/hadoop/; <span class="keyword">done</span></span><br></pre></td></tr></table></figure></p>
 <p>更新环境变量：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> ip <span class="keyword">in</span> `seq 2 3`; <span class="keyword">do</span> scp /home/hadoop/.bashrc hadoop@hadoop0<span class="variable">$ip</span>:/home/hadoop/; <span class="keyword">done</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="安装HBase"><a href="#安装HBase" class="headerlink" title="安装HBase"></a>安装HBase</h3><ul>
@@ -875,7 +877,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">44</span>
+                    <span class="site-state-item-count">45</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1035,7 +1037,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">43</span>
+                      
+                    
+                    <span class="site-state-item-count">44</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1118,7 +1122,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装ubuntu"><span class="nav-number">1.</span> <span class="nav-text">安装ubuntu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装NVIDIA驱动"><span class="nav-number">2.</span> <span class="nav-text">安装NVIDIA驱动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装cuda-cudnn-opencv-caffe"><span class="nav-number">3.</span> <span class="nav-text">安装cuda+cudnn+opencv+caffe</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置静态ip-安装ssh-server"><span class="nav-number">4.</span> <span class="nav-text">配置静态ip + 安装ssh-server</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#静态ip"><span class="nav-number">4.1.</span> <span class="nav-text">静态ip</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#network-192-168-0-0"><span class="nav-number"></span> <span class="nav-text">network 192.168.0.0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#broadcast-192-168-0-255"><span class="nav-number"></span> <span class="nav-text">broadcast 192.168.0.255</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装ssh-server"><span class="nav-number">0.1.</span> <span class="nav-text">安装ssh-server</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装storm-kafka-zookeeper-hdfs-hbase-jdk"><span class="nav-number">1.</span> <span class="nav-text">安装storm+kafka+zookeeper+hdfs+hbase+jdk</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前期准备工作"><span class="nav-number">1.1.</span> <span class="nav-text">前期准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装zookeeper"><span class="nav-number">1.2.</span> <span class="nav-text">安装zookeeper</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装storm"><span class="nav-number">1.3.</span> <span class="nav-text">安装storm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装hadoop"><span class="nav-number">1.4.</span> <span class="nav-text">安装hadoop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装HBase"><span class="nav-number">1.5.</span> <span class="nav-text">安装HBase</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装kafka"><span class="nav-number">1.6.</span> <span class="nav-text">安装kafka</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装ubuntu"><span class="nav-number">1.</span> <span class="nav-text">安装ubuntu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装NVIDIA驱动"><span class="nav-number">2.</span> <span class="nav-text">安装NVIDIA驱动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装cuda-cudnn-opencv-caffe"><span class="nav-number">3.</span> <span class="nav-text">安装cuda+cudnn+opencv+caffe</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置静态ip-安装ssh-server"><span class="nav-number">4.</span> <span class="nav-text">配置静态ip + 安装ssh-server</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#静态ip"><span class="nav-number">4.1.</span> <span class="nav-text">静态ip</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装ssh-server"><span class="nav-number">4.2.</span> <span class="nav-text">安装ssh-server</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装storm-kafka-zookeeper-hdfs-hbase-jdk"><span class="nav-number">5.</span> <span class="nav-text">安装storm+kafka+zookeeper+hdfs+hbase+jdk</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前期准备工作"><span class="nav-number">5.1.</span> <span class="nav-text">前期准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装zookeeper"><span class="nav-number">5.2.</span> <span class="nav-text">安装zookeeper</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装storm"><span class="nav-number">5.3.</span> <span class="nav-text">安装storm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装hadoop"><span class="nav-number">5.4.</span> <span class="nav-text">安装hadoop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装HBase"><span class="nav-number">5.5.</span> <span class="nav-text">安装HBase</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装kafka"><span class="nav-number">5.6.</span> <span class="nav-text">安装kafka</span></a></li></ol></li></ol></div>
             
 
           </div>

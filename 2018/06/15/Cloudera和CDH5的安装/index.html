@@ -148,20 +148,20 @@
 
 
 
-  <meta name="description" content="安装UbuntuLiveCD 准备：U盘，ubuntu官方镜像文件  windows解决方案 安装UltralSO，打开ubuntu镜像文件，写入U盘 安装UNetBootin，打开Ubuntu镜像文件，写入U盘  linux解决方案 插入U盘 sudo fdisk -l cd ubuntu-iso的目录 sudo dd if=ubuntu-14.04.5-desktop-amd64.iso of">
-<meta name="keywords" content="ubuntu,教程">
+  <meta name="description" content="1.准备工作1.安装Oracel JDK（所有节点）查看cloudera官网上堆系统的要求安装jdk版本，查看链接CDH5.11.X要求JDK1.7u55 or higher 、JDK1.8u31 or higher，要求集群所有机器的JDK版本一致 2.安装Mysql （主节点）集群中至少有一台机器安装mysql，建议安装在主节点机器上。安装mysql参考链接  mysql配置 1234567#">
+<meta name="keywords" content="cloudera">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu制作UbuntuLiveCD+备份系统镜像教程">
-<meta property="og:url" content="http://xraorao.top/2017/03/03/Ubuntu制作UbuntuLiveCD-备份系统镜像教程/index.html">
+<meta property="og:title" content="Cloudera和CDH5的安装">
+<meta property="og:url" content="http://xraorao.top/2018/06/15/Cloudera和CDH5的安装/index.html">
 <meta property="og:site_name" content="在路上">
-<meta property="og:description" content="安装UbuntuLiveCD 准备：U盘，ubuntu官方镜像文件  windows解决方案 安装UltralSO，打开ubuntu镜像文件，写入U盘 安装UNetBootin，打开Ubuntu镜像文件，写入U盘  linux解决方案 插入U盘 sudo fdisk -l cd ubuntu-iso的目录 sudo dd if=ubuntu-14.04.5-desktop-amd64.iso of">
+<meta property="og:description" content="1.准备工作1.安装Oracel JDK（所有节点）查看cloudera官网上堆系统的要求安装jdk版本，查看链接CDH5.11.X要求JDK1.7u55 or higher 、JDK1.8u31 or higher，要求集群所有机器的JDK版本一致 2.安装Mysql （主节点）集群中至少有一台机器安装mysql，建议安装在主节点机器上。安装mysql参考链接  mysql配置 1234567#">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://xraorao.top/images/ubuntu系统备份镜像-1.png">
-<meta property="og:updated_time" content="2018-06-08T09:10:07.335Z">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/1150091/201704/1150091-20170425193926303-554555577.png">
+<meta property="og:updated_time" content="2018-06-15T00:22:01.414Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ubuntu制作UbuntuLiveCD+备份系统镜像教程">
-<meta name="twitter:description" content="安装UbuntuLiveCD 准备：U盘，ubuntu官方镜像文件  windows解决方案 安装UltralSO，打开ubuntu镜像文件，写入U盘 安装UNetBootin，打开Ubuntu镜像文件，写入U盘  linux解决方案 插入U盘 sudo fdisk -l cd ubuntu-iso的目录 sudo dd if=ubuntu-14.04.5-desktop-amd64.iso of">
-<meta name="twitter:image" content="http://xraorao.top/images/ubuntu系统备份镜像-1.png">
+<meta name="twitter:title" content="Cloudera和CDH5的安装">
+<meta name="twitter:description" content="1.准备工作1.安装Oracel JDK（所有节点）查看cloudera官网上堆系统的要求安装jdk版本，查看链接CDH5.11.X要求JDK1.7u55 or higher 、JDK1.8u31 or higher，要求集群所有机器的JDK版本一致 2.安装Mysql （主节点）集群中至少有一台机器安装mysql，建议安装在主节点机器上。安装mysql参考链接  mysql配置 1234567#">
+<meta name="twitter:image" content="http://images2015.cnblogs.com/blog/1150091/201704/1150091-20170425193926303-554555577.png">
 
 
 
@@ -170,7 +170,7 @@
 
 
 
-  <link rel="canonical" href="http://xraorao.top/2017/03/03/Ubuntu制作UbuntuLiveCD-备份系统镜像教程/"/>
+  <link rel="canonical" href="http://xraorao.top/2018/06/15/Cloudera和CDH5的安装/"/>
 
 
 
@@ -180,7 +180,7 @@
   };
 </script>
 
-  <title>Ubuntu制作UbuntuLiveCD+备份系统镜像教程 | 在路上</title>
+  <title>Cloudera和CDH5的安装 | 在路上</title>
   
 
 
@@ -425,7 +425,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xraorao.top/2017/03/03/Ubuntu制作UbuntuLiveCD-备份系统镜像教程/">
+    <link itemprop="mainEntityOfPage" href="http://xraorao.top/2018/06/15/Cloudera和CDH5的安装/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiong Raorao">
@@ -442,7 +442,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Ubuntu制作UbuntuLiveCD+备份系统镜像教程
+          <h2 class="post-title" itemprop="name headline">Cloudera和CDH5的安装
               
             
           </h2>
@@ -467,24 +467,12 @@
                 
               
 
-              <time title="创建时间：2017-03-03 15:50:08" itemprop="dateCreated datePublished" datetime="2017-03-03T15:50:08+08:00">2017-03-03</time>
+              <time title="创建时间：2018-06-15 08:20:02 / 修改时间：08:22:01" itemprop="dateCreated datePublished" datetime="2018-06-15T08:20:02+08:00">2018-06-15</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-06-08 17:10:07" itemprop="dateModified" datetime="2018-06-08T17:10:07+08:00">2018-06-08</time>
               
             
           </span>
@@ -505,13 +493,6 @@
 
                 
                 
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/解决方案/ubuntu/" itemprop="url" rel="index"><span itemprop="name">ubuntu</span></a></span>
-
-                
-                
               
             </span>
           
@@ -522,7 +503,7 @@
 
           
           
-             <span id="/2017/03/03/Ubuntu制作UbuntuLiveCD-备份系统镜像教程/" class="leancloud_visitors" data-flag-title="Ubuntu制作UbuntuLiveCD+备份系统镜像教程">
+             <span id="/2018/06/15/Cloudera和CDH5的安装/" class="leancloud_visitors" data-flag-title="Cloudera和CDH5的安装">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -553,35 +534,56 @@
       
 
       
-        <h2 id="安装UbuntuLiveCD"><a href="#安装UbuntuLiveCD" class="headerlink" title="安装UbuntuLiveCD"></a>安装UbuntuLiveCD</h2><blockquote>
-<p>准备：U盘，ubuntu官方镜像文件</p>
+        <h2 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1.准备工作"></a>1.准备工作</h2><h3 id="1-安装Oracel-JDK（所有节点）"><a href="#1-安装Oracel-JDK（所有节点）" class="headerlink" title="1.安装Oracel JDK（所有节点）"></a>1.安装Oracel JDK（所有节点）</h3><p>查看cloudera官网上堆系统的要求安装jdk版本，<a href="https://www.cloudera.com/documentation/enterprise/release-notes/topics/rn_consolidated_pcm.html#concept_dcw_m5v_jz" target="_blank" rel="noopener">查看链接</a><br>CDH5.11.X要求JDK1.7u55 or higher 、JDK1.8u31 or higher，<strong>要求集群所有机器的JDK版本一致</strong></p>
+<h3 id="2-安装Mysql-（主节点）"><a href="#2-安装Mysql-（主节点）" class="headerlink" title="2.安装Mysql （主节点）"></a>2.安装Mysql （主节点）</h3><p>集群中至少有一台机器安装mysql，建议安装在主节点机器上。安装mysql<a href="http://blog.csdn.net/chenpy/article/details/50344085" target="_blank" rel="noopener">参考链接</a></p>
+<ul>
+<li><p>mysql配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 配置mysql数据库远程连接</span></span><br><span class="line">$ mysql -uroot -p123456</span><br><span class="line">mysql&gt;grant all privileges on *.* to <span class="string">'root'</span>@<span class="string">'%'</span> identified by <span class="string">'123456'</span> with grant option;</span><br><span class="line">mysql&gt;flush privileges;</span><br><span class="line">$ sudo vi /etc/mysql/my.conf</span><br><span class="line"><span class="built_in">bind</span>-address=127.0.0.1 注释掉</span><br><span class="line">$ sudo service mysql restart</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成CDH5所需数据库</p>
+</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> amon <span class="keyword">default</span> <span class="built_in">character</span> <span class="keyword">set</span> utf8;</span><br><span class="line"><span class="keyword">grant</span> all <span class="keyword">on</span> amon.* <span class="keyword">to</span> <span class="string">'amon'</span>@<span class="string">'%'</span> <span class="keyword">identified</span> <span class="keyword">by</span> <span class="string">'amon'</span>;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> rman <span class="keyword">default</span> <span class="built_in">character</span> <span class="keyword">set</span> utf8;</span><br><span class="line"><span class="keyword">grant</span> all <span class="keyword">on</span> rman.* <span class="keyword">to</span> <span class="string">'rman'</span>@<span class="string">'%'</span> <span class="keyword">identified</span> <span class="keyword">by</span> <span class="string">'rman'</span>;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> metastore <span class="keyword">default</span> <span class="built_in">character</span> <span class="keyword">set</span> utf8;</span><br><span class="line"><span class="keyword">grant</span> all <span class="keyword">on</span> metastore.* <span class="keyword">to</span> <span class="string">'hive'</span>@<span class="string">'%'</span> <span class="keyword">identified</span> <span class="keyword">by</span> <span class="string">'hive'</span>;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> sentry <span class="keyword">default</span> <span class="built_in">character</span> <span class="keyword">set</span> utf8;</span><br><span class="line"><span class="keyword">grant</span> all <span class="keyword">on</span> sentry.* <span class="keyword">to</span> <span class="string">'sentry'</span>@<span class="string">'%'</span> <span class="keyword">identified</span> <span class="keyword">by</span> <span class="string">'sentry'</span>;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> <span class="keyword">nav</span> <span class="keyword">default</span> <span class="built_in">character</span> <span class="keyword">set</span> utf8;</span><br><span class="line"><span class="keyword">grant</span> all <span class="keyword">on</span> nav.* <span class="keyword">to</span> <span class="string">'nav'</span>@<span class="string">'%'</span> <span class="keyword">identified</span> <span class="keyword">by</span> <span class="string">'nav'</span>;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> navms <span class="keyword">default</span> <span class="built_in">character</span> <span class="keyword">set</span> utf8;</span><br><span class="line"><span class="keyword">grant</span> all <span class="keyword">on</span> navms.* <span class="keyword">to</span> <span class="string">'navms'</span>@<span class="string">'%'</span> <span class="keyword">identified</span> <span class="keyword">by</span> <span class="string">'navms'</span>;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> hue <span class="keyword">default</span> <span class="built_in">character</span> <span class="keyword">set</span> utf8 <span class="keyword">default</span> <span class="keyword">collate</span> utf8_general_ci;</span><br><span class="line"><span class="keyword">grant</span> all <span class="keyword">on</span> hue.* <span class="keyword">to</span> <span class="string">'hue'</span>@<span class="string">'%'</span> <span class="keyword">identified</span> <span class="keyword">by</span> <span class="string">'hue'</span>;</span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> information_schema.schemata;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> oozie;</span><br><span class="line"><span class="keyword">grant</span> all <span class="keyword">privileges</span> <span class="keyword">on</span> oozie.* <span class="keyword">to</span> <span class="string">'oozie'</span>@<span class="string">'localhost'</span> <span class="keyword">identified</span> <span class="keyword">by</span> <span class="string">'oozie'</span>;</span><br><span class="line"><span class="keyword">grant</span> all <span class="keyword">privileges</span> <span class="keyword">on</span> oozie.* <span class="keyword">to</span> <span class="string">'oozie'</span>@<span class="string">'%'</span> <span class="keyword">identified</span> <span class="keyword">by</span> <span class="string">'oozie'</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="3-网络配置-（所有节点）"><a href="#3-网络配置-（所有节点）" class="headerlink" title="3.网络配置 （所有节点）"></a>3.网络配置 （所有节点）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1.修改hostname</span></span><br><span class="line">sudo vi /etc/hostsname ==&gt; cloud01,cloud02,cloud03</span><br><span class="line"><span class="comment"># 2. 修改ip映射</span></span><br><span class="line">sudo vi /etc/hosts </span><br><span class="line">==&gt; example: </span><br><span class="line">192.168.1.1 cloud01[,other name]</span><br><span class="line">192.168.1.3 cloud02[,other name]</span><br><span class="line">192.168.1.3 cloud03[,other name]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 关闭防火墙</span></span><br><span class="line">sudo apt-get install ufw -y</span><br><span class="line">sudo ufw stop</span><br><span class="line">sudo ufw status //查看防火墙状态</span><br></pre></td></tr></table></figure>
+<h3 id="3-设置SSH无密码访问"><a href="#3-设置SSH无密码访问" class="headerlink" title="3.设置SSH无密码访问"></a>3.设置SSH无密码访问</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1.生成密钥对，集群所有机器上执行命令</span></span><br><span class="line">ssh-keygen -t rsa  //默认生成两个文件 ~/.ssh/id_rsa ~/.ssh/id_rsa.pub</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2.选择集群一台机器，例如cloud01,假设集群有5台机器</span></span><br><span class="line">root@cloud01:~<span class="comment"># for ip in `seq 1 5`;do scp root@cloud0$ip:~/.ssh/id_rsa.pub ~/.ssh/rsa_temp &amp;&amp; cat ~/.ssh/rsa_temp &gt;&gt; ~/.ssh/authorized_keys;done //此时会在~/.ssh/目录下生成authorizied_keys文件</span></span><br><span class="line">root@cloud01:~<span class="comment"># for ip in `seq 2 5`;do scp ~/.ssh/authorized_keys root@cloud0$ip:~/.ssh/;done //复制authorizedkeys到其他的主机中</span></span><br><span class="line">root@cloud01:~<span class="comment"># rm ~/.ssh/rsa_temp</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 3.SSH服务器配置</span></span><br><span class="line">root@cloud01:~<span class="comment"># vi /etc/ssh/sshd_config</span></span><br><span class="line">PermitRootLogin yes //修改默认的without password</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4.重启SSH服务</span></span><br><span class="line">sudo service sshd restart</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5.免密码登录失败原因</span></span><br><span class="line">1、权限问题</span><br><span class="line"></span><br><span class="line">.ssh目录，以及/home/当前用户 需要700权限，参考以下操作调整</span><br><span class="line"></span><br><span class="line">sudo chmod 700 ~/.ssh</span><br><span class="line"></span><br><span class="line">sudo chmod 700 /home/当前用户</span><br><span class="line"></span><br><span class="line">.ssh目录下的authorized_keys文件需要600或644权限，参考以下操作调整</span><br><span class="line"></span><br><span class="line">sudo chmod 600 ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
+<h3 id="4-配置NTP时间同步服务（所有节点）"><a href="#4-配置NTP时间同步服务（所有节点）" class="headerlink" title="4.配置NTP时间同步服务（所有节点）"></a>4.配置NTP时间同步服务（所有节点）</h3><ul>
+<li>时间服务器配置（主节点）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 所有节点安装ntp服务</span></span><br><span class="line">sudo apt-get install ntp</span><br><span class="line"><span class="comment">#查看服务是否启动</span></span><br><span class="line">service --status-all</span><br><span class="line">[+]表示启动</span><br><span class="line"></span><br><span class="line"><span class="comment">#选择cloud01作为时间同步服务器</span></span><br><span class="line">ssh cloud01</span><br><span class="line">sudo vi /etc/ntp.conf</span><br><span class="line">=====</span><br><span class="line">1. 修改server</span><br><span class="line">server [IP or hostname] [prefer]</span><br><span class="line">在 server 后端可以接 IP 或主机名，个人比较喜欢使用 IP 来设定， perfer 表示『优先使用』的服务器。</span><br><span class="line">server 2.cn.pool.ntp.org prefer</span><br><span class="line">server 0.asia.pool.ntp.org prefer</span><br><span class="line">server 3.asia.pool.ntp.org prefer</span><br><span class="line">2. 修改本地server</span><br><span class="line"><span class="comment">#让NTP Server和其自身保持同步，如果在/etc/ntp.conf中定义的server都不可用时，将使用local时间作为ntp服务提供给ntp客户端</span></span><br><span class="line">server 127.127.1.0</span><br><span class="line">fudge 127.127.1.0 stratum 5</span><br><span class="line">3.  restrict管理时间服务器权限</span><br><span class="line"><span class="comment">#不允许来自公网上ipv4和ipv6客户端的访问</span></span><br><span class="line">restrict -4 default kod notrap nomodify nopeer noquery</span><br><span class="line">restrict -6 default kod notrap nomodify nopeer noquery</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">restrict 192.168.1.0 mask 255.255.255.0 nomodify notrap</span><br><span class="line">=====</span><br></pre></td></tr></table></figure>
+<ul>
+<li>请求对时客户端配置（其他节点）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#安装ntp服务</span></span><br><span class="line">sudo apt-get install ntp</span><br><span class="line">sudo vi /etc/ntp.conf</span><br><span class="line"><span class="comment">#去掉之前默认的server</span></span><br><span class="line">server 192.168.1.1（时间服务器的ip）</span><br><span class="line">fudge 192.168.1.1 stratum 5</span><br></pre></td></tr></table></figure>
+<ul>
+<li>对时操作</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1. 使用ntp服务对时</span><br><span class="line">$ sudo service ntp stop</span><br><span class="line">$ sudo ntpdate 时间服务器ip</span><br><span class="line">$ sudo service ntp start</span><br><span class="line"></span><br><span class="line">2.查看时间状态</span><br><span class="line">$ timedatectl status</span><br><span class="line">$ sudo ntpq -p</span><br><span class="line"></span><br><span class="line">3.更换时区</span><br><span class="line">$ sudo tzselect</span><br></pre></td></tr></table></figure>
+<h3 id="5-修改source-list"><a href="#5-修改source-list" class="headerlink" title="5.修改source.list"></a>5.修改source.list</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1.增加两个源</span></span><br><span class="line">deb [arch=amd64] http://archive.cloudera.com/cm5/ubuntu/trusty/amd64/cm trusty-cm5 contrib</span><br><span class="line">deb-src http://archive.cloudera.com/cm5/ubuntu/trusty/amd64/cm trusty-cm5 contrib</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2.更新</span></span><br><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
+<h2 id="2-安装CDH"><a href="#2-安装CDH" class="headerlink" title="2.安装CDH"></a>2.安装CDH</h2><h3 id="1-下载CDH安装包（主节点）"><a href="#1-下载CDH安装包（主节点）" class="headerlink" title="1.下载CDH安装包（主节点）"></a>1.<a href="https://www.cloudera.com/documentation/enterprise/release-notes/topics/cm_vd.html" target="_blank" rel="noopener">下载</a>CDH安装包（主节点）</h3><p>Ubuntu14.04下载<a href="https://archive.cloudera.com/cm5/cm/5/cloudera-manager-trusty-cm5.11.1_amd64.tar.gz" target="_blank" rel="noopener">链接</a>（CM5.11）<br>cloudera-manager<a href="http://archive.cloudera.com/cm5/cm/5/" target="_blank" rel="noopener">下载链接</a><br>CDH5<a href="http://archive.cloudera.com/cdh5/parcels/" target="_blank" rel="noopener">下载链接</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 1.解压安装包</span></span><br><span class="line">sudo mkdir /opt/cloudera-manager</span><br><span class="line">sudo tar xzf cloudera-manager*.tar.gz -C /opt/cloudera-manager</span><br><span class="line"><span class="comment"># 假设$CMF_DEFAULTS=/opt/cloudera-manager/cm-5.11.1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2.初始化数据库</span></span><br><span class="line">sudo <span class="variable">$CMF_DEFAULTS</span>/share/cmf/schema/scm_prepare_database.sh mysql cm -hMasterNode -uroot -p123456 --scm-host MasterNode scm scm scm</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3.修改angent配置</span></span><br><span class="line">sudo vi <span class="variable">$CMF_DEFAULTS</span>/etc/cloudera-scm-agent/config.ini </span><br><span class="line">server_host = MasterNode</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4.复制cloudera-manager到其他主机</span></span><br><span class="line">root@cloud01:~<span class="comment"># for $ip in `seq 2 5`;do scp -r $CMF_DEFAULTS/ root@cloud0$ip:/opt/</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="2-为CDH创建用户（所有节点）"><a href="#2-为CDH创建用户（所有节点）" class="headerlink" title="2.为CDH创建用户（所有节点）"></a>2.为CDH创建用户（所有节点）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@cloud01:~<span class="comment"># useradd --system --home=$CMF_DEFAULTS/run/cloudera-scm-server --no-create-home --shell=/bin/false --comment "Cloudera SCM User" cloudera-scm</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-创建相关文件夹（主节点）"><a href="#3-创建相关文件夹（主节点）" class="headerlink" title="3.创建相关文件夹（主节点）"></a>3.创建相关文件夹（主节点）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo mkdir /var/lib/cloudera-scm-server</span><br><span class="line">$ sudo chown cloudera-scm:cloudera-scm /var/lib/cloudera-scm-server</span><br></pre></td></tr></table></figure>
+<h3 id="4-准备Parcels，用于安装CDH5"><a href="#4-准备Parcels，用于安装CDH5" class="headerlink" title="4.准备Parcels，用于安装CDH5"></a>4.准备Parcels，用于安装CDH5</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 1.主节点放置CDH5 Parcel 库文件</span></span><br><span class="line">$ sudo mkdir -p /opt/cloudera/parcel-repo</span><br><span class="line">$ sudo chown cloudera-scm:cloudera-scm /opt/cloudera/parcel-repo</span><br><span class="line">$ sudo mv /path/to/CDH5.parcel /opt/cloudera/parcel-repo/ </span><br><span class="line">$ sudo mv /path/to/CDH5.parcel.sha1 /opt/cloudera/parcel-repo/CDH5.parcel.sha</span><br><span class="line">$ sudo mv /path/to/manifest.json /opt/cloudera/parcel-repo/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2.所有节点创建parcels目录</span></span><br><span class="line">$ sudo mkdir -p /opt/cloudera/parcels</span><br><span class="line">$ sudo chown cloudera-scm:cloudera-scm /opt/cloudera/parcels</span><br></pre></td></tr></table></figure>
+<h3 id="5-启动cloudera-scm-服务"><a href="#5-启动cloudera-scm-服务" class="headerlink" title="5.启动cloudera scm 服务"></a>5.启动cloudera scm 服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 主节点启动server服务</span></span><br><span class="line">$ root@cloud01:~<span class="comment"># /$CMF_DEFAULTS/etc/init.d/cloudera-scm-server start</span></span><br><span class="line">//server启动日志/var/<span class="built_in">log</span>/cloudera-scm-server/cloudera-scm-server.log</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 所有节点启动agent服务</span></span><br><span class="line">$ root@cloud01:~<span class="comment"># /$CMF_DEFAULTS/etc/init.d/cloudera-scm-agent start</span></span><br><span class="line">//agent启动日志/var/<span class="built_in">log</span>/cloudera-scm-agent/cloudera-scm-agent.log</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3.设置机器重启自动运行服务</span></span><br><span class="line">$ cp <span class="variable">$CMF_DEFAULTS</span>/etc/init.d/cloudera-scm-server /etc/init.d/cloudera-scm-server</span><br><span class="line">$ update-rc.d cloudera-scm-server defaults</span><br><span class="line"></span><br><span class="line">$ cp <span class="variable">$CMF_DEFAULTS</span>/etc/init.d/cloudera-scm-agent /etc/init.d/cloudera-scm-agent</span><br><span class="line">$ update-rc.d cloudera-scm-agent defaults</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4.取消自动重启</span></span><br><span class="line">$ sudo update-rc.d -f cloudera-scm-agent remove</span><br></pre></td></tr></table></figure>
+<p>tips:这一步如果没有完成好，会导致后面的cloudera-manager agent安装出错，<br>推荐顺序<br>启动/opt目录下的agent服务<br>设置步骤3，<strong>但不要使用service 命令启动</strong><br>安装完成后，可以去掉自动重启（执行步骤4）</p>
+<h3 id="6-CDH5网页配置"><a href="#6-CDH5网页配置" class="headerlink" title="6.CDH5网页配置"></a>6.CDH5网页配置</h3><ul>
+<li>打开<a href="http://clouder-server-host:7180" target="_blank" rel="noopener">http://clouder-server-host:7180</a></li>
+<li>默认密码是admin</li>
+<li>选择免费版本，不需要安装JDK</li>
+<li>root用户登录，提前将集群机器的root密码设置一样，并且打通root用户的ssh登录</li>
+</ul>
+<h3 id="7-安装kafka服务"><a href="#7-安装kafka服务" class="headerlink" title="7.安装kafka服务"></a>7.安装kafka服务</h3><p>1.下载kafka parcel，在线或者<a href="https://archive.cloudera.com/kafka/parcels/latest/" target="_blank" rel="noopener">离线</a>都可以，然后在集群所有机器中分发激活Kafka Parcel</p>
+<p>2.集群添加kafka服务<br>若提示，或者错误日志中提示Java Heap空间太小：<br>Missing required value: Destination Broker List<br>Missing required value: Source Broker List</p>
+<p>可按如下方法配置后重试即可：<br>a. 填写Source Brokers List<br>填写Kafka Broker所在节点构成的列表（用逗号分隔），如下（本文在所有节点部署了Kafka Broker）：<br>master:9092,slave1:9092,slave2:9092,slave3:9092,slave4:9092</p>
+<p>b. 填写Destination Brokers List<br>若添加了Kafka MirrorMaker，则可填写其所在节点构成的列表；若未添加Kafka MirrorMaker，可填写任意服务器即可，如下：<br>master:9092,slave1:9092,slave2:9092,slave3:9092,slave4:9092<br>或：<br>example.com:9092</p>
+<p>c. 修改Java Heap Size<br>填写上面列表后，点击继续，出错后，Kafka服务未启动。返回集群配置，打卡Kafka服务配置页，查找“Java Heap Size of Broker”项，将对大小从50MB修改为256MB。<br>d. 配置Topic Whitelist<br>配置Topic Whitelist项为正则表达式：(?!x)x，保存更改。然后添加角色实例，重新配置即可。<br>参考链接：adding a Kafka service failed</p>
+<h2 id="3-CDH5安装常见问题"><a href="#3-CDH5安装常见问题" class="headerlink" title="3.CDH5安装常见问题"></a>3.CDH5安装常见问题</h2><h3 id="1-主机检查警告"><a href="#1-主机检查警告" class="headerlink" title="1. 主机检查警告"></a>1. 主机检查警告</h3><p><img src="http://images2015.cnblogs.com/blog/1150091/201704/1150091-20170425193926303-554555577.png" alt="此处输入图片的描述"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">第一个警告：</span><br><span class="line"></span><br><span class="line"> Cloudera 建议将 /proc/sys/vm/swappiness 设置为 10。当前设置为 60。使用 sysctl 命令在运行时更改该设置并编辑 /etc/sysctl.conf 以在重启后保存该设置。 </span><br><span class="line"></span><br><span class="line"> echo 10 &gt; /proc/sys/vm/swappiness</span><br><span class="line"></span><br><span class="line">这样操作重启机器还是还原，要永久改变</span><br><span class="line"></span><br><span class="line">vim   /etc/sysctl.conf</span><br><span class="line">vm.swappiness=10</span><br><span class="line"> </span><br><span class="line"> 第二个警告，提示执行命令：</span><br><span class="line"></span><br><span class="line"> echo never &gt; /sys/kernel/mm/transparent_hugepage/defrag</span><br><span class="line"></span><br><span class="line"> echo never &gt; /sys/kernel/mm/transparent_hugepage/enabled</span><br><span class="line"></span><br><span class="line">执行完毕，重启后，警告依然，暂时不处理</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-mysql数据库生成报错"><a href="#2-mysql数据库生成报错" class="headerlink" title="2.mysql数据库生成报错"></a>2.mysql数据库生成报错</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1.主要是系统的java环境中没有连接数据库的包，因此需要手动把包拷贝到系统目录</span></span><br><span class="line">$ sudo cp mysql-connector-*.jar /usr/share/java/mysql-connector-java.jar</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2.设置mysql远程登录和访问权限问题</span></span><br><span class="line">mysql&gt;grant all privileges on . to ‘root’@’%’ identified by ‘youpassword’ with grant option;</span><br><span class="line">mysql&gt;flush privileges;</span><br><span class="line">$ sudo vi /etc/mysql/my.conf</span><br><span class="line">comment <span class="built_in">bind</span>-address = 127.0.0.1</span><br><span class="line">$ sudo service mysql restart</span><br></pre></td></tr></table></figure>
+<h3 id="3-kafka安装问题"><a href="#3-kafka安装问题" class="headerlink" title="3.kafka安装问题"></a>3.kafka安装问题</h3><p>参考官方教程，分配Kafka parcel包，第一次安装会遇到问题，解决方案如下：<br><a href="http://www.aboutyun.com/thread-19903-1-1.html" target="_blank" rel="noopener">http://www.aboutyun.com/thread-19903-1-1.html</a></p>
+<h3 id="4-参考链接"><a href="#4-参考链接" class="headerlink" title="4.参考链接"></a>4.参考链接</h3><p><a href="http://www.cnblogs.com/codedevelop/p/6762555.html" target="_blank" rel="noopener">http://www.cnblogs.com/codedevelop/p/6762555.html</a></p>
+<h3 id="5-agent启动报错"><a href="#5-agent启动报错" class="headerlink" title="5.agent启动报错"></a>5.agent启动报错</h3><p>ProtocolError: &lt;ProtocolError for 127.0.0.1/RPC2: 401 Unauthorized&gt;<br>resolution:<br>Steps to find and kill the process:<br>1) Find the port which is used by supervisor: </p>
+<blockquote>
+<p>ps aux |grep supervisor<br>2) kill the port<br>sudo kill -9 <port number=""> </port></p>
 </blockquote>
-<h3 id="windows解决方案"><a href="#windows解决方案" class="headerlink" title="windows解决方案"></a>windows解决方案</h3><ul>
-<li>安装UltralSO，打开ubuntu镜像文件，写入U盘</li>
-<li>安装UNetBootin，打开Ubuntu镜像文件，写入U盘</li>
-</ul>
-<h3 id="linux解决方案"><a href="#linux解决方案" class="headerlink" title="linux解决方案"></a>linux解决方案</h3><ul>
-<li>插入U盘</li>
-<li>sudo fdisk -l</li>
-<li>cd ubuntu-iso的目录</li>
-<li>sudo dd if=ubuntu-14.04.5-desktop-amd64.iso of=/dev/sdX(sdX表示插入的U盘)</li>
-</ul>
-<h2 id="备份系统镜像"><a href="#备份系统镜像" class="headerlink" title="备份系统镜像"></a>备份系统镜像</h2><p>linux提供的dd命令可以直接复制磁盘的数据</p>
-<ul>
-<li>使用U盘启动UbuntuLiveCD，类似WinPE系统</li>
-<li>sudo fdisk -l /dev/sdX(sdX代表你要克隆的磁盘)<br><img src="/images/ubuntu系统备份镜像-1.png" alt="磁盘分区图"><br>如图所示，linux系统有三个分区分别是sda8 sda9 sda10,其中sda8 是交换分区，不用备份，只需要备份sda9和sda10空间</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dd bs=512 count=1953523712 skip=1646948352 <span class="keyword">if</span>=/dev/sda of=savedPath/ghost.img</span><br></pre></td></tr></table></figure>
-<ul>
-<li>将ghost.img恢复到新硬盘</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dd <span class="keyword">if</span>=savedPath/ghost.img of=/dev/sda</span><br></pre></td></tr></table></figure>
-<ul>
-<li>不要直接在计算机上用本地磁盘启动系统后执行dd命令生成本地磁盘的镜像。而应该用livecd启动计算机。因此计算机运行时会对系统盘产生大量写操作。 直接对运行中的系统盘生成的镜像，在恢复到其他硬盘上时，很可能会无法启动！</li>
-</ul>
-<h3 id="使用gzip进行压缩和解压缩"><a href="#使用gzip进行压缩和解压缩" class="headerlink" title="使用gzip进行压缩和解压缩"></a>使用gzip进行压缩和解压缩</h3><p>gzip参数：<br>-c 表示输出到stdout<br>-d  表示解压缩<br>-1 表示最快压缩<br>-9 表示最好压缩<br>默认使用的是-6压缩级别</p>
-<p>dd备份命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dd bs=512 count=1953523712 skip=1646948352 <span class="keyword">if</span>=/dev/sda | gzip -6 &gt; /ghost.img.gz</span><br></pre></td></tr></table></figure></p>
-<p>dd还原命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gzip -dc /ghost.img.gz.gz | dd of=/dev/sda</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -602,9 +604,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ubuntu/" rel="tag"># ubuntu</a>
-          
-            <a href="/tags/教程/" rel="tag"># 教程</a>
+            <a href="/tags/cloudera/" rel="tag"># cloudera</a>
           
         </div>
       
@@ -632,8 +632,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/28/caffe学习笔记-生成deploy-prototxt文件/" rel="next" title="caffe学习笔记-生成deploy.prototxt文件">
-                <i class="fa fa-chevron-left"></i> caffe学习笔记-生成deploy.prototxt文件
+              <a href="/2018/06/12/jenkins使用/" rel="next" title="jenkins使用">
+                <i class="fa fa-chevron-left"></i> jenkins使用
               </a>
             
           </div>
@@ -641,10 +641,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/07/大数据分析平台环境搭建/" rel="prev" title="分布式大数据分析平台环境搭建">
-                分布式大数据分析平台环境搭建 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -969,7 +965,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装UbuntuLiveCD"><span class="nav-number">1.</span> <span class="nav-text">安装UbuntuLiveCD</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#windows解决方案"><span class="nav-number">1.1.</span> <span class="nav-text">windows解决方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux解决方案"><span class="nav-number">1.2.</span> <span class="nav-text">linux解决方案</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#备份系统镜像"><span class="nav-number">2.</span> <span class="nav-text">备份系统镜像</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用gzip进行压缩和解压缩"><span class="nav-number">2.1.</span> <span class="nav-text">使用gzip进行压缩和解压缩</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-准备工作"><span class="nav-number">1.</span> <span class="nav-text">1.准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装Oracel-JDK（所有节点）"><span class="nav-number">1.1.</span> <span class="nav-text">1.安装Oracel JDK（所有节点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装Mysql-（主节点）"><span class="nav-number">1.2.</span> <span class="nav-text">2.安装Mysql （主节点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-网络配置-（所有节点）"><span class="nav-number">1.3.</span> <span class="nav-text">3.网络配置 （所有节点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-设置SSH无密码访问"><span class="nav-number">1.4.</span> <span class="nav-text">3.设置SSH无密码访问</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-配置NTP时间同步服务（所有节点）"><span class="nav-number">1.5.</span> <span class="nav-text">4.配置NTP时间同步服务（所有节点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-修改source-list"><span class="nav-number">1.6.</span> <span class="nav-text">5.修改source.list</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装CDH"><span class="nav-number">2.</span> <span class="nav-text">2.安装CDH</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-下载CDH安装包（主节点）"><span class="nav-number">2.1.</span> <span class="nav-text">1.下载CDH安装包（主节点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-为CDH创建用户（所有节点）"><span class="nav-number">2.2.</span> <span class="nav-text">2.为CDH创建用户（所有节点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-创建相关文件夹（主节点）"><span class="nav-number">2.3.</span> <span class="nav-text">3.创建相关文件夹（主节点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-准备Parcels，用于安装CDH5"><span class="nav-number">2.4.</span> <span class="nav-text">4.准备Parcels，用于安装CDH5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-启动cloudera-scm-服务"><span class="nav-number">2.5.</span> <span class="nav-text">5.启动cloudera scm 服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-CDH5网页配置"><span class="nav-number">2.6.</span> <span class="nav-text">6.CDH5网页配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-安装kafka服务"><span class="nav-number">2.7.</span> <span class="nav-text">7.安装kafka服务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-CDH5安装常见问题"><span class="nav-number">3.</span> <span class="nav-text">3.CDH5安装常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-主机检查警告"><span class="nav-number">3.1.</span> <span class="nav-text">1. 主机检查警告</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-mysql数据库生成报错"><span class="nav-number">3.2.</span> <span class="nav-text">2.mysql数据库生成报错</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-kafka安装问题"><span class="nav-number">3.3.</span> <span class="nav-text">3.kafka安装问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-参考链接"><span class="nav-number">3.4.</span> <span class="nav-text">4.参考链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-agent启动报错"><span class="nav-number">3.5.</span> <span class="nav-text">5.agent启动报错</span></a></li></ol></li></ol></div>
             
 
           </div>
