@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://xraorao.top/2018/06/12/jenkins%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2018-06-20T02:20:31.082Z</lastmod>
+    <data>
+        <display>
+        <title>jenkins使用</title>
+        <pubTime>2018-06-12T06:18:19.000Z</pubTime>
+        
+        <tag>jenkins</tag>
+         
+         
+           
+             
+              <breadCrumb title="k8s" url="http://xraorao.top/categories/k8s/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://xraorao.top/2018/06/15/Cloudera%E5%92%8CCDH5%E7%9A%84%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2018-06-15T00:22:01.414Z</lastmod>
     <data>
@@ -17,26 +37,6 @@
            
              
               <breadCrumb title="解决方案" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://xraorao.top/2018/06/12/jenkins%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2018-06-14T02:58:15.318Z</lastmod>
-    <data>
-        <display>
-        <title>jenkins使用</title>
-        <pubTime>2018-06-12T06:18:19.000Z</pubTime>
-        
-        <tag>jenkins</tag>
-         
-         
-           
-             
-              <breadCrumb title="k8s" url="http://xraorao.top/categories/k8s/"/>
           
         </display>
     </data>
