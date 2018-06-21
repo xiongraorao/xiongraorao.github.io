@@ -4,6 +4,40 @@
 
     
   <url>
+    <loc>http://xraorao.top/2018/06/20/%E9%BB%91%E8%8B%B9%E6%9E%9C%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2018-06-21T02:30:34.956Z</lastmod>
+    <data>
+        <display>
+        <title>黑苹果安装记录</title>
+        <pubTime>2018-06-20T06:26:50.000Z</pubTime>
+        
+        <tag>mac</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xraorao.top/2018/06/20/docker-%E8%BF%9C%E7%A8%8B%E6%9E%84%E5%BB%BA/</loc>
+    <lastmod>2018-06-20T07:13:16.727Z</lastmod>
+    <data>
+        <display>
+        <title>docker 远程构建</title>
+        <pubTime>2018-06-20T07:01:58.000Z</pubTime>
+        
+        <tag>docker</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://xraorao.top/2018/06/12/jenkins%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2018-06-20T02:20:31.082Z</lastmod>
     <data>
@@ -303,31 +337,6 @@
 
     
   <url>
-    <loc>http://xraorao.top/2016/10/24/%E8%BD%AC-Java%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%EF%BC%8Csynchronized%E9%94%81%E4%BD%8F%E7%9A%84%E6%98%AF%E4%BB%A3%E7%A0%81%E8%BF%98%E6%98%AF%E5%AF%B9%E8%B1%A1/</loc>
-    <lastmod>2018-06-08T09:10:07.355Z</lastmod>
-    <data>
-        <display>
-        <title>[转]Java线程同步，synchronized锁住的是代码还是对象</title>
-        <pubTime>2016-10-24T03:01:27.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>笔记</tag>
-         
-         
-           
-             
-              <breadCrumb title="IT" url="http://xraorao.top/categories/IT/"/>
-          
-             
-              <breadCrumb title="java" url="http://xraorao.top/categories/IT/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://xraorao.top/2016/09/12/%E8%BD%AC-C-%E7%BB%A7%E6%89%BF-%E5%85%AC%E6%9C%89%EF%BC%8C%E7%A7%81%E6%9C%89%EF%BC%8C%E4%BF%9D%E6%8A%A4/</loc>
     <lastmod>2018-06-08T09:10:07.355Z</lastmod>
     <data>
@@ -346,6 +355,31 @@
           
              
               <breadCrumb title="c++" url="http://xraorao.top/categories/IT/c/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xraorao.top/2016/10/24/%E8%BD%AC-Java%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%EF%BC%8Csynchronized%E9%94%81%E4%BD%8F%E7%9A%84%E6%98%AF%E4%BB%A3%E7%A0%81%E8%BF%98%E6%98%AF%E5%AF%B9%E8%B1%A1/</loc>
+    <lastmod>2018-06-08T09:10:07.355Z</lastmod>
+    <data>
+        <display>
+        <title>[转]Java线程同步，synchronized锁住的是代码还是对象</title>
+        <pubTime>2016-10-24T03:01:27.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="IT" url="http://xraorao.top/categories/IT/"/>
+          
+             
+              <breadCrumb title="java" url="http://xraorao.top/categories/IT/java/"/>
           
         </display>
     </data>
@@ -378,6 +412,29 @@
 
     
   <url>
+    <loc>http://xraorao.top/2017/05/24/%E7%90%86%E8%A7%A3Linux%E7%B3%BB%E7%BB%9F-etc-init-d%E7%9B%AE%E5%BD%95%E5%92%8C-etc-rc-local%E8%84%9A%E6%9C%AC/</loc>
+    <lastmod>2018-06-08T09:10:07.353Z</lastmod>
+    <data>
+        <display>
+        <title>理解Linux系统/etc/init.d目录和/etc/rc.local脚本</title>
+        <pubTime>2017-05-24T01:56:35.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="IT" url="http://xraorao.top/categories/IT/"/>
+          
+             
+              <breadCrumb title="linux" url="http://xraorao.top/categories/IT/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://xraorao.top/2017/02/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8C%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
     <lastmod>2018-06-08T09:10:07.353Z</lastmod>
     <data>
@@ -403,22 +460,24 @@
 
     
   <url>
-    <loc>http://xraorao.top/2017/05/24/%E7%90%86%E8%A7%A3Linux%E7%B3%BB%E7%BB%9F-etc-init-d%E7%9B%AE%E5%BD%95%E5%92%8C-etc-rc-local%E8%84%9A%E6%9C%AC/</loc>
-    <lastmod>2018-06-08T09:10:07.353Z</lastmod>
+    <loc>http://xraorao.top/2017/06/09/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E7%BB%B4%E6%8A%A4%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2018-06-08T09:10:07.352Z</lastmod>
     <data>
         <display>
-        <title>理解Linux系统/etc/init.d目录和/etc/rc.local脚本</title>
-        <pubTime>2017-05-24T01:56:35.000Z</pubTime>
+        <title>大数据平台维护笔记</title>
+        <pubTime>2017-06-09T04:47:59.000Z</pubTime>
         
-        <tag>linux</tag>
+        <tag>hadoop</tag>
+         
+        <tag>大数据</tag>
          
          
            
              
-              <breadCrumb title="IT" url="http://xraorao.top/categories/IT/"/>
+              <breadCrumb title="笔记" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
           
              
-              <breadCrumb title="linux" url="http://xraorao.top/categories/IT/linux/"/>
+              <breadCrumb title="hadoop" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/hadoop/"/>
           
         </display>
     </data>
@@ -452,31 +511,6 @@
           
              
               <breadCrumb title="hadoop" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/hadoop/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://xraorao.top/2017/06/09/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E7%BB%B4%E6%8A%A4%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2018-06-08T09:10:07.352Z</lastmod>
-    <data>
-        <display>
-        <title>大数据平台维护笔记</title>
-        <pubTime>2017-06-09T04:47:59.000Z</pubTime>
-        
-        <tag>hadoop</tag>
-         
-        <tag>大数据</tag>
-         
-         
-           
-             
-              <breadCrumb title="笔记" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
-          
-             
-              <breadCrumb title="hadoop" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/hadoop/"/>
           
         </display>
     </data>
@@ -536,16 +570,16 @@
 
     
   <url>
-    <loc>http://xraorao.top/2016/10/11/%E5%8E%9F-java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-socket%E5%A5%97%E6%8E%A5%E5%AD%97/</loc>
+    <loc>http://xraorao.top/2016/10/11/%E5%8E%9F-java%E4%B8%AD%E5%85%B3%E9%94%AE%E5%AD%97super%E5%92%8Cthis%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2018-06-08T09:10:07.349Z</lastmod>
     <data>
         <display>
-        <title>[原]java网络编程--socket套接字</title>
-        <pubTime>2016-10-11T07:18:06.000Z</pubTime>
+        <title>[原]java中关键字super和this的使用</title>
+        <pubTime>2016-10-11T10:44:03.000Z</pubTime>
         
         <tag>java</tag>
          
-        <tag>笔记</tag>
+        <tag>编程</tag>
          
          
            
@@ -561,16 +595,16 @@
 
     
   <url>
-    <loc>http://xraorao.top/2016/10/11/%E5%8E%9F-java%E4%B8%AD%E5%85%B3%E9%94%AE%E5%AD%97super%E5%92%8Cthis%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <loc>http://xraorao.top/2016/10/11/%E5%8E%9F-java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-socket%E5%A5%97%E6%8E%A5%E5%AD%97/</loc>
     <lastmod>2018-06-08T09:10:07.349Z</lastmod>
     <data>
         <display>
-        <title>[原]java中关键字super和this的使用</title>
-        <pubTime>2016-10-11T10:44:03.000Z</pubTime>
+        <title>[原]java网络编程--socket套接字</title>
+        <pubTime>2016-10-11T07:18:06.000Z</pubTime>
         
         <tag>java</tag>
          
-        <tag>编程</tag>
+        <tag>笔记</tag>
          
          
            
@@ -611,6 +645,35 @@
 
     
   <url>
+    <loc>http://xraorao.top/2016/12/05/%E5%8E%9F-Ubuntu%E4%B8%8B%E9%85%8D%E7%BD%AEjava-Eclipse%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc>
+    <lastmod>2018-06-08T09:10:07.347Z</lastmod>
+    <data>
+        <display>
+        <title>[原]Ubuntu下配置java+Eclipse开发环境</title>
+        <pubTime>2016-12-05T03:26:29.000Z</pubTime>
+        
+        <tag>ubuntu</tag>
+         
+        <tag>教程</tag>
+         
+        <tag>java</tag>
+         
+        <tag>eclipse</tag>
+         
+         
+           
+             
+              <breadCrumb title="解决方案" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+          
+             
+              <breadCrumb title="ubuntu" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/ubuntu/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://xraorao.top/2016/10/20/%E5%8E%9F-Ubuntu14-04%E4%B8%8B%E5%AE%89%E8%A3%85%E5%8D%95%E6%9C%BA%E7%89%88Storm%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</loc>
     <lastmod>2018-06-08T09:10:07.347Z</lastmod>
     <data>
@@ -638,35 +701,6 @@
 
     
   <url>
-    <loc>http://xraorao.top/2016/12/05/%E5%8E%9F-Ubuntu%E4%B8%8B%E9%85%8D%E7%BD%AEjava-Eclipse%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc>
-    <lastmod>2018-06-08T09:10:07.347Z</lastmod>
-    <data>
-        <display>
-        <title>[原]Ubuntu下配置java+Eclipse开发环境</title>
-        <pubTime>2016-12-05T03:26:29.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>ubuntu</tag>
-         
-        <tag>教程</tag>
-         
-        <tag>eclipse</tag>
-         
-         
-           
-             
-              <breadCrumb title="解决方案" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-          
-             
-              <breadCrumb title="ubuntu" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/ubuntu/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://xraorao.top/2017/01/14/%E5%8E%9F-Ubuntu-14-04-64%E4%BD%8D%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85cuda8-0-cudnn7-5-opencv-caffe-%E8%A1%80%E6%B3%AA%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2018-06-08T09:10:07.346Z</lastmod>
     <data>
@@ -674,11 +708,11 @@
         <title>[原]Ubuntu 14.04 64位系统安装cuda8.0+cudnn7.5+opencv+caffe 血泪教程</title>
         <pubTime>2017-01-14T08:57:09.000Z</pubTime>
         
-        <tag>caffe</tag>
-         
         <tag>ubuntu</tag>
          
         <tag>教程</tag>
+         
+        <tag>caffe</tag>
          
         <tag>cuda</tag>
          
@@ -750,31 +784,6 @@
 
     
   <url>
-    <loc>http://xraorao.top/2017/02/28/storm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%B5%81%E5%88%86%E7%BB%84/</loc>
-    <lastmod>2018-06-08T09:10:07.344Z</lastmod>
-    <data>
-        <display>
-        <title>storm学习笔记--流分组</title>
-        <pubTime>2017-02-28T02:18:54.000Z</pubTime>
-        
-        <tag>storm</tag>
-         
-        <tag>大数据</tag>
-         
-         
-           
-             
-              <breadCrumb title="笔记" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
-          
-             
-              <breadCrumb title="storm" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/storm/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://xraorao.top/2017/02/17/ubuntu%E5%AE%89%E8%A3%85hadoop%E5%92%8Chbase%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2018-06-08T09:10:07.344Z</lastmod>
     <data>
@@ -799,6 +808,31 @@
           
              
               <breadCrumb title="hadoop" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/hadoop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xraorao.top/2017/02/28/storm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%B5%81%E5%88%86%E7%BB%84/</loc>
+    <lastmod>2018-06-08T09:10:07.344Z</lastmod>
+    <data>
+        <display>
+        <title>storm学习笔记--流分组</title>
+        <pubTime>2017-02-28T02:18:54.000Z</pubTime>
+        
+        <tag>storm</tag>
+         
+        <tag>大数据</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔记" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
+          
+             
+              <breadCrumb title="storm" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/storm/"/>
           
         </display>
     </data>
@@ -1046,31 +1080,6 @@
 
     
   <url>
-    <loc>http://xraorao.top/2017/03/03/Ubuntu%E5%88%B6%E4%BD%9CUbuntuLiveCD-%E5%A4%87%E4%BB%BD%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2018-06-08T09:10:07.335Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu制作UbuntuLiveCD+备份系统镜像教程</title>
-        <pubTime>2017-03-03T07:50:08.000Z</pubTime>
-        
-        <tag>ubuntu</tag>
-         
-        <tag>教程</tag>
-         
-         
-           
-             
-              <breadCrumb title="解决方案" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-          
-             
-              <breadCrumb title="ubuntu" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/ubuntu/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://xraorao.top/2017/02/28/caffe%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-solver-prototxt%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</loc>
     <lastmod>2018-06-08T09:10:07.335Z</lastmod>
     <data>
@@ -1091,6 +1100,31 @@
           
              
               <breadCrumb title="caffe" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/caffe/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xraorao.top/2017/03/03/Ubuntu%E5%88%B6%E4%BD%9CUbuntuLiveCD-%E5%A4%87%E4%BB%BD%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2018-06-08T09:10:07.335Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu制作UbuntuLiveCD+备份系统镜像教程</title>
+        <pubTime>2017-03-03T07:50:08.000Z</pubTime>
+        
+        <tag>ubuntu</tag>
+         
+        <tag>教程</tag>
+         
+         
+           
+             
+              <breadCrumb title="解决方案" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+          
+             
+              <breadCrumb title="ubuntu" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/ubuntu/"/>
           
         </display>
     </data>
