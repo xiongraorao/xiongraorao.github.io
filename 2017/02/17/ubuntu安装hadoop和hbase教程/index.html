@@ -590,8 +590,8 @@ sudo gedit /etc/sudoers
 <h3 id="安装hadoop2"><a href="#安装hadoop2" class="headerlink" title="安装hadoop2"></a>安装hadoop2</h3><ul>
 <li>官网下载： <a href="http://mirror.bit.edu.cn/apache/hadoop/common/" target="_blank" rel="noopener">http://mirror.bit.edu.cn/apache/hadoop/common/</a></li>
 <li><p>安装,修改文件拥有者为hadoop,修改权限为774</p>
-<pre><code>  sudo chown -R hadoop:hadoop hadoop-install-path
-  sudo chmod 774 hadoop-install-path
+<pre><code>sudo chown -R hadoop:hadoop hadoop-install-path
+sudo chmod 774 hadoop-install-path
 </code></pre></li>
 <li>配置环境变量</li>
 </ul>
@@ -607,11 +607,11 @@ sudo gedit /etc/sudoers
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.replication<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">value</span>&gt;</span>1<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.namenode.name.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">value</span>&gt;</span>file:/usr/local/hadoop/tmp/dfs/name<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.datanode.data.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">value</span>&gt;</span>file:/usr/local/hadoop/tmp/dfs/data<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>执行NameNode初始化</p>
-<pre><code>  ./bin/hdfs namenode -format
+<pre><code>./bin/hdfs namenode -format
 </code></pre><p>成功的话，会看到 “successfully formatted” 和 “Exitting with status 0” 的提示，若为 “Exitting with status 1” 则是出错。</p>
 </li>
 <li><p>开启NameNode 和 DataNode守护进程</p>
-<pre><code>  ./sbin/start-dfs.sh
+<pre><code>./sbin/start-dfs.sh
 </code></pre><p>通过$jps命令可以查看是否启动相关进程（NameNode，DataNode,SecondaryNameNode）</p>
 </li>
 </ul>
@@ -626,21 +626,21 @@ sudo gedit /etc/sudoers
 <p>启动Yarn来管理资源，负责任务调度</p>
 <ul>
 <li><p>修改配置文件 mapred-site.xml</p>
-<pre><code>  mv ./etc/hadoop/mapred­site.xml.template ./etc/hadoop/mapred­site.xml
+<pre><code>mv ./etc/hadoop/mapred­site.xml.template ./etc/hadoop/mapred­site.xml
 </code></pre><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.framework.name<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>yarn<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>修改配置文件 yarn-site.xml</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.aux­services<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>mapreduce_shuffle<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>启动yarn</p>
-<pre><code>  ./sbin/start­-yarn.sh # 启动YARN
-  ./sbin/mr­jobhistory­daemon.sh start historyserver # 开启历史服务器，才能在Web中查看任务运行情况
+<pre><code>./sbin/start­-yarn.sh # 启动YARN
+./sbin/mr­jobhistory­daemon.sh start historyserver # 开启历史服务器，才能在Web中查看任务运行情况
 </code></pre></li>
 </ul>
 <p>开启jps，出现NodeManager和ResourceManager两个后台进程，通过web界面<a href="http://localhost:8088/cluster" target="_blank" rel="noopener">ResourceManager</a> 可以查看任务运行情况</p>
 <ul>
-<li>关闭yarn<pre><code>  ./sbin/stop-yarn.sh
-  ./sbin/mr­jobhistory­daemon.sh stop historyserver
+<li>关闭yarn<pre><code>./sbin/stop-yarn.sh
+./sbin/mr­jobhistory­daemon.sh stop historyserver
 </code></pre></li>
 </ul>
 <p><strong>注意:不启动 YARN 需重命名 mapred­site.xml如果不想启动 YARN，务必把配置文件 mapred­site.xml 重命名，改成 mapred­site.xml.template，需要用时改回来就行。否则在该配置文件存在，而未开启 YARN 的情况下，运行程序会提示 “Retrying connect to server: 0.0.0.0/0.0.0.0:8032” 的错误，这也是为何该配置文件初始文件名为 mapred­site.xml.template。</strong></p>
@@ -792,7 +792,7 @@ sudo gedit /etc/sudoers
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">50</span>
+                    <span class="site-state-item-count">52</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -857,7 +857,11 @@ sudo gedit /etc/sudoers
                     
                       
                     
-                    <span class="site-state-item-count">26</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">28</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -968,7 +972,9 @@ sudo gedit /etc/sudoers
                     
                       
                     
-                    <span class="site-state-item-count">49</span>
+                      
+                    
+                    <span class="site-state-item-count">50</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1083,7 +1089,7 @@ sudo gedit /etc/sudoers
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">189k</span>
+    <span title="站点总字数">194k</span>
   
 
   

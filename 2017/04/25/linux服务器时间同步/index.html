@@ -583,7 +583,7 @@
 <h4 id="2-请求对时客户端配置"><a href="#2-请求对时客户端配置" class="headerlink" title="2.请求对时客户端配置"></a>2.请求对时客户端配置</h4><p>这里cloud02和cloud03分别是客户端<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#安装ntp服务</span></span><br><span class="line">sudo apt-get install ntp</span><br><span class="line">sudo vi /etc/ntp.conf</span><br><span class="line"></span><br><span class="line"><span class="comment">#去掉之前默认的server</span></span><br><span class="line">server 192.168.1.1（时间服务器的ip）</span><br><span class="line">fudge 192.168.1.1 stratum 5</span><br></pre></td></tr></table></figure></p>
 <h4 id="3-客户端和时间服务器同步"><a href="#3-客户端和时间服务器同步" class="headerlink" title="3.客户端和时间服务器同步"></a>3.客户端和时间服务器同步</h4><ul>
 <li><p>使用ntpdate更新时间</p>
-<h1 id="注意要停止ntp服务才能使用ntpdate更新时间"><a href="#注意要停止ntp服务才能使用ntpdate更新时间" class="headerlink" title="注意要停止ntp服务才能使用ntpdate更新时间"></a>注意要停止ntp服务才能使用ntpdate更新时间</h1><p>sudo ntpdate 192.168.1.1<br>sudo hwclock —systohc #将系统时间写入硬件时间<br>sudo hwclock —hctosys #将硬件时间写入系统时间</p>
+<h1 id="注意要停止ntp服务才能使用ntpdate更新时间"><a href="#注意要停止ntp服务才能使用ntpdate更新时间" class="headerlink" title="注意要停止ntp服务才能使用ntpdate更新时间"></a>注意要停止ntp服务才能使用ntpdate更新时间</h1><p>sudo ntpdate 192.168.1.1<br>sudo hwclock –systohc #将系统时间写入硬件时间<br>sudo hwclock –hctosys #将硬件时间写入系统时间</p>
 </li>
 <li><p>使用ntpd更新时间<br>sudo service ntp start #启动ntp进程，自动逐渐同步时间</p>
 </li>
@@ -735,7 +735,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">50</span>
+                    <span class="site-state-item-count">52</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -800,7 +800,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">26</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">28</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -911,7 +915,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">49</span>
+                      
+                    
+                    <span class="site-state-item-count">50</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1026,7 +1032,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">189k</span>
+    <span title="站点总字数">194k</span>
   
 
   
