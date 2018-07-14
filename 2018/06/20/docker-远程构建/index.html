@@ -148,18 +148,18 @@
 
 
 
-  <meta name="description" content="docker 远程连接docker server和client是分开的，因此支持远程连接 dockerd 设置方法1： 修改 /etc/default/docker 文件 DOCKER_OPTS=&amp;quot;-H unix:///var/run/docker.sock -H tcp://0.0.0.0:2375&amp;quot;  方法2： 修改 /etc/systemd/system/docker.s">
+  <meta name="description" content="docker 远程连接docker server和client是分开的，因此支持远程连接 dockerd 设置方法1： 修改 /etc/default/docker 文件     DOCKER_OPTS=&amp;quot;-H unix:///var/run/docker.sock -H tcp://0.0.0.0:2375&amp;quot;  方法2： 修改 /etc/systemd/system/dock">
 <meta name="keywords" content="docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker 远程构建">
 <meta property="og:url" content="http://xraorao.top/2018/06/20/docker-远程构建/index.html">
 <meta property="og:site_name" content="在路上">
-<meta property="og:description" content="docker 远程连接docker server和client是分开的，因此支持远程连接 dockerd 设置方法1： 修改 /etc/default/docker 文件 DOCKER_OPTS=&amp;quot;-H unix:///var/run/docker.sock -H tcp://0.0.0.0:2375&amp;quot;  方法2： 修改 /etc/systemd/system/docker.s">
+<meta property="og:description" content="docker 远程连接docker server和client是分开的，因此支持远程连接 dockerd 设置方法1： 修改 /etc/default/docker 文件     DOCKER_OPTS=&amp;quot;-H unix:///var/run/docker.sock -H tcp://0.0.0.0:2375&amp;quot;  方法2： 修改 /etc/systemd/system/dock">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-06-20T07:13:16.727Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker 远程构建">
-<meta name="twitter:description" content="docker 远程连接docker server和client是分开的，因此支持远程连接 dockerd 设置方法1： 修改 /etc/default/docker 文件 DOCKER_OPTS=&amp;quot;-H unix:///var/run/docker.sock -H tcp://0.0.0.0:2375&amp;quot;  方法2： 修改 /etc/systemd/system/docker.s">
+<meta name="twitter:description" content="docker 远程连接docker server和client是分开的，因此支持远程连接 dockerd 设置方法1： 修改 /etc/default/docker 文件     DOCKER_OPTS=&amp;quot;-H unix:///var/run/docker.sock -H tcp://0.0.0.0:2375&amp;quot;  方法2： 修改 /etc/systemd/system/dock">
 
 
 
@@ -508,7 +508,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">394</span>
+                <span title="本文字数">406</span>
               
 
               
@@ -544,11 +544,11 @@
       
         <h1 id="docker-远程连接"><a href="#docker-远程连接" class="headerlink" title="docker 远程连接"></a>docker 远程连接</h1><p>docker server和client是分开的，因此支持远程连接</p>
 <h1 id="dockerd-设置"><a href="#dockerd-设置" class="headerlink" title="dockerd 设置"></a>dockerd 设置</h1><p>方法1： 修改 /etc/default/docker 文件</p>
-<pre><code>DOCKER_OPTS=&quot;-H unix:///var/run/docker.sock -H tcp://0.0.0.0:2375&quot; 
+<pre><code>    DOCKER_OPTS=&quot;-H unix:///var/run/docker.sock -H tcp://0.0.0.0:2375&quot; 
 </code></pre><p>方法2： 修改 /etc/systemd/system/docker.service 文件</p>
-<pre><code>ExecStart=/usr/bin/dockerd -H fd:// -H tcp://0.0.0.0:2375
+<pre><code>    ExecStart=/usr/bin/dockerd -H fd:// -H tcp://0.0.0.0:2375
 </code></pre><p>重启docker服务</p>
-<pre><code>systemctl daemon-reload &amp;&amp; systemctl restart docker
+<pre><code>    systemctl daemon-reload &amp;&amp; systemctl restart docker
 </code></pre><h1 id="TSL-认证"><a href="#TSL-认证" class="headerlink" title="TSL 认证"></a>TSL 认证</h1><p>如果主机在公网环境，则需要使用TSL认证</p>
 <p>参考资料：</p>
 <ul>
@@ -694,7 +694,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">56</span>
+                    <span class="site-state-item-count">57</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -995,7 +995,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">205k</span>
+    <span title="站点总字数">218k</span>
   
 
   
@@ -1642,6 +1642,13 @@
 
 
   
+  
+
+  
+  
+
+  
+
 
   
   

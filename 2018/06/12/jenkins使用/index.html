@@ -584,12 +584,10 @@
 </ol>
 <blockquote>
 <p>启动 docker container<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">docker run \ </span><br><span class="line">  -u root \ </span><br><span class="line">  --rm \  </span><br><span class="line">  -d \ </span><br><span class="line">  -p 8080:8080 \ </span><br><span class="line">  -p 50000:50000 \ </span><br><span class="line">  -v jenkins-data:/var/jenkins_home \ </span><br><span class="line">  -v /var/run/docker.sock:/var/run/docker.sock \ </span><br><span class="line">  jenkinsci/blueocean</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
 <p><a href="http://mirrors.jenkins.io/war-stable/latest/jenkins.war" target="_blank" rel="noopener">download war file</a></p>
 </blockquote>
-<pre><code>java -jar jenkins.war
-brows http://localhost:8080  and wait until the Unlock Jenkins page appears.
+<pre><code>    java -jar jenkins.war
+    brows http://localhost:8080  and wait until the Unlock Jenkins page appears.
 </code></pre><h2 id="apt-方式安装"><a href="#apt-方式安装" class="headerlink" title="apt 方式安装"></a>apt 方式安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -</span><br><span class="line">sudo sh -c <span class="string">'echo deb http://pkg.jenkins.io/debian-stable binary/ &gt; /etc/apt/sources.list.d/jenkins.list'</span></span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install jenkins</span><br></pre></td></tr></table></figure>
 <h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>jenkins 本身是一个持续集成部署的工具，可以和很多工具平台联动。</p>
 <h2 id="credentials"><a href="#credentials" class="headerlink" title="credentials"></a>credentials</h2><p>credentials 主要是用来存储一些用户密码、token 这些敏感信息</p>
@@ -643,7 +641,7 @@ brows http://localhost:8080  and wait until the Unlock Jenkins page appears.
 <p><strong>注意事项：</strong> 在使用自定义的镜像的时候，因为/home/jenkins 目录被挂载到了NFS上面，因此在镜像中保留的文件全部被清空掉，kube/config文件需要通过NFS才能挂载</p>
 <p>参考资料:</p>
 <ul>
-<li><a href="https://blog.csdn.net/felix_yujing/article/details/78725142" target="_blank" rel="noopener">Jenkins On Kubernetes—Jenkins上Kubernetes Plugin的使用</a>  </li>
+<li><a href="https://blog.csdn.net/felix_yujing/article/details/78725142" target="_blank" rel="noopener">Jenkins On Kubernetes—-Jenkins上Kubernetes Plugin的使用</a>  </li>
 <li><a href="https://blog.csdn.net/aixiaoyang168/article/details/79767649" target="_blank" rel="noopener">初试 Jenkins 使用 Kubernetes Plugin 完成持续构建与发布</a>  </li>
 <li><a href="https://yq.aliyun.com/articles/180888" target="_blank" rel="noopener">Kubernetes集群上基于Jenkins的CI/CD流程实践</a>  </li>
 </ul>
@@ -787,7 +785,7 @@ brows http://localhost:8080  and wait until the Unlock Jenkins page appears.
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">56</span>
+                    <span class="site-state-item-count">57</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1088,7 +1086,7 @@ brows http://localhost:8080  and wait until the Unlock Jenkins page appears.
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">205k</span>
+    <span title="站点总字数">218k</span>
   
 
   
@@ -1735,6 +1733,13 @@ brows http://localhost:8080  and wait until the Unlock Jenkins page appears.
 
 
   
+  
+
+  
+  
+
+  
+
 
   
   

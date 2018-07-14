@@ -148,18 +148,18 @@
 
 
 
-  <meta name="description" content="笔记本配置：    项目 详情         型号 | 神舟战神Z6-i78154S2CPU  | Intel-core i7-4720HQ核心显卡 | Intel Graphics HD 4600独显 | NVIDIA GTX 960M 这是我的Config文件 软件准备：  transMac 烧录镜像 DiskGenius 硬盘分区工具  BIOS + MBR 转 GPT + EFI  使用">
+  <meta name="description" content="笔记本配置：     项目 详情          型号 | 神舟战神Z6-i78154S2CPU  | Intel-core i7-4720HQ核心显卡 | Intel Graphics HD 4600独显 | NVIDIA GTX 960M 这是我的Config文件 软件准备：  transMac 烧录镜像 DiskGenius 硬盘分区工具  BIOS + MBR 转 GPT + EFI">
 <meta name="keywords" content="mac">
 <meta property="og:type" content="article">
 <meta property="og:title" content="黑苹果安装记录">
 <meta property="og:url" content="http://xraorao.top/2018/06/20/黑苹果安装记录/index.html">
 <meta property="og:site_name" content="在路上">
-<meta property="og:description" content="笔记本配置：    项目 详情         型号 | 神舟战神Z6-i78154S2CPU  | Intel-core i7-4720HQ核心显卡 | Intel Graphics HD 4600独显 | NVIDIA GTX 960M 这是我的Config文件 软件准备：  transMac 烧录镜像 DiskGenius 硬盘分区工具  BIOS + MBR 转 GPT + EFI  使用">
+<meta property="og:description" content="笔记本配置：     项目 详情          型号 | 神舟战神Z6-i78154S2CPU  | Intel-core i7-4720HQ核心显卡 | Intel Graphics HD 4600独显 | NVIDIA GTX 960M 这是我的Config文件 软件准备：  transMac 烧录镜像 DiskGenius 硬盘分区工具  BIOS + MBR 转 GPT + EFI">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-06-23T02:27:16.251Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="黑苹果安装记录">
-<meta name="twitter:description" content="笔记本配置：    项目 详情         型号 | 神舟战神Z6-i78154S2CPU  | Intel-core i7-4720HQ核心显卡 | Intel Graphics HD 4600独显 | NVIDIA GTX 960M 这是我的Config文件 软件准备：  transMac 烧录镜像 DiskGenius 硬盘分区工具  BIOS + MBR 转 GPT + EFI  使用">
+<meta name="twitter:description" content="笔记本配置：     项目 详情          型号 | 神舟战神Z6-i78154S2CPU  | Intel-core i7-4720HQ核心显卡 | Intel Graphics HD 4600独显 | NVIDIA GTX 960M 这是我的Config文件 软件准备：  transMac 烧录镜像 DiskGenius 硬盘分区工具  BIOS + MBR 转 GPT + EFI">
 
 
 
@@ -520,7 +520,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">697</span>
+                <span title="本文字数">704</span>
               
 
               
@@ -555,6 +555,7 @@
 
       
         <p>笔记本配置：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -568,6 +569,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>型号 | 神舟战神Z6-i78154S2<br>CPU  | Intel-core i7-4720HQ<br>核心显卡 | Intel Graphics HD 4600<br>独显 | NVIDIA GTX 960M</p>
 <p>这是我的<a href="/download/EFI.zip">Config</a>文件</p>
 <p>软件准备：</p>
@@ -582,11 +584,11 @@
 <li><p>使用DG 软件将MBR 转为 GPT 分区</p>
 </li>
 <li><p>挂载ESP分区,很关键，不然无法启动系统</p>
-<pre><code>bcdboot c:\windows /s X: /f uefi /l zh-cn 
+<pre><code> bcdboot c:\windows /s X: /f uefi /l zh-cn 
 </code></pre></li>
 </ol>
 <p>其中X为你指派的ESP分区盘符。（修复UEfi也可借助工具）</p>
-<ol start="4">
+<ol>
 <li>查看ESP分区是否已经写入了efi等启动文件</li>
 </ol>
 <p>参考链接：<a href="http://diy.zol.com.cn/609/6094015.html" target="_blank" rel="noopener">免重装系统 手把手教你MBR转GPT分区表</a></p>
@@ -605,7 +607,7 @@
 <li>蓝牙</li>
 </ul>
 <p>修复黑苹果和windows系统时间不同步的问题：<br>bios 时钟设置UTC时间，mac OS 自动识别到UTC+8的时间，但是windows无法变成UTC+8, 因此需要在windows上面执行如下指令：</p>
-<pre><code>Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
+<pre><code>    Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
 </code></pre><p>修复黑苹果睡眠重启问题：<a href="http://bbs.pcbeta.com/viewthread-1569975-1-1.html" target="_blank" rel="noopener">参考链接</a></p>
 <p>参考链接：</p>
 <ul>
@@ -742,7 +744,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">56</span>
+                    <span class="site-state-item-count">57</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1027,7 +1029,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">205k</span>
+    <span title="站点总字数">218k</span>
   
 
   
@@ -1674,6 +1676,13 @@
 
 
   
+  
+
+  
+  
+
+  
+
 
   
   
