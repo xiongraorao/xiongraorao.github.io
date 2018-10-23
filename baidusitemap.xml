@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>http://xraorao.top/2018/10/23/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2018-10-23T11:33:24.327Z</lastmod>
+    <data>
+        <display>
+        <title>python学习笔记</title>
+        <pubTime>2018-10-23T03:11:20.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://xraorao.top/2018/08/09/java8%E4%B9%A0%E6%83%AF%E7%94%A8%E8%AF%AD/</loc>
     <lastmod>2018-08-09T05:37:02.156Z</lastmod>
     <data>
@@ -11,9 +28,9 @@
         <title>java8习惯用语</title>
         <pubTime>2018-08-09T02:02:40.000Z</pubTime>
         
-        <tag>编程</tag>
-         
         <tag>java</tag>
+         
+        <tag>编程</tag>
          
          
            
@@ -36,9 +53,9 @@
         <title>java正则表达式</title>
         <pubTime>2018-07-20T07:18:51.000Z</pubTime>
         
-        <tag>笔记</tag>
-         
         <tag>java</tag>
+         
+        <tag>笔记</tag>
          
          
            
@@ -61,9 +78,9 @@
         <title>java面试常考</title>
         <pubTime>2018-07-15T02:22:53.000Z</pubTime>
         
-        <tag>笔记</tag>
-         
         <tag>java</tag>
+         
+        <tag>笔记</tag>
          
          
            
@@ -86,9 +103,9 @@
         <title>java锁和监视器</title>
         <pubTime>2018-07-16T11:34:40.000Z</pubTime>
         
-        <tag>笔记</tag>
-         
         <tag>java</tag>
+         
+        <tag>笔记</tag>
          
          
            
@@ -188,9 +205,9 @@
         
         <tag>教程</tag>
          
-        <tag>kafka</tag>
-         
         <tag>linux</tag>
+         
+        <tag>kafka</tag>
          
          
            
@@ -559,6 +576,31 @@
 
     
   <url>
+    <loc>http://xraorao.top/2016/08/23/%E8%BD%AC-java%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%BC%95%E7%94%A8%E5%92%8C%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%B5%8B%E5%80%BC/</loc>
+    <lastmod>2018-06-08T09:10:07.358Z</lastmod>
+    <data>
+        <display>
+        <title>[转]java对象的引用和对象的赋值</title>
+        <pubTime>2016-08-23T06:23:36.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="IT" url="http://xraorao.top/categories/IT/"/>
+          
+             
+              <breadCrumb title="java" url="http://xraorao.top/categories/IT/java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://xraorao.top/2016/04/11/%E8%BD%AC-ROC%E6%9B%B2%E7%BA%BF-%E9%98%88%E5%80%BC%E8%AF%84%E4%BB%B7%E6%A0%87%E5%87%86/</loc>
     <lastmod>2018-06-08T09:10:07.358Z</lastmod>
     <data>
@@ -579,31 +621,6 @@
           
              
               <breadCrumb title="机器学习" url="http://xraorao.top/categories/IT/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://xraorao.top/2016/08/23/%E8%BD%AC-java%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%BC%95%E7%94%A8%E5%92%8C%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%B5%8B%E5%80%BC/</loc>
-    <lastmod>2018-06-08T09:10:07.358Z</lastmod>
-    <data>
-        <display>
-        <title>[转]java对象的引用和对象的赋值</title>
-        <pubTime>2016-08-23T06:23:36.000Z</pubTime>
-        
-        <tag>笔记</tag>
-         
-        <tag>java</tag>
-         
-         
-           
-             
-              <breadCrumb title="IT" url="http://xraorao.top/categories/IT/"/>
-          
-             
-              <breadCrumb title="java" url="http://xraorao.top/categories/IT/java/"/>
           
         </display>
     </data>
@@ -670,9 +687,9 @@
         <title>[转]Java线程同步，synchronized锁住的是代码还是对象</title>
         <pubTime>2016-10-24T03:01:27.000Z</pubTime>
         
-        <tag>笔记</tag>
-         
         <tag>java</tag>
+         
+        <tag>笔记</tag>
          
          
            
@@ -903,9 +920,9 @@
         <title>[原]java网络编程--socket套接字</title>
         <pubTime>2016-10-11T07:18:06.000Z</pubTime>
         
-        <tag>笔记</tag>
-         
         <tag>java</tag>
+         
+        <tag>笔记</tag>
          
          
            
@@ -928,9 +945,9 @@
         <title>[原]java中关键字super和this的使用</title>
         <pubTime>2016-10-11T10:44:03.000Z</pubTime>
         
-        <tag>编程</tag>
-         
         <tag>java</tag>
+         
+        <tag>编程</tag>
          
          
            
@@ -953,9 +970,9 @@
         <title>Ubuntu系统操作命令笔记（持续更新...）</title>
         <pubTime>2017-05-24T01:14:21.000Z</pubTime>
         
-        <tag>笔记</tag>
-         
         <tag>ubuntu</tag>
+         
+        <tag>笔记</tag>
          
          
            
@@ -964,6 +981,33 @@
           
              
               <breadCrumb title="linux" url="http://xraorao.top/categories/IT/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xraorao.top/2016/10/20/%E5%8E%9F-Ubuntu14-04%E4%B8%8B%E5%AE%89%E8%A3%85%E5%8D%95%E6%9C%BA%E7%89%88Storm%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</loc>
+    <lastmod>2018-06-08T09:10:07.347Z</lastmod>
+    <data>
+        <display>
+        <title>[原]Ubuntu14.04下安装单机版Storm运行环境</title>
+        <pubTime>2016-10-20T11:40:39.000Z</pubTime>
+        
+        <tag>ubuntu</tag>
+         
+        <tag>教程</tag>
+         
+        <tag>storm</tag>
+         
+         
+           
+             
+              <breadCrumb title="解决方案" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+          
+             
+              <breadCrumb title="storm" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/storm/"/>
           
         </display>
     </data>
@@ -993,33 +1037,6 @@
           
              
               <breadCrumb title="ubuntu" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/ubuntu/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://xraorao.top/2016/10/20/%E5%8E%9F-Ubuntu14-04%E4%B8%8B%E5%AE%89%E8%A3%85%E5%8D%95%E6%9C%BA%E7%89%88Storm%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</loc>
-    <lastmod>2018-06-08T09:10:07.347Z</lastmod>
-    <data>
-        <display>
-        <title>[原]Ubuntu14.04下安装单机版Storm运行环境</title>
-        <pubTime>2016-10-20T11:40:39.000Z</pubTime>
-        
-        <tag>ubuntu</tag>
-         
-        <tag>教程</tag>
-         
-        <tag>storm</tag>
-         
-         
-           
-             
-              <breadCrumb title="解决方案" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-          
-             
-              <breadCrumb title="storm" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/storm/"/>
           
         </display>
     </data>
@@ -1058,6 +1075,31 @@
 
     
   <url>
+    <loc>http://xraorao.top/2016/08/23/%E5%8E%9F-Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
+    <lastmod>2018-06-08T09:10:07.345Z</lastmod>
+    <data>
+        <display>
+        <title>[原]Java学习笔记（一）</title>
+        <pubTime>2016-08-23T04:58:48.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="IT" url="http://xraorao.top/categories/IT/"/>
+          
+             
+              <breadCrumb title="java" url="http://xraorao.top/categories/IT/java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://xraorao.top/2017/05/23/ubuntu%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/</loc>
     <lastmod>2018-06-08T09:10:07.345Z</lastmod>
     <data>
@@ -1085,24 +1127,30 @@
 
     
   <url>
-    <loc>http://xraorao.top/2016/08/23/%E5%8E%9F-Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
-    <lastmod>2018-06-08T09:10:07.345Z</lastmod>
+    <loc>http://xraorao.top/2017/02/17/ubuntu%E5%AE%89%E8%A3%85hadoop%E5%92%8Chbase%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2018-06-08T09:10:07.344Z</lastmod>
     <data>
         <display>
-        <title>[原]Java学习笔记（一）</title>
-        <pubTime>2016-08-23T04:58:48.000Z</pubTime>
+        <title>ubuntu安装hadoop和hbase教程</title>
+        <pubTime>2017-02-17T03:19:07.000Z</pubTime>
         
-        <tag>笔记</tag>
+        <tag>hbase</tag>
          
-        <tag>java</tag>
+        <tag>ubuntu</tag>
+         
+        <tag>教程</tag>
+         
+        <tag>hadoop</tag>
+         
+        <tag>大数据</tag>
          
          
            
              
-              <breadCrumb title="IT" url="http://xraorao.top/categories/IT/"/>
+              <breadCrumb title="解决方案" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
           
              
-              <breadCrumb title="java" url="http://xraorao.top/categories/IT/java/"/>
+              <breadCrumb title="hadoop" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/hadoop/"/>
           
         </display>
     </data>
@@ -1135,37 +1183,6 @@
 
     
   <url>
-    <loc>http://xraorao.top/2017/02/17/ubuntu%E5%AE%89%E8%A3%85hadoop%E5%92%8Chbase%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2018-06-08T09:10:07.344Z</lastmod>
-    <data>
-        <display>
-        <title>ubuntu安装hadoop和hbase教程</title>
-        <pubTime>2017-02-17T03:19:07.000Z</pubTime>
-        
-        <tag>hadoop</tag>
-         
-        <tag>hbase</tag>
-         
-        <tag>ubuntu</tag>
-         
-        <tag>教程</tag>
-         
-        <tag>大数据</tag>
-         
-         
-           
-             
-              <breadCrumb title="解决方案" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-          
-             
-              <breadCrumb title="hadoop" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/hadoop/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://xraorao.top/2017/03/18/storm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-storm-yaml%E9%85%8D%E7%BD%AE%E9%A1%B9/</loc>
     <lastmod>2018-06-08T09:10:07.343Z</lastmod>
     <data>
@@ -1182,31 +1199,6 @@
           
              
               <breadCrumb title="storm" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/storm/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://xraorao.top/2017/04/24/mysql%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2018-06-08T09:10:07.342Z</lastmod>
-    <data>
-        <display>
-        <title>mysql命令</title>
-        <pubTime>2017-04-24T11:50:40.000Z</pubTime>
-        
-        <tag>mysql</tag>
-         
-        <tag>数据库</tag>
-         
-         
-           
-             
-              <breadCrumb title="笔记" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
-          
-             
-              <breadCrumb title="mysql" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/mysql/"/>
           
         </display>
     </data>
@@ -1234,6 +1226,31 @@
           
              
               <breadCrumb title="ubuntu" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/ubuntu/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xraorao.top/2017/04/24/mysql%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2018-06-08T09:10:07.342Z</lastmod>
+    <data>
+        <display>
+        <title>mysql命令</title>
+        <pubTime>2017-04-24T11:50:40.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+        <tag>数据库</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔记" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
+          
+             
+              <breadCrumb title="mysql" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/mysql/"/>
           
         </display>
     </data>
@@ -1360,12 +1377,12 @@
 
     
   <url>
-    <loc>http://xraorao.top/2017/06/04/caffe%E7%9B%B8%E5%85%B3%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>http://xraorao.top/2017/02/28/caffe%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%94%9F%E6%88%90deploy-prototxt%E6%96%87%E4%BB%B6/</loc>
     <lastmod>2018-06-08T09:10:07.336Z</lastmod>
     <data>
         <display>
-        <title>caffe相关博客</title>
-        <pubTime>2017-06-04T01:31:57.000Z</pubTime>
+        <title>caffe学习笔记-生成deploy.prototxt文件</title>
+        <pubTime>2017-02-28T07:33:08.000Z</pubTime>
         
         <tag>caffe</tag>
          
@@ -1383,12 +1400,12 @@
 
     
   <url>
-    <loc>http://xraorao.top/2017/02/28/caffe%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%94%9F%E6%88%90deploy-prototxt%E6%96%87%E4%BB%B6/</loc>
+    <loc>http://xraorao.top/2017/06/04/caffe%E7%9B%B8%E5%85%B3%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2018-06-08T09:10:07.336Z</lastmod>
     <data>
         <display>
-        <title>caffe学习笔记-生成deploy.prototxt文件</title>
-        <pubTime>2017-02-28T07:33:08.000Z</pubTime>
+        <title>caffe相关博客</title>
+        <pubTime>2017-06-04T01:31:57.000Z</pubTime>
         
         <tag>caffe</tag>
          
