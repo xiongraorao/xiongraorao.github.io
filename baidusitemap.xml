@@ -628,31 +628,6 @@
 
     
   <url>
-    <loc>http://xraorao.top/2016/12/05/%E8%BD%AC-Markdown%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E5%AD%97%E4%BD%93%EF%BC%8C%E9%A2%9C%E8%89%B2%EF%BC%8C%E5%AD%97%E5%8F%B7%EF%BC%8C%E8%83%8C%E6%99%AF%EF%BC%8C%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B%E7%AD%89/</loc>
-    <lastmod>2018-06-08T09:10:07.357Z</lastmod>
-    <data>
-        <display>
-        <title>[转]Markdown使用技巧总结——字体，颜色，字号，背景，首行缩进等</title>
-        <pubTime>2016-12-05T08:04:16.000Z</pubTime>
-        
-        <tag>教程</tag>
-         
-        <tag>Markdown</tag>
-         
-         
-           
-             
-              <breadCrumb title="IT" url="http://xraorao.top/categories/IT/"/>
-          
-             
-              <breadCrumb title="Markdown" url="http://xraorao.top/categories/IT/Markdown/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://xraorao.top/2016/12/05/%E8%BD%AC-Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</loc>
     <lastmod>2018-06-08T09:10:07.357Z</lastmod>
     <data>
@@ -673,6 +648,31 @@
           
              
               <breadCrumb title="linux" url="http://xraorao.top/categories/IT/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xraorao.top/2016/12/05/%E8%BD%AC-Markdown%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E5%AD%97%E4%BD%93%EF%BC%8C%E9%A2%9C%E8%89%B2%EF%BC%8C%E5%AD%97%E5%8F%B7%EF%BC%8C%E8%83%8C%E6%99%AF%EF%BC%8C%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B%E7%AD%89/</loc>
+    <lastmod>2018-06-08T09:10:07.357Z</lastmod>
+    <data>
+        <display>
+        <title>[转]Markdown使用技巧总结——字体，颜色，字号，背景，首行缩进等</title>
+        <pubTime>2016-12-05T08:04:16.000Z</pubTime>
+        
+        <tag>教程</tag>
+         
+        <tag>Markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="IT" url="http://xraorao.top/categories/IT/"/>
+          
+             
+              <breadCrumb title="Markdown" url="http://xraorao.top/categories/IT/Markdown/"/>
           
         </display>
     </data>
@@ -755,6 +755,29 @@
 
     
   <url>
+    <loc>http://xraorao.top/2017/05/24/%E7%90%86%E8%A7%A3Linux%E7%B3%BB%E7%BB%9F-etc-init-d%E7%9B%AE%E5%BD%95%E5%92%8C-etc-rc-local%E8%84%9A%E6%9C%AC/</loc>
+    <lastmod>2018-06-08T09:10:07.353Z</lastmod>
+    <data>
+        <display>
+        <title>理解Linux系统/etc/init.d目录和/etc/rc.local脚本</title>
+        <pubTime>2017-05-24T01:56:35.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="IT" url="http://xraorao.top/categories/IT/"/>
+          
+             
+              <breadCrumb title="linux" url="http://xraorao.top/categories/IT/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://xraorao.top/2017/02/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8C%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
     <lastmod>2018-06-08T09:10:07.353Z</lastmod>
     <data>
@@ -773,29 +796,6 @@
           
              
               <breadCrumb title="数据库" url="http://xraorao.top/categories/IT/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://xraorao.top/2017/05/24/%E7%90%86%E8%A7%A3Linux%E7%B3%BB%E7%BB%9F-etc-init-d%E7%9B%AE%E5%BD%95%E5%92%8C-etc-rc-local%E8%84%9A%E6%9C%AC/</loc>
-    <lastmod>2018-06-08T09:10:07.353Z</lastmod>
-    <data>
-        <display>
-        <title>理解Linux系统/etc/init.d目录和/etc/rc.local脚本</title>
-        <pubTime>2017-05-24T01:56:35.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="IT" url="http://xraorao.top/categories/IT/"/>
-          
-             
-              <breadCrumb title="linux" url="http://xraorao.top/categories/IT/linux/"/>
           
         </display>
     </data>
@@ -1051,15 +1051,42 @@
         <title>[原]Ubuntu 14.04 64位系统安装cuda8.0+cudnn7.5+opencv+caffe 血泪教程</title>
         <pubTime>2017-01-14T08:57:09.000Z</pubTime>
         
+        <tag>caffe</tag>
+         
         <tag>ubuntu</tag>
          
         <tag>教程</tag>
          
-        <tag>caffe</tag>
-         
         <tag>cuda</tag>
          
         <tag>opencv</tag>
+         
+         
+           
+             
+              <breadCrumb title="解决方案" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+          
+             
+              <breadCrumb title="ubuntu" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/ubuntu/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xraorao.top/2017/05/23/ubuntu%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/</loc>
+    <lastmod>2018-06-08T09:10:07.345Z</lastmod>
+    <data>
+        <display>
+        <title>ubuntu端口转发</title>
+        <pubTime>2017-05-23T13:11:44.000Z</pubTime>
+        
+        <tag>ubuntu</tag>
+         
+        <tag>iptable</tag>
+         
+        <tag>端口转发</tag>
          
          
            
@@ -1093,33 +1120,6 @@
           
              
               <breadCrumb title="java" url="http://xraorao.top/categories/IT/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://xraorao.top/2017/05/23/ubuntu%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/</loc>
-    <lastmod>2018-06-08T09:10:07.345Z</lastmod>
-    <data>
-        <display>
-        <title>ubuntu端口转发</title>
-        <pubTime>2017-05-23T13:11:44.000Z</pubTime>
-        
-        <tag>ubuntu</tag>
-         
-        <tag>iptable</tag>
-         
-        <tag>端口转发</tag>
-         
-         
-           
-             
-              <breadCrumb title="解决方案" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-          
-             
-              <breadCrumb title="ubuntu" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/ubuntu/"/>
           
         </display>
     </data>
@@ -1423,6 +1423,31 @@
 
     
   <url>
+    <loc>http://xraorao.top/2017/03/03/Ubuntu%E5%88%B6%E4%BD%9CUbuntuLiveCD-%E5%A4%87%E4%BB%BD%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2018-06-08T09:10:07.335Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu制作UbuntuLiveCD+备份系统镜像教程</title>
+        <pubTime>2017-03-03T07:50:08.000Z</pubTime>
+        
+        <tag>ubuntu</tag>
+         
+        <tag>教程</tag>
+         
+         
+           
+             
+              <breadCrumb title="解决方案" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+          
+             
+              <breadCrumb title="ubuntu" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/ubuntu/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://xraorao.top/2017/02/28/caffe%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-solver-prototxt%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</loc>
     <lastmod>2018-06-08T09:10:07.335Z</lastmod>
     <data>
@@ -1443,31 +1468,6 @@
           
              
               <breadCrumb title="caffe" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/caffe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://xraorao.top/2017/03/03/Ubuntu%E5%88%B6%E4%BD%9CUbuntuLiveCD-%E5%A4%87%E4%BB%BD%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2018-06-08T09:10:07.335Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu制作UbuntuLiveCD+备份系统镜像教程</title>
-        <pubTime>2017-03-03T07:50:08.000Z</pubTime>
-        
-        <tag>ubuntu</tag>
-         
-        <tag>教程</tag>
-         
-         
-           
-             
-              <breadCrumb title="解决方案" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-          
-             
-              <breadCrumb title="ubuntu" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/ubuntu/"/>
           
         </display>
     </data>

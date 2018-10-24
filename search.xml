@@ -580,9 +580,9 @@
         <category>ubuntu</category>
       </categories>
       <tags>
+        <tag>caffe</tag>
         <tag>ubuntu</tag>
         <tag>教程</tag>
-        <tag>caffe</tag>
         <tag>cuda</tag>
         <tag>opencv</tag>
       </tags>
