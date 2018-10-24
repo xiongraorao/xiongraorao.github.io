@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xraorao.top/"/>
-  <updated>2018-10-23T11:33:24.327Z</updated>
+  <updated>2018-10-24T00:50:18.118Z</updated>
   <id>http://xraorao.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo 博客遇到的坑--host key verification failed</title>
+    <link href="http://xraorao.top/2018/10/24/failed/"/>
+    <id>http://xraorao.top/2018/10/24/failed/</id>
+    <published>2018-10-24T00:44:39.000Z</published>
+    <updated>2018-10-24T00:50:18.118Z</updated>
+    
+    <content type="html"><![CDATA[<p>使用<code>hexo d</code>进行部署的时候，会遇到如下的报错信息：</p><p>Host Key Verification failed ….</p><p>原因：ssh链接的时候没有加入到known_host 里面去，因此需要执行如下命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br><span class="line"></span><br><span class="line">The authenticity of host <span class="string">'github.com (192.30.252.1)'</span> can<span class="string">'t be established.</span></span><br><span class="line"><span class="string">RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.</span></span><br><span class="line"><span class="string">are you sure you want to continue connecting (yes/no)?'</span></span><br><span class="line"></span><br><span class="line">yes</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果有自己的服务器的话，同样需要执行</span></span><br><span class="line">ssh root@your.server.ip </span><br><span class="line"></span><br><span class="line">yes</span><br></pre></td></tr></table></figure><p>tips：遇到坑，先分析原因，分析不出来就google，==</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;使用&lt;code&gt;hexo d&lt;/code&gt;进行部署的时候，会遇到如下的报错信息：&lt;/p&gt;
+&lt;p&gt;Host Key Verification failed ….&lt;/p&gt;
+&lt;p&gt;原因：ssh链接的时候没有加入到known_host 里面去，因此需要执行如下命令：&lt;/p&gt;
+&lt;fi
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://xraorao.top/tags/hexo/"/>
+    
+      <category term="bug" scheme="http://xraorao.top/tags/bug/"/>
+    
+  </entry>
   
   <entry>
     <title>python学习笔记</title>
@@ -551,33 +579,6 @@
     
     
       <category term="jenkins" scheme="http://xraorao.top/tags/jenkins/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>k8s学习-1--常用命令</title>
-    <link href="http://xraorao.top/2018/04/27/k8s%E5%AD%A6%E4%B9%A0-1/"/>
-    <id>http://xraorao.top/2018/04/27/k8s学习-1/</id>
-    <published>2018-04-27T09:30:43.000Z</published>
-    <updated>2018-06-11T02:06:41.808Z</updated>
-    
-    <content type="html"><![CDATA[<p>k8s 采用声明式的 API , 因此许多命令可以组合使用</p><h1 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h1><p>查看资源</p><pre><code>kubectl get \&lt;resource type\&gt; | all  [-n namespace] [-o wide]</code></pre><p>查看集群</p><pre><code>kubectl cluster-info</code></pre><p>查看各组件的状态</p><pre><code>kubectl -s http://masterip:8080 get componentstatuses </code></pre><h1 id="详细信息"><a href="#详细信息" class="headerlink" title="详细信息"></a>详细信息</h1><p>查看资源的详细信息，类似docker inspect</p><pre><code>kubectl describe \&lt;resource type\&gt;</code></pre><h1 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h1><p>创建k8s资源</p><pre><code>kubectl create -f filename</code></pre><p>filename 为定义资源的yaml文件。也可以直接只用子命令 [run/namespace/secret/configmap/serviceaccount] 等直接创建相应的resource。从追踪和维护的角度出发，建议使用json或yaml的方式定义资源。</p><h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p>更新资源有以下几种方式：</p><p>1.replace</p><pre><code>kubectl replace -f filename</code></pre><p>replace命令用于对已有资源进行更新、替换。当我们需要更新resource的一些属性的时候，如果修改副本数量，增加、修改label，更改image版本，修改端口等。都可以直接修改原yaml文件，然后执行replace命令。</p><p><strong>注意名字不可以被更新</strong></p><p>2.patch</p><p>对一个已经在运行的pod进行更新操作，不会删除容器</p><p>3.edit</p><p>交互式编辑资源文件并更新</p><p>4.apply</p><p>比 pathch 和 edit 更加严格的更新操作，保留更新历史版本库</p><p>5.rolling-update</p><p>不中断更新，先产生新的 pod, 更新完成后再生成再删除旧的 pod, 直到替换掉所有的pod</p><p>6.scale</p><p>资源的扩容或缩容</p><p>7.autoscale</p><p>自动根据系统资源的情况进行扩容或缩容</p><h1 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h1><pre><code>kubectl delete &lt;resource type&gt;</code></pre><h1 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h1><pre><code>kubectl logs</code></pre><h1 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h1><pre><code>kubectl attach kubectl exec [-c container-name]</code></pre><h1 id="节点管理"><a href="#节点管理" class="headerlink" title="节点管理"></a>节点管理</h1><pre><code>kubectl get nodes //查看所有节点</code></pre><p>节点维护：cordon, drain, uncordon</p><ul><li>cordon: 标记节点为SchedulingDisable, 禁止新的资源被调度到该节点</li><li>drain: 将要维护的节点的pod赶到其他的节点</li><li>uncordon: 恢复维护节点到正常的工作状态</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;k8s 采用声明式的 API , 因此许多命令可以组合使用&lt;/p&gt;
-&lt;h1 id=&quot;查看&quot;&gt;&lt;a href=&quot;#查看&quot; class=&quot;headerlink&quot; title=&quot;查看&quot;&gt;&lt;/a&gt;查看&lt;/h1&gt;&lt;p&gt;查看资源&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;kubectl get \
-      
-    
-    </summary>
-    
-      <category term="k8s" scheme="http://xraorao.top/categories/k8s/"/>
-    
-    
-      <category term="k8s" scheme="http://xraorao.top/tags/k8s/"/>
     
   </entry>
   

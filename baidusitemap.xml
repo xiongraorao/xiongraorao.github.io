@@ -4,6 +4,25 @@
 
     
   <url>
+    <loc>http://xraorao.top/2018/10/24/failed/</loc>
+    <lastmod>2018-10-24T00:50:18.118Z</lastmod>
+    <data>
+        <display>
+        <title>hexo 博客遇到的坑--host key verification failed</title>
+        <pubTime>2018-10-24T00:44:39.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>bug</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://xraorao.top/2018/10/23/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2018-10-23T11:33:24.327Z</lastmod>
     <data>
@@ -988,33 +1007,6 @@
 
     
   <url>
-    <loc>http://xraorao.top/2016/10/20/%E5%8E%9F-Ubuntu14-04%E4%B8%8B%E5%AE%89%E8%A3%85%E5%8D%95%E6%9C%BA%E7%89%88Storm%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</loc>
-    <lastmod>2018-06-08T09:10:07.347Z</lastmod>
-    <data>
-        <display>
-        <title>[原]Ubuntu14.04下安装单机版Storm运行环境</title>
-        <pubTime>2016-10-20T11:40:39.000Z</pubTime>
-        
-        <tag>ubuntu</tag>
-         
-        <tag>教程</tag>
-         
-        <tag>storm</tag>
-         
-         
-           
-             
-              <breadCrumb title="解决方案" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-          
-             
-              <breadCrumb title="storm" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/storm/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://xraorao.top/2016/12/05/%E5%8E%9F-Ubuntu%E4%B8%8B%E9%85%8D%E7%BD%AEjava-Eclipse%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc>
     <lastmod>2018-06-08T09:10:07.347Z</lastmod>
     <data>
@@ -1037,6 +1029,33 @@
           
              
               <breadCrumb title="ubuntu" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/ubuntu/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xraorao.top/2016/10/20/%E5%8E%9F-Ubuntu14-04%E4%B8%8B%E5%AE%89%E8%A3%85%E5%8D%95%E6%9C%BA%E7%89%88Storm%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</loc>
+    <lastmod>2018-06-08T09:10:07.347Z</lastmod>
+    <data>
+        <display>
+        <title>[原]Ubuntu14.04下安装单机版Storm运行环境</title>
+        <pubTime>2016-10-20T11:40:39.000Z</pubTime>
+        
+        <tag>ubuntu</tag>
+         
+        <tag>教程</tag>
+         
+        <tag>storm</tag>
+         
+         
+           
+             
+              <breadCrumb title="解决方案" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+          
+             
+              <breadCrumb title="storm" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/storm/"/>
           
         </display>
     </data>
@@ -1377,12 +1396,12 @@
 
     
   <url>
-    <loc>http://xraorao.top/2017/02/28/caffe%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%94%9F%E6%88%90deploy-prototxt%E6%96%87%E4%BB%B6/</loc>
+    <loc>http://xraorao.top/2017/06/04/caffe%E7%9B%B8%E5%85%B3%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2018-06-08T09:10:07.336Z</lastmod>
     <data>
         <display>
-        <title>caffe学习笔记-生成deploy.prototxt文件</title>
-        <pubTime>2017-02-28T07:33:08.000Z</pubTime>
+        <title>caffe相关博客</title>
+        <pubTime>2017-06-04T01:31:57.000Z</pubTime>
         
         <tag>caffe</tag>
          
@@ -1400,12 +1419,12 @@
 
     
   <url>
-    <loc>http://xraorao.top/2017/06/04/caffe%E7%9B%B8%E5%85%B3%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>http://xraorao.top/2017/02/28/caffe%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%94%9F%E6%88%90deploy-prototxt%E6%96%87%E4%BB%B6/</loc>
     <lastmod>2018-06-08T09:10:07.336Z</lastmod>
     <data>
         <display>
-        <title>caffe相关博客</title>
-        <pubTime>2017-06-04T01:31:57.000Z</pubTime>
+        <title>caffe学习笔记-生成deploy.prototxt文件</title>
+        <pubTime>2017-02-28T07:33:08.000Z</pubTime>
         
         <tag>caffe</tag>
          
