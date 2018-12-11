@@ -4,6 +4,121 @@
 
     
   <url>
+    <loc>http://xraorao.top/2018/12/11/python%E5%8D%8F%E7%A8%8B%E5%92%8C%E5%BC%82%E6%AD%A5/</loc>
+    <lastmod>2018-12-11T07:25:01.474Z</lastmod>
+    <data>
+        <display>
+        <title>python协程和异步</title>
+        <pubTime>2018-12-11T06:21:03.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>异步</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xraorao.top/2018/12/08/%E5%9F%BA%E4%BA%8Eredis%E7%9A%84%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/</loc>
+    <lastmod>2018-12-11T02:21:20.148Z</lastmod>
+    <data>
+        <display>
+        <title>基于redis的分布式锁</title>
+        <pubTime>2018-12-08T07:24:11.000Z</pubTime>
+        
+        <tag>redis</tag>
+         
+        <tag>分布式锁</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xraorao.top/2018/07/16/java%E9%94%81%E5%92%8C%E7%9B%91%E8%A7%86%E5%99%A8/</loc>
+    <lastmod>2018-12-11T02:21:20.148Z</lastmod>
+    <data>
+        <display>
+        <title>java锁和监视器</title>
+        <pubTime>2018-07-16T11:34:40.000Z</pubTime>
+        
+        <tag>笔记</tag>
+         
+        <tag>java</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔记" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
+          
+             
+              <breadCrumb title="java" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xraorao.top/2017/05/23/ubuntu%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/</loc>
+    <lastmod>2018-12-07T08:47:47.682Z</lastmod>
+    <data>
+        <display>
+        <title>ubuntu端口转发</title>
+        <pubTime>2017-05-23T13:11:44.000Z</pubTime>
+        
+        <tag>ubuntu</tag>
+         
+        <tag>iptable</tag>
+         
+        <tag>端口转发</tag>
+         
+         
+           
+             
+              <breadCrumb title="解决方案" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+          
+             
+              <breadCrumb title="ubuntu" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/ubuntu/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xraorao.top/2018/07/15/java%E9%9D%A2%E8%AF%95%E5%B8%B8%E8%80%83/</loc>
+    <lastmod>2018-12-07T08:47:42.537Z</lastmod>
+    <data>
+        <display>
+        <title>java面试常考</title>
+        <pubTime>2018-07-15T02:22:53.000Z</pubTime>
+        
+        <tag>笔记</tag>
+         
+        <tag>java</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔记" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
+          
+             
+              <breadCrumb title="java" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://xraorao.top/2018/11/14/python%E4%B8%AD%E7%9A%84%E5%AD%90%E8%BF%9B%E7%A8%8B/</loc>
     <lastmod>2018-12-06T08:03:03.231Z</lastmod>
     <data>
@@ -202,56 +317,6 @@
 
     
   <url>
-    <loc>http://xraorao.top/2018/07/15/java%E9%9D%A2%E8%AF%95%E5%B8%B8%E8%80%83/</loc>
-    <lastmod>2018-07-17T06:31:30.152Z</lastmod>
-    <data>
-        <display>
-        <title>java面试常考</title>
-        <pubTime>2018-07-15T02:22:53.000Z</pubTime>
-        
-        <tag>笔记</tag>
-         
-        <tag>java</tag>
-         
-         
-           
-             
-              <breadCrumb title="笔记" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
-          
-             
-              <breadCrumb title="java" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://xraorao.top/2018/07/16/java%E9%94%81%E5%92%8C%E7%9B%91%E8%A7%86%E5%99%A8/</loc>
-    <lastmod>2018-07-16T11:48:33.073Z</lastmod>
-    <data>
-        <display>
-        <title>java锁和监视器</title>
-        <pubTime>2018-07-16T11:34:40.000Z</pubTime>
-        
-        <tag>笔记</tag>
-         
-        <tag>java</tag>
-         
-         
-           
-             
-              <breadCrumb title="笔记" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
-          
-             
-              <breadCrumb title="java" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://xraorao.top/2018/07/14/%E5%B8%B8%E8%A7%81%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2018-07-14T08:24:16.789Z</lastmod>
     <data>
@@ -336,9 +401,9 @@
         
         <tag>教程</tag>
          
-        <tag>kafka</tag>
-         
         <tag>linux</tag>
+         
+        <tag>kafka</tag>
          
          
            
@@ -759,6 +824,31 @@
 
     
   <url>
+    <loc>http://xraorao.top/2016/12/05/%E8%BD%AC-Markdown%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E5%AD%97%E4%BD%93%EF%BC%8C%E9%A2%9C%E8%89%B2%EF%BC%8C%E5%AD%97%E5%8F%B7%EF%BC%8C%E8%83%8C%E6%99%AF%EF%BC%8C%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B%E7%AD%89/</loc>
+    <lastmod>2018-06-08T09:10:07.357Z</lastmod>
+    <data>
+        <display>
+        <title>[转]Markdown使用技巧总结——字体，颜色，字号，背景，首行缩进等</title>
+        <pubTime>2016-12-05T08:04:16.000Z</pubTime>
+        
+        <tag>教程</tag>
+         
+        <tag>Markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="IT" url="http://xraorao.top/categories/IT/"/>
+          
+             
+              <breadCrumb title="Markdown" url="http://xraorao.top/categories/IT/Markdown/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://xraorao.top/2016/12/05/%E8%BD%AC-Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</loc>
     <lastmod>2018-06-08T09:10:07.357Z</lastmod>
     <data>
@@ -779,31 +869,6 @@
           
              
               <breadCrumb title="linux" url="http://xraorao.top/categories/IT/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://xraorao.top/2016/12/05/%E8%BD%AC-Markdown%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E5%AD%97%E4%BD%93%EF%BC%8C%E9%A2%9C%E8%89%B2%EF%BC%8C%E5%AD%97%E5%8F%B7%EF%BC%8C%E8%83%8C%E6%99%AF%EF%BC%8C%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B%E7%AD%89/</loc>
-    <lastmod>2018-06-08T09:10:07.357Z</lastmod>
-    <data>
-        <display>
-        <title>[转]Markdown使用技巧总结——字体，颜色，字号，背景，首行缩进等</title>
-        <pubTime>2016-12-05T08:04:16.000Z</pubTime>
-        
-        <tag>教程</tag>
-         
-        <tag>Markdown</tag>
-         
-         
-           
-             
-              <breadCrumb title="IT" url="http://xraorao.top/categories/IT/"/>
-          
-             
-              <breadCrumb title="Markdown" url="http://xraorao.top/categories/IT/Markdown/"/>
           
         </display>
     </data>
@@ -886,6 +951,31 @@
 
     
   <url>
+    <loc>http://xraorao.top/2017/02/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8C%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
+    <lastmod>2018-06-08T09:10:07.353Z</lastmod>
+    <data>
+        <display>
+        <title>数据库和数据仓库的区别</title>
+        <pubTime>2017-02-28T01:04:35.000Z</pubTime>
+        
+        <tag>数据库</tag>
+         
+        <tag>数据仓库</tag>
+         
+         
+           
+             
+              <breadCrumb title="IT" url="http://xraorao.top/categories/IT/"/>
+          
+             
+              <breadCrumb title="数据库" url="http://xraorao.top/categories/IT/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://xraorao.top/2017/05/24/%E7%90%86%E8%A7%A3Linux%E7%B3%BB%E7%BB%9F-etc-init-d%E7%9B%AE%E5%BD%95%E5%92%8C-etc-rc-local%E8%84%9A%E6%9C%AC/</loc>
     <lastmod>2018-06-08T09:10:07.353Z</lastmod>
     <data>
@@ -909,24 +999,24 @@
 
     
   <url>
-    <loc>http://xraorao.top/2017/02/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8C%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
-    <lastmod>2018-06-08T09:10:07.353Z</lastmod>
+    <loc>http://xraorao.top/2017/06/09/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E7%BB%B4%E6%8A%A4%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2018-06-08T09:10:07.352Z</lastmod>
     <data>
         <display>
-        <title>数据库和数据仓库的区别</title>
-        <pubTime>2017-02-28T01:04:35.000Z</pubTime>
+        <title>大数据平台维护笔记</title>
+        <pubTime>2017-06-09T04:47:59.000Z</pubTime>
         
-        <tag>数据库</tag>
+        <tag>hadoop</tag>
          
-        <tag>数据仓库</tag>
+        <tag>大数据</tag>
          
          
            
              
-              <breadCrumb title="IT" url="http://xraorao.top/categories/IT/"/>
+              <breadCrumb title="笔记" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
           
              
-              <breadCrumb title="数据库" url="http://xraorao.top/categories/IT/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+              <breadCrumb title="hadoop" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/hadoop/"/>
           
         </display>
     </data>
@@ -960,31 +1050,6 @@
           
              
               <breadCrumb title="hadoop" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/hadoop/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://xraorao.top/2017/06/09/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E7%BB%B4%E6%8A%A4%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2018-06-08T09:10:07.352Z</lastmod>
-    <data>
-        <display>
-        <title>大数据平台维护笔记</title>
-        <pubTime>2017-06-09T04:47:59.000Z</pubTime>
-        
-        <tag>hadoop</tag>
-         
-        <tag>大数据</tag>
-         
-         
-           
-             
-              <breadCrumb title="笔记" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
-          
-             
-              <breadCrumb title="hadoop" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/hadoop/"/>
           
         </display>
     </data>
@@ -1119,6 +1184,33 @@
 
     
   <url>
+    <loc>http://xraorao.top/2016/10/20/%E5%8E%9F-Ubuntu14-04%E4%B8%8B%E5%AE%89%E8%A3%85%E5%8D%95%E6%9C%BA%E7%89%88Storm%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</loc>
+    <lastmod>2018-06-08T09:10:07.347Z</lastmod>
+    <data>
+        <display>
+        <title>[原]Ubuntu14.04下安装单机版Storm运行环境</title>
+        <pubTime>2016-10-20T11:40:39.000Z</pubTime>
+        
+        <tag>ubuntu</tag>
+         
+        <tag>教程</tag>
+         
+        <tag>storm</tag>
+         
+         
+           
+             
+              <breadCrumb title="解决方案" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+          
+             
+              <breadCrumb title="storm" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/storm/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://xraorao.top/2016/12/05/%E5%8E%9F-Ubuntu%E4%B8%8B%E9%85%8D%E7%BD%AEjava-Eclipse%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc>
     <lastmod>2018-06-08T09:10:07.347Z</lastmod>
     <data>
@@ -1148,33 +1240,6 @@
 
     
   <url>
-    <loc>http://xraorao.top/2016/10/20/%E5%8E%9F-Ubuntu14-04%E4%B8%8B%E5%AE%89%E8%A3%85%E5%8D%95%E6%9C%BA%E7%89%88Storm%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</loc>
-    <lastmod>2018-06-08T09:10:07.347Z</lastmod>
-    <data>
-        <display>
-        <title>[原]Ubuntu14.04下安装单机版Storm运行环境</title>
-        <pubTime>2016-10-20T11:40:39.000Z</pubTime>
-        
-        <tag>ubuntu</tag>
-         
-        <tag>教程</tag>
-         
-        <tag>storm</tag>
-         
-         
-           
-             
-              <breadCrumb title="解决方案" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-          
-             
-              <breadCrumb title="storm" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/storm/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://xraorao.top/2017/01/14/%E5%8E%9F-Ubuntu-14-04-64%E4%BD%8D%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85cuda8-0-cudnn7-5-opencv-caffe-%E8%A1%80%E6%B3%AA%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2018-06-08T09:10:07.346Z</lastmod>
     <data>
@@ -1182,11 +1247,11 @@
         <title>[原]Ubuntu 14.04 64位系统安装cuda8.0+cudnn7.5+opencv+caffe 血泪教程</title>
         <pubTime>2017-01-14T08:57:09.000Z</pubTime>
         
+        <tag>caffe</tag>
+         
         <tag>ubuntu</tag>
          
         <tag>教程</tag>
-         
-        <tag>caffe</tag>
          
         <tag>cuda</tag>
          
@@ -1231,58 +1296,6 @@
 
     
   <url>
-    <loc>http://xraorao.top/2017/05/23/ubuntu%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/</loc>
-    <lastmod>2018-06-08T09:10:07.345Z</lastmod>
-    <data>
-        <display>
-        <title>ubuntu端口转发</title>
-        <pubTime>2017-05-23T13:11:44.000Z</pubTime>
-        
-        <tag>ubuntu</tag>
-         
-        <tag>iptable</tag>
-         
-        <tag>端口转发</tag>
-         
-         
-           
-             
-              <breadCrumb title="解决方案" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-          
-             
-              <breadCrumb title="ubuntu" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/ubuntu/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://xraorao.top/2017/02/28/storm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%B5%81%E5%88%86%E7%BB%84/</loc>
-    <lastmod>2018-06-08T09:10:07.344Z</lastmod>
-    <data>
-        <display>
-        <title>storm学习笔记--流分组</title>
-        <pubTime>2017-02-28T02:18:54.000Z</pubTime>
-        
-        <tag>大数据</tag>
-         
-        <tag>storm</tag>
-         
-         
-           
-             
-              <breadCrumb title="笔记" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
-          
-             
-              <breadCrumb title="storm" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/storm/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://xraorao.top/2017/02/17/ubuntu%E5%AE%89%E8%A3%85hadoop%E5%92%8Chbase%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2018-06-08T09:10:07.344Z</lastmod>
     <data>
@@ -1307,6 +1320,31 @@
           
              
               <breadCrumb title="hadoop" url="http://xraorao.top/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/hadoop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xraorao.top/2017/02/28/storm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%B5%81%E5%88%86%E7%BB%84/</loc>
+    <lastmod>2018-06-08T09:10:07.344Z</lastmod>
+    <data>
+        <display>
+        <title>storm学习笔记--流分组</title>
+        <pubTime>2017-02-28T02:18:54.000Z</pubTime>
+        
+        <tag>storm</tag>
+         
+        <tag>大数据</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔记" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
+          
+             
+              <breadCrumb title="storm" url="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/storm/"/>
           
         </display>
     </data>
@@ -1412,16 +1450,16 @@
 
     
   <url>
-    <loc>http://xraorao.top/2017/03/18/linux%E4%B8%8BU%E7%9B%98%E5%88%86%E5%8C%BA/</loc>
+    <loc>http://xraorao.top/2017/04/25/linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</loc>
     <lastmod>2018-06-08T09:10:07.340Z</lastmod>
     <data>
         <display>
-        <title>linux下U盘分区</title>
-        <pubTime>2017-03-18T02:34:44.000Z</pubTime>
+        <title>linux服务器时间同步</title>
+        <pubTime>2017-04-25T10:57:24.000Z</pubTime>
         
-        <tag>分区</tag>
+        <tag>linux</tag>
          
-        <tag>U盘</tag>
+        <tag>ntp</tag>
          
          
            
@@ -1437,16 +1475,16 @@
 
     
   <url>
-    <loc>http://xraorao.top/2017/04/25/linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</loc>
+    <loc>http://xraorao.top/2017/03/18/linux%E4%B8%8BU%E7%9B%98%E5%88%86%E5%8C%BA/</loc>
     <lastmod>2018-06-08T09:10:07.340Z</lastmod>
     <data>
         <display>
-        <title>linux服务器时间同步</title>
-        <pubTime>2017-04-25T10:57:24.000Z</pubTime>
+        <title>linux下U盘分区</title>
+        <pubTime>2017-03-18T02:34:44.000Z</pubTime>
         
-        <tag>linux</tag>
+        <tag>分区</tag>
          
-        <tag>ntp</tag>
+        <tag>U盘</tag>
          
          
            

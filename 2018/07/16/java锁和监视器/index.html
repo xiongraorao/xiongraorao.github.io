@@ -156,7 +156,7 @@
 <meta property="og:site_name" content="在路上">
 <meta property="og:description" content="在JVM的规范中，有这么一些话：  “在JVM中，每个对象和类在逻辑上都是和一个监视器相关联的，为了实现监视器的排他性监视能力，JVM为每一个对象和类都关联一个锁（内置锁），锁住了一个对象，就是获得对象相关联的监视器”  锁为监视器的实现提供了必要的支持。 java 提供了synchronized关键字来支持内置锁。synchronized 关键字可以放在方法的前面、对象的前面、类的前面。 同步方">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-16T11:48:33.073Z">
+<meta property="og:updated_time" content="2018-12-11T02:21:20.148Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java锁和监视器">
 <meta name="twitter:description" content="在JVM的规范中，有这么一些话：  “在JVM中，每个对象和类在逻辑上都是和一个监视器相关联的，为了实现监视器的排他性监视能力，JVM为每一个对象和类都关联一个锁（内置锁），锁住了一个对象，就是获得对象相关联的监视器”  锁为监视器的实现提供了必要的支持。 java 提供了synchronized关键字来支持内置锁。synchronized 关键字可以放在方法的前面、对象的前面、类的前面。 同步方">
@@ -465,12 +465,24 @@
                 
               
 
-              <time title="创建时间：2018-07-16 19:34:40 / 修改时间：19:48:33" itemprop="dateCreated datePublished" datetime="2018-07-16T19:34:40+08:00">2018-07-16</time>
+              <time title="创建时间：2018-07-16 19:34:40" itemprop="dateCreated datePublished" datetime="2018-07-16T19:34:40+08:00">2018-07-16</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-12-11 10:21:20" itemprop="dateModified" datetime="2018-12-11T10:21:20+08:00">2018-12-11</time>
               
             
           </span>
@@ -533,7 +545,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.5k</span>
+                <span title="本文字数">1.8k</span>
               
 
               
@@ -578,6 +590,13 @@
 <h1 id="同步类"><a href="#同步类" class="headerlink" title="同步类"></a>同步类</h1><p>把synchronized关键字放在类的前面，这个类中的所有方法都是同步方法。</p>
 <h1 id="可重入同步"><a href="#可重入同步" class="headerlink" title="可重入同步"></a>可重入同步</h1><p>线程可以获得他已经拥有的锁，运行线程多次获得同一个锁，就是可以重入（reentrant）同步。这种情况通常是同步代码直接或者间接的调用也包含了同步代码的方法，并且两个代码集都使用同一个锁。如果没有可重入同步，那么，同步代码就必须采取很多额外的预防措施避免线程阻塞自己。java java.util.concurrent 包中的  ReentrantLock 即为可重入锁</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> Lock bankLock = <span class="keyword">new</span> ReentrantLock();</span><br><span class="line">…</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getTotalBalance</span><span class="params">()</span></span></span><br><span class="line"><span class="function">   </span>&#123;</span><br><span class="line">      bankLock.lock();</span><br><span class="line">      <span class="keyword">try</span></span><br><span class="line">      &#123;</span><br><span class="line">         <span class="keyword">double</span> sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">         <span class="keyword">for</span> (<span class="keyword">double</span> a : accounts)</span><br><span class="line">            sum += a;</span><br><span class="line"></span><br><span class="line">         <span class="keyword">return</span> sum;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">finally</span></span><br><span class="line">      &#123;</span><br><span class="line">         bankLock.unlock();</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Lock-和-synchronized-的选择"><a href="#Lock-和-synchronized-的选择" class="headerlink" title="Lock 和 synchronized 的选择"></a>Lock 和 synchronized 的选择</h1><ul>
+<li>Lock是一个接口，而synchronized是java的关键字，synchronized是内置的语言实现</li>
+<li>synchronized在发生异常的时候，会自动释放锁，不会发生死锁，而Lock在发生异常的时候，如果没有主动的去释放锁（unlock)，则会造成死锁的现象，因此Lock需要用try-catch-finally，在块中释放锁</li>
+<li>Lock可以让等待锁的线程响应中断(tryLock(time))，synchronized不行，使用synchronized锁的线程会一直等待下去，不能响应中断。</li>
+<li>通过Lock可以知道有没有成功获取锁，但是synchronized无法办到</li>
+<li>Lock可以提高多个线程进行读操作的效率</li>
+</ul>
 <h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
 <li><a href="https://www.cnblogs.com/keeplearnning/p/7020287.html" target="_blank" rel="noopener">锁和监视器之间的区别 – Java并发</a></li>
 <li><a href="https://blog.csdn.net/fujunsfzh/article/details/53517536" target="_blank" rel="noopener">java 内在锁（intrinsic lock）或者监视器锁（monitor lock）</a></li>
@@ -724,7 +743,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">69</span>
+                    <span class="site-state-item-count">71</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -924,7 +943,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">57</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">60</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1007,7 +1032,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#同步方法中的锁"><span class="nav-number">1.</span> <span class="nav-text">同步方法中的锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#同步语句"><span class="nav-number">2.</span> <span class="nav-text">同步语句</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#同步类"><span class="nav-number">3.</span> <span class="nav-text">同步类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#可重入同步"><span class="nav-number">4.</span> <span class="nav-text">可重入同步</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#同步方法中的锁"><span class="nav-number">1.</span> <span class="nav-text">同步方法中的锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#同步语句"><span class="nav-number">2.</span> <span class="nav-text">同步语句</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#同步类"><span class="nav-number">3.</span> <span class="nav-text">同步类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#可重入同步"><span class="nav-number">4.</span> <span class="nav-text">可重入同步</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lock-和-synchronized-的选择"><span class="nav-number">5.</span> <span class="nav-text">Lock 和 synchronized 的选择</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">6.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
@@ -1039,7 +1064,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">283k</span>
+    <span title="站点总字数">294k</span>
   
 
   
