@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xraorao.top/"/>
-  <updated>2018-12-11T07:25:01.474Z</updated>
+  <updated>2018-12-22T01:26:41.060Z</updated>
   <id>http://xraorao.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python time和datetime模块的使用</title>
+    <link href="http://xraorao.top/2018/12/21/python-time%E5%92%8Cdatetime%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://xraorao.top/2018/12/21/python-time和datetime模块的使用/</id>
+    <published>2018-12-21T11:55:13.000Z</published>
+    <updated>2018-12-22T01:26:41.060Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="相关术语"><a href="#相关术语" class="headerlink" title="相关术语"></a>相关术语</h1><ul><li><p>UTC time Coordinated Universal Time</p><p>世界协调时，又称 格林尼治天文时间、世界标准时间。与UTC time对应的是各个时区的local time，东N区的时间比UTC时间早N个小时，因此UTC time + N小时 即为东N区的本地时间；而西N区时间比UTC时间晚N个小时，即 UTC time - N小时 即为西N区的本地时间； 中国在东8区，因此比UTC时间早8小时，可以以UTC+8进行表示。</p></li><li><p>epoch time </p><p>表示时间开始的起点；它是一个特定的时间，不同平台上这个时间点的值不太相同，对于Unix而言，epoch time为 1970-01-01 00:00:00 UTC。</p></li><li><p>timestamp（时间戳） 也称为Unix时间 或 POSIX时间</p><p>它是一种时间表示方式，表示从格林尼治时间1970年1月1日0时0分0秒开始到现在所经过的毫秒数，其值为float类型。 但是有些编程语言的相关方法返回的是秒数（Python就是这样），这个需要看方法的文档说明。需要说明的是时间戳是个差值，其值与时区无关。</p></li></ul><h1 id="time-模块"><a href="#time-模块" class="headerlink" title="time 模块"></a>time 模块</h1><div class="table-container"><table><thead><tr><th style="text-align:left">方法/属性</th><th style="text-align:left">描述</th></tr></thead><tbody><tr><td style="text-align:left">time.altzone</td><td style="text-align:left">返回与utc时间的时间差，以秒为单位（西区该值为正，东区该值为负）。其表示的是本地DST 时区的偏移量，只有daylight非0时才使用。</td></tr><tr><td style="text-align:left">time.clock()</td><td style="text-align:left">返回当前进程所消耗的处理器运行时间秒数（不包括sleep时间），值为小数；该方法Python3.3改成了time.process_time()</td></tr><tr><td style="text-align:left">time.asctime([t])</td><td style="text-align:left">将一个tuple或struct_time形式的时间（可以通过gmtime()和localtime()方法获取）转换为一个24个字符的时间字符串，格式为: “Fri Aug 19 11:14:16 2016”。如果参数t未提供，则取localtime()的返回值作为参数。</td></tr><tr><td style="text-align:left">time.ctime([secs])</td><td style="text-align:left">功能同上，将一个秒数时间戳表示的时间转换为一个表示当前本地时间的字符串。如果参数secs没有提供或值为None，则取time()方法的返回值作为默认值。ctime(secs)等价于asctime(localtime(secs))</td></tr><tr><td style="text-align:left">time.time()</td><td style="text-align:left">返回时间戳（自1970-1-1 0:00:00 至今所经历的秒数）</td></tr><tr><td style="text-align:left">time.localtime([secs])</td><td style="text-align:left">返回以指定时间戳对应的本地时间的 struct_time对象（可以通过下标，也可以通过 .属性名 的方式来引用内部属性）格式</td></tr><tr><td style="text-align:left">time.localtime(time.time() + n*3600)</td><td style="text-align:left">返回n个小时后本地时间的 struct_time对象格式（可以用来实现类似crontab的功能）</td></tr><tr><td style="text-align:left">time.gmtime([secs])</td><td style="text-align:left">返回指定时间戳对应的utc时间的 struct_time对象格式（与当前本地时间差8个小时）</td></tr><tr><td style="text-align:left">time.gmtime(time.time() + n*3600)</td><td style="text-align:left">返回n个小时后utc时间的 struct_time对象（可以通过 .属性名 的方式来引用内部属性）格式</td></tr><tr><td style="text-align:left">time.strptime(time_str, time_format_str)</td><td style="text-align:left">将时间字符串转换为struct_time时间对象，如：time.strptime(‘2017-01-13 17:07’, ‘%Y-%m-%d %H:%M’)</td></tr><tr><td style="text-align:left">time.mktime(struct_time_instance)</td><td style="text-align:left">将struct_time对象实例转换成时间戳</td></tr><tr><td style="text-align:left">time.strftime(time_format_str, struct_time_instance)</td><td style="text-align:left">将struct_time对象实例转换成字符串</td></tr></tbody></table></div><p>time 的时间格式转换：</p><p><img src="/images/1063221-20170204153018854-1098926175.png" alt="time格式转换"></p><h1 id="datetime-模块"><a href="#datetime-模块" class="headerlink" title="datetime 模块"></a>datetime 模块</h1><p>datetime模块提供了处理日期和时间的类，既有简单的方式，又有复杂的方式。它虽然支持日期和时间算法，但其实现的重点是为输出格式化和操作提供高效的属性提取功能。</p><h2 id="datetime模块中定义的类"><a href="#datetime模块中定义的类" class="headerlink" title="datetime模块中定义的类"></a>datetime模块中定义的类</h2><p>datetime模块定义了以下几个类：</p><div class="table-container"><table><thead><tr><th style="text-align:left">类名称</th><th style="text-align:left">描述</th></tr></thead><tbody><tr><td style="text-align:left">datetime.date</td><td style="text-align:left">表示日期，常用的属性有：year, month和day</td></tr><tr><td style="text-align:left">datetime.time</td><td style="text-align:left">表示时间，常用属性有：hour, minute, second, microsecond</td></tr><tr><td style="text-align:left">datetime.datetime</td><td style="text-align:left">表示日期时间</td></tr><tr><td style="text-align:left">datetime.timedelta</td><td style="text-align:left">表示两个date、time、datetime实例之间的时间间隔，分辨率（最小单位）可达到微秒</td></tr><tr><td style="text-align:left">datetime.tzinfo</td><td style="text-align:left">时区相关信息对象的抽象基类。它们由datetime和time类使用，以提供自定义时间的而调整。</td></tr><tr><td style="text-align:left">datetime.timezone</td><td style="text-align:left">Python 3.2中新增的功能，实现tzinfo抽象基类的类，表示与UTC的固定偏移量</td></tr></tbody></table></div><h2 id="datetime模块中定义的常量"><a href="#datetime模块中定义的常量" class="headerlink" title="datetime模块中定义的常量"></a>datetime模块中定义的常量</h2><div class="table-container"><table><thead><tr><th style="text-align:left">常量名称</th><th style="text-align:left">描述</th></tr></thead><tbody><tr><td style="text-align:left">datetime.MINYEAR</td><td style="text-align:left">datetime.date或datetime.datetime对象所允许的年份的最小值，值为1</td></tr><tr><td style="text-align:left">datetime.MAXYEAR</td><td style="text-align:left">datetime.date或datetime.datetime对象所允许的年份的最大值，只为9999</td></tr></tbody></table></div><h2 id="datetime-datatime-类"><a href="#datetime-datatime-类" class="headerlink" title="datetime.datatime 类"></a>datetime.datatime 类</h2><p>class 定义：</p><pre><code>    class datetime.datetime(year, month, day, hour=0, minute=0, second=0, microsecond=0, tzinfo=None)</code></pre><h3 id="类方法和属性"><a href="#类方法和属性" class="headerlink" title="类方法和属性"></a>类方法和属性</h3><div class="table-container"><table><thead><tr><th>类方法/属性名称</th><th>描述</th></tr></thead><tbody><tr><td>datetime.today()</td><td>返回一个表示当前本期日期时间的datetime对象</td></tr><tr><td>datetime.now([tz])</td><td>返回指定时区日期时间的datetime对象，如果不指定tz参数则结果同上</td></tr><tr><td>datetime.utcnow()</td><td>返回当前utc日期时间的datetime对象</td></tr><tr><td>datetime.fromtimestamp(timestamp[, tz])</td><td>根据指定的时间戳创建一个datetime对象</td></tr><tr><td>datetime.utcfromtimestamp(timestamp)</td><td>根据指定的时间戳创建一个datetime对象</td></tr><tr><td>datetime.combine(date, time)</td><td>把指定的date和time对象整合成一个datetime对象</td></tr><tr><td>datetime.strptime(date_str, format)</td><td>将时间字符串转换为datetime对象</td></tr></tbody></table></div><h3 id="对象方法和属性"><a href="#对象方法和属性" class="headerlink" title="对象方法和属性"></a>对象方法和属性</h3><div class="table-container"><table><thead><tr><th>对象方法/属性名称</th><th>描述</th></tr></thead><tbody><tr><td>dt.year, dt.month, dt.day</td><td>年、月、日</td></tr><tr><td>dt.hour, dt.minute, dt.second</td><td>时、分、秒</td></tr><tr><td>dt.microsecond, dt.tzinfo</td><td>微秒、时区信息</td></tr><tr><td>dt.date()</td><td>获取datetime对象对应的date对象</td></tr><tr><td>dt.time()</td><td>获取datetime对象对应的time对象， tzinfo 为None</td></tr><tr><td>dt.timetz()</td><td>获取datetime对象对应的time对象，tzinfo与datetime对象的tzinfo相同</td></tr><tr><td>dt.replace([year[, month[, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]]]]])</td><td>生成并返回一个新的datetime对象，如果所有参数都没有指定，则返回一个与原datetime对象相同的对象</td></tr><tr><td>dt.timetuple()</td><td>返回datetime对象对应的tuple（不包括tzinfo）</td></tr><tr><td>dt.utctimetuple()</td><td>返回datetime对象对应的utc时间的tuple（不包括tzinfo）</td></tr><tr><td>dt.toordinal()</td><td>同date对象</td></tr><tr><td>dt.weekday()</td><td>同date对象</td></tr><tr><td>dt.isocalendar()</td><td>同date独享</td></tr><tr><td>dt.isoformat([sep])</td><td>返回一个‘%Y-%m-%d</td></tr><tr><td>dt.ctime()</td><td>等价于time模块的time.ctime(time.mktime(d.timetuple()))</td></tr><tr><td>dt.strftime(format)</td><td>返回指定格式的时间字符串</td></tr></tbody></table></div><p>datetime 时间格式转换：</p><p><img src="/images/1063221-20170205083810667-126583354.png" alt="datetime 时间格式转换"></p><h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><ul><li><a href="https://blog.csdn.net/p9bl5bxp/article/details/54945920" target="_blank" rel="noopener">Python之日期与时间处理模块</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;相关术语&quot;&gt;&lt;a href=&quot;#相关术语&quot; class=&quot;headerlink&quot; title=&quot;相关术语&quot;&gt;&lt;/a&gt;相关术语&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;UTC time Coordinated Universal Time&lt;/p&gt;
+&lt;p&gt;世界协调时，又称 格
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://xraorao.top/tags/python/"/>
+    
+      <category term="time" scheme="http://xraorao.top/tags/time/"/>
+    
+  </entry>
   
   <entry>
     <title>python协程和异步</title>
@@ -559,38 +586,6 @@
       <category term="笔记" scheme="http://xraorao.top/tags/%E7%AC%94%E8%AE%B0/"/>
     
       <category term="linux" scheme="http://xraorao.top/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>黑苹果仿冒声卡驱动AppleALC</title>
-    <link href="http://xraorao.top/2018/07/02/%E9%BB%91%E8%8B%B9%E6%9E%9C%E4%BB%BF%E5%86%92%E5%A3%B0%E5%8D%A1%E9%A9%B1%E5%8A%A8AppleALC/"/>
-    <id>http://xraorao.top/2018/07/02/黑苹果仿冒声卡驱动AppleALC/</id>
-    <published>2018-07-02T11:58:33.000Z</published>
-    <updated>2018-07-11T12:33:45.105Z</updated>
-    
-    <content type="html"><![CDATA[<p>参考教程：  </p><ul><li><a href="https://www.jianshu.com/p/29a74f0664f1" target="_blank" rel="noopener">黑苹果定制声卡驱动（ALC892为例)</a></li><li><a href="https://blog.daliansky.net/Use-AppleALC-sound-card-to-drive-the-correct-posture-of-AppleHDA.html" target="_blank" rel="noopener">使用AppleALC声卡仿冒驱动AppleHDA的正确姿势</a></li><li><a href="http://bbs.pcbeta.com/viewthread-1685213-1-1.html" target="_blank" rel="noopener">傻瓜式仿冒声卡驱动第二季（仿冒ALC892)</a></li><li><a href="https://www.haolie.net/thread-664.htm" target="_blank" rel="noopener">[教程] AppleALC使用和修改教程</a></li></ul><p>资源链接：  </p><ul><li><a href="https://github.com/vit9696/AppleALC" target="_blank" rel="noopener">vit9696/AppleALC</a></li><li><a href="https://github.com/acidanthera/Lilu" target="_blank" rel="noopener">acidanthera/Lilu</a></li><li><a href="https://github.com/daliansky/dell7000/tree/master/hda-tools" target="_blank" rel="noopener">HDA 工具</a></li><li><a href="https://pan.baidu.com/s/1ge40mR5#list/path=%2Fmac%E5%BF%85%E5%A4%87%E8%BD%AF%E4%BB%B6%2F%E5%A3%B0%E5%8D%A1%E5%B7%A5%E5%85%B7%2F%E5%B7%A5%E5%85%B7&amp;parentPath=%2Fmac%E5%BF%85%E5%A4%87%E8%BD%AF%E4%BB%B6%2F%E5%A3%B0%E5%8D%A1%E5%B7%A5%E5%85%B7" target="_blank" rel="noopener">zlib 转换器</a></li></ul><p><strong>注意事项：</strong></p><p>该教程可以通过AppleALC修改驱动，然后通过Clover 的方式注入Layout，也可以直接在原生AppleHDA上面修改。</p><p><a href="/download/AppleHDA-10.14.kext.zip">AppleHDA-10.14.kext.zip</a></p><p>clover注意要设置一个参数：FixHPET,否则无法加载AppleHDA</p><p>附：ALC269VC 的confidData的数据格式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">id_modified:40</span><br><span class="line">01271C40 01271D01 01271EA0 01271F90 </span><br><span class="line">01471C10 01471D01 01471E17 01471F90 01470C02 </span><br><span class="line">01571C20 01571D10 01571E21 01571F00 </span><br><span class="line">01871C30 01871D10 01871E81 01871F00</span><br><span class="line"></span><br><span class="line">oneline:</span><br><span class="line">01271C40 01271D01 01271EA0 01271F90 01471C10 01471D01 01471E17 01471F90 01470C02 01571C20 01571D10 01571E21 01571F00 01871C30 01871D10 01871E81 01871F00</span><br></pre></td></tr></table></figure><p>每组数字构成：<br>Address+Node+71+[c/d/e/f]+描述数字<br>描述数字每组一共有8个<br>分别表示：<br>1 优先级<br>耳机优先级一定要低于内置扬声器，外置麦克风一定要低于内置麦克风<br>2 lineout 为f，其余0<br>3 接口颜色<br>4 接口为 0，表示当接口被检测到时使用。如果是笔记本的话内建的麦克风和扬声器要设成1，即当耳机插入时，内建扬声器静音，耳机0 接口被检测到就是用耳机。<br>5 接口功能信息<br>6 链接装置类型<br>7 接口类型<br>0为插入接口的，如外置麦克风、耳机等。<br>(如果codec_dump出来有 [N/A] 的就是无用的port，数字为4。)<br>9为给笔记本內建，像内置扬声器、内置麦克风等<br>8 接口位置</p><h1 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><ol><li>睡眠后无法耳机没有声音</li></ol><p>解决方法: </p><ul><li><a href="https://blog.daliansky.net/Use-AppleALC-sound-card-to-drive-the-correct-posture-of-AppleHDA.html#%E8%A7%A3%E5%86%B3%E8%80%B3%E6%9C%BA%E5%88%87%E6%8D%A2-%E7%9D%A1%E7%9C%A0%E5%94%A4%E9%86%92-%E5%8E%BB%E9%99%A4%E5%BA%95%E5%99%AA%E7%AD%89%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" target="_blank" rel="noopener">解决耳机切换问题</a>  </li><li><a href="https://bitbucket.org/RehabMan/os-x-eapd-codec-commander/downloads" target="_blank" rel="noopener">CodeCommander.kext</a></li></ul><ol><li>上面不管用的情况，直接重新加载AppleHDA就可以了</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo kextunload /System/Library/Extensions/AppleHDA.kext</span><br><span class="line">sudo kextload /System/Library/Extensions/AppleHDA.kext</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;参考教程：  &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/29a74f0664f1&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;黑苹果定制声卡驱动（ALC892为例)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a 
-      
-    
-    </summary>
-    
-      <category term="笔记" scheme="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="mac" scheme="http://xraorao.top/categories/%E7%AC%94%E8%AE%B0/mac/"/>
-    
-    
-      <category term="笔记" scheme="http://xraorao.top/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="黑苹果" scheme="http://xraorao.top/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/"/>
     
   </entry>
   
